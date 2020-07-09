@@ -6,11 +6,16 @@ Vue.directive("open-mobile-navigation",
         {
             el.onclick = function(event)
             {
-                if (document.querySelector(".mobile-navigation"))
+                ceresStore.dispatch("loadComponent", "mobile-navigation");
+
+                setTimeout(function()
                 {
-                    document.querySelector(".mobile-navigation").classList.add("open");
-                    document.querySelector("body").classList.add("menu-is-visible");
-                }
+                    if (document.querySelector(".mobile-navigation"))
+                    {
+                        document.querySelector(".mobile-navigation").classList.add("open");
+                        document.querySelector("body").classList.add("menu-is-visible");
+                    }
+                }, 1);
             };
         }
     });

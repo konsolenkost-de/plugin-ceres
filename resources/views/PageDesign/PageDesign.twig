@@ -251,6 +251,8 @@
         return source += "?v={{ buildHash }}";
     };
 
+    Vue.config.performance = true;
+
     window.vueEventHub = new Vue();
 
     setTimeout(function() {
