@@ -7,7 +7,12 @@ const TranslationService = (function($)
     const _translations = {};
 
     // initialize translations
-    _readTranslations();
+    setTimeout(
+        function()
+        {
+            _readTranslations();
+        }, 1
+    );
 
     return {
         translate: _translate

@@ -307,14 +307,14 @@ if ( headerParent )
         calculateBodyOffset();
         getHeaderChildrenHeights();
         scrollHeaderElements();
-    }, 50));
+    }, 50), detectPassiveEvents() ? { passive: true } : false);
 
     window.addEventListener("load", function()
     {
         calculateBodyOffset();
         getHeaderChildrenHeights();
         scrollHeaderElements();
-    });
+    }, detectPassiveEvents() ? { passive: true } : false);
 
     if (document.fonts)
     {

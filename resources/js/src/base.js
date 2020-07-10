@@ -28,7 +28,10 @@ window.$ = jQuery;
 import "bootstrap";
 import "owl.carousel";
 
-import "./app/store/index";
+import TranslationService from "./app/services/TranslationService";
+import ApiService from "./app/services/ApiService";
+import store from "./app/store/index";
+
 
 // =========================
 // COMPONENTS
@@ -232,10 +235,6 @@ setTimeout(function()
     store.dispatch("loadBasketData");
 }, 1);
 
-import TranslationService from "./app/services/TranslationService";
-import ApiService from "./app/services/ApiService";
-import store from "./app/store";
 window.ceresTranslate = TranslationService.translate;
-
 Vue.prototype.$translate = TranslationService.translate;
 Vue.prototype.$ceres = App;
