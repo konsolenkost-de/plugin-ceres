@@ -1,8 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import ApiService from "../services/ApiService";
-
 import address from "./modules/AddressModule";
 import basket from "./modules/BasketModule";
 import checkout from "./modules/CheckoutModule";
@@ -58,45 +56,5 @@ const store = new Vuex.Store(
 // Fill initial vuex data
 // =========================
 
-setTimeout(function()
-{
-    App.initialData.shippingCountries.sort((first, second) =>
-    {
-        if (first.currLangName < second.currLangName)
-        {
-            return -1;
-        }
-        if (first.currLangName > second.currLangName)
-        {
-            return 1;
-        }
-        return 0;
-    });
-
-    store.commit("setShippingCountries", App.initialData.shippingCountries);
-    store.commit("setShippingCountryId", App.initialData.shippingCountryId);
-    store.commit("setShowNetPrices", App.initialData.showNetPrices);
-    store.commit("initConsents");
-
-    ApiService.listen("LocalizationChanged",
-        data =>
-        {
-            store.commit("setShippingCountries", data.localization.activeShippingCountries);
-            store.commit("setShippingCountryId", data.localization.currentShippingCountryId);
-        });
-
-
-    window.ceresStore = store;
-
-    ApiService.listen("AfterBasketChanged",
-        data =>
-        {
-            store.commit("setBasket", data.basket);
-            store.commit("setShowNetPrices", data.showNetPrices);
-            store.commit("setWishListIds", data.basket.itemWishListIds);
-        });
-
-    store.dispatch("loadBasketData");
-}, 1);
 
 export default store;

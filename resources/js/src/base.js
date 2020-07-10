@@ -28,6 +28,8 @@ window.$ = jQuery;
 import "bootstrap";
 import "owl.carousel";
 
+import "./app/store/index";
+
 // =========================
 // COMPONENTS
 // =========================
@@ -188,9 +190,51 @@ import "./app/mixins/template.mixin";
 // Bootstrap frameworks
 // =========================
 import "./app/main";
-// import "./app/store/index";
+
+setTimeout(function()
+{
+    App.initialData.shippingCountries.sort((first, second) =>
+    {
+        if (first.currLangName < second.currLangName)
+        {
+            return -1;
+        }
+        if (first.currLangName > second.currLangName)
+        {
+            return 1;
+        }
+        return 0;
+    });
+
+    store.commit("setShippingCountries", App.initialData.shippingCountries);
+    store.commit("setShippingCountryId", App.initialData.shippingCountryId);
+    store.commit("setShowNetPrices", App.initialData.showNetPrices);
+    store.commit("initConsents");
+
+    ApiService.listen("LocalizationChanged",
+        data =>
+        {
+            store.commit("setShippingCountries", data.localization.activeShippingCountries);
+            store.commit("setShippingCountryId", data.localization.currentShippingCountryId);
+        });
+
+
+    window.ceresStore = store;
+
+    ApiService.listen("AfterBasketChanged",
+        data =>
+        {
+            store.commit("setBasket", data.basket);
+            store.commit("setShowNetPrices", data.showNetPrices);
+            store.commit("setWishListIds", data.basket.itemWishListIds);
+        });
+
+    store.dispatch("loadBasketData");
+}, 1);
 
 import TranslationService from "./app/services/TranslationService";
+import ApiService from "./app/services/ApiService";
+import store from "./app/store";
 window.ceresTranslate = TranslationService.translate;
 
 Vue.prototype.$translate = TranslationService.translate;
