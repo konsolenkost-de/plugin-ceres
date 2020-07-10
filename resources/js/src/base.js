@@ -94,7 +94,8 @@ Vue.component("mobile-navigation", MobileNavigation);
 import Notifications from "./app/components/pageDesign/Notifications.vue";
 Vue.component("notifications", Notifications);
 Vue.component("popper", () => import("./app/components/pageDesign/Popper.vue"));
-Vue.component("shipping-country-select", () => import("./app/components/pageDesign/ShippingCountrySelect.vue"));
+import ShippingCountrySelect from "./app/components/pageDesign/ShippingCountrySelect.vue";
+Vue.component("shipping-country-select", ShippingCountrySelect);
 Vue.component("loading-animation", () => import("./app/components/pageDesign/LoadingAnimation.vue"));
 
 Vue.component("wish-list", () => import("./app/components/wishList/WishList.vue"));
