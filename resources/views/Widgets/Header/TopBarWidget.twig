@@ -108,7 +108,8 @@
                                    href="#countrySettings"
                                    aria-expanded="false"
                                    aria-controls="countrySettings"
-                                   data-parent="#controlsList">
+                                   data-parent="#controlsList"
+                                   @click="$store.dispatch('loadComponent', 'top-bar-shipping-country-select')">
                                     <i class="flag-icon flag-icon-{{ Twig.print('lang') }}"></i>
                                 </a>
                             </li>
@@ -316,7 +317,9 @@
                                             <strong>{{ Twig.print('trans("Ceres::Template.headerSelectShippingCountry")') }}</strong>
                                             <hr>
                                         </div>
-                                        <shipping-country-select :disable-input="{{ Twig.print(Twig.call('services.template.isCheckout') ~ ' | json_encode') }}"></shipping-country-select>
+                                        <lazy-load component="top-bar-shipping-country-select">
+                                            <shipping-country-select :disable-input="{{ Twig.print(Twig.call('services.template.isCheckout') ~ ' | json_encode') }}"></shipping-country-select>
+                                        </lazy-load>
                                     </div>
                                 </div>
                             {% endif %}

@@ -43,7 +43,7 @@ function CeresMain()
         $("html").addClass("unkown-os");
     }
 
-    $(window).scroll(function()
+    window.addEventListener("scroll", function()
     {
         if ($(".wrapper-main").hasClass("isSticky"))
         {
@@ -56,7 +56,7 @@ function CeresMain()
                 $(".wrapper-main").removeClass("sticky");
             }
         }
-    });
+    }, detectPassiveEvents() ? { passive: true } : false);
 
     window.onpopstate = function(event)
     {
@@ -127,7 +127,7 @@ function CeresMain()
             }
         });
 
-        $(window).scroll(function()
+        window.addEventListener("scroll", function()
         {
             if (isDesktop)
             {
@@ -142,7 +142,7 @@ function CeresMain()
                     $(".back-to-top-center").fadeOut(duration);
                 }
             }
-        });
+        }, detectPassiveEvents() ? { passive: true } : false);
 
         window.addEventListener("resize", function()
         {

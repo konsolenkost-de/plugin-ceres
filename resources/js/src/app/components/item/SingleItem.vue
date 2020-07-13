@@ -340,17 +340,23 @@ export default {
     created()
     {
         this.$store.dispatch("initVariation", this.itemData);
-        this.$store.commit(`${this.itemId}/setPleaseSelectVariationId`, this.pleaseSelectOptionVariationId);
-        this.$store.dispatch("addLastSeenItem", this.currentVariation.variation.id);
 
-        this.$store.dispatch(`${this.itemId}/variationSelect/setVariationSelect`, {
-            itemId:             this.itemId,
-            attributes:         this.attributesData,
-            variations:         this.variations,
-            initialVariationId: this.currentVariation.variation.id,
-            isPleaseSelectOption: this.initPleaseSelectOption,
-            afterKey:           this.afterKey
-        });
+        let _self = this;
+        setTimeout(function() {
+            _self.$store.dispatch("addLastSeenItem", _self.currentVariation.variation.id);
+        }, 1);
+
+        setTimeout(function() {
+            _self.$store.commit(`${_self.itemId}/setPleaseSelectVariationId`, _self.pleaseSelectOptionVariationId);
+            _self.$store.dispatch(`${_self.itemId}/variationSelect/setVariationSelect`, {
+                itemId:             _self.itemId,
+                attributes:         _self.attributesData,
+                variations:         _self.variations,
+                initialVariationId: _self.currentVariation.variation.id,
+                isPleaseSelectOption: _self.initPleaseSelectOption,
+                afterKey:           _self.afterKey
+            });
+        }, 1);
     },
 
     methods:

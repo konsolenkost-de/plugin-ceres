@@ -18,7 +18,7 @@ import user from "./modules/UserModule";
 import wishList from "./modules/WishListModule";
 import items from "./modules/singleItem/BaseItemModule";
 
-// import eventPropagation from "./plugins/EventPropagationPlugin";
+import eventPropagation from "./plugins/EventPropagationPlugin";
 
 
 // =========================
@@ -49,7 +49,9 @@ const store = new Vuex.Store(
             orderReturn,
             user,
             wishList
-        }
+        },
+
+        plugins: [eventPropagation]
     });
 
 // =========================
