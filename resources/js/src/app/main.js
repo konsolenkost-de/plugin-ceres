@@ -155,7 +155,7 @@ function CeresMain()
         {
             event.preventDefault();
 
-            $("html, body").animate({ scrollTop: 0 }, duration);
+            window.scrollTo({ top: 0, behavior: "smooth" });
 
             return false;
         });
@@ -164,7 +164,7 @@ function CeresMain()
         {
             event.preventDefault();
 
-            $("html, body").animate({ scrollTop: 0 }, duration);
+            window.scrollTo({ top: 0, behavior: "smooth" });
 
             return false;
         });
