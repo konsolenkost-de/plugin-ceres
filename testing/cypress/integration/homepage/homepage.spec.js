@@ -6,7 +6,7 @@ context("Homepage", () =>
         cy.visit("/");
     });
 
-    it("loads the homepage", () =>
+    it("Should load the homepage", () =>
     {
         cy.location("pathname").should("eq", "/");
         // checks if the logo exists
