@@ -1,8 +1,18 @@
 <template>
     <div :class="{ 'has-crossprice': hasCrossPrice }">
+
         <div class="crossprice" v-if="showCrossPrice && hasCrossPrice">
             <del class="text-muted small text-appearance">
                 {{ currentVariation.prices.rrp.unitPrice.formatted | itemCrossPrice }}
+            </del>
+        </div>
+        <div class="crossprice" v-if="showCrossPrice && isSpecialOffer && !!variationGraduatedPrice">
+            <del class="text-muted small text-appearance">
+                {{ $translate("Ceres::Template.itemPriceBefore",
+                    {
+                        price: variationGraduatedPrice.unitPrice.formatted
+                    }
+                ) }}
             </del>
         </div>
 
@@ -88,6 +98,10 @@ export default {
                 && (state.variationSelect && !state.variationSelect.isVariationSelected)
                 && (state.pleaseSelectVariationId === this.currentVariation.variation.id
                     || state.pleaseSelectVariationId === 0);
+        },
+
+        isSpecialOffer() {
+            return !!this.currentVariation.prices.specialOffer;
         }
     }
 }

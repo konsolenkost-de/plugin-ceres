@@ -184,20 +184,12 @@ export default {
         prices()
         {
             const itemPrices = this.currentOffer.item.prices;
-            const prices = {
+
+            return {
+                specialOffer: itemPrices.specialOffer,
                 price: itemPrices.default,
-                rrp: itemPrices.rrp,
-                isRrpDefaultPrice: false
+                rrp: itemPrices.rrp
             };
-
-            if (!isNullOrUndefined(itemPrices.specialOffer))
-            {
-                prices.price = itemPrices.specialOffer;
-                prices.rrp = itemPrices.default || itemPrices.rrp;
-                prices.isRrpDefaultPrice = !!itemPrices.default;
-            }
-
-            return prices;
         }
     },
 

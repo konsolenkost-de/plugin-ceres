@@ -62,12 +62,16 @@
                 <div class="live-shopping-prices-rebate" v-if="!isNaN(itemPriceRebatePercentage) && itemPriceRebatePercentage > 0">{{ $translate("Ceres::Template.liveShoppingRebate", {"rebate": itemPriceRebatePercentage }) }}</div>
                 <div class="live-shopping-prices-container">
                     <div class="live-shopping-price">
-                        <strong>{{ prices.price.unitPrice.formatted }} *</strong>
+                        <strong>{{ prices.specialOffer.unitPrice.formatted }} *</strong>
                     </div>
-                    <span v-if="displaySettings.showCrossPrice && prices.rrp && prices.rrp.unitPrice.value > 0">
-                        <span v-if="prices.isRrpDefaultPrice" v-html="oldPriceBefore"></span>
-                        <span v-else v-html="oldPriceRrp"></span>
-                    </span>
+
+                    <div v-if="displaySettings.showCrossPrice && prices.price && prices.price.unitPrice.value > 0">
+                        <span v-html="oldPriceBefore"></span>
+                    </div>
+
+                    <div v-if="displaySettings.showCrossPrice && prices.rrp && prices.rrp.unitPrice.value > 0">
+                        <span v-html="oldPriceRrp"></span>
+                    </div>
                 </div>
             </div>
 
@@ -179,12 +183,14 @@ export default {
     {
         oldPriceBefore()
         {
-            return this.$translate('Ceres::Template.liveShoppingBefore', {'price': '<del>' + this.prices.rrp.unitPrice.formatted + '</del>'})
+            return this.$translate('Ceres::Template.liveShoppingBefore',
+                { price: `<del>${ this.prices.price.unitPrice.formatted }</del>` });
         },
 
         oldPriceRrp()
         {
-            return this.$translate('Ceres::Template.liveShoppingRrp', {'price': '<del>' + this.prices.rrp.unitPrice.formatted + '</del>'})
+            return this.$translate('Ceres::Template.liveShoppingRrp',
+                { price: `<del>${ this.prices.rrp.unitPrice.formatted }</del>` });
         }
     },
 
@@ -231,8 +237,8 @@ export default {
 
         setItemPriceRebatePercentage()
         {
-            const specialOfferPrice = this.prices.price.price.value;
-            const defaultPrice      = this.prices.rrp && this.prices.rrp.price.value || 0;
+            const specialOfferPrice = this.prices.specialOffer.price.value;
+            const defaultPrice = (this.prices.price && this.prices.price.price.value) || (this.prices.rrp && this.prices.rrp.price.value) || 0;
 
             if (defaultPrice === 0)
             {
@@ -240,7 +246,7 @@ export default {
             }
             else
             {
-                let percentage          = 100 - specialOfferPrice / defaultPrice * 100;
+                let percentage = 100 - specialOfferPrice / defaultPrice * 100;
 
                 percentage = percentage.toFixed(App.config.item.storeSpecial);
                 percentage = percentage.replace(".", App.decimalSeparator);
