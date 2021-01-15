@@ -17,9 +17,9 @@ class CategoryItemContext extends CategoryContext implements ContextInterface
 
         $itemListOptions = [
             'page'          => $this->getParam( 'page', 1 ),
-            'itemsPerPage'  => $this->getParam( 'itemsPerPage', '' ),
+            'itemsPerPage'  => $this->getParam( 'itemsPerPage', null),
             'sorting'       => $this->getParam( 'sorting', '' ),
-            'facets'        => $this->getParam( 'facets' ),
+            'facets'        => $this->getParam( 'facets', '' ),
             'categoryId'    => $this->category->id,
             'priceMin'      => $this->request->get('priceMin', 0),
             'priceMax'      => $this->request->get('priceMax', 0)

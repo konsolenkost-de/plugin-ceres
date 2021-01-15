@@ -92,6 +92,7 @@ class TemplateServiceProvider extends ServiceProvider
     {
         $this->getApplication()->singleton(CeresConfig::class);
         $this->getApplication()->singleton(DefaultSettingsService::class);
+        $this->getApplication()->register(CeresRouteServiceProvider::class);
     }
 
     public function boot(Twig $twig, Dispatcher $eventDispatcher, ConfigRepository $config)
