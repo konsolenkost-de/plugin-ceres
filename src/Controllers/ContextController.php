@@ -54,7 +54,7 @@ class ContextController extends Controller
     private function getItemContext(Request $request)
     {
         $context = pluginApp(SingleItemContext::class);
-        $item = $this->getItem($request->get('itemId'), $request->get('variationId', 0));
+        $item = $this->getItem(intval($request->get('itemId')), intval($request->get('variationId', 0)));
         $context->init([
             'item' => $item
         ]);
