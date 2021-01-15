@@ -26,17 +26,29 @@ class ContextController extends Controller
 {
     use Loggable;
 
-    public function getContext(Request $request, $type = '')
+    public function getContext(Request $request, Response $response, $type = '')
     {
+        $context = null;
         switch ($type)
         {
             case 'item':
-                return json_encode($this->getItemContext($request));
+                $context = json_encode($this->getItemContext($request));
+                break;
             case 'category':
-                return json_encode($this->getCategoryContext($request));
+                $context = json_encode($this->getCategoryContext($request));
+                break;
             default:
-                return json_encode($this->getGlobalContext());
+                $context = json_encode($this->getGlobalContext());
+                break;
         }
+
+        return $response->json(
+            $context,
+            200,
+            [
+                'Access-Control-Allow-Origin' => '*',
+            ]
+        );
     }
 
     private function getItemContext(Request $request)
