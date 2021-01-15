@@ -32,13 +32,13 @@ class ContextController extends Controller
         switch ($type)
         {
             case 'item':
-                $context = json_encode($this->getItemContext($request));
+                $context = $this->getItemContext($request);
                 break;
             case 'category':
-                $context = json_encode($this->getCategoryContext($request));
+                $context = $this->getCategoryContext($request);
                 break;
             default:
-                $context = json_encode($this->getGlobalContext());
+                $context = $this->getGlobalContext();
                 break;
         }
 
