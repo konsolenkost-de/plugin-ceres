@@ -1744,10 +1744,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -38554,19 +38550,6 @@ var render = function() {
                       { staticClass: "col-12 col-sm-6" },
                       [
                         _c("vat-id", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate:text",
-                              value: _vm.isInRequiredFields(
-                                "de",
-                                "billing_address.vatNumber"
-                              ),
-                              expression:
-                                "isInRequiredFields('de', 'billing_address.vatNumber')",
-                              arg: "text"
-                            }
-                          ],
                           attrs: {
                             "is-required": _vm.isInRequiredFields(
                               "de",
@@ -39479,19 +39462,6 @@ var render = function() {
                       { staticClass: "col-12 col-sm-6" },
                       [
                         _c("vat-id", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate:text",
-                              value: _vm.isInRequiredFields(
-                                "gb",
-                                "billing_address.vatNumber"
-                              ),
-                              expression:
-                                "isInRequiredFields('gb', 'billing_address.vatNumber')",
-                              arg: "text"
-                            }
-                          ],
                           attrs: {
                             "is-required": _vm.isInRequiredFields(
                               "gb",
@@ -40408,19 +40378,6 @@ var render = function() {
                       { staticClass: "col-12 col-sm-6" },
                       [
                         _c("vat-id", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate:text",
-                              value: _vm.isInRequiredFields(
-                                "de",
-                                "delivery_address.vatNumber"
-                              ),
-                              expression:
-                                "isInRequiredFields('de', 'delivery_address.vatNumber')",
-                              arg: "text"
-                            }
-                          ],
                           attrs: {
                             "is-required": _vm.isInRequiredFields(
                               "de",
@@ -41272,19 +41229,6 @@ var render = function() {
                       { staticClass: "col-12 col-sm-6" },
                       [
                         _c("vat-id", {
-                          directives: [
-                            {
-                              name: "validate",
-                              rawName: "v-validate:text",
-                              value: _vm.isInRequiredFields(
-                                "gb",
-                                "delivery_address.vatNumber"
-                              ),
-                              expression:
-                                "isInRequiredFields('gb', 'delivery_address.vatNumber')",
-                              arg: "text"
-                            }
-                          ],
                           attrs: {
                             "is-required": _vm.isInRequiredFields(
                               "gb",
@@ -42301,48 +42245,63 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "input-unit flex-fill w-auto" }, [
-            _c("input", {
+          _c(
+            "div",
+            {
               directives: [
                 {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.vatValue,
-                  expression: "vatValue"
+                  name: "validate",
+                  rawName: "v-validate:text",
+                  value: _vm.isRequired,
+                  expression: "isRequired",
+                  arg: "text"
                 }
               ],
-              attrs: {
-                "aria-describedby": "basic-addon1",
-                type: "text",
-                name: "vatNumber",
-                id: "txtVatNumber" + _vm._uid,
-                "data-autofocus": ""
-              },
-              domProps: { value: _vm.vatValue },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+              staticClass: "input-unit flex-fill w-auto"
+            },
+            [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.vatValue,
+                    expression: "vatValue"
                   }
-                  _vm.vatValue = $event.target.value
+                ],
+                attrs: {
+                  "aria-describedby": "basic-addon1",
+                  type: "text",
+                  name: "vatNumber",
+                  id: "txtVatNumber" + _vm._uid,
+                  "data-autofocus": ""
+                },
+                domProps: { value: _vm.vatValue },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.vatValue = $event.target.value
+                  }
                 }
-              }
-            }),
-            _vm._v(" "),
-            _c("label", { attrs: { for: "txtVatNumber" + _vm._uid } }, [
-              _vm._v(
-                "\n            " +
-                  _vm._s(
-                    _vm.transformTranslation(
-                      "Ceres::Template.addressVatNumber",
-                      "de",
-                      "billing_address.vatNumber"
-                    )
-                  ) +
-                  "\n        "
-              )
-            ])
-          ])
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "txtVatNumber" + _vm._uid } }, [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(
+                      _vm.transformTranslation(
+                        "Ceres::Template.addressVatNumber",
+                        "de",
+                        "billing_address.vatNumber"
+                      )
+                    ) +
+                    "\n        "
+                )
+              ])
+            ]
+          )
         ]
       )
     : _vm._e()

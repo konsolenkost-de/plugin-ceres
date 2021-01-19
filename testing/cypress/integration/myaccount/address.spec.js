@@ -199,14 +199,14 @@ context("Address", () =>
 
     it.only("should only show vat id input when country is eu", () =>
     {
-        createNewAddress(1, { gender: "company" });
+        createNewAddress(2, { gender: "company" });
         cy.reload();
 
         cy.getByTestingAttr("delivery-address-select").click();
         cy.getByTestingAttr("delivery-address-select-edit").first().click();
-        // cy.getByTestingAttr("vat-id").should("exist");
-        // select ch cy.getByTestingAttr("address-country-select").find("input")
-        // cy.getByTestingAttr("vat-id").should("not.exist");
+        cy.getByTestingAttr("vat-id").should("exist");
+        cy.getByTestingAttr("address-country-select").find("input");
+        cy.getByTestingAttr("vat-id").should("not.exist");
     });
 
     it("should only show vat id input when salutation is company", () =>
