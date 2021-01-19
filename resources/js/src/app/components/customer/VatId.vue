@@ -7,7 +7,7 @@
             <span class="input-group-text h-100" id="basic-addon1">{{ vatPrefix }}</span>
         </div>
         <div class="input-unit flex-fill w-auto" v-validate:text="isRequired">
-            <input aria-describedby="basic-addon1" type="text" name="vatNumber" :id="'txtVatNumber' + _uid" v-model="vatValue" data-autofocus>
+            <input aria-describedby="basic-addon1" type="text" name="vatNumber" :id="'txtVatNumber' + _uid" v-model="vatValue" data-autofocus data-testing="vat-id">
             <label :for="'txtVatNumber' + _uid">
                 {{ transformTranslation("Ceres::Template.addressVatNumber", "de", "billing_address.vatNumber") }}
             </label>

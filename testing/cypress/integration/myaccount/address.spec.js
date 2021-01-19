@@ -197,6 +197,68 @@ context("Address", () =>
         });
     });
 
+    it.only("should only show vat id input when country is eu", () =>
+    {
+        createNewAddress(1, { gender: "company" });
+        cy.reload();
+
+        cy.getByTestingAttr("delivery-address-select").click();
+        cy.getByTestingAttr("delivery-address-select-edit").first().click();
+        // cy.getByTestingAttr("vat-id").should("exist");
+        // select ch cy.getByTestingAttr("address-country-select").find("input")
+        // cy.getByTestingAttr("vat-id").should("not.exist");
+    });
+
+    it("should only show vat id input when salutation is company", () =>
+    {
+        createNewAddress(1, { gender: "company" });
+        cy.reload();
+
+        cy.getByTestingAttr("delivery-address-select").click();
+        cy.getByTestingAttr("delivery-address-select-edit").first().click();
+
+        // cy.getByTestingAttr("vat-id").should("exist");
+        // select male cy.getByTestingAttr("salutation-select").select("male");
+        // cy.getByTestingAttr("vat-id").should("not.exist");
+    });
+
+    it("should fail on incorrect vat id", () =>
+    {
+        createNewAddress(1, { gender: "company" });
+        cy.reload();
+        cy.intercept("POST", "/rest/io/customer/address/?typeId=2").as("updateAddress");
+
+        cy.getByTestingAttr("delivery-address-select").click();
+        cy.getByTestingAttr("delivery-address-select-edit").first().click();
+
+        cy.getByTestingAttr("vat-id").type("wrong");
+        cy.get("[data-testing='delivery-address-select'] [data-testing='modal-submit']").click();
+
+        cy.wait("@updateAddress").then((res) =>
+        {
+            // TODO fail - expect(res.response.statusCode).to.eql(201);
+        });
+    });
+
+    it("should success on correct vat id", () =>
+    {
+        createNewAddress(1, { gender: "company" });
+        cy.reload();
+        cy.intercept("POST", "/rest/io/customer/address/?typeId=2").as("updateAddress");
+
+        cy.getByTestingAttr("delivery-address-select").click();
+        cy.getByTestingAttr("delivery-address-select-edit").first().click();
+
+        cy.getByTestingAttr("vat-id").type("250560740");
+        cy.get("[data-testing='delivery-address-select'] [data-testing='modal-submit']").click();
+
+        cy.wait("@updateAddress").then((res) =>
+        {
+            expect(res.response.statusCode).to.eql(201);
+        });
+    });
+
+
     function deleteAllAddresses()
     {
         cy.getStore().then((store) =>
@@ -216,26 +278,26 @@ context("Address", () =>
         });
     }
 
-    function createNewAddress(addressType)
+    function createNewAddress(addressType, address)
     {
         cy.getStore().then((store) =>
         {
-            store.dispatch("createAddress", { address: getAddress(), addressType });
+            store.dispatch("createAddress", { address: getAddress(address), addressType });
         });
     }
 
-    function getAddress()
+    function getAddress(address = {})
     {
         return {
-            "gender":"male",
-            "name1":"",
-            "name2": Date.now(),
-            "name3": Date.now(),
-            "address1": Date.now(),
-            "address2": Date.now(),
-            "postalCode": Date.now(),
-            "town": Date.now(),
-            "countryId": 1
+            "gender": address.gender || "male",
+            "name1": address.name1 || "",
+            "name2": address.name2 || Date.now(),
+            "name3": address.name3 || Date.now(),
+            "address1": address.address1 || Date.now(),
+            "address2": address.address2 || Date.now(),
+            "postalCode": address.postalCode || Date.now(),
+            "town": address.town || Date.now(),
+            "countryId": address.countryId || 1
         };
     }
 });
