@@ -7197,7 +7197,8 @@ var render = function() {
                   type: "text",
                   name: "vatNumber",
                   id: "txtVatNumber" + _vm._uid,
-                  "data-autofocus": ""
+                  "data-autofocus": "",
+                  "data-testing": "vat-id"
                 },
                 domProps: { value: _vm.vatValue },
                 on: {
