@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import UrlService from "../../../services/UrlService";
 import { mapState } from "vuex";
 import ItemFilter from "./ItemFilter.vue";
 import { ComponentIdMixin } from "../../../mixins/componentId.mixin";
@@ -75,6 +76,15 @@ export default {
         }
     },
 
+    data()
+    {
+        return {
+            initialSelectedFacets: [],
+            initialPriceMin: "",
+            initialPriceMax: ""
+        };
+    },
+
     computed:
     {
         ...mapState({
@@ -95,9 +105,53 @@ export default {
 
     created()
     {
-        if (!this.$store.state.itemList.facets?.length)
+        this.$store.commit("addFacets", this.facetData);
+
+        this.initSelectedFacets();
+    },
+
+    methods:
+    {
+        initSelectedFacets()
         {
-            this.$store.commit("addFacets", this.facetData);
+            const urlParams = UrlService.getUrlParams(document.location.search);
+
+            let selectedFacets = [];
+
+            if (urlParams.facets)
+            {
+                selectedFacets = urlParams.facets.split(",");
+            }
+
+            if (this.initPriceFacet(urlParams))
+            {
+                selectedFacets.push("price");
+            }
+
+            if (selectedFacets.length > 0)
+            {
+                this.$store.commit("setSelectedFacetsByIds", selectedFacets);
+            }
+
+            this.initialSelectedFacets = selectedFacets;
+        },
+
+        initPriceFacet(urlParams)
+        {
+            if (urlParams.priceMin || urlParams.priceMax)
+            {
+                const priceMin = urlParams.priceMin || "";
+                const priceMax = urlParams.priceMax || "";
+
+                this.$store.commit("setPriceFacet", { priceMin: priceMin, priceMax: priceMax });
+
+                this.initialPriceMin = priceMin;
+                this.initialPriceMax = priceMax;
+
+                return true;
+            }
+
+            return false;
         }
     }
 }
