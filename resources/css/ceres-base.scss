@@ -8053,7 +8053,9 @@ a.close.disabled {
 .bg-white {
   background-color: $white !important;
 }
-
+.bg-smoke{
+  background-color: rgba(200,200,200, .6);
+}
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -8300,8 +8302,10 @@ a.close.disabled {
   z-index: $zindex-fixed;
 }
 
+
 .sticky-top {
-  @supports (position: sticky) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: $zindex-sticky;
@@ -9062,10 +9066,6 @@ button:focus {
     }
 }
 
-.app {
-    overflow-x: hidden;
-}
-
 .center-xy {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9452,15 +9452,6 @@ html.ie .always-visible-search { // stylelint-disable-line selector-no-qualifyin
             margin-left: -1px;
         }
     }
-}
-
-.owl-placeholder {
-    position: absolute;
-    width: 101%;
-    height: 101%;
-    margin-left: -1px;
-    -o-object-fit: contain;
-       object-fit: contain;
 }
 
 .single-carousel,
@@ -10181,14 +10172,6 @@ html.ie {
     pointer-events: none;
 }
 
-.sticky-element {
-    padding-bottom: .1px; // force disable margin collapse
-
-    p:empty {
-        margin-bottom: 0; // remove margin of empty paragraph for correct height detection
-    }
-}
-
 .sticky-element.is-sticky {
     z-index: $zindex-sticky !important; // stylelint-disable-line declaration-no-important
 }
@@ -10336,9 +10319,6 @@ $border-width: 1px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
-        /* Enable click-through */
-        pointer-events: none; 
-
         &.disabled,
         &:disabled {
             cursor: not-allowed;
@@ -10403,13 +10383,6 @@ $border-width: 1px;
     .custom-select {
         padding: 1.2rem 2rem .4rem 1rem;
         background-position: calc(100% - 1rem) 1.2rem;
-    }
-}
-
-.input-group-prepend {
-    .custom-select {
-        padding: 0.8rem 2rem 0.8rem 1rem;
-        background-position: calc(100% - 1rem) center;
     }
 }
 
@@ -10501,7 +10474,7 @@ $border-width: 1px;
         padding: .5em 1.75rem;
         color: $white !important;
         background: $danger !important;
-        border-radius: .1rem;
+        // border-radius: .1rem;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
 
@@ -10663,7 +10636,7 @@ textarea.no-resize {
 .back-to-top {
     position: fixed;
     right: 2rem;
-    bottom: 2rem;
+    bottom: 7rem;
     z-index: $zindex-5;
     display: none;
     width: 40px;
@@ -11489,13 +11462,9 @@ category-item,
             margin-bottom: 0;
             word-wrap: break-word;
         }
-    }
 
-    .category-description {
-        word-wrap: break-word;
-
-        img {
-            max-width: 100%;
+        .category-description {
+            word-wrap: break-word;
         }
     }
 
@@ -12008,10 +11977,6 @@ html.crios {
         }
     }
 
-    .graduated-base-price {
-        font-style: normal !important; // stylelint-disable-line declaration-no-important
-    }
-
     .fade-enter-active,
     .fade-leave-active {
         @include transition(opacity .3s ease-out);
@@ -12042,7 +12007,7 @@ html.crios {
 }
 
 .availability-2 {
-    @include context-bg($success);
+    @include context-bg($warning);
 }
 
 .availability-3 {
@@ -12050,7 +12015,7 @@ html.crios {
 }
 
 .availability-4 {
-    @include context-bg($warning);
+    @include context-bg($info);
 }
 
 .availability-5 {
@@ -12853,28 +12818,6 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
         }
     }
 
-    &.widget-retain-aspect-ratio {
-        position: relative;
-
-        img {
-            position: relative;
-            top: auto;
-            left: auto;
-            -webkit-transform: none;
-                    transform: none;
-            -o-object-fit: initial;
-               object-fit: initial;
-        }
-
-        .widget-inner {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
-
 
     &.widget-primary {
         .widget-caption {
@@ -13289,7 +13232,6 @@ html.ie {
 
 .widget-legal-information {
     a {
-        display: inline-block;
         margin-right: 10px;
         color: $black;
     }
@@ -13339,21 +13281,8 @@ html.ie {
 }
 
 .widget-text {
-    &.widget {
-        margin-bottom: 0;
-    }
-
     .widget-inner {
         padding: 1rem 1.5rem;
-    }
-
-    // images from data-fields
-    img {
-        max-width: 100%;
-    }
-
-    p:last-of-type {
-        margin-bottom: 0;
     }
 }
 
@@ -13485,12 +13414,15 @@ $normalmenu-color: $primary !default;
 
 .navbar-brand {
     img {
-        max-height: 3rem;
+        // max-height: 3rem;
     }
 }
 
 .navbar-toggler {
-    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 // When mobile navigation is open
@@ -13501,7 +13433,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
 
 .normalmenu {
     a {
-        padding: 1rem;
         color: inherit;
     }
 
@@ -13518,6 +13449,7 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
         min-width: 100%;
         max-height: 80vh;
         overflow: hidden;
+        overflow-y: auto;
         word-wrap: break-word;
         visibility: hidden;
         background: $normalmenu-color;
@@ -13533,14 +13465,10 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             &:hover {
                 background: darken($normalmenu-color, 10%);
             }
-        }
-    }
 
-    .bt-more {
-        text-transform: lowercase;
-
-        &:hover {
-            background: darken($normalmenu-color, 10%);
+            a {
+                padding: 1rem;
+            }
         }
     }
 }
@@ -13583,25 +13511,29 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 column-rule: 1px solid $gray-300;
         word-wrap: break-word;
         background-color: color-yiq($megamenu-color);
-
-        li {
-            // 0.1px for rendering fix
-            padding: .1px 1.5em;
-            line-height: 170%;
-            text-align: left;
-        }
     }
 
     .collapse-inner {
         padding-bottom: 1em;
 
         li {
+            // 0.1px for rendering fix
+            padding: .1px 1.5em;
+            line-height: 170%;
+            text-align: left;
+
             &:hover a {
                 color: $megamenu-color;
             }
         }
         a {
             color: $black;
+        }
+        .bt-more {
+            a {
+                color: $gray-600;
+                text-transform: lowercase;
+            }
         }
     }
 
@@ -13616,13 +13548,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
     }
     .level3 {
         padding-left: 2.5em !important; // stylelint-disable-line declaration-no-important
-    }
-
-    .bt-more {
-        a {
-            color: $gray-600 !important; // stylelint-disable-line declaration-no-important
-            text-transform: lowercase;
-        }
     }
 }
 
@@ -13671,9 +13596,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 }
 
                 > ul {
-                    // show the overflow-y only when the menu is visible / required for safari (desktop)
-                    overflow-y: auto;
-
                     visibility: visible;
                     opacity: 1;
                 }
