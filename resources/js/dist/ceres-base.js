@@ -59289,6 +59289,8 @@ var actions = {
         uid = _ref3.uid;
     return new Promise(function (resolve, reject) {
       ApiService.get("/rest/io/live-shopping/" + liveShoppingId + "?sorting=" + sorting).done(function (liveShoppingOffer) {
+        console.log(liveShoppingOffer);
+        console.log(liveShoppingId);
         if (liveShoppingOffer.item) {
           commit("setLiveShoppingOffer", {
             uid: uid,
@@ -59297,7 +59299,7 @@ var actions = {
         } else {
           commit("setLiveShoppingOffer", {
             uid: uid,
-            liveShoppingOffer: null
+            liveShoppingOffer: liveShoppingOffer
           });
         }
 
