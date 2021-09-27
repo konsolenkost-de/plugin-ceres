@@ -8302,8 +8302,7 @@ a.close.disabled {
 }
 
 .sticky-top {
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
-    position: -webkit-sticky;
+  @supports (position: sticky) {
     position: sticky;
     top: 0;
     z-index: $zindex-sticky;
@@ -9063,6 +9062,10 @@ button:focus {
     }
 }
 
+.app {
+    overflow-x: hidden;
+}
+
 .center-xy {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9472,6 +9475,15 @@ html.ie .always-visible-search { // stylelint-disable-line selector-no-qualifyin
             margin-left: -1px;
         }
     }
+}
+
+.owl-placeholder {
+    position: absolute;
+    width: 101%;
+    height: 101%;
+    margin-left: -1px;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .single-carousel,
@@ -10274,11 +10286,10 @@ html.ie {
     p:empty {
         margin-bottom: 0; // remove margin of empty paragraph for correct height detection
     }
+}
 
-    // Needed for elements below not to overlap sticky
-    .sticky-element.is-sticky {
-        z-index: $zindex-sticky !important; // stylelint-disable-line declaration-no-important
-    }
+.sticky-element.is-sticky {
+    z-index: $zindex-sticky !important; // stylelint-disable-line declaration-no-important
 }
 
 
@@ -10424,6 +10435,9 @@ $border-width: 1px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
+        /* Enable click-through */
+        pointer-events: none; 
+
         &.disabled,
         &:disabled {
             cursor: not-allowed;
@@ -10488,6 +10502,13 @@ $border-width: 1px;
     .custom-select {
         padding: 1.2rem 2rem .4rem 1rem;
         background-position: calc(100% - 1rem) 1.2rem;
+    }
+}
+
+.input-group-prepend {
+    .custom-select {
+        padding: 0.8rem 2rem 0.8rem 1rem;
+        background-position: calc(100% - 1rem) center;
     }
 }
 
@@ -11576,9 +11597,13 @@ category-item,
             margin-bottom: 0;
             word-wrap: break-word;
         }
+    }
 
-        .category-description {
-            word-wrap: break-word;
+    .category-description {
+        word-wrap: break-word;
+
+        img {
+            max-width: 100%;
         }
     }
 
@@ -12089,6 +12114,10 @@ html.crios {
         & i {
             color: $success;
         }
+    }
+    
+    .graduated-base-price {
+        font-style: normal !important; // stylelint-disable-line declaration-no-important
     }
 
     .fade-enter-active,
@@ -12985,6 +13014,28 @@ html.ie .v-s-boxes .v-s-box.invalid { // stylelint-disable-line selector-no-qual
         }
     }
 
+    &.widget-retain-aspect-ratio {
+        position: relative;
+
+        img {
+            position: relative;
+            top: auto;
+            left: auto;
+            -webkit-transform: none;
+                    transform: none;
+            -o-object-fit: initial;
+               object-fit: initial;
+        }
+
+        .widget-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
 
     &.widget-primary {
         .widget-caption {
@@ -13411,6 +13462,7 @@ html.ie {
 
 .widget-legal-information {
     a {
+        display: inline-block;
         margin-right: 10px;
         color: $black;
     }
@@ -13472,8 +13524,21 @@ html.ie {
 }
 
 .widget-text {
+    &.widget {
+        margin-bottom: 0;
+    }
+
     .widget-inner {
         padding: 1rem 1.5rem;
+    }
+
+    // images from data-fields
+    img {
+        max-width: 100%;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -13666,6 +13731,14 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 padding: 1rem;
             }
         }
+
+        .bt-more {
+            text-transform: lowercase;
+    
+            &:hover {
+                background: darken($normalmenu-color, 10%);
+            }
+        }
     }
 }
 
@@ -13707,29 +13780,25 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 column-rule: 1px solid $gray-300;
         word-wrap: break-word;
         background-color: color-yiq($megamenu-color);
-    }
-
-    .collapse-inner {
-        padding-bottom: 1em;
 
         li {
             // 0.1px for rendering fix
             padding: .1px 1.5em;
             line-height: 170%;
             text-align: left;
+        }
+    }
 
+    .collapse-inner {
+        padding-bottom: 1em;
+
+        li {
             &:hover a {
                 color: $megamenu-color;
             }
         }
         a {
             color: $black;
-        }
-        .bt-more {
-            a {
-                color: $gray-600;
-                text-transform: lowercase;
-            }
         }
     }
 
@@ -13744,6 +13813,13 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
     }
     .level3 {
         padding-left: 2.5em !important; // stylelint-disable-line declaration-no-important
+    }
+    
+    .bt-more {
+        a {
+            color: $gray-600 !important; // stylelint-disable-line declaration-no-important
+            text-transform: lowercase;
+        }
     }
 }
 
@@ -13792,6 +13868,9 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
                 }
 
                 > ul {
+                    // show the overflow-y only when the menu is visible / required for safari (desktop)
+                    overflow-y: auto;
+
                     visibility: visible;
                     opacity: 1;
                 }
@@ -14794,27 +14873,6 @@ header .widget {
         width: 300px;
     }
 
-    .item-name {
-        display: -webkit-box; // stylelint-disable-line value-no-vendor-prefix
-        max-height: 3em;
-        margin-bottom: .25rem;
-        overflow: hidden;
-        font-weight: 700;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical; // stylelint-disable-line property-no-vendor-prefix
-
-        &::after {
-            position: absolute;
-            right: .25em;
-            bottom: 0;
-            display: inline-block;
-            height: 50%;
-            content: "…";
-            background-color: $white;
-        }
-    }
-
     .item-total-price {
         font-size: 1.5em;
         font-weight: 700;
@@ -15442,6 +15500,12 @@ header .widget {
     }
 }
 
+.confirmation-order-list {
+    .item-name {
+        max-height: none !important; // stylelint-disable-line declaration-no-important
+    }
+}
+
 /* Compatibility for IE */
 // stylelint-disable
 html.ie .confirmation-order-list .cmp-order-item {
@@ -15585,6 +15649,12 @@ html.ie .confirmation-order-list .cmp-order-item {
         .icon {
             display: inline-block;
             vertical-align: middle;
+
+            // fix image proportions for safari of the payment/shipping icons
+            > img {
+                -o-object-fit: contain;
+                   object-fit: contain;
+            }
         }
 
         .content {
