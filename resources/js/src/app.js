@@ -21,6 +21,7 @@ import ItemSearch from "./app/components/itemList/ItemSearch.vue";
 import CookieBar from "./app/components/pageDesign/CookieBar.vue";
 import Carousel from "./app/components/pageDesign/Carousel.vue";
 import Icon from "./app/components/pageDesign/Icon.vue";
+import LanguageDetection from "./app/components/pageDesign/LanguageDetection.vue";
 import MobileNavigation from "./app/components/pageDesign/MobileNavigation.vue";
 import Notifications from "./app/components/pageDesign/Notifications.vue";
 import Popper from "./app/components/pageDesign/Popper.vue";
@@ -36,33 +37,6 @@ import LazyHydrate from "vue-lazy-hydration";
 import ClientOnly from "./app/components/common/ClientOnly.vue";
 import script2 from "./app/plugins/script2";
 
-// CHECKOUT
-import "./app/components/checkout/AcceptGtcCheck";
-import "./app/components/checkout/Checkout";
-import "./app/components/checkout/ContactWishInput";
-import "./app/components/checkout/CustomerSignInput";
-import "./app/components/checkout/PaymentProviderSelect";
-import "./app/components/checkout/PlaceOrder";
-import "./app/components/checkout/ShippingPrivacyHintCheck";
-import "./app/components/checkout/ShippingProfileSelect";
-import "./app/components/checkout/SubscribeNewsletterCheck";
-
-import "./app/components/customer/AddressSelect/AddressHeader";
-import "./app/components/customer/AddressSelect/InvoiceAddressSelect";
-import "./app/components/customer/AddressSelect/ShippingAddressSelect";
-
-import "./app/components/myAccount/AccountSettings";
-import "./app/components/myAccount/BankDataSelect";
-import "./app/components/myAccount/ChangePaymentMethod";
-import "./app/components/myAccount/MyAccount";
-import "./app/components/myAccount/OrderDocuments";
-
-// // legacy non-shopbuilder components
-import "./app/components/myAccount/History";
-
-// // new shopbuilder-only component
-import "./app/components/myAccount/OrderHistoryList";
-import "./app/components/myAccount/OrderReturnHistoryList";
 
 // =========================
 // SERVICES
@@ -123,9 +97,7 @@ import "./app/filters/propertyFileUrl.filter";
 import "./app/filters/translate.filter";
 import "./app/filters/truncate.filter";
 
-import { createStore } from "./app/store/index";
-
-export function createApp(options)
+export function beforeCreate(context)
 {
     // =========================
     // COMPONENTS
@@ -136,6 +108,7 @@ export function createApp(options)
     Vue.component("add-to-basket", () => import("./app/components/basket/AddToBasket.vue"));
     Vue.component("basket-preview", () => import("./app/components/basket/BasketPreview.vue"));
     Vue.component("basket-totals", () => import("./app/components/basket/BasketTotals.vue"));
+    Vue.component("mail-changed-info", () => import("./app/components/basket/MailChangedInfo.vue"));
     Vue.component("coupon", () => import("./app/components/basket/Coupon.vue"));
     Vue.component("basket-list", () => import("./app/components/basket/list/BasketList.vue"));
     Vue.component("step-by-step-navigation", () => import("./app/components/category/StepByStepNavigation.vue"));
@@ -171,6 +144,7 @@ export function createApp(options)
     Vue.component("privacy-settings", () => import("./app/components/pageDesign/PrivacySettings.vue"));
     Vue.component("carousel", Carousel);
     Vue.component("icon", Icon);
+    Vue.component("language-detection", LanguageDetection);
     Vue.component("mobile-navigation", MobileNavigation);
     Vue.component("notifications", Notifications);
     Vue.component("popper", Popper);
@@ -201,14 +175,12 @@ export function createApp(options)
     Vue.component("lazy-hydrate", LazyHydrate);
     Vue.use(script2);
 
-    // CHECKOUT
-    Vue.component("edit-coupon-overlay", () => import("./app/components/myAccount/EditCouponOverlay.vue"));
-
     Vue.prototype.$translate = TranslationService.translate;
     Vue.prototype.$ceres = App;
+}
 
-    const store = createStore();
-
+export function createApp(options, store)
+{
     const defaultOptions = {
         store,
         ...options
@@ -216,5 +188,5 @@ export function createApp(options)
 
     const app = new Vue(defaultOptions);
 
-    return { app, store };
+    return app;
 }

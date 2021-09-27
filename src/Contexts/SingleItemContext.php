@@ -101,6 +101,41 @@ class SingleItemContext extends GlobalContext implements ContextInterface
     public $manufacturer = '';
 
     /**
+     * @var string $gtin Contains the "GTIN" Barcode for SEO attribute.
+     */
+    public $gtin = '';
+
+    /**
+     * @var string $gtin8 Contains the "GTIN8" Barcode for SEO attribute.
+     */
+    public $gtin8 = '';
+
+    /**
+     * @var string $gtin13 Contains the "GTIN13" Barcode for SEO attribute.
+     */
+    public $gtin13 = '';
+
+    /**
+     * @var string $isbn Contains the "ISBN" Barcode for SEO attribute.
+     */
+    public $isbn = '';
+
+    /**
+     * @var string $mpn Contains the "MPN" Barcode for SEO attribute.
+     */
+    public $mpn = '';
+
+    /**
+     * @var string $priceValidUntil Contains the date until the price of item is valid for SEO attribute.
+     */
+    public $priceValidUntil = '';
+
+    /**
+     * @var string $sku Contains the SKU code for SEO attribute.
+     */
+    public $sku = '';
+
+    /**
      * @inheritDoc
      */
     public function init($params)
@@ -127,19 +162,81 @@ class SingleItemContext extends GlobalContext implements ContextInterface
         if ($brandMapping == 2) {
             $this->brand = $itemData['item']['manufacturer']['externalName'];
         } elseif ($brandMapping == 3) {
-            $propertyBrand = '';
-            foreach ($itemData['variationProperties'][0]['properties'] as $property) {
-                if ($property['id'] == $brandMappingId) {
-                    $propertyBrand = $property['values']['value'];
-                    break;
-                }
-            }
-            $this->brand = $propertyBrand;
+            $this->brand = $this->getVariationProperty($itemData['variationProperties'], $brandMappingId);
         }
 
         $manufacturerMapping = $this->ceresConfig->seo->manufacturerMapping;
         if ($manufacturerMapping == 2) {
             $this->manufacturer = $itemData['item']['manufacturer']['externalName'] ?? '';
+        } elseif ($manufacturerMapping == 3) {
+            $this->manufacturer = $itemData['item']['manufacturer']['name'];
+        }
+
+        $gtinMapping = $this->ceresConfig->seo->gtinMapping;
+        $gtinMappingId = $this->ceresConfig->seo->gtinMappingId;
+        if ($gtinMapping == 2) {
+            $barcodeType = 'GTIN';
+            $this->gtin = $this->getFirstBarcode($itemData['barcodes'], $barcodeType);
+        } elseif ($gtinMapping == 3) {
+            $this->gtin = $this->getBarcodeWithId($itemData['barcodes'], $gtinMappingId);
+        }
+
+        $gtin8Mapping = $this->ceresConfig->seo->gtin8Mapping;
+        $gtin8MappingId = $this->ceresConfig->seo->gtin8MappingId;
+        if ($gtin8Mapping == 2) {
+            $barcodeType = "GTIN_8";
+            $this->gtin8 = $this->getFirstBarcode($itemData['barcodes'], $barcodeType);
+        } elseif ($gtin8Mapping == 3) {
+            $this->gtin8 = $this->getBarcodeWithId($itemData['barcodes'], $gtin8MappingId);
+        }
+
+        $gtin13Mapping = $this->ceresConfig->seo->gtin13Mapping;
+        $gtin13MappingId = $this->ceresConfig->seo->gtin13MappingId;
+        if ($gtin13Mapping == 2) {
+            $barcodeType = "GTIN_13";
+            $this->gtin13 = $this->getFirstBarcode($itemData['barcodes'], $barcodeType);
+        } elseif ($gtin13Mapping == 3) {
+            $this->gtin13 = $this->getBarcodeWithId($itemData['barcodes'], $gtin13MappingId);
+        }
+
+        $isbnMapping = $this->ceresConfig->seo->isbnMapping;
+        $isbnMappingId = $this->ceresConfig->seo->isbnMappingId;
+        if ($isbnMapping == 2) {
+            $barcodeType = "ISBN";
+            $this->isbn = $this->getFirstBarcode($itemData['barcodes'], $barcodeType);
+        } elseif ($isbnMapping == 3) {
+            $this->isbn = $this->getBarcodeWithId($itemData['barcodes'], $isbnMappingId);
+        }
+
+        $mpnMapping = $this->ceresConfig->seo->mpnMapping;
+        $mpnMappingId = $this->ceresConfig->seo->mpnMappingId;
+        if ($mpnMapping == 2) {
+            $this->mpn = $itemData['variation']['externalId'];
+        } elseif ($mpnMapping == 3) {
+            $this->mpn = $this->getVariationProperty($itemData['variationProperties'], $mpnMappingId);
+        }
+
+        $priceValidUntilMappingId = $this->ceresConfig->seo->priceValidUntilMappingId;
+        if ($priceValidUntilMappingId > 0) {
+            $orgDate = $this->getVariationProperty($itemData['variationProperties'], $priceValidUntilMappingId);
+            if(strlen($orgDate)) {
+                $orgDate = date("Y-m-d", strtotime($orgDate));
+            }
+            $this->priceValidUntil = $orgDate;
+        }
+
+        $skuMapping = $this->ceresConfig->seo->skuMapping;
+        $skuMappingId = $this->ceresConfig->seo->skuMappingId;
+        switch($skuMapping) {
+            case 1:
+                $this->sku = $itemData['variation']['id'];
+                break;
+            case 2:
+                $this->sku = $itemData['variation']['number'];
+                break;
+            case 3:
+                $this->sku = $this->getVariationProperty($itemData['variationProperties'], $skuMappingId);
+                break;
         }
 
         $this->isItemSet = $params['isItemSet'];
@@ -169,5 +266,76 @@ class SingleItemContext extends GlobalContext implements ContextInterface
 
         $this->bodyClasses[] = "item-" . $itemData['item']['id'];
         $this->bodyClasses[] = "variation-" . $itemData['variation']['id'];
+    }
+
+    /**
+     * @param $referrers
+     *
+     * @return bool
+     */
+    private function isWebshopReferrer($referrers)
+    {
+        if($referrers[0] == -1) {
+            return true;
+        }
+        foreach ($referrers as $referrer) {
+            if($referrer == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @param array $variationPropertyGroups
+     * @param $mappingPropertyId
+     *
+     * @return string
+     */
+    private function getVariationProperty($variationPropertyGroups, $mappingPropertyId) {
+        $variationProperty = '';
+        foreach ($variationPropertyGroups as $propertyGroup) {
+            foreach ($propertyGroup['properties'] as $property) {
+                if ($property['id'] == $mappingPropertyId) {
+                    $variationProperty = $property['values']['value'];
+                    break 2;
+                }
+            }
+        }
+        return $variationProperty;
+    }
+
+    /**
+     * @param $barcodes
+     * @param $barcodeType
+     *
+     * @return string
+     */
+    private function getFirstBarcode($barcodes, $barcodeType){
+        $barcode = '';
+        foreach ($barcodes as $property) {
+            if (strpos($property['type'], $barcodeType) === 0 && $this->isWebshopReferrer($property['referrers'])) {
+                $barcode = $property['code'];
+                break;
+            }
+        }
+        return $barcode;
+    }
+
+    /**
+     * @param $barcodes
+     * @param $barcodeMappingId
+     * 
+     * @return string
+     */
+    private function getBarcodeWithId($barcodes, $barcodeMappingId){
+        $barcode = '';
+        foreach ($barcodes as $property) {
+            if ($property['id'] == $barcodeMappingId) {
+                $barcode = $property['code'];
+                break;
+            }
+        }
+        return $barcode;
     }
 }

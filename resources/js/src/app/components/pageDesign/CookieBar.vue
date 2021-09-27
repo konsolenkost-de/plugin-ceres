@@ -1,5 +1,14 @@
 <template>
-    <div class="cookie-bar" :class="{ 'out': !isVisible, 'border-top bg-white': isVisible, 'fixed-bottom': !isShopBuilder || false }">
+    <!-- v-show is required to prevent CLS for ssr -->
+    <div
+        v-show="!$ceres.isSSR"   
+        class="cookie-bar"
+        :class="{
+            'out': !isVisible,
+            'border-top bg-white': isVisible,
+            'fixed-bottom': !isShopBuilder || false
+        }"
+    >
         <div class="container-max" v-if="isVisible">
             <div class="row py-3" v-show="!isExpanded" :class="classes" :style="styles">
                 <div class="col-12 col-md-8">
@@ -8,14 +17,16 @@
 
                     <div>
                         <template v-for="consentGroup in consentGroups">
-                            <span v-if="consentGroup.consents.length > 0" class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3">
+                            <span v-if="consentGroup.consents.length > 0"
+                                  class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"
+                                  :key="consentGroup.key">
                                 <input type="checkbox"
                                        class="custom-control-input"
-                                       :id="_uid + '-group-' + consentGroup.key"
+                                       :id="_cid + '-group-' + consentGroup.key"
                                        :disabled="consentGroup.necessary"
                                        :checked="isConsented(consentGroup.key) || consentGroup.necessary"
                                        @change="toggleConsent(consentGroup.key)">
-                                <label class="custom-control-label" :for="_uid + '-group-' + consentGroup.key">
+                                <label class="custom-control-label" :for="_cid + '-group-' + consentGroup.key">
                                     <template v-if="consentGroup.label.length > 0">
                                         {{ consentGroup.label }}
                                     </template>
@@ -88,8 +99,8 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { mapMutations } from "vuex";
+import { ComponentIdMixin } from "../../mixins/componentId.mixin";
 
 export default {
     props:
@@ -98,6 +109,8 @@ export default {
         classes: String,
         consentGroups: Object
     },
+
+    mixins: [ComponentIdMixin], // Experimental mixin, may be removed in the future.
 
     data()
     {
