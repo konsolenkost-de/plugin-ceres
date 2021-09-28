@@ -1,24 +1,26 @@
 <template>
     <div class="container-max" :class="{'p-0' : $ceres.isShopBuilder}"> 
-        <div class="position-relative"><div class="d-flex flex-grow-1 position-relative clearable">
+        <div class="position-relative">
+            <div class="d-flex flex-grow-1 position-relative clearable">
             <input type="text" id="query" name="q" placeholder="Wonach suchst Du?" class="search-input flex-grow-1"> 
-            <i class="clearable__clear">&times;</i>
-            <button type="button" class="search-button" onclick="buttonOnClick(this)">
-                <img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png">
-            </button>
+                <i class="clearable__clear">&times;</i>
+                <button type="button" class="search-button" onclick="buttonOnClick(this)">
+                    <img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png">
+                </button>
 
-            <template v-if="isSearchFocused">
-                <div v-show="(searchString.length >= searchMinLength && hasInitialInput) || $ceres.isShopBuilder">
-                    <slot name="autocomplete-suggestions">
-                        <div class="autocomplete-suggestions shadow bg-white w-100">
-                            <search-suggestion-item
-                                :show-images="true"
-                                suggestion-type="item">
-                            </search-suggestion-item>
-                        </div>
-                    </slot>
-                </div>
-            </template>
+                <template v-if="isSearchFocused">
+                    <div v-show="hasAutocompleteResults">
+                        <slot name="autocomplete-suggestions">
+                            <div class="autocomplete-suggestions shadow bg-white w-100 ">
+                                <search-suggestion-item
+                                    :show-images="true"
+                                    suggestion-type="item">
+                                </search-suggestion-item>
+                            </div>
+                        </slot>
+                    </div>
+                </template>
+            </div>
         </div>
     </div>
 </template>

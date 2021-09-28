@@ -20,7 +20,7 @@
                     :item-type="item.item.itemType">
             </add-to-basket>
             <div class="d-lg-none">
-                <add-to-wish-list-icon :variation-id="item.variation.id"></add-to-wish-list>
+                <add-to-wish-list-icon :variation-id="item.variation.id"></add-to-wish-list-icon>
             </div>
             <div class="thumb-image">
                 <div class="prop-1-1">
@@ -39,8 +39,8 @@
 
             <!-- STORE SPECIALS -->
             <slot name="store-special">
-                <img v-if="item.prices.specialOffer && item.prices.default.price.value > item.prices.specialOffer.unitPrice.value || item.prices.rrp && item.prices.rrp.price.value > item.prices.default.unitPrice.value" class="store-special" src="{{ plugin_path('d2gPmThemeKonsolenkost') }}/images/sale-category-item.png" />
-                <img v-else-if="item.item.condition.id === 0" class="store-special" src="{{ plugin_path('d2gPmThemeKonsolenkost') }}/images/neu-category-item.png" />
+                <img v-if="item.prices.specialOffer && item.prices.default.price.value > item.prices.specialOffer.unitPrice.value || item.prices.rrp && item.prices.rrp.price.value > item.prices.default.unitPrice.value" class="store-special" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png" />
+                <img v-else-if="item.item.condition.id === 0" class="store-special" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png" />
             </slot>
             <!-- ./STORE SPECIALS -->
 

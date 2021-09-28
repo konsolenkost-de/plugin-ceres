@@ -1,6 +1,6 @@
 <template>
     <div itemscope itemtype="http://schema.org/Thing">
-        <link rel="preload" as="image" href="{{ item.documents[0].data.images.all[0].url }}" />
+        <link rel="preload" as="image" :href="singleImages[0].url" />
         <div class="single-item-wishlist"><add-to-wish-list-icon /></div>
         <div class="single-carousel owl-carousel owl-theme owl-single-item mt-0" ref="single">
             <div v-for="(image, i) in singleImages" class="prop-1-1" :key="i">
@@ -21,7 +21,7 @@
                 </lazy-img>
                 </div>
             </div>
-        </template>
+        </div>
         <div v-if="!initialized" class="single-carousel owl-carousel owl-loaded owl-theme owl-single-item mt-0">
             <div class="prop-1-1">
                 <img

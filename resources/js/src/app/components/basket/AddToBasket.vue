@@ -15,7 +15,7 @@
                 {{ $translate("Ceres::Template.itemShowItem") }}
                 <i class="fa fa-arrow-right fa-lg d-none d-sm-block"></i>
             </div>
-            <add-to-wish-list-icon :variation-id="variationId"></add-to-wish-list>
+            <add-to-wish-list-icon :variation-id="variationId"></add-to-wish-list-icon>
         </div>
 
         <div class="d-inline" v-if="showQuantity && !useLargeScale" :class="{'d-lg-none': !$ceres.isItemView }">
