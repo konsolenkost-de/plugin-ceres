@@ -1,14 +1,14 @@
 <template>
-    <button class="btn btn-link btn-sm text-muted"
+    <a class="btn btn-link btn-sm text-muted btn-wish-list"
         @click.prevent="switchState()"
         data-toggle="tooltip"
         data-placement="top"
         ref="addToWishList"
-        v-tooltip
-        :title="tooltipText">
-        <icon icon="heart" class="default-float" :class="{'text-appearance text-danger': isVariationInWishList}" :loading="isLoading"></icon>
-        {{ $translate("Ceres::Template.singleItemWishList") }}
-    </button>
+        title="zu Wunschliste hinzufügen">
+        <img v-if="isVariationInWishList" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png" class="default-float wishlist-icon" :loading="isLoading" />
+        <img v-else src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png" class="default-float wishlist-icon" :loading="isLoading" />
+        Wunschliste
+    </a>
 </template>
 
 <script>

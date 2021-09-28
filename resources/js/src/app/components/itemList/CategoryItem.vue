@@ -1,9 +1,8 @@
 <template>
-    <article class="cmp cmp-product-thumb" :data-testing="item.variation.id">
+    <article class="cmp cmp-product-thumb" :class="'cmp-availability-'+item.variation.availability.id">
         <div :class="paddingClasses" :style="paddingInlineStyles">
 
             <add-to-basket
-                    data-testing="item-add-to-basket"
                     :variation-id="item.variation.id"
                     :is-salable="!!item.filter && item.filter.isSalable"
                     :has-children="!!item.item && item.item.salableVariationCount > 1"
@@ -20,13 +19,15 @@
                     :has-graduated-price="itemGraduatedPriceisCheapestSorting || itemGraduatedPricesalableVariationCount"
                     :item-type="item.item.itemType">
             </add-to-basket>
-
+            <div class="d-lg-none">
+                <add-to-wish-list-icon :variation-id="item.variation.id"></add-to-wish-list>
+            </div>
             <div class="thumb-image">
                 <div class="prop-1-1">
                     <slot name="item-image">
                         <category-image-carousel :image-urls-data="item.images | itemImages(imageUrlAccessor)"
-                                                :alt="item | itemName"
-                                                :title="item | itemName"
+                                                :alt-text="item.texts.name2+' '+item.texts.name3+' kaufen'"
+                                                :title-text="item.texts.name2+' '+item.texts.name3+' kaufen'"
                                                 :item-url="item | itemURL(urlWithVariationId)"
                                                 :enable-carousel="$ceres.config.item.enableImageCarousel"
                                                 :disable-carousel-on-mobile="disableCarouselOnMobile"
@@ -38,15 +39,8 @@
 
             <!-- STORE SPECIALS -->
             <slot name="store-special">
-                <item-store-special v-if="storeSpecial || item.variation.bundleType === 'bundle' || item.item.itemType === 'set'"
-                                    :store-special="storeSpecial"
-                                    :recommended-retail-price="item.prices.rrp"
-                                    :variation-retail-price="item.prices.default"
-                                    :special-offer-price="item.prices.specialOffer"
-                                    :decimal-count="decimalCount"
-                                    :bundle-type="item.variation.bundleType"
-                                    :item-type="item.item.itemType">
-                </item-store-special>
+                <img v-if="item.prices.specialOffer && item.prices.default.price.value > item.prices.specialOffer.unitPrice.value || item.prices.rrp && item.prices.rrp.price.value > item.prices.default.unitPrice.value" class="store-special" src="{{ plugin_path('d2gPmThemeKonsolenkost') }}/images/sale-category-item.png" />
+                <img v-else-if="item.item.condition.id === 0" class="store-special" src="{{ plugin_path('d2gPmThemeKonsolenkost') }}/images/neu-category-item.png" />
             </slot>
             <!-- ./STORE SPECIALS -->
 
@@ -54,40 +48,42 @@
             <slot name="item-details">
                 <div class="thumb-content">
                     <a :href="item | itemURL(urlWithVariationId)" class="thumb-title small" :class="{ 'stretched-link': $ceres.config.global.shippingCostsCategoryId == 0 }">
-                        {{ item | itemName }}<!--
-                    --><span v-for="attribute in item.groupedAttributes">{{ "Ceres::Template.itemGroupedAttribute" | translate(attribute) }}</span>
+                        <span class="category-item-name">{{ item.texts.name2 | truncate('50') }}</span>
+                        <span class="category-item-sub-name">{{ item.texts.name3 | truncate('20') }}</span>
                     </a>
-                    <div class="thumb-meta mt-2">
-                        <slot name="before-prices"></slot>
 
-                        <div class="prices">
-                            <div v-if="item.prices.rrp && item.prices.rrp.price.value > 0 && item.prices.rrp.price.value > item.prices.default.unitPrice.value" class="price-view-port">
-                                <del class="crossprice" v-if="item.prices.specialOffer">
-                                    {{ item.prices.default.unitPrice.formatted | itemCrossPrice(true) }}
-                                </del>
-                                <del class="crossprice" v-else>
-                                    {{ item.prices.rrp.unitPrice.formatted | itemCrossPrice }}
-                                </del>
-                            </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                        <div class="thumb-meta mt-2">
+                            <slot name="before-prices"></slot>
 
-                            <div class="price">
-                                <template v-if="item.item.itemType === 'set'">
-                                    {{ $translate("Ceres::Template.itemSetPrice", { price: itemSetPrice }) }} {{ $translate("Ceres::Template.itemFootnote") }}
-                                </template>
-                                <template v-else-if="itemGraduatedPriceisCheapestSorting">
-                                    {{ $translate("Ceres::Template.itemFromPrice", { price: itemPriceGraduated }) }} {{ $translate("Ceres::Template.itemFootnote") }}
-                                </template>
-                                <template v-else-if="itemGraduatedPricesalableVariationCount">
-                                    {{ $translate("Ceres::Template.itemFromPrice", { price: itemPriceGraduated }) }} {{ $translate("Ceres::Template.itemFootnote") }}
-                                </template>
-                                <template v-else>
-                                    {{ item.prices.default.unitPrice.formatted | specialOffer(item.prices, "unitPrice", "formatted") }} {{ $translate("Ceres::Template.itemFootnote") }}
-                                </template>
+                            <div class="prices">
+                                <div class="price-view-port">
+                                    <template v-if="item.prices.specialOffer && item.prices.default.price.value > item.prices.specialOffer.unitPrice.value || item.prices.rrp && item.prices.rrp.price.value > item.prices.default.unitPrice.value">
+                                        <span class="small">{{ trans('d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale') }}</span>
+                                        <del class="crossprice" v-if="item.prices.rrp.price.value > item.prices.default.unitPrice.value">
+                                            {{ item.prices.rrp.unitPrice.formatted | itemCrossPrice }}
+                                        </del>
+                                        <del class="crossprice" v-else>
+                                            {{ item.prices.default.unitPrice.formatted | itemCrossPrice }}
+                                        </del>
+                                    </template>
+                                </div>
+
+                                <div class="price">
+                                    <template v-if="item.item.itemType === 'set'">
+                                        {{ $translate("Ceres::Template.itemSetPrice", { price: itemSetPrice }) }}
+                                    </template>
+                                    <template v-else-if="!!item.item && item.item.salableVariationCount > 1 && $ceres.isCheapestSorting" >
+                                        {{ $translate("Ceres::Template.categoryItemFromPrice", { price: itemPrice }) }}
+                                    </template>
+                                    <template v-else>
+                                        <span class="small">{{ trans('d2gPmThemeKonsolenkost::Theme.categoryItemOnly') }}</span> {{ item.prices.default.unitPrice.formatted | specialOffer(item.prices, "unitPrice", "formatted") }}
+                                    </template>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <slot name="after-prices"></slot>
+                        <slot name="after-prices"></slot>
 
                     <div class="category-lowest-price small" v-if="item.prices.default.lowestPrice.value && hasCrossPrice">
                         <span v-html="$translate('Ceres::Template.itemLowestPrice', {'price': item.prices.default.lowestPrice.formatted})"></span>
@@ -97,6 +93,7 @@
                         <span>{{ item.unit.content }}</span>
                         <span>&nbsp;{{ item.unit.names.name }}</span>
                         <span v-if="item.variation.mayShowUnitPrice">&nbsp;| {{ basePrice }}</span>
+                        <span class="availability" :class="'availability-'+item.variation.availability.id"></span>
                     </div>
 
                     <add-to-basket
