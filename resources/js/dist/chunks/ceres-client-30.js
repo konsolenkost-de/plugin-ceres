@@ -59,6 +59,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -169,8 +170,12 @@ var render = function() {
     "a",
     {
       ref: "addToWishList",
-      staticClass: "btn btn-link btn-sm text-muted",
-      attrs: { "data-toggle": "tooltip", "data-placement": "top", title: "" },
+      staticClass: "btn btn-link btn-sm text-muted btn-wish-list",
+      attrs: {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "zu Wunschliste hinzufügen"
+      },
       on: {
         click: function($event) {
           $event.preventDefault()
@@ -179,18 +184,25 @@ var render = function() {
       }
     },
     [
-      _c("icon", {
-        staticClass: "default-float",
-        class: { "text-appearance text-danger": _vm.isVariationInWishList },
-        attrs: { icon: "heart", loading: _vm.isLoading }
-      }),
-      _vm._v(
-        "\n    " +
-          _vm._s(_vm.$translate("Ceres::Template.singleItemWishList")) +
-          "\n"
-      )
-    ],
-    1
+      _vm.isVariationInWishList
+        ? _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png",
+              loading: _vm.isLoading
+            }
+          })
+        : _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png",
+              loading: _vm.isLoading
+            }
+          }),
+      _vm._v("\n    Wunschliste\n")
+    ]
   )
 }
 var staticRenderFns = []

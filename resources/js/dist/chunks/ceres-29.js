@@ -67,6 +67,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -126,7 +127,9 @@ var render = function() {
           _c(
             "div",
             [
-              _c("h1", { staticClass: "login-view-title mb-5" }, [
+              _c("br"),
+              _vm._v(" "),
+              _c("h1", { staticClass: "login-view-title kk-heading" }, [
                 _vm._v(_vm._s(_vm.$translate("Ceres::Template.login")))
               ]),
               _vm._v(" "),
@@ -179,11 +182,11 @@ var render = function() {
                       attrs: { "aria-hidden": "true" }
                     }),
                     _vm._v(
-                      "\n                        " +
+                      "\n\t\t\t\t\t\t\t" +
                         _vm._s(
                           _vm.$translate("Ceres::Template.loginRegister")
                         ) +
-                        "\n                    "
+                        "\n\t\t\t\t\t\t"
                     )
                   ]
                 )
@@ -208,11 +211,11 @@ var render = function() {
                         attrs: { "aria-hidden": "true" }
                       }),
                       _vm._v(
-                        "\n                        " +
+                        "\n\t\t\t\t\t\t\t" +
                           _vm._s(
                             _vm.$translate("Ceres::Template.loginOrderAsGuest")
                           ) +
-                          "\n                    "
+                          "\n\t\t\t\t\t\t"
                       )
                     ]
                   )
@@ -249,7 +252,6 @@ var render = function() {
                   staticClass: "close",
                   attrs: {
                     type: "button",
-                    "data-testing": "guest-login-modal",
                     "data-dismiss": "modal",
                     "aria-hidden": "true"
                   }

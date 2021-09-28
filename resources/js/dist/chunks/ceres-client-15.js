@@ -63,7 +63,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -181,7 +180,6 @@ var render = function() {
   return _c(
     "form",
     {
-      ref: "newsletterForm",
       attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
       on: {
         submit: function($event) {
@@ -264,18 +262,28 @@ var render = function() {
             ])
           : _vm._e(),
         _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "newsletter-input" }, [
           _c("div", { staticClass: "input-group" }, [
             _c(
               "div",
-              { staticClass: "input-unit", attrs: { "data-validate": "mail" } },
+              {
+                staticClass: "input-unit border-0",
+                attrs: { "data-validate": "mail" }
+              },
               [
-                _c("label", { attrs: { for: "email-input-id_" + _vm._uid } }, [
-                  _vm._v(
-                    _vm._s(_vm.$translate("Ceres::Template.newsletterEmail")) +
-                      " *"
-                  )
-                ]),
+                _vm.showNameInputs
+                  ? _c(
+                      "label",
+                      { attrs: { for: "email-input-id_" + _vm._uid } },
+                      [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.newsletterEmail")
+                          ) + " *"
+                        )
+                      ]
+                    )
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -286,16 +294,15 @@ var render = function() {
                       expression: "email"
                     }
                   ],
+                  staticClass: "newsletter-input",
                   attrs: {
                     type: "email",
                     autocomplete: "email",
-                    id: "email-input-id_" + _vm._uid
+                    id: "email-input-id_" + _vm._uid,
+                    placeholder: "Deine E-Mail"
                   },
                   domProps: { value: _vm.email },
                   on: {
-                    focus: function($event) {
-                      _vm.loadRecaptcha = true
-                    },
                     input: function($event) {
                       if ($event.target.composing) {
                         return
@@ -404,36 +411,30 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-block btn-primary btn-appearance",
+                staticClass:
+                  "btn btn-block btn-primary btn-appearance newsletter-button",
                 class: _vm.buttonSizeClass,
                 attrs: { type: "button", disabled: _vm.isDisabled },
                 on: { click: _vm.validateData }
               },
               [
-                _c("icon", {
-                  attrs: { icon: "paper-plane-o", loading: _vm.isDisabled }
+                _c("img", {
+                  attrs: {
+                    width: "13",
+                    height: "13",
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"
+                  }
                 }),
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(
-                      _vm.$translate(
-                        "Ceres::Template.newsletterSubscribeButtonLabel"
-                      )
-                    ) +
-                    "\n                "
-                )
-              ],
-              1
+                _c("span", { staticClass: "newsletter-button-text" }, [
+                  _vm._v("  Anmelden")
+                ])
+              ]
             )
           ])
         ])
-      ]),
-      _vm._v(" "),
-      !!_vm.$ceres.config.global.googleRecaptchaApiKey && _vm.loadRecaptcha
-        ? _c("recaptcha")
-        : _vm._e()
-    ],
-    1
+      ])
+    ]
   )
 }
 var staticRenderFns = []
