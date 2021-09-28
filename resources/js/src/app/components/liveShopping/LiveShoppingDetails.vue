@@ -66,7 +66,7 @@
                         <div class="progress-bar-done" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" v-else></div>
                     </div>
                     <div class="live-shopping-progress-heading">
-                        <span>{{ $translate("Ceres::Template.liveShoppingRemainingStock", {"quantitySoldPercentage": quantitySoldPercentage }}) }</span>
+                        <span>{{ $translate("Ceres::Template.liveShoppingRemainingStock", {"quantitySoldPercentage": quantitySoldPercentage }) }}</span>
                     </div>
                 </div>
             </template>
