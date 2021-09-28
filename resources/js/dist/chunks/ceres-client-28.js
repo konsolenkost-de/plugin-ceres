@@ -66,11 +66,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 
 
 
 
 
+=======
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> ed1465193 (chore: compile resources)
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "forgot-password-modal",
@@ -178,6 +188,7 @@ var render = function() {
           attrs: { id: "resetPwd", tabindex: "-1", role: "dialog" }
         },
         [
+<<<<<<< HEAD
           _c("div", { staticClass: "modal-dialog" }, [
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
@@ -189,6 +200,54 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
+=======
+          _c(
+            "div",
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("h1", { staticClass: "login-view-title kk-heading" }, [
+                _vm._v(_vm._s(_vm.$translate("Ceres::Template.login")))
+              ]),
+              _vm._v(" "),
+              _c("login", {
+                attrs: {
+                  backlink: _vm.sanitizedBacklink,
+                  "has-to-forward": true
+                },
+                scopedSlots: _vm._u(
+                  [
+                    {
+                      key: "extend-overlay-buttons",
+                      fn: function() {
+                        return [_vm._t("extend-overlay-buttons")]
+                      },
+                      proxy: true
+                    }
+                  ],
+                  null,
+                  true
+                )
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-sm-{% if 'my-account' not in backlink %}6{% else %}12{% endif %}",
+                class: {
+                  "col-sm-6": !_vm.myAccountInBacklink,
+                  "col-sm-12": _vm.myAccountInBacklink
+                }
+              },
+              [
+>>>>>>> ed1465193 (chore: compile resources)
                 _c(
                   "button",
                   {
@@ -209,6 +268,7 @@ var render = function() {
                   "div",
                   { staticClass: "alert alert-info w-100 pwd-forgot-info" },
                   [
+<<<<<<< HEAD
                     _c("span", { staticClass: "info-badge" }, [
                       _vm._v(
                         _vm._s(
@@ -218,6 +278,19 @@ var render = function() {
                         )
                       )
                     ])
+=======
+                    _c("i", {
+                      staticClass: "fa fa-user-plus",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(
+                      "\n\t\t\t\t\t\t\t" +
+                        _vm._s(
+                          _vm.$translate("Ceres::Template.loginRegister")
+                        ) +
+                        "\n\t\t\t\t\t\t"
+                    )
+>>>>>>> ed1465193 (chore: compile resources)
                   ]
                 ),
                 _vm._v(" "),
@@ -296,17 +369,26 @@ var render = function() {
                     _vm._v(" "),
                     _c("span", { staticClass: "error-msg" }, [
                       _vm._v(
+<<<<<<< HEAD
                         _vm._s(
                           _vm.$translate(
                             "Ceres::Template.loginEnterConfirmEmail"
                           )
                         )
+=======
+                        "\n\t\t\t\t\t\t\t" +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.loginOrderAsGuest")
+                          ) +
+                          "\n\t\t\t\t\t\t"
+>>>>>>> ed1465193 (chore: compile resources)
                       )
                     ])
                   ])
                 ])
               ]),
               _vm._v(" "),
+<<<<<<< HEAD
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
                   "div",
@@ -378,6 +460,35 @@ var render = function() {
                 )
               ])
             ])
+=======
+              _c(
+                "button",
+                {
+                  staticClass: "close",
+                  attrs: {
+                    type: "button",
+                    "data-dismiss": "modal",
+                    "aria-hidden": "true"
+                  }
+                },
+                [_vm._v("×")]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "modal-body" },
+              [
+                _c("guest-login", {
+                  attrs: {
+                    backlink: _vm.sanitizedBacklink,
+                    "initial-email": _vm.guestEmail
+                  }
+                })
+              ],
+              1
+            )
+>>>>>>> ed1465193 (chore: compile resources)
           ])
         ]
       )

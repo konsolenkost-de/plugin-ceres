@@ -30,6 +30,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -288,7 +293,98 @@ function memoizeCapped(func) {
   return result;
 }
 
+<<<<<<< HEAD
 module.exports = memoizeCapped;
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> ed1465193 (chore: compile resources)
 
 
 /***/ }),
@@ -402,6 +498,7 @@ function get(object, path, defaultValue) {
   return result === undefined ? defaultValue : result;
 }
 
+<<<<<<< HEAD
 module.exports = get;
 
 
@@ -481,6 +578,76 @@ function memoize(func, resolver) {
   };
   memoized.cache = new (memoize.Cache || MapCache);
   return memoized;
+=======
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "transition-group",
+        { attrs: { name: "list-transition", tag: "div" } },
+        _vm._l(_vm.wishListItems, function(wishListItem) {
+          return _c("wish-list-item", {
+            key: wishListItem.id,
+            attrs: {
+              "wish-list-item-raw": wishListItem,
+              "item-details-data": _vm.itemDetailsData
+            }
+          })
+        }),
+        1
+      ),
+      _vm._v(" "),
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("p", { staticClass: "h4 text-muted text-center my-5" }, [
+            _vm._v("Du hast noch keine Artikel in deiner Wunschliste.")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.isLoading ? _c("loading-animation") : _vm._e(),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("last-seen-item-list", {
+            staticClass: "bordered-item-list",
+            attrs: { "items-per-page": 4, "max-items": 4 },
+            scopedSlots: _vm._u(
+              [
+                {
+                  key: "heading",
+                  fn: function() {
+                    return [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "widget-caption bg-appearance widget-item-list-caption mb-3"
+                        },
+                        [_c("div", [_c("h2", [_vm._v("Zuletzt angesehen")])])]
+                      )
+                    ]
+                  },
+                  proxy: true
+                }
+              ],
+              null,
+              false,
+              4103951690
+            )
+          })
+        : _vm._e()
+    ],
+    1
+  )
+>>>>>>> ed1465193 (chore: compile resources)
 }
 
 // Expose `MapCache`.
@@ -506,6 +673,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c(
     "table",
     { staticClass: "table table-striped table-hover table-sm" },
@@ -523,6 +691,61 @@ var render = function() {
                         class: _vm.paddingClasses,
                         style: _vm.paddingInlineStyles
                       },
+=======
+  return _c("div", { staticClass: "basket-list-item py-3" }, [
+    _c(
+      "div",
+      { staticClass: "basket-item component-loading with-icon d-flex" },
+      [
+        _c("div", { staticClass: "image-container" }, [
+          _vm.image
+            ? _c("img", {
+                staticClass: "d-block mw-100 mh-100",
+                attrs: {
+                  src: _vm.image,
+                  title: _vm._f("itemName")(_vm.wishListItem)
+                }
+              })
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "meta-container-wrapper" }, [
+          _c("div", { staticClass: "meta-container-wrapper-inner mb-2" }, [
+            _c("div", { staticClass: "meta-container" }, [
+              _c("div", { staticClass: "position-relative w-100" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "item-name text-appearance font-weight-bold text-break",
+                    staticStyle: { color: "#212529" },
+                    attrs: { href: _vm._f("itemURL")(_vm.wishListItem) }
+                  },
+                  [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
+                        "\n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "item-base-price" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(_vm._f("currency")(_vm.unitPrice)) +
+                      "\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                !(
+                  _vm.wishListItem.unit.unitOfMeasurement === "C62" &&
+                  _vm.wishListItem.unit.content === 1
+                ) && _vm.wishListItem.variation.mayShowUnitPrice
+                  ? _c(
+                      "div",
+                      { staticClass: "item-small-prices text-muted small" },
+>>>>>>> ed1465193 (chore: compile resources)
                       [
                         _vm._v(
                           "\n                " +
@@ -530,6 +753,7 @@ var render = function() {
                             "\n            "
                         )
                       ]
+<<<<<<< HEAD
                     ),
                     _vm._v(" "),
                     _c(
@@ -555,6 +779,172 @@ var render = function() {
       )
     ]
   )
+=======
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "item-small-prices small" },
+                  _vm._l(_vm.wishListItem.attributes, function(
+                    attribute,
+                    index
+                  ) {
+                    return _c("div", { key: index }, [
+                      _c("strong", [
+                        _vm._v(_vm._s(attribute.attribute.names.name) + ": ")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(attribute.value.names.name))])
+                    ])
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "item-small-prices text-muted small" },
+                  [
+                    _vm._l(_vm.wishListItem.variationProperties, function(
+                      propertyGroup
+                    ) {
+                      return _vm._l(propertyGroup.properties, function(
+                        property,
+                        index
+                      ) {
+                        return _c("div", { key: index }, [
+                          propertyGroup.name
+                            ? _c("strong", [
+                                _vm._v(_vm._s(propertyGroup.name) + ": ")
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(property.names.name))]),
+                          _vm._v(" "),
+                          property.cast === "file"
+                            ? _c("span", [
+                                _c("a", {
+                                  attrs: {
+                                    href: _vm._f("propertyFileUrl")(
+                                      property.values.value
+                                    ),
+                                    target: "_blank"
+                                  },
+                                  domProps: {
+                                    innerHTML: _vm._s(property.values.value)
+                                  }
+                                })
+                              ])
+                            : _c("span", {
+                                domProps: {
+                                  innerHTML: _vm._s(property.values.value)
+                                }
+                              })
+                        ])
+                      })
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex kk-wishlist-details-box" }, [
+            _c("div", { staticClass: "d-flex" }, [
+              _c("div", {
+                staticClass:
+                  "availability kk-wishlist-availability-icon mt-auto mb-auto",
+                class:
+                  "availability-" + _vm.wishListItem.variation.availability.id
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ml-2 mt-auto mb-auto" }, [
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(_vm.wishListItem.variation.availability.names.name) +
+                    "\n                    "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex kk-wishlist-delete-and-basket" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "btn btn-sm text-danger mt-auto mb-auto kk-border flex-style",
+                  staticStyle: { width: "33px", height: "33px" },
+                  on: {
+                    click: function($event) {
+                      return _vm.removeItem()
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "waiting-animation-infinite",
+                        rawName: "v-waiting-animation-infinite"
+                      }
+                    ],
+                    staticClass: "fa fa-trash-o default-float",
+                    staticStyle: { "font-size": "1.2rem", color: "grey" },
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                [
+                  _c("add-to-basket", {
+                    attrs: {
+                      "variation-id": _vm.wishListItem.variation.id,
+                      "is-salable":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.isSalable,
+                      "has-children":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.hasActiveChildren,
+                      "interval-quantity":
+                        _vm.wishListItem.variation.intervalOrderQuantity || 1,
+                      "minimum-quantity":
+                        _vm.wishListItem.variation.minimumOrderQuantity,
+                      "maximum-quantity":
+                        !!_vm.wishListItem.variation.maximumOrderQuantity &&
+                        _vm.wishListItem.variation.maximumOrderQuantity > 0
+                          ? _vm.wishListItem.variation.maximumOrderQuantity
+                          : null,
+                      "order-properties": _vm.wishListItem.properties.filter(
+                        function(prop) {
+                          return prop.property.isOderProperty
+                        }
+                      ),
+                      "has-order-properties":
+                        _vm.wishListItem.hasOrderProperties,
+                      "use-large-scale": false,
+                      "show-quantity": false,
+                      "item-url": _vm._f("itemURL")(_vm.wishListItem),
+                      "has-price": _vm._f("hasItemDefaultPrice")(
+                        _vm.wishListItem
+                      ),
+                      "is-wish-list": true,
+                      "prop-quantity": _vm.quantity,
+                      "item-type": _vm.wishListItem.item.itemType
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+>>>>>>> ed1465193 (chore: compile resources)
 }
 var staticRenderFns = []
 render._withStripped = true

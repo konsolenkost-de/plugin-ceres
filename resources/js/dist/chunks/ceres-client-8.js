@@ -245,8 +245,73 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 
 
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> ed1465193 (chore: compile resources)
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "item-filter-list",
@@ -385,8 +450,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -444,6 +507,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _vm.facet.name
     ? _c(
         "div",
@@ -584,6 +648,342 @@ var render = function() {
                 " " +
                   _vm._s(_vm.$translate("Ceres::Template.itemFilter")) +
                   "\n    "
+=======
+  return _c(
+    "div",
+    { staticClass: "live-shopping-details" },
+    [
+      _c("div", { staticClass: "h3 live-shopping-item-name" }, [
+        _c(
+          "a",
+          { attrs: { href: _vm._f("itemURL")(_vm.liveShoppingData.item) } },
+          [
+            _c("div", { staticClass: "two-lines-of-text" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(
+                    (
+                      _vm.liveShoppingData.item.texts.name1.match(
+                        /[^\ - ]+ -/
+                      ) || [""]
+                    ).pop()
+                  ) +
+                  " \n                " +
+                  _vm._s(_vm.liveShoppingData.item.texts.name2) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "live-shopping-item-name-condition two-lines-of-text"
+              },
+              [_vm._v(_vm._s(_vm.liveShoppingData.item.texts.name3))]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _vm.hasStarted
+        ? _c("div", { staticClass: "live-shopping-prices" }, [
+            _c("div", { staticClass: "live-shopping-prices-inner" }, [
+              _c("div", { staticClass: "live-shopping-prices-container" }, [
+                _vm.displaySettings.showCrossPrice &&
+                _vm.prices.rrp &&
+                _vm.prices.rrp.unitPrice.value > 0
+                  ? _c("span", [
+                      _vm.liveShoppingData.item.prices.default.unitPrice.value >
+                      _vm.liveShoppingData.item.prices.rrp.unitPrice.value
+                        ? _c("span", [
+                            _vm._v("\n                        statt "),
+                            _c("del", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm.liveShoppingData.item.prices.default
+                                    .unitPrice.formatted
+                                )
+                              )
+                            ])
+                          ])
+                        : _c("span", [
+                            _vm._v("\n                        statt "),
+                            _c("del", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm.liveShoppingData.item.prices.rrp.unitPrice
+                                    .formatted
+                                )
+                              )
+                            ])
+                          ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.displaySettings.showCrossPrice &&
+                _vm.prices.rrp &&
+                _vm.prices.rrp.unitPrice.value === 0
+                  ? _c("span", [_c("span", [_vm._v(" ")])])
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("div", { staticClass: "live-shopping-price" }, [
+                  _c("strong", [
+                    _c("span", { staticClass: "d-none d-lg-inline" }, [
+                      _vm._v("heute ")
+                    ]),
+                    _vm._v(
+                      "nur " + _vm._s(_vm.prices.price.unitPrice.formatted)
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "live-shopping-prices-additional-info" },
+              [
+                !(
+                  _vm.liveShoppingData.item.unit.unitOfMeasurement === "C62" &&
+                  _vm.liveShoppingData.item.unit.content === 1
+                )
+                  ? _c("div", [
+                      _c("span", [
+                        _vm._v(_vm._s(_vm.liveShoppingData.item.unit.content))
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [
+                        _vm._v(
+                          _vm._s(_vm.liveShoppingData.item.unit.names.name)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm.liveShoppingData.item.variation.mayShowUnitPrice
+                        ? _c("span", [
+                            _vm._v("| " + _vm._s(_vm.prices.price.basePrice))
+                          ])
+                        : _vm._e()
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.showNetPrices
+                  ? [
+                      _vm._v(
+                        _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
+                      )
+                    ]
+                  : [
+                      _vm._v(
+                        _vm._s(_vm.$translate("Ceres::Template.itemInclVAT"))
+                      )
+                    ],
+                _vm._v(
+                  " " +
+                    _vm._s(_vm.$translate("Ceres::Template.itemExclusive")) +
+                    "\n            "
+                ),
+                _vm.$ceres.config.global.shippingCostsCategoryId > 0
+                  ? _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "https://www.konsolenkost.de/versand",
+                          title: _vm.$translate(
+                            "Ceres::Template.itemShippingCosts"
+                          )
+                        }
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.itemShippingCosts")
+                          )
+                        )
+                      ]
+                    )
+                  : _c(
+                      "a",
+                      {
+                        attrs: {
+                          title: _vm.$translate(
+                            "Ceres::Template.itemShippingCosts"
+                          )
+                        }
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.itemShippingCosts")
+                          )
+                        )
+                      ]
+                    )
+              ],
+              2
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.hasClosed
+        ? _c("div", [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-primary d-block d-lg-inline-block my-lg-3",
+                attrs: { href: _vm._f("itemURL")(_vm.liveShoppingData.item) }
+              },
+              [
+                _vm._v("\n            Will ich haben "),
+                _c("span", { staticClass: "d-none d-lg-inline" }, [_vm._v(">")])
+              ]
+            )
+          ])
+        : _c("div", [_vm._m(0)]),
+      _vm._v(" "),
+      _vm._t("after-item-name"),
+      _vm._v(" "),
+      _vm.displaySettings.showTimer || _vm.displaySettings.showStock
+        ? _c(
+            "div",
+            { staticClass: "live-shopping-countdown" },
+            [
+              _vm.hasStarted && !_vm.hasClosed
+                ? [
+                    _vm.displaySettings.showStock
+                      ? _c("div", { staticClass: "live-shopping-progress" }, [
+                          _vm.displaySettings.showStockProgress
+                            ? _c("div", { staticClass: "progress" }, [
+                                _vm.liveShoppingData.liveShopping.quantitySold <
+                                _vm.liveShoppingData.liveShopping.quantityMax
+                                  ? _c("div", {
+                                      staticClass: "progress-bar",
+                                      class:
+                                        "progress-" +
+                                        Math.round(
+                                          _vm.quantitySoldPercentage / 10
+                                        ) *
+                                          10,
+                                      style:
+                                        "width:" +
+                                        _vm.quantitySoldPercentage +
+                                        "%",
+                                      attrs: {
+                                        role: "progressbar",
+                                        "aria-valuenow": "25",
+                                        "aria-valuemin": "0",
+                                        "aria-valuemax": "100"
+                                      }
+                                    })
+                                  : _c("div", {
+                                      staticClass: "progress-bar-done",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        role: "progressbar",
+                                        "aria-valuenow": "25",
+                                        "aria-valuemin": "0",
+                                        "aria-valuemax": "100"
+                                      }
+                                    })
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "live-shopping-progress-heading" },
+                            [
+                              _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$translate(
+                                      "Ceres::Template.liveShoppingRemainingStock",
+                                      {
+                                        quantitySoldPercentage:
+                                          _vm.quantitySoldPercentage
+                                      }
+                                    )
+                                  )
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      : _vm._e()
+                  ]
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.hasClosed
+                ? [
+                    _vm.displaySettings.showStock
+                      ? _c("div", { staticClass: "live-shopping-progress" }, [
+                          _vm.displaySettings.showStockProgress
+                            ? _c("div", { staticClass: "progress" }, [
+                                _vm.liveShoppingData.liveShopping.quantitySold <
+                                _vm.liveShoppingData.liveShopping.quantityMax
+                                  ? _c("div", {
+                                      staticClass: "progress-10",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        role: "progressbar",
+                                        "aria-valuemin": "0",
+                                        "aria-valuemax": "100"
+                                      }
+                                    })
+                                  : _c("div", {
+                                      staticClass: "progress-bar-done",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        role: "progressbar",
+                                        "aria-valuenow": "25",
+                                        "aria-valuemin": "0",
+                                        "aria-valuemax": "100"
+                                      }
+                                    })
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm._m(1)
+                        ])
+                      : _vm._e()
+                  ]
+                : _vm._e()
+            ],
+            2
+          )
+        : _c("div", { staticClass: "thumb-content" }, [
+            _c("div", [
+              _c("div", { staticClass: "prices" }, [
+                _c("div", { staticClass: "price-view-port" }, [
+                  _vm.displaySettings.showCrossPrice &&
+                  _vm.prices.rrp.price.value > 0
+                    ? _c("del", { staticClass: "crossprice" }, [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(
+                              _vm._f("itemCrossPrice")(
+                                _vm.prices.rrp.price.formatted
+                              )
+                            ) +
+                            "\n                    "
+                        )
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "price" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.prices.price.price.formatted) +
+                      " *\n                "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              !(
+                _vm.liveShoppingData.item.unit.unitOfMeasurement === "C62" &&
+                _vm.liveShoppingData.item.unit.content === 1
+>>>>>>> ed1465193 (chore: compile resources)
               )
             ]
           ),
@@ -608,6 +1008,7 @@ var render = function() {
                   class: { "is-loading": _vm.isLoading }
                 },
                 [
+<<<<<<< HEAD
                   _c(
                     "div",
                     { staticClass: "card-columns" },
@@ -624,6 +1025,47 @@ var render = function() {
                     _c("div", { staticClass: "col-12 text-right" }, [
                       _c(
                         "button",
+=======
+                  _vm.showNetPrices
+                    ? [
+                        _vm._v(
+                          _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
+                        )
+                      ]
+                    : [
+                        _vm._v(
+                          _vm._s(_vm.$translate("Ceres::Template.itemInclVAT"))
+                        )
+                      ],
+                  _vm._v(
+                    " " +
+                      _vm._s(_vm.$translate("Ceres::Template.itemExclusive")) +
+                      "\n                "
+                  ),
+                  _vm.$ceres.config.global.shippingCostsCategoryId > 0
+                    ? _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.konsolenkost.de/versand",
+                            title: _vm.$translate(
+                              "Ceres::Template.itemShippingCosts"
+                            )
+                          }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$translate(
+                                "Ceres::Template.itemShippingCosts"
+                              )
+                            )
+                          )
+                        ]
+                      )
+                    : _c(
+                        "a",
+>>>>>>> ed1465193 (chore: compile resources)
                         {
                           staticClass: "btn btn-primary btn-medium-large",
                           attrs: {
@@ -657,7 +1099,32 @@ var render = function() {
         ]
       )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass:
+          "btn btn-primary btn-danger text-white d-block d-lg-inline-block my-lg-3"
+      },
+      [
+        _vm._v("\n           AUSVERKAUFT* "),
+        _c("span", { staticClass: "d-none d-lg-inline" })
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "live-shopping-progress-heading" }, [
+      _c("span", [_vm._v("*Aktionsbestand ausverkauft")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -679,6 +1146,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c("div", { staticClass: "item-filter-price" }, [
     _c("div", { staticClass: "input-group" }, [
       _c("div", { staticClass: "input-group-prepend" }, [
@@ -777,6 +1245,179 @@ var render = function() {
       1
     )
   ])
+=======
+  return _c(
+    "div",
+    [
+      !!_vm.currentOffer
+        ? _c("category-item", {
+            attrs: {
+              "item-data": _vm.currentOffer.item,
+              "decimal-count": _vm.$ceres.config.item.storeSpecial,
+              "image-url-accessor": "urlMiddle",
+              "padding-classes": _vm.paddingClasses,
+              "padding-inline-styles": _vm.paddingInlineStyles
+            },
+            scopedSlots: _vm._u(
+              [
+                {
+                  key: "store-special",
+                  fn: function() {
+                    return [
+                      _c("item-store-special", {
+                        attrs: {
+                          "store-special": _vm.storeSpecial,
+                          "recommended-retail-price": _vm.prices.rrp,
+                          "variation-retail-price": _vm.prices.price,
+                          "decimal-count": _vm.$ceres.config.item.storeSpecial
+                        }
+                      })
+                    ]
+                  },
+                  proxy: true
+                },
+                {
+                  key: "item-image",
+                  fn: function() {
+                    return [
+                      !!_vm.displaySettings.customImagePath
+                        ? _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: _vm._f("itemURL")(_vm.currentOffer.item)
+                              }
+                            },
+                            [
+                              _c("lazy-img", {
+                                attrs: {
+                                  "image-url":
+                                    _vm.displaySettings.customImagePath,
+                                  alt: _vm._f("itemName")(
+                                    _vm.currentOffer.item
+                                  ),
+                                  title: _vm._f("itemName")(
+                                    _vm.currentOffer.item
+                                  )
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : _vm._e()
+                    ]
+                  },
+                  proxy: true
+                },
+                !!_vm.currentOffer
+                  ? {
+                      key: "item-details",
+                      fn: function() {
+                        return [
+                          _c("live-shopping-details", {
+                            attrs: {
+                              "live-shopping-data": _vm.currentOffer,
+                              "display-settings": _vm.displaySettings,
+                              prices: _vm.prices,
+                              "is-active-by-stock": _vm.isActiveByStock,
+                              "show-net-prices": _vm.showNetPrices
+                            },
+                            on: {
+                              "reload-offer": function($event) {
+                                return _vm.reloadOffer()
+                              }
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "after-item-name",
+                                  fn: function() {
+                                    return [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "live-shopping-add-to-basket"
+                                        },
+                                        [
+                                          _c("add-to-basket", {
+                                            attrs: {
+                                              "variation-id":
+                                                _vm.currentOffer.item.variation
+                                                  .id,
+                                              "is-salable":
+                                                !!_vm.currentOffer.item
+                                                  .filter &&
+                                                _vm.currentOffer.item.filter
+                                                  .isSalable,
+                                              "has-children":
+                                                !!_vm.currentOffer.item
+                                                  .filter &&
+                                                _vm.currentOffer.item.filter
+                                                  .hasActiveChildren,
+                                              "interval-quantity":
+                                                _vm.currentOffer.item.variation
+                                                  .intervalOrderQuantity || 1,
+                                              "minimum-quantity":
+                                                _vm.currentOffer.item.variation
+                                                  .minimumOrderQuantity,
+                                              "maximum-quantity":
+                                                !!_vm.currentOffer.item
+                                                  .variation
+                                                  .maximumOrderQuantity &&
+                                                _vm.currentOffer.item.variation
+                                                  .maximumOrderQuantity > 0
+                                                  ? _vm.currentOffer.item
+                                                      .variation
+                                                      .maximumOrderQuantity
+                                                  : null,
+                                              "order-properties": _vm.currentOffer.item.properties.filter(
+                                                function(prop) {
+                                                  return prop.property
+                                                    .isOderProperty
+                                                }
+                                              ),
+                                              "has-order-properties":
+                                                _vm.currentOffer.item
+                                                  .hasOrderProperties,
+                                              "use-large-scale": false,
+                                              "show-quantity": false,
+                                              "item-url": _vm._f("itemURL")(
+                                                _vm.currentOffer.item
+                                              ),
+                                              "item-type":
+                                                _vm.currentOffer.item.item
+                                                  .itemType
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  },
+                                  proxy: true
+                                }
+                              ],
+                              null,
+                              false,
+                              741665433
+                            )
+                          })
+                        ]
+                      },
+                      proxy: true
+                    }
+                  : null
+              ],
+              null,
+              true
+            )
+          })
+        : _c("div", [_vm._t("default")], 2)
+    ],
+    1
+  )
+>>>>>>> ed1465193 (chore: compile resources)
 }
 var staticRenderFns = []
 render._withStripped = true

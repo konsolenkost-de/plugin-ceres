@@ -77,9 +77,95 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 
 
 
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> ed1465193 (chore: compile resources)
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -110,6 +196,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+<<<<<<< HEAD
     privacyPolicyText: function privacyPolicyText() {
       var link = "<a href=\"" + App.urls.privacyPolicy + "\" target=\"_blank\"><span class=\"text-primary text-appearance\">" + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
         "hyphen": "&shy;"
@@ -117,6 +204,31 @@ __webpack_require__.r(__webpack_exports__);
       return this.$translate("Ceres::Template.newsletterAcceptPrivacyPolicy", {
         "policy": link
       }) + this.$translate("Ceres::Template.newsletterIsRequiredFootnote");
+=======
+    isVisible: function isVisible() {
+      return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
+    },
+    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+    // Experimental mixin, may be removed in the future.
+    data: function data() {
+      return {
+        isCollapsed: true,
+        isExpanded: false
+      };
+    },
+    text: function text() {
+      var links = {
+        gtc: '<a class="text-appearance" href="' + App.urls.gtc + '" target="_blank">' + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
+        cancellation: '<a class="text-appearance" href="' + App.urls.cancellationRights + '" target="_blank">' + this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        policy: '<a class="text-appearance" href="' + App.urls.privacyPolicy + '" target="_blank">' + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        legal: '<a class="text-appearance" href="' + App.urls.legalDisclosure + '" target="_blank">' + this.$translate("Ceres::Template.footerLegalDisclosure") + "</a>"
+      };
+      return this.$translate("Ceres::Template.cookieBarHintText", links);
+>>>>>>> ed1465193 (chore: compile resources)
     }
   },
   methods: {
@@ -145,6 +257,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.isDisabled = false;
       });
     },
+<<<<<<< HEAD
     save: function save() {
       var _this2 = this;
 
@@ -186,6 +299,10 @@ __webpack_require__.r(__webpack_exports__);
       this.lastName = "";
       this.email = "";
       this.privacyPolicyValue = false;
+=======
+    isConsented: function isConsented(groupKey) {
+      return this.$store.getters.isConsented(groupKey + ".*");
+>>>>>>> ed1465193 (chore: compile resources)
     },
     resetRecaptcha: function resetRecaptcha() {
       if (App.config.global.googleRecaptchaVersion === 2 && window.grecaptcha) {
@@ -216,6 +333,7 @@ var render = function() {
   return _c(
     "form",
     {
+<<<<<<< HEAD
       ref: "newsletterForm",
       attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
       on: {
@@ -236,14 +354,144 @@ var render = function() {
                   attrs: { "data-validate": "!regex" }
                 },
                 [
+=======
+      staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
+      class: {
+        out: !_vm.isVisible,
+        "bg-smoke": _vm.isVisible,
+        "fixed-bottom": !_vm.isShopBuilder || false
+      }
+    },
+    [
+      _vm.isVisible
+        ? _c("div", { staticClass: "container-max kk-border bg-white" }, [
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: !_vm.isExpanded,
+                    expression: "!isExpanded"
+                  }
+                ],
+                staticClass: "row py-3",
+                class: _vm.classes,
+                style: _vm.styles
+              },
+              [
+                _c("div", { staticClass: "p-3" }, [
+                  _c("p", { domProps: { innerHTML: _vm._s(_vm.text) } }),
+                  _vm._v(" "),
+>>>>>>> ed1465193 (chore: compile resources)
                   _c(
                     "label",
                     { attrs: { for: "first-name-input_" + _vm._uid } },
                     [
+<<<<<<< HEAD
                       _vm._v(
                         _vm._s(
                           _vm.$translate("Ceres::Template.newsletterFirstName")
                         )
+=======
+                      _vm._l(_vm.consentGroups, function(consentGroup) {
+                        return [
+                          consentGroup.consents.length > 0
+                            ? _c(
+                                "span",
+                                {
+                                  key: consentGroup.key,
+                                  staticClass:
+                                    "custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"
+                                },
+                                [
+                                  _c("input", {
+                                    staticClass: "custom-control-input",
+                                    attrs: {
+                                      type: "checkbox",
+                                      id:
+                                        _vm._uid + "-group-" + consentGroup.key,
+                                      disabled: consentGroup.necessary
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.isConsented(consentGroup.key) ||
+                                        consentGroup.necessary
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.toggleConsent(
+                                          consentGroup.key
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "custom-control-label",
+                                      attrs: {
+                                        for:
+                                          _vm._uid +
+                                          "-group-" +
+                                          consentGroup.key
+                                      }
+                                    },
+                                    [
+                                      consentGroup.label.length > 0
+                                        ? [
+                                            _vm._v(
+                                              "\n                  " +
+                                                _vm._s(consentGroup.label) +
+                                                "\n                "
+                                            )
+                                          ]
+                                        : [
+                                            _vm._v(
+                                              "\n                  " +
+                                                _vm._s(
+                                                  _vm.$translate(
+                                                    "Ceres::Template.privacySettingsDefaultGroup"
+                                                  )
+                                                ) +
+                                                "\n                "
+                                            )
+                                          ]
+                                    ],
+                                    2
+                                  )
+                                ]
+                              )
+                            : _vm._e()
+                        ]
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "text-primary text-appearance d-block d-md-inline-block",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              $event.stopPropagation()
+                              _vm.isExpanded = true
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$translate(
+                                "Ceres::Template.cookieBarMoreSettings"
+                              )
+                            )
+                          )
+                        ]
+>>>>>>> ed1465193 (chore: compile resources)
                       )
                     ]
                   ),
@@ -257,6 +505,7 @@ var render = function() {
                         expression: "firstName"
                       }
                     ],
+<<<<<<< HEAD
                     attrs: {
                       type: "text",
                       "data-validate-ref": "/[.:\\/\\d]/g",
@@ -268,6 +517,21 @@ var render = function() {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
+=======
+                    2
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "p-3 w-100" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary btn-block btn-appearance",
+                      on: {
+                        click: function($event) {
+                          _vm.acceptAll()
+                          _vm.close()
+>>>>>>> ed1465193 (chore: compile resources)
                         }
                         _vm.firstName = $event.target.value
                       }
@@ -292,13 +556,22 @@ var render = function() {
                     { attrs: { for: "last-name-input_" + _vm._uid } },
                     [
                       _vm._v(
+<<<<<<< HEAD
                         _vm._s(
                           _vm.$translate("Ceres::Template.newsletterLastName")
                         )
+=======
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarAcceptAll")
+                          ) +
+                          "\n        "
+>>>>>>> ed1465193 (chore: compile resources)
                       )
                     ]
                   ),
                   _vm._v(" "),
+<<<<<<< HEAD
                   _c("input", {
                     directives: [
                       {
@@ -306,6 +579,17 @@ var render = function() {
                         rawName: "v-model",
                         value: _vm.lastName,
                         expression: "lastName"
+=======
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default btn-block",
+                      on: {
+                        click: function($event) {
+                          _vm.storeConsents()
+                          _vm.close()
+                        }
+>>>>>>> ed1465193 (chore: compile resources)
                       }
                     ],
                     attrs: {
@@ -314,6 +598,7 @@ var render = function() {
                       id: "last-name-input_" + _vm._uid,
                       "data-testing": "nl-last-name"
                     },
+<<<<<<< HEAD
                     domProps: { value: _vm.lastName },
                     on: {
                       input: function($event) {
@@ -343,6 +628,15 @@ var render = function() {
                         _vm.$translate(
                           "Ceres::Template.newsletterIsRequiredFootnote"
                         )
+=======
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarSave")
+                          ) +
+                          "\n        "
+>>>>>>> ed1465193 (chore: compile resources)
                       )
                   )
                 ]),
@@ -378,6 +672,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
+<<<<<<< HEAD
             _c("input", {
               directives: [
                 {
@@ -520,6 +815,109 @@ var render = function() {
         : _vm._e()
     ],
     1
+=======
+            _vm.isExpanded
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "row py-3",
+                    class: _vm.classes,
+                    style: _vm.styles
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "col-12 mb-3" },
+                      [
+                        _c("privacy-settings", {
+                          attrs: { "consent-groups": _vm.consentGroups }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-12 col-md-6" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "text-primary text-appearance d-inline-block mb-3",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              $event.stopPropagation()
+                              _vm.isExpanded = false
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.cookieBarBack")
+                            )
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-block btn-primary btn-appearance",
+                          on: {
+                            click: function($event) {
+                              _vm.acceptAll()
+                              _vm.close()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.cookieBarAcceptAll"
+                                )
+                              ) +
+                              "\n        "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-block btn-block btn-default",
+                          on: {
+                            click: function($event) {
+                              _vm.storeConsents()
+                              _vm.close()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.cookieBarSave")
+                              ) +
+                              "\n        "
+                          )
+                        ]
+                      )
+                    ])
+                  ]
+                )
+              : _vm._e()
+          ])
+        : _vm._e()
+    ]
+>>>>>>> ed1465193 (chore: compile resources)
   )
 }
 var staticRenderFns = []

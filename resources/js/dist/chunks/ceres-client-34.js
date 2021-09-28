@@ -66,6 +66,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c("div", [
     _vm.showItemBundleItems
       ? _c(
@@ -113,6 +114,118 @@ var render = function() {
         )
       : _c("div", [_vm._t("default")], 2)
   ])
+=======
+  return _c(
+    "div",
+    { attrs: { itemscope: "", itemtype: "http://schema.org/Thing" } },
+    [
+      _c("link", {
+        attrs: { rel: "preload", as: "image", href: _vm.singleImages[0].url }
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "single-item-wishlist" },
+        [_c("add-to-wish-list-icon")],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          ref: "single",
+          staticClass:
+            "single-carousel owl-carousel owl-theme owl-single-item mt-0"
+        },
+        _vm._l(_vm.singleImages, function(image, i) {
+          return _c("div", { key: i, staticClass: "prop-1-1" }, [
+            _c(
+              "a",
+              {
+                staticClass: "single-item-image",
+                attrs: {
+                  href: image.url,
+                  "data-lightbox": "single-item-image" + _vm._uid
+                }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    src: image.url,
+                    alt: _vm.getAltText(image),
+                    title: _vm.getImageName(image)
+                  }
+                })
+              ]
+            )
+          ])
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm.showThumbs
+        ? _c(
+            "div",
+            {
+              ref: "thumbs",
+              staticClass: "owl-thumbs owl-carousel owl-theme owl-single-item",
+              attrs: { id: "thumb-carousel" }
+            },
+            _vm._l(_vm.carouselImages, function(imagePreview, index) {
+              return _c("div", { key: index, staticClass: "prop-1-1" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "image-container",
+                    on: {
+                      click: function($event) {
+                        return _vm.goTo(index)
+                      }
+                    }
+                  },
+                  [
+                    _c("lazy-img", {
+                      class: { active: _vm.currentItem === index },
+                      attrs: {
+                        "picture-class": "owl-thumb border-appearance",
+                        "image-url": imagePreview.url,
+                        alt: _vm.getAltText(imagePreview),
+                        title: _vm.getImageName(imagePreview)
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            }),
+            0
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.initialized
+        ? _c(
+            "div",
+            {
+              staticClass:
+                "single-carousel owl-carousel owl-loaded owl-theme owl-single-item mt-0"
+            },
+            [
+              _c("div", { staticClass: "prop-1-1" }, [
+                _c("img", {
+                  staticClass: "owl-placeholder",
+                  attrs: {
+                    src: _vm.singleImages[0].url,
+                    alt: _vm.getAltText(_vm.singleImages[0].url),
+                    title: _vm.getImageName(_vm.singleImages[0].url)
+                  }
+                })
+              ])
+            ]
+          )
+        : _vm._e()
+    ]
+  )
+>>>>>>> ed1465193 (chore: compile resources)
 }
 var staticRenderFns = []
 render._withStripped = true

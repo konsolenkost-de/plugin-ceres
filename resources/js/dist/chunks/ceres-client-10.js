@@ -36,6 +36,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "wish-list",
+  components: {
+    WishListItem: _WishListItem_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  },
+  props: {
+    itemDetailsData: {
+      type: Array,
+      default: function _default() {
+        return ["wishListItem.variation.availability"];
+      }
+    }
+  },
+  computed: Object(vuex__WEBPACK_IMPORTED_MODULE_6__["mapState"])({
+    wishListItems: function wishListItems(state) {
+      return state.wishList.wishListItems;
+    },
+    isLoading: function isLoading(state) {
+      return state.wishList.isLoading;
+    }
+  }),
+  mounted: function mounted() {
+    this.initWishListItems();
+  },
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_6__["mapActions"])(["initWishListItems"]))
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/wishList/WishListItem.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/wishList/WishListItem.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes.js */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.find-index.js */ "./node_modules/core-js/modules/es.array.find-index.js");
+/* harmony import */ var core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_NotificationService__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../services/NotificationService */ "./resources/js/src/app/services/NotificationService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+
+
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+>>>>>>> ed1465193 (chore: compile resources)
 //
 //
 //
@@ -124,6 +209,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -377,6 +463,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+=======
+>>>>>>> ed1465193 (chore: compile resources)
 
 
 
@@ -580,6 +668,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
+<<<<<<< HEAD
       _vm._t("after-item-name"),
       _vm._v(" "),
       _vm.displaySettings.showTimer || _vm.displaySettings.showStock
@@ -618,6 +707,116 @@ var render = function() {
                             )
                           ])
                     ]
+=======
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("p", { staticClass: "h4 text-muted text-center my-5" }, [
+            _vm._v("Du hast noch keine Artikel in deiner Wunschliste.")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.isLoading ? _c("loading-animation") : _vm._e(),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("last-seen-item-list", {
+            staticClass: "bordered-item-list",
+            attrs: { "items-per-page": 4, "max-items": 4 },
+            scopedSlots: _vm._u(
+              [
+                {
+                  key: "heading",
+                  fn: function() {
+                    return [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "widget-caption bg-appearance widget-item-list-caption mb-3"
+                        },
+                        [_c("div", [_c("h2", [_vm._v("Zuletzt angesehen")])])]
+                      )
+                    ]
+                  },
+                  proxy: true
+                }
+              ],
+              null,
+              false,
+              4103951690
+            )
+          })
+        : _vm._e()
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/wishList/WishListItem.vue?vue&type=template&id=adce5d40&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/wishList/WishListItem.vue?vue&type=template&id=adce5d40& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "basket-list-item py-3" }, [
+    _c(
+      "div",
+      { staticClass: "basket-item component-loading with-icon d-flex" },
+      [
+        _c("div", { staticClass: "image-container" }, [
+          _vm.image
+            ? _c("img", {
+                staticClass: "d-block mw-100 mh-100",
+                attrs: {
+                  src: _vm.image,
+                  title: _vm._f("itemName")(_vm.wishListItem)
+                }
+              })
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "meta-container-wrapper" }, [
+          _c("div", { staticClass: "meta-container-wrapper-inner mb-2" }, [
+            _c("div", { staticClass: "meta-container" }, [
+              _c("div", { staticClass: "position-relative w-100" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "item-name text-appearance font-weight-bold text-break",
+                    staticStyle: { color: "#212529" },
+                    attrs: { href: _vm._f("itemURL")(_vm.wishListItem) }
+                  },
+                  [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
+                        "\n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "item-base-price" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(_vm._f("currency")(_vm.unitPrice)) +
+                      "\n                        "
+>>>>>>> ed1465193 (chore: compile resources)
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -803,6 +1002,7 @@ var render = function() {
                               ])
                             : _vm._e()
                         ])
+<<<<<<< HEAD
                       : _vm._e()
                   ]
                 : _vm._e()
@@ -1306,6 +1506,111 @@ var render = function() {
     ],
     1
   )
+=======
+                      })
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex kk-wishlist-details-box" }, [
+            _c("div", { staticClass: "d-flex" }, [
+              _c("div", {
+                staticClass:
+                  "availability kk-wishlist-availability-icon mt-auto mb-auto",
+                class:
+                  "availability-" + _vm.wishListItem.variation.availability.id
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ml-2 mt-auto mb-auto" }, [
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(_vm.wishListItem.variation.availability.names.name) +
+                    "\n                    "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex kk-wishlist-delete-and-basket" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "btn btn-sm text-danger mt-auto mb-auto kk-border flex-style",
+                  staticStyle: { width: "33px", height: "33px" },
+                  on: {
+                    click: function($event) {
+                      return _vm.removeItem()
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "waiting-animation-infinite",
+                        rawName: "v-waiting-animation-infinite"
+                      }
+                    ],
+                    staticClass: "fa fa-trash-o default-float",
+                    staticStyle: { "font-size": "1.2rem", color: "grey" },
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                [
+                  _c("add-to-basket", {
+                    attrs: {
+                      "variation-id": _vm.wishListItem.variation.id,
+                      "is-salable":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.isSalable,
+                      "has-children":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.hasActiveChildren,
+                      "interval-quantity":
+                        _vm.wishListItem.variation.intervalOrderQuantity || 1,
+                      "minimum-quantity":
+                        _vm.wishListItem.variation.minimumOrderQuantity,
+                      "maximum-quantity":
+                        !!_vm.wishListItem.variation.maximumOrderQuantity &&
+                        _vm.wishListItem.variation.maximumOrderQuantity > 0
+                          ? _vm.wishListItem.variation.maximumOrderQuantity
+                          : null,
+                      "order-properties": _vm.wishListItem.properties.filter(
+                        function(prop) {
+                          return prop.property.isOderProperty
+                        }
+                      ),
+                      "has-order-properties":
+                        _vm.wishListItem.hasOrderProperties,
+                      "use-large-scale": false,
+                      "show-quantity": false,
+                      "item-url": _vm._f("itemURL")(_vm.wishListItem),
+                      "has-price": _vm._f("hasItemDefaultPrice")(
+                        _vm.wishListItem
+                      ),
+                      "is-wish-list": true,
+                      "prop-quantity": _vm.quantity,
+                      "item-type": _vm.wishListItem.item.itemType
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+>>>>>>> ed1465193 (chore: compile resources)
 }
 var staticRenderFns = []
 render._withStripped = true

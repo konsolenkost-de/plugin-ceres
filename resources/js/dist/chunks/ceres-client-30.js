@@ -37,6 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -63,6 +64,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+=======
+
+
+
+var NotificationService = __webpack_require__(/*! ../../services/NotificationService */ "./resources/js/src/app/services/NotificationService.js");
+
+>>>>>>> ed1465193 (chore: compile resources)
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "form-attachment",
   data: function data() {
@@ -121,6 +129,7 @@ var render = function() {
   return _c(
     "label",
     {
+<<<<<<< HEAD
       directives: [{ name: "tooltip", rawName: "v-tooltip" }],
       ref: "inputUnit",
       staticClass: "input-unit file-input",
@@ -176,6 +185,41 @@ var render = function() {
         },
         on: { change: _vm.collectFiles }
       })
+=======
+      ref: "addToWishList",
+      staticClass: "btn btn-link btn-sm text-muted btn-wish-list",
+      attrs: {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "zu Wunschliste hinzufügen"
+      },
+      on: {
+        click: function($event) {
+          $event.preventDefault()
+          return _vm.switchState()
+        }
+      }
+    },
+    [
+      _vm.isVariationInWishList
+        ? _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png",
+              loading: _vm.isLoading
+            }
+          })
+        : _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png",
+              loading: _vm.isLoading
+            }
+          }),
+      _vm._v("\n    Wunschliste\n")
+>>>>>>> ed1465193 (chore: compile resources)
     ]
   )
 }

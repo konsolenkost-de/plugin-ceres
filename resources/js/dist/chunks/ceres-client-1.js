@@ -206,6 +206,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "order-property-value-list-item",
@@ -248,6 +254,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c("div", { staticClass: "d-flex mb-2" }, [
     _c("span", { staticClass: "text-muted" }, [
       _vm._v(_vm._s(_vm.quantity) + "x")
@@ -265,6 +272,47 @@ var render = function() {
                 alt: _vm.altText,
                 title: _vm.itemName
               }
+=======
+  return _c("div", [
+    !_vm.showQuantity && _vm.useLargeScale && _vm.canBeAddedToBasket
+      ? _c(
+          "div",
+          {
+            staticClass: "add-to-basket-lg-container d-none d-lg-block",
+            class: { "no-pointer-events": _vm.isLoading },
+            attrs: {
+              title: _vm.$translate("Ceres::Template.singleItemAddToBasket")
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.addToBasket()
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(
+                      _vm.$translate("Ceres::Template.singleItemAddToBasket")
+                    ) +
+                    "\n            "
+                ),
+                _c("icon", {
+                  staticClass: "fa-lg mobile-icon-right",
+                  attrs: { icon: "cart-plus", loading: _vm.isLoading }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("add-to-wish-list-icon", {
+              attrs: { "variation-id": _vm.variationId }
+>>>>>>> ed1465193 (chore: compile resources)
             })
           : _vm._e()
       ],
@@ -277,9 +325,14 @@ var render = function() {
         _c(
           "a",
           {
+<<<<<<< HEAD
             staticClass:
               "item-name text-primary text-appearance font-weight-bold text-break",
             attrs: { href: _vm._f("itemURL")(_vm.variation) }
+=======
+            staticClass: "add-to-basket-lg-container d-none d-lg-block",
+            attrs: { title: _vm.$translate("Ceres::Template.itemShowItem") }
+>>>>>>> ed1465193 (chore: compile resources)
           },
           [_vm._v("\n            " + _vm._s(_vm.itemName) + "\n        ")]
         ),
@@ -298,6 +351,7 @@ var render = function() {
           "div",
           { staticClass: "text-muted small" },
           [
+<<<<<<< HEAD
             _vm._l(_vm.variation.variationProperties, function(propertyGroup) {
               return _vm._l(propertyGroup.properties, function(property) {
                 return _c("div", [
@@ -370,10 +424,45 @@ var render = function() {
         _vm._v(" "),
         _c(
           "ul",
+=======
+            _c(
+              "div",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.directToItem()
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.$translate("Ceres::Template.itemShowItem")) +
+                    "\n            "
+                ),
+                _c("i", {
+                  staticClass: "fa fa-arrow-right fa-lg d-none d-sm-block"
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("add-to-wish-list-icon", {
+              attrs: { "variation-id": _vm.variationId }
+            })
+          ],
+          1
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.showQuantity && !_vm.useLargeScale
+      ? _c(
+          "div",
+>>>>>>> ed1465193 (chore: compile resources)
           {
             staticClass: "ml-1 pl-3",
             attrs: { "data-testing": "order-property-list" }
           },
+<<<<<<< HEAD
           _vm._l(_vm.shownProperties, function(property) {
             return _c("order-property-value-list-item", {
               key: property.propertyId,
@@ -433,6 +522,72 @@ var render = function() {
                       )
                     ]
                   : [
+=======
+          [
+            _c("div", { staticClass: "add-to-basket-container" }, [
+              _c(
+                "div",
+                { staticClass: "quantity-input-container" },
+                [
+                  _c("quantity-input", {
+                    attrs: {
+                      value: _vm.quantity,
+                      timeout: 0,
+                      min: _vm.minimumQuantity,
+                      max: _vm.maximumQuantity,
+                      interval: _vm.intervalQuantity,
+                      "variation-id": _vm.variationId,
+                      waiting:
+                        _vm.isLoading ||
+                        !_vm.isSalable ||
+                        !_vm.allVariationsSelected
+                    },
+                    on: {
+                      "quantity-change": _vm.updateQuantity,
+                      "out-of-stock": _vm.handleButtonState
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              !_vm.allVariationsSelected || !_vm.isSalable
+                ? _c(
+                    "button",
+                    {
+                      directives: [{ name: "tooltip", rawName: "v-tooltip" }],
+                      staticClass:
+                        "btn btn-block btn-primary btn-basket btn-appearance disabled",
+                      class: _vm.buttonClasses,
+                      style: _vm.paddingInlineStyles,
+                      attrs: {
+                        "data-toggle": "tooltip",
+                        "data-placement": "top",
+                        title: _vm.tooltipText
+                      }
+                    },
+                    [_vm._v("\n                    Ausverkauft\n            ")]
+                  )
+                : !_vm.buttonLockState
+                ? _c(
+                    "button",
+                    {
+                      staticClass:
+                        "btn btn-block btn-primary btn-basket btn-appearance",
+                      class: _vm.buttonClasses,
+                      style: _vm.paddingInlineStyles,
+                      attrs: { disabled: _vm.isLoading || !_vm.hasPrice },
+                      on: {
+                        click: function($event) {
+                          return _vm.addToBasket()
+                        }
+                      }
+                    },
+                    [
+                      _c("icon", {
+                        attrs: { icon: "shopping-cart", loading: _vm.isLoading }
+                      }),
+>>>>>>> ed1465193 (chore: compile resources)
                       _vm._v(
                         "\n                    (" +
                           _vm._s(
@@ -442,6 +597,7 @@ var render = function() {
                           _vm._s(_vm._f("currency")(_vm.surcharge)) +
                           ")\n                "
                       )
+<<<<<<< HEAD
                     ]
               ]
             : _vm._e()
@@ -469,15 +625,130 @@ var render = function() {
                     "\n                    " +
                       _vm._s(_vm._f("fileName")(_vm.property.property.value)) +
                       "\n                "
+=======
+                    ],
+                    1
+                  )
+                : _c(
+                    "button",
+                    {
+                      directives: [{ name: "tooltip", rawName: "v-tooltip" }],
+                      staticClass:
+                        "btn btn-block btn-primary btn-basket btn-appearance disabled",
+                      class: _vm.buttonClasses,
+                      style: _vm.paddingInlineStyles,
+                      attrs: {
+                        "data-toggle": "tooltip",
+                        "data-placement": "top",
+                        title: _vm._f(
+                          "translate"
+                        )("Ceres::Template.singleItemQuantityMax", {
+                          max: _vm.maximumQuantity
+                        })
+                      }
+                    },
+                    [_vm._v("\n                    Ausverkauft\n            ")]
+>>>>>>> ed1465193 (chore: compile resources)
                   )
                 ]
               )
             ])
+<<<<<<< HEAD
           : _vm.property.property.valueType !== "empty"
           ? _c("span", [_vm._v(_vm._s(_vm.property.property.value))])
           : _vm._e()
       ])
     ])
+=======
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.showQuantity && !_vm.useLargeScale
+      ? _c(
+          "div",
+          { staticClass: "d-inline", class: { "d-lg-none": !_vm.isWishList } },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "btn-group",
+                attrs: { role: "group", "aria-label": "Thumb Control" }
+              },
+              [
+                _vm.canBeAddedToBasket
+                  ? _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary btn-basket btn-i-w btn-appearance mobile-width-button",
+                        class: { "no-pointer-events": _vm.isLoading },
+                        attrs: { type: "button" },
+                        on: {
+                          click: function($event) {
+                            return _vm.addToBasket()
+                          }
+                        }
+                      },
+                      [
+                        _c("icon", {
+                          staticClass: "fa-lg mobile-icon-right",
+                          attrs: {
+                            icon: "shopping-cart",
+                            loading: _vm.isLoading
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "btn-text" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$translate(
+                                "Ceres::Template.singleItemAddToBasket"
+                              )
+                            )
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.canBeAddedToBasket
+                  ? _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary btn-basket btn-appearance mobile-width-button",
+                        attrs: { type: "button" },
+                        on: {
+                          click: function($event) {
+                            return _vm.directToItem()
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          staticClass:
+                            "fa fa-arrow-right fa-lg d-none d-sm-block",
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "btn-text" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.itemShowItem")
+                            )
+                          )
+                        ])
+                      ]
+                    )
+                  : _vm._e()
+              ]
+            )
+          ]
+        )
+      : _vm._e()
+>>>>>>> ed1465193 (chore: compile resources)
   ])
 }
 var staticRenderFns = []

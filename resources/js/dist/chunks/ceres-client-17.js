@@ -74,9 +74,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -213,6 +210,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c(
     "form",
     {
@@ -236,6 +234,164 @@ var render = function() {
                   attrs: { "data-validate": "!regex" }
                 },
                 [
+=======
+  return _c("div", { attrs: { id: "add-item-to-basket-overlay" } }, [
+    _c("div", { staticClass: "modal fade" }, [
+      _c("div", { staticClass: "modal-dialog", attrs: { role: "document" } }, [
+        _vm.basketItem
+          ? _c(
+              "div",
+              { staticClass: "modal-content" },
+              [
+                _c("div", { staticClass: "modal-header" }, [
+                  _c("div", { staticClass: "modal-title h5" }, [
+                    _vm._v(
+                      _vm._s(_vm.$translate("Ceres::Template.singleItemAdded"))
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-body" }, [
+                  _c("div", { staticClass: "row is-table-row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-4",
+                        staticStyle: { "min-height": "80px" }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "img-fluid mx-auto",
+                          staticStyle: { "max-height": "140px" },
+                          attrs: {
+                            src: _vm.imageUrl,
+                            alt: _vm.imageAlternativeText || _vm.itemName,
+                            title: _vm.itemName
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-md-8" },
+                      [
+                        _c("p", [
+                          _c("strong", { staticClass: "basket-item-name" }, [
+                            _vm._v(_vm._s(_vm.itemName))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _c("strong", { staticClass: "basket-item-price" }, [
+                            _c("span", [
+                              _vm._v(_vm._s(_vm._f("currency")(_vm.price)))
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.variation.attributes, function(
+                          attribute,
+                          i
+                        ) {
+                          return _c("p", { key: i, staticClass: "small" }, [
+                            _c("strong", [
+                              _vm._v(_vm._s(attribute.attribute.names.name))
+                            ]),
+                            _vm._v(":\n                                "),
+                            _c("span", [
+                              _vm._v(_vm._s(attribute.value.names.name))
+                            ])
+                          ])
+                        }),
+                        _vm._v(" "),
+                        _vm.shownOrderProperties.length
+                          ? _c("div", { staticClass: "small" }, [
+                              _c(
+                                "div",
+                                { staticClass: "font-weight-bold my-1" },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm.$translate(
+                                        "Ceres::Template.singleItemAdditionalOptions"
+                                      )
+                                    ) + ":"
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "ul",
+                                { staticClass: "ml-1 pl-3" },
+                                _vm._l(_vm.shownOrderProperties, function(
+                                  property
+                                ) {
+                                  return _c(
+                                    "li",
+                                    { key: property.propertyId },
+                                    [
+                                      _c("span", { staticClass: "d-block" }, [
+                                        _c(
+                                          "strong",
+                                          {
+                                            class: {
+                                              colon: property.type.length > 0
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              _vm._s(property.name) +
+                                                " (" +
+                                                _vm._s(
+                                                  _vm.$translate(
+                                                    "Ceres::Template.singleItemIncludeAbbr"
+                                                  )
+                                                ) +
+                                                " " +
+                                                _vm._s(
+                                                  _vm._f("currency")(
+                                                    _vm._f("propertySurcharge")(
+                                                      _vm.basketItem.variation
+                                                        .data.properties,
+                                                      property.propertyId
+                                                    )
+                                                  )
+                                                ) +
+                                                ")"
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          [
+                                            _c("order-property-value", {
+                                              attrs: { property: property }
+                                            })
+                                          ],
+                                          1
+                                        )
+                                      ])
+                                    ]
+                                  )
+                                }),
+                                0
+                              )
+                            ])
+                          : _vm._e()
+                      ],
+                      2
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-footer" }, [
+>>>>>>> ed1465193 (chore: compile resources)
                   _c(
                     "label",
                     { attrs: { for: "first-name-input_" + _vm._uid } },

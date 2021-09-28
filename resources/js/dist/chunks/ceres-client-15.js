@@ -34,7 +34,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -126,6 +125,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c("div", [
     _c(
       "form",
@@ -139,6 +139,145 @@ var render = function() {
           "div",
           { staticClass: "input-unit", attrs: { "data-validate": "mail" } },
           [
+=======
+  return _c(
+    "form",
+    {
+      attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.validateData($event)
+        }
+      }
+    },
+    [
+      _c("div", { staticClass: "row" }, [
+        _vm.showNameInputs
+          ? _c("div", { staticClass: "col-6" }, [
+              _c("div", { staticClass: "input-unit" }, [
+                _c(
+                  "label",
+                  { attrs: { for: "first-name-input_" + _vm._uid } },
+                  [
+                    _vm._v(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.newsletterFirstName")
+                      )
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.firstName,
+                      expression: "firstName"
+                    }
+                  ],
+                  attrs: { type: "text", id: "first-name-input_" + _vm._uid },
+                  domProps: { value: _vm.firstName },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.firstName = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.showNameInputs
+          ? _c("div", { staticClass: "col-6 pl-0" }, [
+              _c("div", { staticClass: "input-unit" }, [
+                _c("label", { attrs: { for: "last-name-input_" + _vm._uid } }, [
+                  _vm._v(
+                    _vm._s(_vm.$translate("Ceres::Template.newsletterLastName"))
+                  )
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.lastName,
+                      expression: "lastName"
+                    }
+                  ],
+                  attrs: { type: "text", id: "last-name-input_" + _vm._uid },
+                  domProps: { value: _vm.lastName },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.lastName = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "newsletter-input" }, [
+          _c("div", { staticClass: "input-group" }, [
+            _c(
+              "div",
+              {
+                staticClass: "input-unit border-0",
+                attrs: { "data-validate": "mail" }
+              },
+              [
+                _vm.showNameInputs
+                  ? _c(
+                      "label",
+                      { attrs: { for: "email-input-id_" + _vm._uid } },
+                      [
+                        _vm._v(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.newsletterEmail")
+                          ) + " *"
+                        )
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.email,
+                      expression: "email"
+                    }
+                  ],
+                  staticClass: "newsletter-input",
+                  attrs: {
+                    type: "email",
+                    autocomplete: "email",
+                    id: "email-input-id_" + _vm._uid,
+                    placeholder: "Deine E-Mail"
+                  },
+                  domProps: { value: _vm.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.email = $event.target.value
+                    }
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+>>>>>>> ed1465193 (chore: compile resources)
             _c("input", {
               directives: [
                 {
@@ -179,6 +318,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
+<<<<<<< HEAD
         _c("div", { staticClass: "text-right" }, [
           _c(
             "button",
@@ -212,6 +352,38 @@ var render = function() {
       ]
     )
   ])
+=======
+        _c("div", { staticClass: "col-12 mt-3" }, [
+          _c("div", { staticClass: "input-group-btn" }, [
+            _c(
+              "button",
+              {
+                staticClass:
+                  "btn btn-block btn-primary btn-appearance newsletter-button",
+                class: _vm.buttonSizeClass,
+                attrs: { type: "button", disabled: _vm.isDisabled },
+                on: { click: _vm.validateData }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    width: "13",
+                    height: "13",
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"
+                  }
+                }),
+                _c("span", { staticClass: "newsletter-button-text" }, [
+                  _vm._v("  Anmelden")
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ]
+  )
+>>>>>>> ed1465193 (chore: compile resources)
 }
 var staticRenderFns = []
 render._withStripped = true
