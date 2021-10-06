@@ -94,13 +94,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -504,32 +497,11 @@ var render = function() {
   return _vm.facet.name
     ? _c(
         "div",
-        { staticClass: "card pt-4 border-0" },
+        { staticClass: "card pt-4 border-0", class: _vm.facet.cssClass },
         [
-          _c(
-            "button",
-            {
-              staticClass:
-                "category-menu-button card-header btn btn-link text-appearance collapsed",
-              attrs: {
-                type: "button",
-                "data-toggle": "collapse",
-                "data-target": "#collapse-form-check",
-                "aria-expanded": "false",
-                "aria-controls": "collapse-form-check"
-              }
-            },
-            [
-              _c("h5", { staticClass: "category-menu-header h3 py-0" }, [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.facetName) +
-                    "\n                    "
-                ),
-                _c("i", { staticClass: "fa fa-chevron-down" })
-              ])
-            ]
-          ),
+          _c("div", { staticClass: "h3 title py-0" }, [
+            _vm._v(_vm._s(_vm.facetName))
+          ]),
           _vm._v(" "),
           _vm.facet.type === "price"
             ? _c("div", [_c("item-filter-price")], 1)
@@ -538,8 +510,8 @@ var render = function() {
                   "div",
                   {
                     key: value.id,
-                    staticClass: "form-check-wrapper collapse",
-                    attrs: { id: "collapse-form-check" }
+                    staticClass: "form-check-wrapper",
+                    class: value.cssClass
                   },
                   [
                     _c("div", { staticClass: "form-check mb-0 pl-0" }, [
