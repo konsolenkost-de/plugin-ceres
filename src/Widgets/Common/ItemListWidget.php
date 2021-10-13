@@ -128,6 +128,11 @@ class ItemListWidget extends BaseWidget
                     ->addEntry(4, 'Widget.itemListItemsPerPage4')
                     ->toArray()
             );
+            
+            $settings->createCheckbox('lazyLoading')
+            ->withName('Widget.imageBoxLazyLoadingName')
+            ->withTooltip('Widget.imageBoxLazyLoadingTooltip')
+            ->withDefaultValue(false);
 
         $settings->createCheckbox('preloadImage')
             ->withName('Widget.preloadImageLabel')
