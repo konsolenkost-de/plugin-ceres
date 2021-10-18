@@ -312,14 +312,6 @@
             </template>
 
             {{ LayoutContainer.show("Ceres::MyAccount.OrderHistoryPaymentInformation", orderData.order) }}
-
-            {% if orderData.isReturnable %}
-                <a v-if="allowReturn" v-waiting-animation-infinite class="btn btn-block btn-appearance mb-2" href="{{ urls.returns(orderData.order.id) }}" {{ set_testing_attr("data-testing", "order-history-return") }}>
-                    <i class="fa fa-repeat fa-flip-horizontal" aria-hidden="true"></i>
-                    {{ trans("Ceres::Template.orderHistoryReturnSendBack") }}
-                </a>
-            {% endif %}
-
             <order-documents :documents="{{ orderData.order.documents | json_encode }}"></order-documents>
         </div>
     </div>
