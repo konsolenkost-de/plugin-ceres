@@ -69796,8 +69796,7 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
       this.isPending = true;
       ApiService.post("/rest/io/order/payment", {
         orderId: this.currentOrder.id,
-        paymentMethodId: this.paymentMethod,
-        accessKey: this.currentOrder.accessKey
+        paymentMethodId: this.paymentMethod
       }).done(function (response) {
         document.dispatchEvent(new CustomEvent("historyPaymentMethodChanged", {
           detail: {
