@@ -135,7 +135,7 @@ export default Vue.component("change-payment-method", {
 
         changePaymentMethod()
         {
-            this.isPending = false;
+            this.isPending = true;
 
             ApiService.post("/rest/io/order/payment", { orderId: this.currentOrder.id, paymentMethodId: this.paymentMethod })
                 .done(response =>
