@@ -69793,7 +69793,7 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
     changePaymentMethod: function changePaymentMethod() {
       var _this4 = this;
 
-      this.isPending = true;
+      this.isPending = false;
       ApiService.post("/rest/io/order/payment", {
         orderId: this.currentOrder.id,
         paymentMethodId: this.paymentMethod
