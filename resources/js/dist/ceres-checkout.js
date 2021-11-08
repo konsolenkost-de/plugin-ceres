@@ -69796,7 +69796,8 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
       this.isPending = true;
       ApiService.post("/rest/io/order/payment", {
         orderId: this.currentOrder.id,
-        paymentMethodId: this.paymentMethod
+        paymentMethodId: this.paymentMethod,
+        accessKey: this.currentOrder.accessKey
       }).done(function (response) {
         document.dispatchEvent(new CustomEvent("historyPaymentMethodChanged", {
           detail: {
@@ -69808,7 +69809,8 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
         _this4.updateOrderHistory(response);
 
         _this4.updateAllowedPaymentMethods(_this4.getPaymentId(response.order.properties));
-      }).fail(function () {// TODO add error msg
+      }).fail(function () {
+        console.log("Error test");
       });
     }
   },
