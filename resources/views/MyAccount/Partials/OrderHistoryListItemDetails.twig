@@ -228,6 +228,9 @@
                                         <span class="flex-fill text-right">{{ itemPriceTotal | formatMonetary( itemAmount.currency ) }}</span>
                                     </div>
                                 </div>
+                                <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
+                                    <button type="button" class="btn btn-primary btn-appearance btn-block">Bewerte diesen Artikel!</button>
+                                </a>
                             </div>
                         </div>
                     {% endif %}
