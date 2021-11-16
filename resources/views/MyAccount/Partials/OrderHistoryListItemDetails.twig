@@ -229,9 +229,9 @@
                                     </div>
                                 </div>
                             </div>
-                            {% if ItemName.get(item.orderItemName, item.bundleType) != 'Mitarbeiterrabatt' %}
+                            {% if ItemName.get(item.orderItemName) != 'Mitarbeiterrabatt' %}
                              <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
-                                <button type="button" class="btn btn-primary btn-appearance btn-block">Bewerte diesen Artikel!</button>
+                                <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
                             </a>
                             {% endif %}
                         </div>
