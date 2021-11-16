@@ -229,11 +229,9 @@
                                     </div>
                                 </div>
                             </div>
-                            {% if ItemName.get(item.orderItemName) == 'Mitarbeiterrabatt' %}
-                                <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
-                                    <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
-                                </a>
-                            {% endif %}
+                            <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
+                                <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
+                            </a>
                         </div>
                     {% endif %}
                 {% endfor %}
