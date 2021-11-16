@@ -228,10 +228,12 @@
                                         <span class="flex-fill text-right">{{ itemPriceTotal | formatMonetary( itemAmount.currency ) }}</span>
                                     </div>
                                 </div>
-                                <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
-                                    <button type="button" class="btn btn-primary btn-appearance btn-block">Bewerte diesen Artikel!</button>
-                                </a>
                             </div>
+                            {% if ItemName.get(item.orderItemName, item.bundleType) != 'Mitarbeiterrabatt' %}
+                             <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
+                                <button type="button" class="btn btn-primary btn-appearance btn-block">Bewerte diesen Artikel!</button>
+                            </a>
+                            {% endif %}
                         </div>
                     {% endif %}
                 {% endfor %}
