@@ -230,14 +230,10 @@
                                 </div>
                             </div>
                             {% if ItemName.get(item.orderItemName) != 'Mitarbeiterrabatt' %}
-                             <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
-                                <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
-                            </a>
-                            <feedback-container class="widget-inner"
-                                :options="{&quot;allowFeedbacksOnlyIfPurchased&quot;:false,&quot;allowNoRatingFeedback&quot;:false,&quot;feedbacksPerPage&quot;:10,&quot;numberOfFeedbacks&quot;:1,&quot;timestampVisibility&quot;:true,&quot;allowGuestFeedbacks&quot;:false}"
-                                classes=""
-                                styles="">
-                            </feedback-container>
+                                {{ ItemName.get(item.orderItemName) }}
+                                <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
+                                    <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
+                                </a>
                             {% endif %}
                         </div>
                     {% endif %}
