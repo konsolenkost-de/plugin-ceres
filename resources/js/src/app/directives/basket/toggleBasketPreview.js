@@ -7,7 +7,7 @@ Vue.directive("toggle-basket-preview",
             el.addEventListener("click", event =>
             {
                 document.body.classList.toggle("basket-open");
-                document.getElementById("#tidio-chat iframe").style.visibility = "hidden";
+                document.getElementById("tidio-chat").hidden = true;
 
                 event.preventDefault();
                 event.stopPropagation();
