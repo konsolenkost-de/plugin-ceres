@@ -147,8 +147,6 @@ export default {
     {
         show()
         {
-            var toggleChat = document.getElementById("#tidio-chat iframe");
-            toggleChat.style.display = "none";
             setTimeout(function()
             {
                 document.body.classList.add("basket-open");
