@@ -14,11 +14,13 @@ class ItemSortValueListFactory extends ValueListFactory
         $sortBySales = $webstoreConfigurationRepository->getWebstoreConfiguration()->itemSortByMonthlySales === 1;
 
         $list = parent::make()
+            ->addEntry('variation.position_asc',$sortBySales ? 'Widget.itemVariationTopseller_asc' : 'Widget.itemVariationPosition_asc')
+            ->addEntry('variation.position_desc', $sortBySales ? 'Widget.itemVariationTopseller_desc' : 'Widget.itemVariationPosition_desc')
             ->addEntry('default.recommended_sorting', 'Widget.itemRecommendedSorting')
-            ->addEntry('texts.name1_asc', 'Widget.itemName_asc')
-            ->addEntry('texts.name1_desc', 'Widget.itemName_desc')
             ->addEntry('sorting.price.avg_asc', 'Widget.itemPrice_asc')
             ->addEntry('sorting.price.avg_desc', 'Widget.itemPrice_desc')
+            ->addEntry('texts.name1_asc', 'Widget.itemName_asc')
+            ->addEntry('texts.name1_desc', 'Widget.itemName_desc')
             ->addEntry('variation.createdAt_desc', 'Widget.itemVariationCreateTimestamp_desc')
             ->addEntry('variation.createdAt_asc', 'Widget.itemVariationCreateTimestamp_asc')
             ->addEntry('variation.availability.averageDays_asc', 'Widget.itemAvailabilityAverageDays_asc')
@@ -34,14 +36,6 @@ class ItemSortValueListFactory extends ValueListFactory
             $list->addEntry('item.random', 'Widget.itemRandom');
         }
 
-        return $list
-            ->addEntry(
-                'variation.position_asc',
-                $sortBySales ? 'Widget.itemVariationTopseller_asc' : 'Widget.itemVariationPosition_asc'
-            )
-            ->addEntry(
-                'variation.position_desc',
-                $sortBySales ? 'Widget.itemVariationTopseller_desc' : 'Widget.itemVariationPosition_desc'
-            );
+        return $list;
     }
 }
