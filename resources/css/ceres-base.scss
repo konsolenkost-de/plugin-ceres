@@ -2117,10 +2117,13 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
 @mixin img-fluid() {
   // Part 1: Set a maximum relative to the parent
-  max-width: 100%;
   // Part 2: Override the height to auto, otherwise images will be stretched
   // when setting a width and height attribute on the img element.
-  height: auto;
+  padding-left: 10.3px;
+  width: 135px !important;
+  height: 157px !important;
+  max-width: none !important;
+  max-height: none !important;
 }
 
 
