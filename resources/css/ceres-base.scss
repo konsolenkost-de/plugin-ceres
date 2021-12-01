@@ -11117,8 +11117,6 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
 
     .thumb-image {
         @include img-contain();
-        width: 220px !important;
-        height: 262px !important;
     }
 
     //TODO create separate mixin
