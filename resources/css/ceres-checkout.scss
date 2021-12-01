@@ -11185,6 +11185,12 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
 
         .img-fluid {
             @include transition(.4s cubic-bezier(0, 0, .26, 1));
+            padding-left: 10.3px;
+            width: 135px !important;
+            height: 157px !important;
+            max-width: none !important;
+            max-height: none !important;
+            
         }
 
         &:hover {
