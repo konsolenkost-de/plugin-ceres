@@ -11055,7 +11055,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
 }
 
 .cmp-product-thumb {
-    width: 236px;
+    width: 100%;
     padding: .8rem;
     margin-bottom: $grid-gutter-width / 2;
     overflow: hidden;
@@ -11171,7 +11171,7 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
         margin-bottom: $grid-gutter-width;
 
         .thumb-content {
-            width: 236px;
+            width: 100%;
             padding: .8rem;
         }
 
@@ -11180,12 +11180,11 @@ html.ios .basket-preview-content .totals { // stylelint-disable-line selector-no
         }
 
         .thumb-image {
-            width: 236px;
+            width: 100%;
         }
 
         .img-fluid {
             @include transition(.4s cubic-bezier(0, 0, .26, 1));
-            padding-right: 10px;
         }
 
         &:hover {
