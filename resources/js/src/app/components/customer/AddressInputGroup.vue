@@ -377,10 +377,10 @@
 							</div>
 						</div>
 						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
-							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('gb', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
 								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
 								<label :for="'txtBirthdate' + _uid">
-									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "gb", "billing_address.birthday") }}
 								</label>
 							</div>
 						</div>
@@ -708,10 +708,10 @@
 							</div>
 						</div>
 						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
-							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('gb', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
 								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
 								<label :for="'txtBirthdate' + _uid">
-									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "gb", "billing_address.birthday") }}
 								</label>
 							</div>
 						</div>

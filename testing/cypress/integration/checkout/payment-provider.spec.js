@@ -201,6 +201,7 @@ context("Checkout payment provider", () =>
 
         cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="firstName"]`).type("x").clear().type("Plenty", { delay: 40 });
         cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="lastName"]`).type("Test");
+        cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="birthday"]`).type("01.01.1910");
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="street"]`).type("Abby Road");
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="housenumber"]`).type("1337");
         cy.getByTestingAttr("billing-address-de-zip").type("12345");

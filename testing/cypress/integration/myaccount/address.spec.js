@@ -22,6 +22,7 @@ context("Address", () =>
 
         cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="firstName"]`).type("x").clear().type("Plenty", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="lastName"]`).type("Test", { delay: 15 });
+        cy.getByTestingAttr("billing-address-de-name-inputs").find(`input[name="birthday"]`).type("01.01.1910", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="street"]`).type("Abby Road", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="housenumber"]`).type("1337", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-zip").type("12345", { delay: 15 });
