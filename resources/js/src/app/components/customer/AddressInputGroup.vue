@@ -219,10 +219,11 @@
 								</label>
 							</div>
 						</div>
-						<div class="col-12 col-sm-4">
-							<div class="input-unit" data-model="name3" v-validate:text="areNameFieldsRequired('de', 'billing_address')">
-								<input type="text" name="lastName" :id="'txtLastName' + _uid" :value="value.name3" @input="emitInputEvent('name3', $event.target.value)" data-testing="billing-address-de-lastname">
-								<label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName") }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
+						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
+								<label :for="'txtBirthdate' + _uid">
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
 								</label>
 							</div>
 						</div>
@@ -246,14 +247,6 @@
 						</div>
 					</div>
 
-					<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
-						<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
-							<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
-							<label :for="'txtBirthdate' + _uid">
-								{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
-							</label>
-						</div>
-					</div>
 					<div v-if="isInOptionalFields('de', 'billing_address.phoneNumber')" class="col-12 col-sm-4">
 						<div class="input-unit" data-model="telephone" v-validate:text="isInRequiredFields('de', 'billing_address.phoneNumber')">
 							<input type="text" name="telephone" :id="'txtTelephone' + _uid" :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
