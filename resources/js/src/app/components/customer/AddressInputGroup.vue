@@ -376,6 +376,14 @@
 								</label>
 							</div>
 						</div>
+						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
+								<label :for="'txtBirthdate' + _uid">
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
+								</label>
+							</div>
+						</div>
 					</template>
 
 					<div v-else class="col-12 col-sm-8">
@@ -535,6 +543,14 @@
 								</label>
 							</div>
 						</div>
+						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
+								<label :for="'txtBirthdate' + _uid">
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
+								</label>
+							</div>
+						</div>
 					</template>
 
 					<div v-else class="col-12 col-sm-8">
@@ -688,6 +704,14 @@
 							<div class="input-unit" data-model="name3" v-validate:text="areNameFieldsRequired('gb', 'delivery_address')">
 								<input type="text" name="lastName" :id="'txtLastName' + _uid" :value="value.name3" @input="emitInputEvent('name3', $event.target.value)">
 								<label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName") }}<template v-if="areNameFieldsRequired('gb', 'delivery_address')">*</template>
+								</label>
+							</div>
+						</div>
+						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
+								<label :for="'txtBirthdate' + _uid">
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
 								</label>
 							</div>
 						</div>
