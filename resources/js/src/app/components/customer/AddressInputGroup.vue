@@ -204,6 +204,31 @@
 						</div>
 					</div>
 
+					<template v-if="areNameFieldsShown('de', 'billing_address')">
+						<div class="col-12 col-sm-4">
+							<div class="input-unit" data-model="name2" v-validate:text="areNameFieldsRequired('de', 'billing_address')">
+								<input type="text" name="firstName" :id="'txtFirstName' + _uid" :value="value.name2" @input="emitInputEvent('name2', $event.target.value)" data-autofocus data-testing="billing-address-de-firstname">
+								<label :for="'txtFirstName' + _uid">{{ $translate("Ceres::Template.addressFirstName") }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
+								</label>
+							</div>
+						</div>
+						<div class="col-12 col-sm-4">
+							<div class="input-unit" data-model="name3" v-validate:text="areNameFieldsRequired('de', 'billing_address')">
+								<input type="text" name="lastName" :id="'txtLastName' + _uid" :value="value.name3" @input="emitInputEvent('name3', $event.target.value)" data-testing="billing-address-de-lastname">
+								<label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName") }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
+								</label>
+							</div>
+						</div>
+						<div v-if="isInOptionalFields('de', 'billing_address.birthday')" class="col-12 col-sm-4">
+							<div class="input-unit" data-model="birthday" v-validate:date="isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length">
+								<input type="date" min="1901-12-14" :max="new Date().toISOString().split('T')[0]" name="birthday" :placeholder="$translate('Ceres::Template.addressBirthdatePlaceholder')" :id="'txtBirthdate' + _uid" :value="value.birthday" @input="emitInputEvent('birthday', $event.target.value)">
+								<label :for="'txtBirthdate' + _uid">
+									{{ transformTranslation("Ceres::Template.addressBirthdate", "de", "billing_address.birthday") }}
+								</label>
+							</div>
+						</div>
+					</template>
+
 					<div v-else class="col-12 col-sm-8">
 						<div class="input-unit" data-model="contactPerson" v-validate:text="isInRequiredFields('de', 'billing_address.contactPerson')">
 							<input type="text" name="lastName" :id="'txtContactPerson' + _uid" :value="value.contactPerson" @input="emitInputEvent('contactPerson', $event.target.value)">
