@@ -59,6 +59,8 @@ export default {
             isDisabled: false,
             privacyPolicyAccepted : false,
             privacyPolicyShowError: false,
+            enableConfirmingPrivacyPolicy: App.config.global.registrationRequirePrivacyPolicyConfirmation,
+
 
         };
     },

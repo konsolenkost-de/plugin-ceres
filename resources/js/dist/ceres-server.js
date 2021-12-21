@@ -5802,7 +5802,8 @@ __webpack_require__.r(__webpack_exports__);
       email: "",
       isDisabled: false,
       privacyPolicyAccepted: false,
-      privacyPolicyShowError: false
+      privacyPolicyShowError: false,
+      enableConfirmingPrivacyPolicy: App.config.global.registrationRequirePrivacyPolicyConfirmation
     };
   },
   created: function created() {
