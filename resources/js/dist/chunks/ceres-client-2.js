@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     labelHtml: function labelHtml() {
-      if (type) {
+      if (this.type) {
         var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy2", {
           "hyphen": "&shy;"
         });
