@@ -5,15 +5,12 @@
                 <input type="email" name="email" autocomplete="email" data-testing="guest-login-input" :id="_uid" v-model="email" data-autofocus>
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
-            <span class="error-msg">TEST</span>
+            <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
             
-            <div class="input-unit" data-validate="checkbox">
-               <input type="checkbox" id="checkbox" v-model="checked">
-                <label for="checkbox">
-                    Ich willige ein, dass meine E-Mail-Adresse im Rahmen der Vertragsabwicklung an den Versanddienstleister weitergegeben wird, um über den Status der Lieferung informiert zu werden. Dieser Verwendung der E-Mail-Adresse kann jederzeit durch eine Mitteilung an uns widersprochen werden. Die Kontaktdaten für die Ausübung des Widerspruchs finden Sie im Impressum.
-                </label>
+            <div class="col-12" v-if="enableConfirmingPrivacyPolicy">
+                <accept-privacy-policy-check class="mt-3 mb-0" v-model="privacyPolicyAccepted" @input="privacyPolicyValueChanged($event)" :show-error="privacyPolicyShowError"></accept-privacy-policy-check>
             </div>
-            
+
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">
                     {{ $translate("Ceres::Template.loginNext") }}
@@ -53,8 +50,9 @@ export default {
         return {
             email: "",
             isDisabled: false,
-            checked: false,
-            checkbox: false
+            privacyPolicyAccepted : false,
+            privacyPolicyShowError: false,
+
         };
     },
 
@@ -95,12 +93,30 @@ export default {
             ValidationService.validate(this.$refs.form)
                 .done(() =>
                 {   
-                    console.log("val"+this.checked)
+                    if (!this.enableConfirmingPrivacyPolicy || this.privacyPolicyAccepted)
+                            {
                     this.authGuest();
+                            }else
+                            {
+                                this.privacyPolicyShowError = true;
+
+                                NotificationService.error(
+                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                                );
+                                this.resetRecaptcha();
+                            }
                 })
                 .fail(invalidFields =>
                 {
                     ValidationService.markInvalidFields(invalidFields, "error");
+                    if (this.enableConfirmingPrivacyPolicy && !this.privacyPolicyAccepted)
+                    {
+                        this.privacyPolicyShowError = true;
+
+                        NotificationService.error(
+                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                        );
+                    }
                 });
         },
 
@@ -121,7 +137,16 @@ export default {
                 {
                     this.isDisabled = false;
                 });
-        }
+        },
+        privacyPolicyValueChanged(value)
+        {
+            this.privacyPolicyAccepted = value;
+
+            if (value)
+            {
+                this.privacyPolicyShowError = false;
+            }
+        },
     }
 }
 </script>
