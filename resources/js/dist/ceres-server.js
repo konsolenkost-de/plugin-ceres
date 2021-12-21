@@ -5751,6 +5751,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/ValidationService */ "./resources/js/src/app/services/ValidationService.js");
 /* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
 /* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _AcceptPrivacyPolicyCheck_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../AcceptPrivacyPolicyCheck.vue */ "./resources/js/src/app/components/customer/AcceptPrivacyPolicyCheck.vue");
 //
 //
 //
@@ -5770,6 +5771,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
 
 
 
@@ -5777,7 +5783,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "guest-login",
   mixins: [_mixins_buttonSizeProperty_mixin__WEBPACK_IMPORTED_MODULE_0__["ButtonSizePropertyMixin"]],
+  components: {
+    AcceptPrivacyPolicyCheck: _AcceptPrivacyPolicyCheck_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+  },
   props: {
     backlink: {
       type: String
@@ -5790,10 +5800,14 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       email: "",
-      isDisabled: false
+      isDisabled: false,
+      privacyPolicyAccepted: false,
+      privacyPolicyShowError: false
     };
   },
   created: function created() {
+    console.log("cre" + this.checked);
+
     if (!Object(_helper_utils__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.initialEmail) && this.initialEmail.length > 0) {
       this.email = this.initialEmail;
     }
@@ -5801,6 +5815,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    console.log("moun" + this.checked);
     this.$nextTick(function () {
       // for old login view only (input in modal)
       if (!Object(_helper_utils__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.$parent.$refs.guestModal)) {
@@ -5818,9 +5833,25 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__["default"].validate(this.$refs.form).done(function () {
-        _this2.authGuest();
+        if (!_this2.enableConfirmingPrivacyPolicy || _this2.privacyPolicyAccepted) {
+          _this2.authGuest();
+        } else {
+          _this2.privacyPolicyShowError = true;
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+            hyphen: "&shy;"
+          }));
+
+          _this2.resetRecaptcha();
+        }
       }).fail(function (invalidFields) {
         _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__["default"].markInvalidFields(invalidFields, "error");
+
+        if (_this2.enableConfirmingPrivacyPolicy && !_this2.privacyPolicyAccepted) {
+          _this2.privacyPolicyShowError = true;
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+            hyphen: "&shy;"
+          }));
+        }
       });
     },
     authGuest: function authGuest() {
@@ -5834,6 +5865,13 @@ __webpack_require__.r(__webpack_exports__);
       }).fail(function () {
         _this3.isDisabled = false;
       });
+    },
+    privacyPolicyValueChanged: function privacyPolicyValueChanged(value) {
+      this.privacyPolicyAccepted = value;
+
+      if (value) {
+        this.privacyPolicyShowError = false;
+      }
     }
   }
 });
@@ -47884,6 +47922,32 @@ var render = function() {
             ) +
             "</span> "
         ),
+        _vm.enableConfirmingPrivacyPolicy
+          ? _vm._ssrNode(
+              '<div class="col-12">',
+              "</div>",
+              [
+                _c("accept-privacy-policy-check", {
+                  staticClass: "mt-3 mb-0",
+                  attrs: { "show-error": _vm.privacyPolicyShowError },
+                  on: {
+                    input: function($event) {
+                      return _vm.privacyPolicyValueChanged($event)
+                    }
+                  },
+                  model: {
+                    value: _vm.privacyPolicyAccepted,
+                    callback: function($$v) {
+                      _vm.privacyPolicyAccepted = $$v
+                    },
+                    expression: "privacyPolicyAccepted"
+                  }
+                })
+              ],
+              1
+            )
+          : _vm._e(),
+        _vm._ssrNode(" "),
         _vm._ssrNode('<div class="text-right">', "</div>", [
           _vm._ssrNode(
             "<button" +
