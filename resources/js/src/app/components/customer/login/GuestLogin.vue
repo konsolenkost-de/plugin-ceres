@@ -6,11 +6,9 @@
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
             <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
-            TestTestTest
             <div class="col-12" v-if="enableConfirmingPrivacyPolicy">
                 <accept-privacy-policy-check class="mt-3 mb-0" v-model="privacyPolicyAccepted" @input="privacyPolicyValueChanged($event)" :show-error="privacyPolicyShowError"></accept-privacy-policy-check>
             </div>
-            TestTestTest
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">
                     {{ $translate("Ceres::Template.loginNext") }}
@@ -60,8 +58,6 @@ export default {
             privacyPolicyAccepted : false,
             privacyPolicyShowError: false,
             enableConfirmingPrivacyPolicy: App.config.global.registrationRequirePrivacyPolicyConfirmation,
-
-
         };
     },
 
@@ -110,7 +106,7 @@ export default {
                                 this.privacyPolicyShowError = true;
 
                                 NotificationService.error(
-                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", { hyphen: "&shy;" })
                                 );
                                 this.resetRecaptcha();
                             }
@@ -123,7 +119,7 @@ export default {
                         this.privacyPolicyShowError = true;
 
                         NotificationService.error(
-                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", { hyphen: "&shy;" })
                         );
                     }
                 });

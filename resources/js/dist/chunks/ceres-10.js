@@ -85,8 +85,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -150,7 +148,7 @@ __webpack_require__.r(__webpack_exports__);
           _this2.authGuest();
         } else {
           _this2.privacyPolicyShowError = true;
-          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", {
             hyphen: "&shy;"
           }));
 
@@ -161,7 +159,7 @@ __webpack_require__.r(__webpack_exports__);
 
         if (_this2.enableConfirmingPrivacyPolicy && !_this2.privacyPolicyAccepted) {
           _this2.privacyPolicyShowError = true;
-          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", {
             hyphen: "&shy;"
           }));
         }
@@ -313,7 +311,7 @@ var render = function() {
             _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
           )
         ]),
-        _vm._v("\n        TestTestTest\n        "),
+        _vm._v(" "),
         _vm.enableConfirmingPrivacyPolicy
           ? _c(
               "div",
@@ -339,7 +337,7 @@ var render = function() {
               1
             )
           : _vm._e(),
-        _vm._v("\n        TestTestTest\n        "),
+        _vm._v(" "),
         _c("div", { staticClass: "text-right" }, [
           _c(
             "button",
