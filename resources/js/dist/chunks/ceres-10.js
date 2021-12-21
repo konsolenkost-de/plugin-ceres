@@ -312,7 +312,7 @@ var render = function() {
             _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
           )
         ]),
-        _vm._v(" "),
+        _vm._v("\n        TestTestTest\n        "),
         _vm.enableConfirmingPrivacyPolicy
           ? _c(
               "div",
@@ -338,7 +338,7 @@ var render = function() {
               1
             )
           : _vm._e(),
-        _vm._v(" "),
+        _vm._v("\n        TestTestTest\n        "),
         _c("div", { staticClass: "text-right" }, [
           _c(
             "button",

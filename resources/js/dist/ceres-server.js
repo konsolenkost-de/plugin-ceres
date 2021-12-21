@@ -47920,7 +47920,7 @@ var render = function() {
             _vm._ssrEscape(
               _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
             ) +
-            "</span> "
+            "</span>\n        TestTestTest\n        "
         ),
         _vm.enableConfirmingPrivacyPolicy
           ? _vm._ssrNode(
@@ -47947,7 +47947,7 @@ var render = function() {
               1
             )
           : _vm._e(),
-        _vm._ssrNode(" "),
+        _vm._ssrNode("\n        TestTestTest\n        "),
         _vm._ssrNode('<div class="text-right">', "</div>", [
           _vm._ssrNode(
             "<button" +
