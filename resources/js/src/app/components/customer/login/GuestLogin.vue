@@ -6,10 +6,13 @@
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
             <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
-            <input type="checkbox" id="checkbox" v-model="checked">
-            <label for="checkbox">
-                Ich willige ein, dass meine E-Mail-Adresse im Rahmen der Vertragsabwicklung an den Versanddienstleister weitergegeben wird, um über den Status der Lieferung informiert zu werden. Dieser Verwendung der E-Mail-Adresse kann jederzeit durch eine Mitteilung an uns widersprochen werden. Die Kontaktdaten für die Ausübung des Widerspruchs finden Sie im Impressum.
-            </label>
+            <div class="input-unit" data-validate="checkbox">
+               <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox">
+                    Ich willige ein, dass meine E-Mail-Adresse im Rahmen der Vertragsabwicklung an den Versanddienstleister weitergegeben wird, um über den Status der Lieferung informiert zu werden. Dieser Verwendung der E-Mail-Adresse kann jederzeit durch eine Mitteilung an uns widersprochen werden. Die Kontaktdaten für die Ausübung des Widerspruchs finden Sie im Impressum.
+                </label>
+            </div>
+            
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">
                     {{ $translate("Ceres::Template.loginNext") }}
@@ -50,6 +53,7 @@ export default {
             email: "",
             isDisabled: false,
             checked: false,
+            checkbox: false
         };
     },
 
