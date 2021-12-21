@@ -29,9 +29,14 @@ import AutoFocusService from "../../../services/AutoFocusService";
 import ValidationService from "../../../services/ValidationService";
 import { navigateTo } from "../../../services/UrlService";
 import { isDefined, isNullOrUndefined } from "../../../helper/utils";
+import AcceptPrivacyPolicyCheck from "./AcceptPrivacyPolicyCheck.vue";
 
 export default {
     mixins: [ButtonSizePropertyMixin],
+    components:
+    {
+        AcceptPrivacyPolicyCheck
+    },
 
     props: {
         backlink:
