@@ -47940,7 +47940,7 @@ var render = function() {
               "</div>",
               [
                 _c("accept-privacy-policy-check", {
-                  staticClass: "mt-3 mb-0",
+                  staticClass: "my-3 mb-0",
                   attrs: {
                     type: "guest-login",
                     "show-error": _vm.privacyPolicyShowError
