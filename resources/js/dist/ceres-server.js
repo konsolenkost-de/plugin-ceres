@@ -41057,34 +41057,6 @@ var render = function() {
                               return [_vm._t("after-item-sum")]
                             },
                             proxy: true
-                          },
-                          {
-                            key: "before-total-sum",
-                            fn: function() {
-                              return [_vm._t("before-total-sum")]
-                            },
-                            proxy: true
-                          },
-                          {
-                            key: "before-vat",
-                            fn: function() {
-                              return [_vm._t("before-vat")]
-                            },
-                            proxy: true
-                          },
-                          {
-                            key: "after-vat",
-                            fn: function() {
-                              return [_vm._t("after-vat")]
-                            },
-                            proxy: true
-                          },
-                          {
-                            key: "after-total-sum",
-                            fn: function() {
-                              return [_vm._t("after-total-sum")]
-                            },
-                            proxy: true
                           }
                         ],
                         null,

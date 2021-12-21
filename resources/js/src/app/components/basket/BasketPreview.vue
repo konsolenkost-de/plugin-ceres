@@ -50,7 +50,7 @@
                             <template #after-shipping-costs>
                                 <slot name="after-shipping-costs"></slot>
                             </template> -->
-                            <template #before-total-sum>
+                            <!-- <template #before-total-sum>
                                 <slot name="before-total-sum"></slot>
                             </template>
                             <template #before-vat>
@@ -61,7 +61,7 @@
                             </template>
                             <template #after-total-sum>
                                 <slot name="after-total-sum"></slot>
-                            </template>
+                            </template> -->
                         </basket-totals>
 
                         <slot name="after-basket-totals"></slot>
