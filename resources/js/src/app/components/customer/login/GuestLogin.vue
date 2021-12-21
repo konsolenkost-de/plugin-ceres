@@ -5,7 +5,8 @@
                 <input type="email" name="email" autocomplete="email" data-testing="guest-login-input" :id="_uid" v-model="email" data-autofocus>
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
-            <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
+            <span class="error-msg">TEST</span>
+            
             <div class="input-unit" data-validate="checkbox">
                <input type="checkbox" id="checkbox" v-model="checked">
                 <label for="checkbox">
