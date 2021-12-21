@@ -6,8 +6,8 @@
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
             <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
-            <div class="col-12" v-if="enableConfirmingPrivacyPolicy">
-                <accept-privacy-policy-check class="mt-3 mb-0" v-model="privacyPolicyAccepted" @input="privacyPolicyValueChanged($event)" :show-error="privacyPolicyShowError"></accept-privacy-policy-check>
+            <div class="col-12 p-0" v-if="enableConfirmingPrivacyPolicy">
+                <accept-privacy-policy-check class="mt-3 mb-0" type="guest-login" v-model="privacyPolicyAccepted" @input="privacyPolicyValueChanged($event)" :show-error="privacyPolicyShowError"></accept-privacy-policy-check>
             </div>
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">

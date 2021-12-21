@@ -15,20 +15,35 @@ export default {
 
     props: {
         value: Boolean ,
-        showError: Boolean
+        showError: Boolean,
+        type: String
     },
 
     computed: {
         labelHtml()
         {
-            const contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {"hyphen": "&shy;"});
-            const html = `
-                <!----><a href="${ App.urls.privacyPolicy }" target="_blank" class="text-appearance">
-                    <span>${ contactPrivacyPolicy }</span>
-                </a><!---->
-            `;
+            if (type){
+                const contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy2", {"hyphen": "&shy;"});
+                const html = `
+                    <!----><a href="${ App.urls.privacyPolicy }" target="_blank" class="text-appearance">
+                        <span>${ contactPrivacyPolicy }</span>
+                    </a><!---->
+                `;
 
-            return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {policy: html});
+            return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy2", {policy: html});
+
+            } else {
+
+                const contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {"hyphen": "&shy;"});
+                const html = `
+                    <!----><a href="${ App.urls.privacyPolicy }" target="_blank" class="text-appearance">
+                        <span>${ contactPrivacyPolicy }</span>
+                    </a><!---->
+                `;
+
+                return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {policy: html});
+
+            }
         }
     },
 

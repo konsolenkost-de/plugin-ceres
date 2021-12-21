@@ -3339,17 +3339,30 @@ __webpack_require__.r(__webpack_exports__);
   name: "accept-privacy-policy-check",
   props: {
     value: Boolean,
-    showError: Boolean
+    showError: Boolean,
+    type: String
   },
   computed: {
     labelHtml: function labelHtml() {
-      var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
-        "hyphen": "&shy;"
-      });
-      var html = "\n                <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                    <span>").concat(contactPrivacyPolicy, "</span>\n                </a><!---->\n            ");
-      return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {
-        policy: html
-      });
+      if (type) {
+        var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy2", {
+          "hyphen": "&shy;"
+        });
+        var html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy2", {
+          policy: html
+        });
+      } else {
+        var _contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
+          "hyphen": "&shy;"
+        });
+
+        var _html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(_contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {
+          policy: _html
+        });
+      }
     }
   },
   methods: {
@@ -47923,12 +47936,15 @@ var render = function() {
         ),
         _vm.enableConfirmingPrivacyPolicy
           ? _vm._ssrNode(
-              '<div class="col-12">',
+              '<div class="col-12 p-0">',
               "</div>",
               [
                 _c("accept-privacy-policy-check", {
                   staticClass: "mt-3 mb-0",
-                  attrs: { "show-error": _vm.privacyPolicyShowError },
+                  attrs: {
+                    type: "guest-login",
+                    "show-error": _vm.privacyPolicyShowError
+                  },
                   on: {
                     input: function($event) {
                       return _vm.privacyPolicyValueChanged($event)
