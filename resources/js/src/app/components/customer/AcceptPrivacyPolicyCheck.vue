@@ -23,7 +23,7 @@ export default {
         labelHtml()
         {
             if (this.type){
-                const contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy2", {"hyphen": "&shy;"});
+                const contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {"hyphen": "&shy;"});
                 const html = `
                     <!----><a href="${ App.urls.privacyPolicy }" target="_blank" class="text-appearance">
                         <span>${ contactPrivacyPolicy }</span>

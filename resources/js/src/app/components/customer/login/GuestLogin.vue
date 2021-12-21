@@ -106,7 +106,7 @@ export default {
                                 this.privacyPolicyShowError = true;
 
                                 NotificationService.error(
-                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", { hyphen: "&shy;" })
+                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
                                 );
                                 this.resetRecaptcha();
                             }
@@ -119,7 +119,7 @@ export default {
                         this.privacyPolicyShowError = true;
 
                         NotificationService.error(
-                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy2", { hyphen: "&shy;" })
+                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
                         );
                     }
                 });

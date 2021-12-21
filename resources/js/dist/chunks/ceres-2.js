@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     labelHtml: function labelHtml() {
       if (this.type) {
-        var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy2", {
+        var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
           "hyphen": "&shy;"
         });
         var html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
