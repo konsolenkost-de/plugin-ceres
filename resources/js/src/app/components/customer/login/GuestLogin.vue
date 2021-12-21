@@ -29,9 +29,11 @@ import AutoFocusService from "../../../services/AutoFocusService";
 import ValidationService from "../../../services/ValidationService";
 import { navigateTo } from "../../../services/UrlService";
 import { isDefined, isNullOrUndefined } from "../../../helper/utils";
-import AcceptPrivacyPolicyCheck from "./AcceptPrivacyPolicyCheck.vue";
+import AcceptPrivacyPolicyCheck from "../AcceptPrivacyPolicyCheck.vue";
 
 export default {
+    name: "guest-login",
+
     mixins: [ButtonSizePropertyMixin],
     components:
     {
@@ -128,8 +130,6 @@ export default {
         authGuest()
         {
             this.isDisabled = true;
-            console.log("auth"+this.checked)
-
 
             ApiService.post("/rest/io/guest", { email: this.email })
                 .done(() =>
