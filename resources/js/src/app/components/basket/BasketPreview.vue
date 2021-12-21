@@ -44,12 +44,12 @@
                             <template #after-item-sum>
                                 <slot name="after-item-sum"></slot>
                             </template>
-                            <template #before-shipping-costs>
+                            <!-- <template #before-shipping-costs>
                                 <slot name="before-shipping-costs"></slot>
                             </template>
                             <template #after-shipping-costs>
                                 <slot name="after-shipping-costs"></slot>
-                            </template>
+                            </template> -->
                             <template #before-total-sum>
                                 <slot name="before-total-sum"></slot>
                             </template>

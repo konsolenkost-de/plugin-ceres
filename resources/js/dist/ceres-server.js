@@ -41059,20 +41059,6 @@ var render = function() {
                             proxy: true
                           },
                           {
-                            key: "before-shipping-costs",
-                            fn: function() {
-                              return [_vm._t("before-shipping-costs")]
-                            },
-                            proxy: true
-                          },
-                          {
-                            key: "after-shipping-costs",
-                            fn: function() {
-                              return [_vm._t("after-shipping-costs")]
-                            },
-                            proxy: true
-                          },
-                          {
                             key: "before-total-sum",
                             fn: function() {
                               return [_vm._t("before-total-sum")]
