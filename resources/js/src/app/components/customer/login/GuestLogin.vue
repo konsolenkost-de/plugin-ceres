@@ -6,7 +6,10 @@
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
             <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
-
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">
+                Ich willige ein, dass meine E-Mail-Adresse im Rahmen der Vertragsabwicklung an den Versanddienstleister weitergegeben wird, um über den Status der Lieferung informiert zu werden. Dieser Verwendung der E-Mail-Adresse kann jederzeit durch eine Mitteilung an uns widersprochen werden. Die Kontaktdaten für die Ausübung des Widerspruchs finden Sie im Impressum.
+            </label>
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">
                     {{ $translate("Ceres::Template.loginNext") }}
@@ -45,12 +48,15 @@ export default {
     {
         return {
             email: "",
-            isDisabled: false
+            isDisabled: false,
+            checked: false,
         };
     },
 
     created()
     {
+        console.log("cre"+this.checked)
+
         if (!isNullOrUndefined(this.initialEmail) && this.initialEmail.length > 0)
         {
             this.email = this.initialEmail;
@@ -59,6 +65,8 @@ export default {
 
     mounted()
     {
+        console.log("moun"+this.checked)
+
         this.$nextTick(() =>
         {
             // for old login view only (input in modal)
@@ -81,7 +89,8 @@ export default {
         {
             ValidationService.validate(this.$refs.form)
                 .done(() =>
-                {
+                {   
+                    console.log("val"+this.checked)
                     this.authGuest();
                 })
                 .fail(invalidFields =>
@@ -93,6 +102,8 @@ export default {
         authGuest()
         {
             this.isDisabled = true;
+            console.log("auth"+this.checked)
+
 
             ApiService.post("/rest/io/guest", { email: this.email })
                 .done(() =>
