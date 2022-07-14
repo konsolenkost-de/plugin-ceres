@@ -74,6 +74,55 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "accept-privacy-policy-check",
+  props: {
+    value: Boolean,
+    showError: Boolean,
+    type: String
+  },
+  computed: {
+    labelHtml: function labelHtml() {
+      if (this.type) {
+        var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
+          "hyphen": "&shy;"
+        });
+        var html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy2", {
+          policy: html
+        });
+      } else {
+        var _contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
+          "hyphen": "&shy;"
+        });
+
+        var _html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(_contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {
+          policy: _html
+        });
+      }
+    }
+  },
+  methods: {
+    onValueChanged: function onValueChanged(value) {
+      this.$emit("input", value);
+    }
+  }
+});
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 

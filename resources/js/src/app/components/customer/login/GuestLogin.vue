@@ -6,7 +6,9 @@
                 <label :for="_uid">{{ $translate("Ceres::Template.loginEmail") }}*</label>
             </div>
             <span class="error-msg">{{ $translate("Ceres::Template.loginEnterConfirmEmail") }}</span>
-
+            <div class="col-12 p-0" v-if="enableConfirmingPrivacyPolicy">
+                <accept-privacy-policy-check class="my-3 mb-0" type="guest-login" v-model="privacyPolicyAccepted" @input="privacyPolicyValueChanged($event)" :show-error="privacyPolicyShowError"></accept-privacy-policy-check>
+            </div>
             <div class="text-right">
                 <button @click.prevent="validate" :disabled="isDisabled" class="btn btn-primary btn-medium btn-appearance" :class="buttonSizeClass" data-testing="guest-login-button">
                     {{ $translate("Ceres::Template.loginNext") }}
@@ -26,9 +28,16 @@ import ValidationService from "../../../services/ValidationService";
 import { navigateTo } from "../../../services/UrlService";
 import { isDefined, isNullOrUndefined } from "../../../helper/utils";
 import ModalService from "../../../services/ModalService";
+import AcceptPrivacyPolicyCheck from "../AcceptPrivacyPolicyCheck.vue";
 
 export default {
+    name: "guest-login",
+
     mixins: [ButtonSizePropertyMixin],
+    components:
+    {
+        AcceptPrivacyPolicyCheck
+    },
 
     props: {
         backlink:
@@ -46,12 +55,17 @@ export default {
     {
         return {
             email: "",
-            isDisabled: false
+            isDisabled: false,
+            privacyPolicyAccepted : false,
+            privacyPolicyShowError: false,
+            enableConfirmingPrivacyPolicy: App.config.global.registrationRequirePrivacyPolicyConfirmation,
         };
     },
 
     created()
     {
+        console.log("cre"+this.checked)
+
         if (!isNullOrUndefined(this.initialEmail) && this.initialEmail.length > 0)
         {
             this.email = this.initialEmail;
@@ -60,6 +74,8 @@ export default {
 
     mounted()
     {
+        console.log("moun"+this.checked)
+
         this.$nextTick(() =>
         {
             const modal = ModalService.findModal(this.$parent.$refs.guestModal);
@@ -90,12 +106,31 @@ export default {
         {
             ValidationService.validate(this.$refs.form)
                 .done(() =>
-                {
+                {   
+                    if (!this.enableConfirmingPrivacyPolicy || this.privacyPolicyAccepted)
+                            {
                     this.authGuest();
+                            }else
+                            {
+                                this.privacyPolicyShowError = true;
+
+                                NotificationService.error(
+                                    this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                                );
+                                this.resetRecaptcha();
+                            }
                 })
                 .fail(invalidFields =>
                 {
                     ValidationService.markInvalidFields(invalidFields, "error");
+                    if (this.enableConfirmingPrivacyPolicy && !this.privacyPolicyAccepted)
+                    {
+                        this.privacyPolicyShowError = true;
+
+                        NotificationService.error(
+                            this.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", { hyphen: "&shy;" })
+                        );
+                    }
                 });
         },
 
@@ -114,7 +149,16 @@ export default {
                 {
                     this.isDisabled = false;
                 });
-        }
+        },
+        privacyPolicyValueChanged(value)
+        {
+            this.privacyPolicyAccepted = value;
+
+            if (value)
+            {
+                this.privacyPolicyShowError = false;
+            }
+        },
     }
 }
 </script>

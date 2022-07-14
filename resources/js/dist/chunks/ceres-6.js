@@ -64,6 +64,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -109,6 +110,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 >>>>>>> ed1465193 (chore: compile resources)
 =======
 >>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -680,6 +683,7 @@ var render = function() {
         "div",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {
           staticClass:
             "d-flex flex-wrap flex-column flex-sm-row justify-content-between mt-3"
@@ -742,6 +746,13 @@ var render = function() {
 >>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             ]
           ),
+=======
+        { staticClass: "card pt-4 border-0", class: _vm.facet.cssClass },
+        [
+          _c("div", { staticClass: "h3 title py-0" }, [
+            _vm._v(_vm._s(_vm.facetName))
+          ]),
+>>>>>>> bugfix/IT-3062/guest-login
           _vm._v(" "),
           _c(
             "button",
@@ -800,12 +811,17 @@ var render = function() {
                     }
 =======
                     key: value.id,
+<<<<<<< HEAD
                     staticClass: "form-check-wrapper collapse",
                     attrs: { id: "collapse-form-check" }
 <<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
 =======
 >>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
+=======
+                    staticClass: "form-check-wrapper",
+                    class: value.cssClass
+>>>>>>> bugfix/IT-3062/guest-login
                   },
                   [_vm._v("×")]
                 )
