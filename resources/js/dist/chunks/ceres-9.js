@@ -110,9 +110,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 
@@ -440,38 +437,24 @@ var render = function() {
                       { staticClass: "col-md-8" },
                       [
                         _c("p", [
-                          _c("strong", [_vm._v(_vm._s(_vm.itemName))]),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
-                          _vm.countAdditionalBasketItems > 0
-                            ? _c("span", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm.$translate(
-                                      "Ceres::Template.basketItemOverlayAdditionalCount",
-                                      { count: _vm.countAdditionalBasketItems }
-                                    )
-                                  )
-                                )
-                              ])
-                            : _vm._e()
+                          _c("strong", { staticClass: "basket-item-name" }, [
+                            _vm._v(_vm._s(_vm.itemName))
+                          ])
                         ]),
                         _vm._v(" "),
-                        _c("p", { staticClass: "small" }, [
-                          _c("strong", [
-                            _c("span", { staticClass: "text-muted" }, [
-                              _vm._v(_vm._s(_vm.basketItem.quantity) + " x ")
-                            ]),
-                            _vm._v(" "),
+                        _c("p", [
+                          _c("strong", { staticClass: "basket-item-price" }, [
                             _c("span", [
                               _vm._v(_vm._s(_vm._f("currency")(_vm.price)))
                             ])
                           ])
                         ]),
                         _vm._v(" "),
-                        _vm._l(_vm.variation.attributes, function(attribute) {
-                          return _c("p", { staticClass: "small" }, [
+                        _vm._l(_vm.variation.attributes, function(
+                          attribute,
+                          i
+                        ) {
+                          return _c("p", { key: i, staticClass: "small" }, [
                             _c("strong", [
                               _vm._v(_vm._s(attribute.attribute.names.name))
                             ]),

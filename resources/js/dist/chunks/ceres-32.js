@@ -162,15 +162,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "button",
+    "a",
     {
-      directives: [{ name: "tooltip", rawName: "v-tooltip" }],
       ref: "addToWishList",
-      staticClass: "btn btn-link btn-sm text-muted",
+      staticClass: "btn btn-link btn-sm text-muted btn-wish-list",
       attrs: {
         "data-toggle": "tooltip",
         "data-placement": "top",
-        title: _vm.tooltipText
+        title: "zu Wunschliste hinzufügen"
       },
       on: {
         click: function($event) {
@@ -180,18 +179,25 @@ var render = function() {
       }
     },
     [
-      _c("icon", {
-        staticClass: "default-float",
-        class: { "text-appearance text-danger": _vm.isVariationInWishList },
-        attrs: { icon: "heart", loading: _vm.isLoading }
-      }),
-      _vm._v(
-        "\n    " +
-          _vm._s(_vm.$translate("Ceres::Template.singleItemWishList")) +
-          "\n"
-      )
-    ],
-    1
+      _vm.isVariationInWishList
+        ? _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png",
+              loading: _vm.isLoading
+            }
+          })
+        : _c("img", {
+            staticClass: "default-float wishlist-icon",
+            attrs: {
+              src:
+                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png",
+              loading: _vm.isLoading
+            }
+          }),
+      _vm._v("\n    Wunschliste\n")
+    ]
   )
 }
 var staticRenderFns = []

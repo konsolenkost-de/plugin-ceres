@@ -501,8 +501,8 @@ var render = function() {
                 ]
               : _vm._e(),
             _vm._v(" "),
-            _vm.visibleFields.includes("basketValueNet") ||
-            _vm.visibleFields.includes("basket.value_of_items_net")
+            _vm.visibleFields.includes("basketValueNet") &&
+            _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? [
                   _c(
                     "dt",
@@ -555,12 +555,17 @@ var render = function() {
                           _vm._s(
                             _vm.$translate("Ceres::Template.basketValue")
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
-                      )
+                          " "
+                      ),
+                      _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? _c("span", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.basketGross")
+                              )
+                            )
+                          ])
+                        : _vm._e()
                     ]
                   ),
                   _c(
@@ -605,15 +610,7 @@ var render = function() {
                             _vm._s(
                               _vm.$translate("Ceres::Template.basketRebateSign")
                             ) +
-                            _vm._s(
-                              _vm._f("currency")(
-                                _vm.calculateBaseValue(
-                                  _vm.basket.itemSum,
-                                  _vm.basket.basketRebate
-                                ) - _vm.basket.itemSum
-                              )
-                            ) +
-                            "\n                "
+                            "${calculateBaseValue(basket.itemSum, basket.basketRebate) - basket.itemSum | currency }\n                "
                         )
                       ])
                     : _c("dd", { staticClass: "rebate-hint" }, [
@@ -670,12 +667,17 @@ var render = function() {
                           _vm._s(
                             _vm.$translate("Ceres::Template.basketSubTotal")
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
-                      )
+                          " "
+                      ),
+                      _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? _c("span", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.basketGross")
+                              )
+                            )
+                          ])
+                        : _vm._e()
                     ]
                   ),
                   _c(
@@ -696,8 +698,8 @@ var render = function() {
             _vm._v(" "),
             _vm._t("before-shipping-costs"),
             _vm._v(" "),
-            _vm.visibleFields.includes("shippingCostsNet") ||
-            _vm.visibleFields.includes("basket.shipping_costs_net")
+            _vm.visibleFields.includes("shippingCostsNet") &&
+            _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? [
                   _c(
                     "dt",
@@ -749,12 +751,17 @@ var render = function() {
                               "Ceres::Template.basketShippingCosts"
                             )
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
-                      )
+                          " "
+                      ),
+                      _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? _c("span", [
+                            _vm._v(
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.basketGross")
+                              )
+                            )
+                          ])
+                        : _vm._e()
                     ]
                   ),
                   _c(
@@ -809,12 +816,14 @@ var render = function() {
                 ]
               : _vm._e(),
             _vm._v(" "),
-            _c("hr"),
+            _vm.basket.basketAmountNet != _vm.basket.basketAmount
+              ? _c("hr")
+              : _vm._e(),
             _vm._v(" "),
             _vm._t("before-total-sum"),
             _vm._v(" "),
-            _vm.visibleFields.includes("subAmount") ||
-            _vm.visibleFields.includes("basket.order_total_net")
+            _vm.visibleFields.includes("totalSumNet") &&
+            _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? [
                   _c(
                     "dt",
@@ -975,12 +984,19 @@ var render = function() {
                               _vm._s(
                                 _vm.$translate("Ceres::Template.basketTotalSum")
                               ) +
-                              " " +
-                              _vm._s(
-                                _vm.$translate("Ceres::Template.basketGross")
-                              ) +
-                              "\n                    "
-                          )
+                              " "
+                          ),
+                          _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                            ? _c("span", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.$translate(
+                                      "Ceres::Template.basketGross"
+                                    )
+                                  )
+                                )
+                              ])
+                            : _vm._e()
                         ]
                       ),
                       _c(

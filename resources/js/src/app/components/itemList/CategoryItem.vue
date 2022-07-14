@@ -84,7 +84,7 @@
                         </div>
 
                         <slot name="after-prices"></slot>
-
+                    </div>
                     <div class="category-lowest-price small" v-if="item.prices.default.lowestPrice.value && hasCrossPrice">
                         <span v-html="$translate('Ceres::Template.itemLowestPrice', {'price': item.prices.default.lowestPrice.formatted})"></span>
                     </div>

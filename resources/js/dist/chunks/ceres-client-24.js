@@ -28,16 +28,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -194,127 +184,14 @@ var render = function() {
   return _c(
     "div",
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       ref: "googleMapsContainer",
       staticClass: "maps-component position-relative",
       class: _vm.aspectClass
     },
     [_vm.scriptBlocked ? _c("div", [_vm._t("default")], 2) : _vm._e()]
-=======
-=======
->>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
-      directives: [
-        {
-          name: "show",
-          rawName: "v-show",
-          value: _vm.items.length,
-          expression: "items.length"
-        }
-      ],
-      staticClass: "row"
-    },
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12" }, [
-        _c(
-          "div",
-          { staticClass: "row" },
-          [
-            _vm._l(_vm.items, function(item, i) {
-              return [
-                _c(
-                  "div",
-                  { key: i, staticClass: "col-6 col-md-3 col-lg-3" },
-                  [
-                    _c("category-item", {
-                      key: item.id,
-                      attrs: {
-                        "item-data": item.data,
-                        "decimal-count": _vm.$ceres.config.item.storeSpecial,
-                        "disable-carousel-on-mobile":
-                          _vm.items.length > _vm.itemsPerPage,
-                        "padding-classes": _vm.paddingClasses,
-                        "padding-inline-styles": _vm.paddingInlineStyles
-                      },
-                      scopedSlots: _vm._u(
-                        [
-                          {
-                            key: "before-prices",
-                            fn: function() {
-                              return [
-                                _c("div", {
-                                  domProps: {
-                                    innerHTML: _vm._s(
-                                      _vm.getContainerContentById(
-                                        item.id,
-                                        "beforePrices"
-                                      )
-                                    )
-                                  }
-                                })
-                              ]
-                            },
-                            proxy: true
-                          },
-                          {
-                            key: "after-prices",
-                            fn: function() {
-                              return [
-                                _c("div", {
-                                  domProps: {
-                                    innerHTML: _vm._s(
-                                      _vm.getContainerContentById(
-                                        item.id,
-                                        "afterPrices"
-                                      )
-                                    )
-                                  }
-                                })
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ],
-                        null,
-                        true
-                      )
-                    })
-                  ],
-                  1
-                )
-              ]
-            })
-          ],
-          2
-        )
-      ])
-    ]
-<<<<<<< HEAD
->>>>>>> ed1465193 (chore: compile resources)
-=======
->>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12", staticStyle: { padding: "0" } }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "widget-caption bg-appearance widget-item-list-caption mb-3",
-          staticStyle: { padding: "0" }
-        },
-        [_c("div", [_c("h2", [_vm._v("Zuletzt angesehen")])])]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
