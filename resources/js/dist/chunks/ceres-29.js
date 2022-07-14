@@ -80,7 +80,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "forgot-password-modal",
@@ -370,18 +374,24 @@ var render = function() {
                     _c("span", { staticClass: "error-msg" }, [
                       _vm._v(
 <<<<<<< HEAD
+<<<<<<< HEAD
                         _vm._s(
                           _vm.$translate(
                             "Ceres::Template.loginEnterConfirmEmail"
                           )
                         )
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         "\n\t\t\t\t\t\t\t" +
                           _vm._s(
                             _vm.$translate("Ceres::Template.loginOrderAsGuest")
                           ) +
                           "\n\t\t\t\t\t\t"
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       )
                     ])
                   ])

@@ -67,6 +67,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
 <<<<<<< HEAD
+<<<<<<< HEAD
   return _c("div", [
     _vm.showItemBundleItems
       ? _c(
@@ -115,6 +116,8 @@ var render = function() {
       : _c("div", [_vm._t("default")], 2)
   ])
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
   return _c(
     "div",
     { attrs: { itemscope: "", itemtype: "http://schema.org/Thing" } },

@@ -144,6 +144,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 //
 //
 //
@@ -194,6 +195,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 =======
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -894,6 +897,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
 <<<<<<< HEAD
+<<<<<<< HEAD
   return _c(
     "div",
     { staticClass: "row" },
@@ -1333,6 +1337,8 @@ var render = function() {
     2
   )
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
   return _c("div", { staticClass: "login-pwd-reset" }, [
     _c("form", { attrs: { id: "login-form-" + _vm._uid, method: "post" } }, [
       _c("div", { class: { "modal-body": _vm.modalElement } }, [

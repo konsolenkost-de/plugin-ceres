@@ -38,6 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 //
 //
 //
@@ -65,6 +66,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -219,7 +222,10 @@ var render = function() {
             }
           }),
       _vm._v("\n    Wunschliste\n")
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
     ]
   )
 }

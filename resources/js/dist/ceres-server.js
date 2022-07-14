@@ -147,12 +147,20 @@ module.exports =
 /* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+<<<<<<< HEAD
 /* harmony import */ var _item_OrderPropertyValueList_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../item/OrderPropertyValueList.vue */ "./resources/js/src/app/components/item/OrderPropertyValueList.vue");
       function ownKeys (object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
       function _objectSpread (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
       function _defineProperty (obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+=======
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -162,6 +170,7 @@ module.exports =
 
 
 
+<<<<<<< HEAD
       //
       //
       //
@@ -239,6 +248,94 @@ module.exports =
       var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./resources/js/src/app/services/ModalService.js");
 
       var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+var ModalService = __webpack_require__(/*! ../../services/ModalService */ "./resources/js/src/app/services/ModalService.js");
+
+var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         name: "add-item-to-basket-overlay",
@@ -942,11 +1039,14 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2317,6 +2417,138 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+var NotificationService = __webpack_require__(/*! ../../../services/NotificationService */ "./resources/js/src/app/services/NotificationService.js");
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         name: "set-component-item",
@@ -4276,6 +4508,7 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 
 
 
@@ -5740,6 +5973,8 @@ module.exports =
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -5981,8 +6216,151 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
+=======
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "country-select",
+  props: {
+    selectedCountryId: Number,
+    selectedStateId: Number,
+    addressType: {
+      type: String,
+      required: true
+    },
+    optionalAddressFields: {
+      type: Object,
+      default: function _default() {}
+    },
+    requiredAddressFields: {
+      type: Object,
+      default: function _default() {}
+    }
+  },
+  data: function data() {
+    return {
+      stateList: [],
+      selectedCountry: {}
+    };
+  },
+  computed: _objectSpread({
+    addressKeyPrefix: function addressKeyPrefix() {
+      return this.addressType === "1" ? "billing_address." : "delivery_address.";
+    },
+    optionalFields: function optionalFields() {
+      var iso = this.selectedCountry.isoCode2.toLowerCase();
+
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_12__["isNullOrUndefined"])(this.optionalAddressFields[iso])) {
+        return this.optionalAddressFields.de;
+      }
+
+      return this.optionalAddressFields[iso];
+    },
+    requiredFields: function requiredFields() {
+      var iso = this.selectedCountry.isoCode2.toLowerCase();
+
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_12__["isNullOrUndefined"])(this.requiredAddressFields[iso])) {
+        return this.requiredAddressFields.de;
+      }
+
+      return this.requiredAddressFields[iso];
+    }
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_13__["mapState"])({
+    shippingCountryId: function shippingCountryId(state) {
+      return state.localization.shippingCountryId;
+    },
+    countryList: function countryList(state) {
+      return state.localization.shippingCountries;
+    }
+  })),
+
+  /**
+   * Get the shipping countries
+   */
+  created: function created() {
+    this.updateSelectedCountry();
+  },
+  methods: {
+    /**
+     * Method to fire when the country has changed
+     */
+    countryChanged: function countryChanged(value) {
+      this.$emit("country-changed", this.getCountryById(parseInt(value)));
+      this.$emit("state-changed", null);
+    },
+
+    /**
+     * @param {*} value
+     */
+    stateChanged: function stateChanged(value) {
+      this.$emit("state-changed", parseInt(value));
+    },
+
+    /**
+     * @param countryId
+     * @returns {*}
+     */
+    getCountryById: function getCountryById(countryId) {
+      return this.countryList.find(function (country) {
+        if (country.id === countryId) {
+          return country;
+        }
+
+        return null;
+      });
+    },
+    updateSelectedCountry: function updateSelectedCountry() {
+      var countryId = this.selectedCountryId || this.shippingCountryId;
+      this.selectedCountry = this.getCountryById(countryId);
+
+      if (this.selectedCountry) {
+        this.stateList = this.selectedCountry.states || [];
+      }
+
+      this.countryChanged(countryId);
+    },
+    isInOptionalFields: function isInOptionalFields(key) {
+      return this.optionalFields.includes(this.addressKeyPrefix + key);
+    },
+    isInRequiredFields: function isInRequiredFields(key) {
+      return this.requiredFields.includes(this.addressKeyPrefix + key);
+    },
+    transformTranslation: function transformTranslation(translationKey, addressKey) {
+      var translation = _services_TranslationService__WEBPACK_IMPORTED_MODULE_11__["default"].translate(translationKey);
+      var isRequired = this.isInRequiredFields(addressKey);
+      return translation + (isRequired ? "*" : "");
+    }
+  },
+  watch: {
+    selectedCountryId: function selectedCountryId() {
+      this.updateSelectedCountry();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/customer/ReCaptcha.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/customer/ReCaptcha.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helper_whenConsented__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../helper/whenConsented */ "./resources/js/src/app/helper/whenConsented.js");
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -6299,6 +6677,7 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -6311,6 +6690,16 @@ module.exports =
 //
 //
 //
+=======
+
+
+
+
+
+
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6493,6 +6882,18 @@ module.exports =
 
 
 
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -7064,6 +7465,15 @@ module.exports =
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         name: "item-image-carousel",
@@ -7326,6 +7736,7 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -7339,6 +7750,8 @@ module.exports =
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         name: "item-price",
@@ -7685,12 +8098,15 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         name: "order-property-list-group",
@@ -12114,6 +12530,7 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -12129,6 +12546,8 @@ module.exports =
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
         props: {
@@ -12285,6 +12704,7 @@ module.exports =
 /*! exports provided: default */
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
+<<<<<<< HEAD
       "use strict";
       __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.freeze.js */ "./node_modules/core-js/modules/es.object.freeze.js");
@@ -12446,6 +12866,41 @@ module.exports =
               } else if (offerTime === TimeEnum.now) {
                 name = this.$translate("Ceres::Template.liveShoppingOfferSoldOut");
               }
+=======
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
+/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
+/* harmony import */ var _services_ApiService__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
               return {
                 id: -1,
@@ -12535,9 +12990,8 @@ module.exports =
 
 
 
-//
-//
-//
+
+
 //
 //
 //
@@ -12588,6 +13042,7 @@ module.exports =
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+<<<<<<< HEAD
         mixins: [_mixins_buttonSizeProperty_mixin__WEBPACK_IMPORTED_MODULE_9__["ButtonSizePropertyMixin"]],
         props: {
           showNameInputs: {
@@ -12652,9 +13107,59 @@ module.exports =
           },
           save: function save () {
             var _this2 = this;
+=======
+  name: "item-search",
+  props: {
+    showItemImages: {
+      type: Boolean
+    },
+    forwardToSingleItem: {
+      type: Boolean,
+      default: App.config.search.forwardToSingleItem
+    },
+    timeout: {
+      type: Number,
+      default: 200
+    }
+  },
+  data: function data() {
+    return {
+      isSearchFocused: App.isShopBuilder,
+      onValueChanged: null,
+      searchString: ""
+    };
+  },
+  computed: _objectSpread({
+    hasAutocompleteResults: function hasAutocompleteResults() {
+      var item = this.autocompleteResult.item;
+      var category = this.autocompleteResult.category;
+      var suggestion = this.autocompleteResult.suggestion;
+      return App.isShopBuilder || item && item.length || category && category.length || suggestion && suggestion.length;
+    },
+    isShopBuilder: function isShopBuilder() {
+      return App.isShopBuilder;
+    }
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_16__["mapState"])({
+    autocompleteResult: function autocompleteResult(state) {
+      return state.itemSearch.autocompleteResult;
+    },
+    moduleSearchString: function moduleSearchString(state) {
+      return state.itemList.searchString;
+    }
+  })),
+  mounted: function mounted() {
+    var _this = this;
+
+    this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_17__["debounce"])(function (searchString) {
+      _this.autocomplete(searchString);
+    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["defaultValue"])(this.timeout, 200));
+    this.$nextTick(function () {
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_12__["default"].getUrlParams(document.location.search);
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
             var recaptchaEl = this.$el.querySelector("[data-recaptcha]");
 
+<<<<<<< HEAD
             if (App.config.global.googleRecaptchaApiKey && (!window.grecaptcha || !recaptchaEl)) {
               _services_NotificationService__WEBPACK_IMPORTED_MODULE_6__["default"].error(this.$translate("Ceres::Template.newsletterAcceptRecaptchaCookie"));
               this.isDisabled = false;
@@ -12675,6 +13180,80 @@ module.exports =
                 } else {
                   _services_NotificationService__WEBPACK_IMPORTED_MODULE_6__["default"].success(_this2.$translate("Ceres::Template.newsletterSuccessMessage")).closeAfter(3000);
                 }
+=======
+      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+    });
+    $('.search-input').each(function (index, input) {
+      $(input).keypress(function onEvent(event) {
+        if (event.key === "Enter") {
+          changeWindow(event.target.value);
+        }
+      });
+    });
+    $(".clearable").each(function () {
+      var $inp = $(this).find("input:text"),
+          $cle = $(this).find(".clearable__clear");
+      $inp.on("input", function () {
+        $cle.toggle(!!this.value);
+      });
+      $cle.on("click", function (e) {
+        e.preventDefault();
+        $inp.val("").trigger("input");
+      });
+    });
+  },
+  methods: {
+    search: function search() {
+      if (this.$refs.searchInput.value.length) {
+        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_14__["pathnameEquals"])(App.urls.search)) {
+          this.$store.dispatch("searchItems", this.$refs.searchInput.value);
+        } else {
+          window.open("".concat(App.urls.search, "?query=").concat(this.searchString), "_self", false);
+        }
+      }
+    },
+    autocomplete: function autocomplete(searchString) {
+      if (searchString.length >= 2) {
+        this.$store.dispatch("loadItemSearchAutocomplete", searchString);
+      } else {
+        this.$store.commit("setAutocompleteResult", {
+          item: [],
+          category: [],
+          suggestion: []
+        });
+      }
+    },
+    // hide search, if targetElement of the blur event is not a child of components' root element
+    onBlurSearchField: function onBlurSearchField(event) {
+      var target = event.relatedTarget;
+
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
+        this.isSearchFocused = false;
+      }
+    },
+    changeWindow: function changeWindow(value) {
+      var path = window.location.pathname.split("/")[1];
+      if (path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
+    },
+    buttonOnClick: function buttonOnClick(elem) {
+      $(elem).siblings("input").each(function (index, input) {
+        var e = jQuery.Event('keypress', {
+          key: "Enter"
+        });
+        $(input).trigger(e);
+      });
+    }
+  },
+  watch: {
+    // set the current search string, after clicking on a suggestion
+    moduleSearchString: function moduleSearchString(newVal) {
+      if (newVal && newVal.length) {
+        this.searchString = newVal;
+      }
+    }
+  }
+});
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
                 _this2.resetInputs();
               }).fail(function () {
@@ -12905,6 +13484,13 @@ module.exports =
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -12996,6 +13582,7 @@ module.exports =
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/orderReturn/OrderReturnItem.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************************************/
 /*! exports provided: default */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -13009,10 +13596,59 @@ module.exports =
 /* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _OrderReturnSetComponentList_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./OrderReturnSetComponentList.vue */ "./resources/js/src/app/components/orderReturn/OrderReturnSetComponentList.vue");
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.includes.js */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ItemFilter.vue */ "./resources/js/src/app/components/itemList/filter/ItemFilter.vue");
+/* harmony import */ var _mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../mixins/componentId.mixin */ "./resources/js/src/app/mixins/componentId.mixin.js");
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -13047,6 +13683,156 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
+=======
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "item-filter-list",
+  components: {
+    ItemFilter: _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+  },
+  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__["ComponentIdMixin"]],
+  // Experimental mixin, may be removed in the future.
+  props: {
+    filterListBulk: Boolean,
+    facetData: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    allowedFacetsTypes: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    paddingClasses: {
+      type: String,
+      default: null
+    },
+    paddingInlineStyles: {
+      type: String,
+      default: null
+    }
+  },
+  data: function data() {
+    return {
+      initialSelectedFacets: [],
+      initialPriceMin: "",
+      initialPriceMax: ""
+    };
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_12__["mapState"])({
+    facets: function facets(state) {
+      var _this = this;
+
+      if (!this.allowedFacetsTypes.length) {
+        return state.itemList.facets;
+      }
+
+      return state.itemList.facets.filter(function (facet) {
+        return _this.allowedFacetsTypes.includes(facet.id) || _this.allowedFacetsTypes.includes(facet.type);
+      });
+    },
+    isLoading: function isLoading(state) {
+      return state.itemList.isLoading;
+    },
+    selectedFacets: function selectedFacets(state) {
+      return state.itemList.selectedFacets;
+    }
+  })),
+  created: function created() {
+    this.$store.commit("addFacets", this.facetData);
+    this.initSelectedFacets();
+  },
+  methods: {
+    initSelectedFacets: function initSelectedFacets() {
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_11__["default"].getUrlParams(document.location.search);
+      var selectedFacets = [];
+
+      if (urlParams.facets) {
+        selectedFacets = urlParams.facets.split(",");
+      }
+
+      if (this.initPriceFacet(urlParams)) {
+        selectedFacets.push("price");
+      }
+
+      if (selectedFacets.length > 0) {
+        this.$store.commit("setSelectedFacetsByIds", selectedFacets);
+      }
+
+      this.initialSelectedFacets = selectedFacets;
+    },
+    initPriceFacet: function initPriceFacet(urlParams) {
+      if (urlParams.priceMin || urlParams.priceMax) {
+        var priceMin = urlParams.priceMin || "";
+        var priceMax = urlParams.priceMax || "";
+        this.$store.commit("setPriceFacet", {
+          priceMin: priceMin,
+          priceMax: priceMax
+        });
+        this.initialPriceMin = priceMin;
+        this.initialPriceMax = priceMax;
+        return true;
+      }
+
+      return false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/itemList/filter/ItemFilterPrice.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/filter/ItemFilterPrice.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -13459,8 +14245,177 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
+=======
 //
-//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    liveShoppingData: {
+      type: Object,
+      required: true
+    },
+    displaySettings: {
+      type: Object,
+      default: function _default() {
+        return {
+          showCrossPrice: true,
+          showStock: true,
+          showStockProgress: true,
+          showTimer: true,
+          showTimerProgress: true
+        };
+      }
+    },
+    prices: {
+      type: Object,
+      required: true
+    },
+    isActiveByStock: {
+      type: Boolean
+    },
+    showNetPrices: {
+      type: Boolean
+    }
+  },
+  data: function data() {
+    return {
+      currentInterval: null,
+      duration: null,
+      hasClosed: null,
+      hasStarted: null,
+      itemPriceRebatePercentage: 0,
+      itemQuantityRemaining: 0,
+      momentBegin: null,
+      momentEnd: null,
+      quantitySoldPercentage: 0,
+      timePercentage: 0
+    };
+  },
+  computed: {
+    oldPriceBefore: function oldPriceBefore() {
+      return this.$translate('Ceres::Template.liveShoppingBefore', {
+        'price': '<del>' + this.prices.rrp.unitPrice.formatted + '</del>'
+      });
+    },
+    oldPriceRrp: function oldPriceRrp() {
+      return this.$translate('Ceres::Template.liveShoppingRrp', {
+        'price': '<del>' + this.prices.rrp.unitPrice.formatted + '</del>'
+      });
+    }
+  },
+  created: function created() {
+    this.initializeDataAndTimer();
+  },
+  methods: {
+    initializeDataAndTimer: function initializeDataAndTimer() {
+      var _this = this;
+
+      var momentNow = dayjs__WEBPACK_IMPORTED_MODULE_3___default()();
+      this.momentBegin = dayjs__WEBPACK_IMPORTED_MODULE_3___default.a.unix(this.liveShoppingData.liveShopping.fromTime);
+      this.momentEnd = dayjs__WEBPACK_IMPORTED_MODULE_3___default.a.unix(this.liveShoppingData.liveShopping.toTime);
+      this.hasStarted = this.momentBegin.valueOf() < momentNow.valueOf();
+      this.hasClosed = this.momentEnd.valueOf() < momentNow.valueOf();
+      this.setQuantitySoldPercentage();
+
+      if (this.hasStarted && !this.hasClosed) {
+        this.setItemPriceRebatePercentage();
+      }
+
+      clearInterval(this.currentInterval);
+      this.calculations();
+      this.currentInterval = setInterval(function () {
+        _this.calculations();
+      }, 1000);
+    },
+    setQuantitySoldPercentage: function setQuantitySoldPercentage() {
+      var data = this.liveShoppingData.liveShopping;
+      var percentage = 100 - data.quantitySold / data.quantityMax * 100;
+      this.itemQuantityRemaining = data.quantityMax - data.quantitySold;
+      this.quantitySoldPercentage = percentage.toFixed(App.config.item.storeSpecial);
+    },
+    setItemPriceRebatePercentage: function setItemPriceRebatePercentage() {
+      var specialOfferPrice = this.prices.price.price.value;
+      var defaultPrice = this.prices.rrp && this.prices.rrp.price.value || 0;
+
+      if (defaultPrice === 0) {
+        this.itemPriceRebatePercentage = 0;
+      } else {
+        var percentage = 100 - specialOfferPrice / defaultPrice * 100;
+        percentage = percentage.toFixed(App.config.item.storeSpecial);
+        percentage = percentage.replace(".", App.decimalSeparator);
+        this.itemPriceRebatePercentage = percentage;
+      }
+    },
+    calculations: function calculations() {
+      var momentNow = dayjs__WEBPACK_IMPORTED_MODULE_3___default()();
+      var fullSeconds = 0;
+      var remainSeconds = 0;
+      fullSeconds = this.momentEnd.diff(this.momentBegin, "second");
+
+      if (this.hasStarted) {
+        remainSeconds = this.momentEnd.diff(momentNow, "second");
+      } else {
+        remainSeconds = this.momentBegin.diff(momentNow, "second");
+      }
+
+      this.timePercentage = (remainSeconds / fullSeconds * 100).toFixed(App.config.item.storeSpecial);
+      this.duration = this.getDuration(remainSeconds);
+      var hasToStart = !this.hasStarted && this.momentBegin < momentNow;
+      var hasToClose = !this.hasClosed && this.momentEnd < momentNow;
+
+      if (hasToStart || hasToClose) {
+        clearInterval(this.currentInterval);
+        this.$emit("reload-offer");
+      }
+    },
+    getDuration: function getDuration(seconds) {
+      var days = Math.floor(seconds / (60 * 60 * 24));
+      seconds = seconds - days * 60 * 60 * 24;
+      var hours = Math.floor(seconds / (60 * 60));
+      seconds = seconds - hours * 60 * 60;
+      var minutes = Math.floor(seconds / 60);
+      seconds = seconds - minutes * 60;
+      return {
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      };
+    }
+  },
+  watch: {
+    liveShoppingData: function liveShoppingData() {
+      this.initializeDataAndTimer();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/liveShopping/LiveShoppingItem.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/liveShopping/LiveShoppingItem.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.freeze.js */ "./node_modules/core-js/modules/es.object.freeze.js");
+/* harmony import */ var core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
+/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _LiveShoppingDetails_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LiveShoppingDetails.vue */ "./resources/js/src/app/components/liveShopping/LiveShoppingDetails.vue");
+/* harmony import */ var _itemList_ItemStoreSpecial_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../itemList/ItemStoreSpecial.vue */ "./resources/js/src/app/components/itemList/ItemStoreSpecial.vue");
+
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -13720,6 +14675,39 @@ module.exports =
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14865,9 +15853,41 @@ module.exports =
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+<<<<<<< HEAD
         name: "wish-list",
         components: {
           WishListItem: _WishListItem_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -14893,6 +15913,58 @@ module.exports =
         },
         methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_6__["mapActions"])(["initWishListItems"]))
       });
+=======
+  props: {
+    styles: String,
+    classes: String,
+    consentGroups: Object
+  },
+  data: function data() {
+    return {
+      isCollapsed: true,
+      isExpanded: false
+    };
+  },
+  computed: {
+    isVisible: function isVisible() {
+      return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
+    },
+    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+    // Experimental mixin, may be removed in the future.
+    data: function data() {
+      return {
+        isCollapsed: true,
+        isExpanded: false
+      };
+    },
+    text: function text() {
+      var links = {
+        gtc: '<a class="text-appearance" href="' + App.urls.gtc + '" target="_blank">' + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
+        cancellation: '<a class="text-appearance" href="' + App.urls.cancellationRights + '" target="_blank">' + this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        policy: '<a class="text-appearance" href="' + App.urls.privacyPolicy + '" target="_blank">' + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        legal: '<a class="text-appearance" href="' + App.urls.legalDisclosure + '" target="_blank">' + this.$translate("Ceres::Template.footerLegalDisclosure") + "</a>"
+      };
+      return this.$translate("Ceres::Template.cookieBarHintText", links);
+    }
+  },
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_6__["mapMutations"])(["storeConsents", "acceptAll"])), {}, {
+    close: function close() {
+      this.isCollapsed = true;
+      this.isExpanded = false;
+    },
+    isConsented: function isConsented(groupKey) {
+      return this.$store.getters.isConsented(groupKey + ".*");
+    },
+    toggleConsent: function toggleConsent(groupKey) {
+      this.$store.commit("toggleConsent", groupKey + ".*");
+    }
+  })
+});
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
       /***/
 }),
@@ -15886,6 +16958,7 @@ module.exports =
             } return that;
           };
 
+<<<<<<< HEAD
           var getEntry = function (that, key) {
             var state = getInternalState(that);
             // fast case
@@ -15897,6 +16970,29 @@ module.exports =
               if (entry.key == key) return entry;
             }
           };
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
           redefineAll(C.prototype, {
             // 23.1.3.1 Map.prototype.clear()
@@ -16160,12 +17256,103 @@ module.exports =
       /***/
 }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/core-js/internals/correct-is-regexp-logic.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/core-js/internals/correct-is-regexp-logic.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function (module, exports, __webpack_require__) {
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
       var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
 
@@ -32545,8 +33732,248 @@ module.exports =
               }).append(this);
             }
 
+<<<<<<< HEAD
             return this;
           },
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/basket/AddItemToBasketOverlay.vue?vue&type=template&id=71cf7942&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/basket/AddItemToBasketOverlay.vue?vue&type=template&id=71cf7942& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "add-item-to-basket-overlay" } }, [
+    _vm._ssrNode('<div class="modal fade">', "</div>", [
+      _vm._ssrNode('<div role="document" class="modal-dialog">', "</div>", [
+        _vm.basketItem
+          ? _vm._ssrNode(
+              '<div class="modal-content">',
+              "</div>",
+              [
+                _vm._ssrNode(
+                  '<div class="modal-header"><div class="modal-title h5">' +
+                    _vm._ssrEscape(
+                      _vm._s(_vm.$translate("Ceres::Template.singleItemAdded"))
+                    ) +
+                    '</div> <span class="text-muted ml-auto"><span class="timer"></span>s</span> <button type="button" data-dismiss="modal" aria-label="Close" class="close ml-0 pl-1"><span aria-hidden="true">×</span></button></div> '
+                ),
+                _vm._ssrNode('<div class="modal-body">', "</div>", [
+                  _vm._ssrNode(
+                    '<div class="row is-table-row">',
+                    "</div>",
+                    [
+                      _vm._ssrNode(
+                        '<div class="col-md-4" style="min-height: 80px;"><img' +
+                          _vm._ssrAttr("src", _vm.imageUrl) +
+                          _vm._ssrAttr(
+                            "alt",
+                            _vm.imageAlternativeText || _vm.itemName
+                          ) +
+                          _vm._ssrAttr("title", _vm.itemName) +
+                          ' class="img-fluid mx-auto" style="max-height: 140px;"></div> '
+                      ),
+                      _vm._ssrNode(
+                        '<div class="col-md-8">',
+                        "</div>",
+                        [
+                          _vm._ssrNode(
+                            '<p><strong class="basket-item-name">' +
+                              _vm._ssrEscape(_vm._s(_vm.itemName)) +
+                              '</strong></p> <p><strong class="basket-item-price"><span>' +
+                              _vm._ssrEscape(
+                                _vm._s(_vm._f("currency")(_vm.price))
+                              ) +
+                              "</span></strong></p> " +
+                              _vm._ssrList(_vm.variation.attributes, function(
+                                attribute,
+                                i
+                              ) {
+                                return (
+                                  '<p class="small"><strong>' +
+                                  _vm._ssrEscape(
+                                    _vm._s(attribute.attribute.names.name)
+                                  ) +
+                                  "</strong>:\n                                <span>" +
+                                  _vm._ssrEscape(
+                                    _vm._s(attribute.value.names.name)
+                                  ) +
+                                  "</span></p>"
+                                )
+                              }) +
+                              " "
+                          ),
+                          _vm.shownOrderProperties.length
+                            ? _vm._ssrNode(
+                                '<div class="small">',
+                                "</div>",
+                                [
+                                  _vm._ssrNode(
+                                    '<div class="font-weight-bold my-1">' +
+                                      _vm._ssrEscape(
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.singleItemAdditionalOptions"
+                                          )
+                                        ) + ":"
+                                      ) +
+                                      "</div> "
+                                  ),
+                                  _vm._ssrNode(
+                                    '<ul class="ml-1 pl-3">',
+                                    "</ul>",
+                                    _vm._l(_vm.shownOrderProperties, function(
+                                      property
+                                    ) {
+                                      return _vm._ssrNode("<li>", "</li>", [
+                                        _vm._ssrNode(
+                                          '<span class="d-block">',
+                                          "</span>",
+                                          [
+                                            _vm._ssrNode(
+                                              "<strong" +
+                                                _vm._ssrClass(null, {
+                                                  colon:
+                                                    property.type.length > 0
+                                                }) +
+                                                ">" +
+                                                _vm._ssrEscape(
+                                                  _vm._s(property.name) +
+                                                    " (" +
+                                                    _vm._s(
+                                                      _vm.$translate(
+                                                        "Ceres::Template.singleItemIncludeAbbr"
+                                                      )
+                                                    ) +
+                                                    " " +
+                                                    _vm._s(
+                                                      _vm._f("currency")(
+                                                        _vm._f(
+                                                          "propertySurcharge"
+                                                        )(
+                                                          _vm.basketItem
+                                                            .variation.data
+                                                            .properties,
+                                                          property.propertyId
+                                                        )
+                                                      )
+                                                    ) +
+                                                    ")"
+                                                ) +
+                                                "</strong> "
+                                            ),
+                                            _vm._ssrNode(
+                                              "<span>",
+                                              "</span>",
+                                              [
+                                                _c("order-property-value", {
+                                                  attrs: { property: property }
+                                                })
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          2
+                                        )
+                                      ])
+                                    }),
+                                    0
+                                  )
+                                ],
+                                2
+                              )
+                            : _vm._e()
+                        ],
+                        2
+                      )
+                    ],
+                    2
+                  )
+                ]),
+                _vm._ssrNode(" "),
+                _vm._ssrNode(
+                  '<div class="modal-footer">',
+                  "</div>",
+                  [
+                    _c(
+                      "a",
+                      {
+                        directives: [
+                          {
+                            name: "waiting-animation-infinite",
+                            rawName: "v-waiting-animation-infinite"
+                          }
+                        ],
+                        staticClass: "btn btn-outline-primary btn-medium mr-2",
+                        attrs: { href: _vm.urls.basket, rel: "nofollow" }
+                      },
+                      [
+                        _vm._ssrNode(
+                          '<i aria-hidden="true" class="fa fa-shopping-cart"></i>' +
+                            _vm._ssrEscape(
+                              "\n                        " +
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.singleItemBasket"
+                                  )
+                                ) +
+                                "\n                    "
+                            )
+                        )
+                      ]
+                    ),
+                    _vm._ssrNode(" "),
+                    _c(
+                      "a",
+                      {
+                        directives: [
+                          {
+                            name: "waiting-animation-infinite",
+                            rawName: "v-waiting-animation-infinite"
+                          }
+                        ],
+                        staticClass: "btn btn-primary btn-medium",
+                        attrs: { href: _vm.urls.checkout, rel: "nofollow" }
+                      },
+                      [
+                        _vm._ssrNode(
+                          '<i aria-hidden="true" class="fa fa-arrow-right"></i>' +
+                            _vm._ssrEscape(
+                              "\n                        " +
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.singleItemCheckout"
+                                  )
+                                ) +
+                                "\n                    "
+                            )
+                        )
+                      ]
+                    )
+                  ],
+                  2
+                ),
+                _vm._ssrNode(" "),
+                _vm._t("extendOverlayButtons")
+              ],
+              2
+            )
+          : _vm._e()
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
           wrapInner: function (html) {
             if (isFunction(html)) {
@@ -32562,6 +33989,7 @@ module.exports =
               if (contents.length) {
                 contents.wrapAll(html);
 
+<<<<<<< HEAD
               } else {
                 self.append(html);
               }
@@ -32823,6 +34251,295 @@ module.exports =
             };
           }
         });
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/basket/AddToBasket.vue?vue&type=template&id=729fe3ab&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/basket/AddToBasket.vue?vue&type=template&id=729fe3ab& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      !_vm.showQuantity && _vm.useLargeScale && _vm.canBeAddedToBasket
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrAttr(
+                "title",
+                _vm.$translate("Ceres::Template.singleItemAddToBasket")
+              ) +
+              _vm._ssrClass("add-to-basket-lg-container d-none d-lg-block", {
+                "no-pointer-events": _vm.isLoading
+              }) +
+              ">",
+            "</div>",
+            [
+              _vm._ssrNode(
+                "<div>",
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    _vm._ssrEscape(
+                      "\n            " +
+                        _vm._s(
+                          _vm.$translate(
+                            "Ceres::Template.singleItemAddToBasket"
+                          )
+                        ) +
+                        "\n            "
+                    )
+                  ),
+                  _c("icon", {
+                    staticClass: "fa-lg mobile-icon-right",
+                    attrs: { icon: "cart-plus", loading: _vm.isLoading }
+                  })
+                ],
+                2
+              ),
+              _vm._ssrNode(" "),
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.variationId }
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._ssrNode(" "),
+      !_vm.showQuantity && _vm.useLargeScale && !_vm.canBeAddedToBasket
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrAttr(
+                "title",
+                _vm.$translate("Ceres::Template.itemShowItem")
+              ) +
+              ' class="add-to-basket-lg-container d-none d-lg-block">',
+            "</div>",
+            [
+              _vm._ssrNode(
+                "<div>" +
+                  _vm._ssrEscape(
+                    "\n            " +
+                      _vm._s(_vm.$translate("Ceres::Template.itemShowItem")) +
+                      "\n            "
+                  ) +
+                  '<i class="fa fa-arrow-right fa-lg d-none d-sm-block"></i></div> '
+              ),
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.variationId }
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._ssrNode(" "),
+      _vm.showQuantity && !_vm.useLargeScale
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrClass("d-inline", {
+                "d-lg-none": !_vm.$ceres.isItemView
+              }) +
+              ">",
+            "</div>",
+            [
+              _vm._ssrNode(
+                '<div class="add-to-basket-container">',
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    '<div class="quantity-input-container">',
+                    "</div>",
+                    [
+                      _c("quantity-input", {
+                        attrs: {
+                          value: _vm.quantity,
+                          timeout: 0,
+                          min: _vm.minimumQuantity,
+                          max: _vm.maximumQuantity,
+                          interval: _vm.intervalQuantity,
+                          "variation-id": _vm.variationId,
+                          waiting:
+                            _vm.isLoading ||
+                            !_vm.isSalable ||
+                            !_vm.allVariationsSelected
+                        },
+                        on: {
+                          "quantity-change": _vm.updateQuantity,
+                          "out-of-stock": _vm.handleButtonState
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._ssrNode(" "),
+                  !_vm.allVariationsSelected || !_vm.isSalable
+                    ? _c(
+                        "button",
+                        {
+                          directives: [
+                            { name: "tooltip", rawName: "v-tooltip" }
+                          ],
+                          staticClass:
+                            "btn btn-block btn-primary btn-basket btn-appearance disabled",
+                          class: _vm.buttonClasses,
+                          style: _vm.paddingInlineStyles,
+                          attrs: {
+                            "data-toggle": "tooltip",
+                            "data-placement": "top",
+                            title: _vm.tooltipText
+                          }
+                        },
+                        [
+                          _vm._ssrNode(
+                            "\n                    Ausverkauft\n            "
+                          )
+                        ],
+                        2
+                      )
+                    : !_vm.buttonLockState
+                    ? _vm._ssrNode(
+                        "<button" +
+                          _vm._ssrAttr(
+                            "disabled",
+                            _vm.isLoading || !_vm.hasPrice
+                          ) +
+                          _vm._ssrClass(
+                            "btn btn-block btn-primary btn-basket btn-appearance",
+                            _vm.buttonClasses
+                          ) +
+                          _vm._ssrStyle(null, _vm.paddingInlineStyles, null) +
+                          ">",
+                        "</button>",
+                        [
+                          _c("icon", {
+                            attrs: {
+                              icon: "shopping-cart",
+                              loading: _vm.isLoading
+                            }
+                          }),
+                          _vm._ssrNode(
+                            _vm._ssrEscape(
+                              "\n                " +
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.singleItemAddToBasket"
+                                  )
+                                ) +
+                                "\n            "
+                            )
+                          )
+                        ],
+                        2
+                      )
+                    : _c(
+                        "button",
+                        {
+                          directives: [
+                            { name: "tooltip", rawName: "v-tooltip" }
+                          ],
+                          staticClass:
+                            "btn btn-block btn-primary btn-basket btn-appearance disabled",
+                          class: _vm.buttonClasses,
+                          style: _vm.paddingInlineStyles,
+                          attrs: {
+                            "data-toggle": "tooltip",
+                            "data-placement": "top",
+                            title: _vm._f(
+                              "translate"
+                            )("Ceres::Template.singleItemQuantityMax", {
+                              max: _vm.maximumQuantity
+                            })
+                          }
+                        },
+                        [
+                          _vm._ssrNode(
+                            "\n                    Ausverkauft\n            "
+                          )
+                        ]
+                      )
+                ],
+                2
+              )
+            ]
+          )
+        : _vm._e(),
+      _vm._ssrNode(" "),
+      !_vm.showQuantity && !_vm.useLargeScale
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrClass("d-inline", { "d-lg-none": !_vm.isWishList }) +
+              ">",
+            "</div>",
+            [
+              _vm._ssrNode(
+                '<div role="group" aria-label="Thumb Control" class="btn-group">',
+                "</div>",
+                [
+                  _vm.canBeAddedToBasket
+                    ? _vm._ssrNode(
+                        '<button type="button"' +
+                          _vm._ssrClass(
+                            "btn btn-primary btn-basket btn-i-w btn-appearance mobile-width-button",
+                            { "no-pointer-events": _vm.isLoading }
+                          ) +
+                          ">",
+                        "</button>",
+                        [
+                          _c("icon", {
+                            staticClass: "fa-lg mobile-icon-right",
+                            attrs: {
+                              icon: "shopping-cart",
+                              loading: _vm.isLoading
+                            }
+                          }),
+                          _vm._ssrNode(
+                            ' <span class="btn-text">' +
+                              _vm._ssrEscape(
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.singleItemAddToBasket"
+                                  )
+                                )
+                              ) +
+                              "</span>"
+                          )
+                        ],
+                        2
+                      )
+                    : _vm._e(),
+                  _vm._ssrNode(
+                    " " +
+                      (!_vm.canBeAddedToBasket
+                        ? '<button type="button" class="btn btn-primary btn-basket btn-appearance mobile-width-button"><i aria-hidden="true" class="fa fa-arrow-right fa-lg d-none d-sm-block"></i> <span class="btn-text">' +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.itemShowItem")
+                            )
+                          ) +
+                          "</span></button>"
+                        : "<!---->")
+                  )
+                ],
+                2
+              )
+            ]
+          )
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -32884,8 +34601,523 @@ module.exports =
               responseContainer = arguments;
             };
 
+<<<<<<< HEAD
             // Clean-up function (fires after converters)
             jqXHR.always(function () {
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/basket/BasketTotals.vue?vue&type=template&id=3765131c&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/basket/BasketTotals.vue?vue&type=template&id=3765131c& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "cmp-totals" },
+    [
+      _vm._ssrNode(
+        '<div class="h3">' +
+          _vm._ssrEscape(_vm._s(_vm.$translate("Ceres::Template.basketSum"))) +
+          "</div> "
+      ),
+      _vm._ssrNode(
+        "<div" +
+          _vm._ssrClass("component-loading with-icon refreshing", {
+            "is-loading": _vm.isBasketLoading
+          }) +
+          ">",
+        "</div>",
+        [
+          _vm._ssrNode(
+            "<dl>",
+            "</dl>",
+            [
+              _vm._t("before-item-sum"),
+              _vm._ssrNode(
+                " " +
+                  (_vm.visibleFields.includes("basketValueNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketValue")
+                          ) +
+                          " " +
+                          _vm._s(_vm.$translate("Ceres::Template.basketNet")) +
+                          "\n                "
+                      ) +
+                      '</dt><dd data-testing="item-sum-net"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(
+                              _vm.calculateBaseValue(
+                                _vm.basket.itemSumNet,
+                                _vm.basket.basketRebate
+                              )
+                            )
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("basketValueGross")
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketValue")
+                          ) +
+                          " "
+                      ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
+                      '</dt><dd data-testing="item-sum"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(
+                              _vm.calculateBaseValue(
+                                _vm.basket.itemSum,
+                                _vm.basket.basketRebate
+                              )
+                            )
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("rebate") &&
+                  _vm.basket.basketRebate
+                    ? '<dt class="rebate-hint">' +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketRebate")
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dt>" +
+                      (!_vm.showNetPrices
+                        ? '<dd class="rebate-hint">' +
+                          _vm._ssrEscape(
+                            "\n                    " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.basketRebateSign"
+                                )
+                              ) +
+                              "${calculateBaseValue(basket.itemSum, basket.basketRebate) - basket.itemSum | currency }\n                "
+                          ) +
+                          "</dd>"
+                        : '<dd class="rebate-hint">' +
+                          _vm._ssrEscape(
+                            "\n                    " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.basketRebateSign"
+                                )
+                              ) +
+                              _vm._s(
+                                _vm._f("currency")(
+                                  _vm.calculateBaseValue(
+                                    _vm.basket.itemSumNet,
+                                    _vm.basket.basketRebate
+                                  ) - _vm.basket.itemSumNet
+                                )
+                              ) +
+                              "\n                "
+                          ) +
+                          "</dd>") +
+                      " <dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketSubTotal")
+                          ) +
+                          " " +
+                          _vm._s(_vm.$translate("Ceres::Template.basketNet")) +
+                          "\n                "
+                      ) +
+                      "</dt><dd" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(_vm._f("currency")(_vm.basket.itemSumNet)) +
+                          "\n                "
+                      ) +
+                      "</dd> <dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketSubTotal")
+                          ) +
+                          " "
+                      ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
+                      "</dt><dd" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(_vm._f("currency")(_vm.basket.itemSum)) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " "
+              ),
+              _vm._t("after-item-sum"),
+              _vm._ssrNode(" "),
+              _vm._t("before-shipping-costs"),
+              _vm._ssrNode(
+                " " +
+                  (_vm.visibleFields.includes("shippingCostsNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate(
+                              "Ceres::Template.basketShippingCosts"
+                            )
+                          ) +
+                          " " +
+                          _vm._s(_vm.$translate("Ceres::Template.basketNet")) +
+                          "\n                "
+                      ) +
+                      '</dt><dd data-testing="shipping-amount-net"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(_vm.basket.shippingAmountNet)
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("shippingCostsGross")
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate(
+                              "Ceres::Template.basketShippingCosts"
+                            )
+                          ) +
+                          " "
+                      ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
+                      '</dt><dd data-testing="shipping-amount"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(_vm.basket.shippingAmount)
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " "
+              ),
+              _vm._t("after-shipping-costs"),
+              _vm._ssrNode(
+                " " +
+                  (_vm.visibleFields.includes("promotionCoupon") &&
+                  _vm.basket.couponCode &&
+                  _vm.basket.couponCampaignType === "promotion"
+                    ? '<dt class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketCoupon")
+                          ) +
+                          "\n                "
+                      ) +
+                      '</dt><dd data-testing="promotion-coupon" class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(_vm.basket.couponDiscount)
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                    ? "<hr>"
+                    : "<!---->") +
+                  " "
+              ),
+              _vm._t("before-total-sum"),
+              _vm._ssrNode(
+                " " +
+                  (_vm.visibleFields.includes("totalSumNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketTotalSum")
+                          ) +
+                          " " +
+                          _vm._s(_vm.$translate("Ceres::Template.basketNet")) +
+                          "\n                "
+                      ) +
+                      '</dt><dd data-testing="basket-amount-net"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": _vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("currency")(_vm.basket.basketAmountNet)
+                          ) +
+                          "\n                "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " "
+              ),
+              _vm._t("before-vat"),
+              _vm._ssrNode(
+                " " +
+                  _vm._ssrList(_vm.basket.totalVats, function(totalVat) {
+                    return _vm.visibleFields.includes("vats")
+                      ? '<div class="vatTotals"><dt>' +
+                          _vm._ssrEscape(
+                            "\n                    " +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.basketVAT")
+                              ) +
+                              " " +
+                              _vm._s(totalVat.vatValue) +
+                              "%\n                "
+                          ) +
+                          '</dt><dd data-testing="vat-amount">' +
+                          _vm._ssrEscape(
+                            "\n                    " +
+                              _vm._s(_vm._f("currency")(totalVat.vatAmount)) +
+                              "\n                "
+                          ) +
+                          "</dd></div>"
+                      : "<!---->"
+                  }) +
+                  " "
+              ),
+              _vm._t("after-vat"),
+              _vm._ssrNode(
+                ' <div class="totalSum"><hr> ' +
+                  (_vm.visibleFields.includes("additionalCosts") &&
+                  _vm.propertiesWithAdditionalCosts.length
+                    ? _vm._ssrList(_vm.propertiesWithAdditionalCosts, function(
+                        property
+                      ) {
+                        return (
+                          '<dt class="font-weight-bold">' +
+                          _vm._ssrEscape(
+                            "\n                            " +
+                              _vm._s(property.name) +
+                              "\n                        "
+                          ) +
+                          '</dt><dd class="font-weight-bold">' +
+                          _vm._ssrEscape(
+                            "\n                            " +
+                              _vm._s(_vm._f("currency")(property.price)) +
+                              "\n                        "
+                          ) +
+                          "</dd>"
+                        )
+                      })
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("totalSumGross")
+                    ? "<dt" +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketTotalSum")
+                          ) +
+                          " "
+                      ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
+                      '</dt><dd data-testing="basket-amount"' +
+                      _vm._ssrClass(null, {
+                        "font-weight-bold": !_vm.showNetPrices
+                      }) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(_vm._f("currency")(_vm.basket.basketAmount)) +
+                          "\n                    "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("salesCoupon") &&
+                  _vm.basket.couponCode &&
+                  _vm.basket.couponCampaignType === "sales"
+                    ? '<dt class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketCoupon")
+                          ) +
+                          "\n                    "
+                      ) +
+                      '</dt><dd data-testing="sales-coupon" class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(
+                            _vm._f("currency")(_vm.basket.couponDiscount)
+                          ) +
+                          "\n                    "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.visibleFields.includes("openAmount") &&
+                  _vm.basket.couponCampaignType === "sales"
+                    ? '<dt class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.basketOpenAmount")
+                          ) +
+                          "\n                    "
+                      ) +
+                      '</dt><dd data-testing="open-amount" class="font-weight-bold">' +
+                      _vm._ssrEscape(
+                        "\n                        " +
+                          _vm._s(_vm._f("currency")(_vm.basket.openAmount)) +
+                          "\n                    "
+                      ) +
+                      "</dd>"
+                    : "<!---->") +
+                  "</div> "
+              ),
+              _vm._t("after-total-sum")
+            ],
+            2
+          )
+        ]
+      ),
+      _vm._ssrNode(
+        " " +
+          (_vm.basket.isExportDelivery && _vm.deliveryExportTranslation
+            ? '<div class="alert alert-info w-100">' +
+              _vm._ssrEscape(
+                "\n        " + _vm._s(_vm.deliveryExportTranslation) + "\n    "
+              ) +
+              "</div>"
+            : "<!---->")
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
               // If previous value didn't exist - remove it
               if (overwritten === undefined) {
@@ -32922,6 +35154,7 @@ module.exports =
 
 
 
+<<<<<<< HEAD
         // Support: Safari 8 only
         // In Safari 8 documents created via document.implementation.createHTMLDocument
         // collapse sibling forms: the second one becomes a child of the first one.
@@ -32932,6 +35165,139 @@ module.exports =
           body.innerHTML = "<form></form><form></form>";
           return body.childNodes.length === 2;
         })();
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/basket/list/BasketList.vue?vue&type=template&id=354088c4&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/basket/list/BasketList.vue?vue&type=template&id=354088c4& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm._ssrNode(
+        "<div>",
+        "</div>",
+        [
+          _vm._ssrNode(
+            (!_vm.basketItems.length > 0
+              ? '<div><div class="h5 py-3">Du hast noch keine Artikel im Warenkorb.</div></div>'
+              : "<!---->") + " "
+          ),
+          _c(
+            "transition-group",
+            { attrs: { name: "list-transition", tag: "div" } },
+            [
+              _vm._l(_vm.basketItems, function(basketItem) {
+                return [
+                  basketItem.price > 0
+                    ? _c("basket-list-item", {
+                        key: basketItem.id,
+                        attrs: {
+                          "basket-item": basketItem,
+                          "is-preview": _vm.isPreview,
+                          "basket-details-data": _vm.basketDetailsData
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "before-basket-item",
+                              fn: function() {
+                                return [_vm._t("before-basket-item")]
+                              },
+                              proxy: true
+                            },
+                            {
+                              key: "after-basket-item",
+                              fn: function() {
+                                return [_vm._t("after-basket-item")]
+                              },
+                              proxy: true
+                            }
+                          ],
+                          null,
+                          true
+                        )
+                      })
+                    : _vm._e()
+                ]
+              })
+            ],
+            2
+          ),
+          _vm._ssrNode(
+            " " +
+              (_vm.basketItems.some(function(item) {
+                return item.price <= 0
+              })
+                ? "<div>Gratis Artikel:</div>"
+                : "<!---->") +
+              " "
+          ),
+          _c(
+            "transition-group",
+            { attrs: { name: "list-transition", tag: "div" } },
+            [
+              _vm._l(_vm.basketItems, function(basketItem) {
+                return [
+                  basketItem.price <= 0
+                    ? _c("basket-list-item", {
+                        key: basketItem.id,
+                        attrs: {
+                          "basket-item": basketItem,
+                          "is-preview": _vm.isPreview,
+                          "basket-details-data": _vm.basketDetailsData
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "before-basket-item",
+                              fn: function() {
+                                return [_vm._t("before-basket-item")]
+                              },
+                              proxy: true
+                            },
+                            {
+                              key: "after-basket-item",
+                              fn: function() {
+                                return [_vm._t("after-basket-item")]
+                              },
+                              proxy: true
+                            }
+                          ],
+                          null,
+                          true
+                        )
+                      })
+                    : _vm._e()
+                ]
+              })
+            ],
+            2
+          )
+        ],
+        2
+      ),
+      _vm._ssrNode(" "),
+      !_vm.isBasketInitiallyLoaded
+        ? _c("loading-animation", { staticClass: "d-table w-100" })
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
         // Argument "data" should be string of html
@@ -32949,7 +35315,571 @@ module.exports =
 
           var base, parsed, scripts;
 
+<<<<<<< HEAD
           if (!context) {
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/basket/list/BasketListItem.vue?vue&type=template&id=3c2c335e&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/basket/list/BasketListItem.vue?vue&type=template&id=3c2c335e& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "basket-list-item py-3" },
+    [
+      _vm._t("before-basket-item"),
+      _vm._ssrNode(" "),
+      _vm._ssrNode(
+        "<div" +
+          _vm._ssrClass("basket-item component-loading with-icon d-flex", {
+            "sending is-loading": _vm.waiting,
+            "is-loading": _vm.isCheckoutReadonly
+          }) +
+          ">",
+        "</div>",
+        [
+          _vm._ssrNode(
+            '<div class="image-container">',
+            "</div>",
+            [
+              _vm.image
+                ? _c("lazy-img", {
+                    attrs: {
+                      "picture-class": "d-block mw-100 mh-100",
+                      "image-url": _vm.image,
+                      alt: _vm.altText,
+                      title: _vm.itemName
+                    }
+                  })
+                : _vm._e()
+            ],
+            1
+          ),
+          _vm._ssrNode(" "),
+          _vm._ssrNode(
+            '<div class="meta-container-wrapper">',
+            "</div>",
+            [
+              _vm._ssrNode(
+                '<div class="meta-container-wrapper-inner">',
+                "</div>",
+                [
+                  _vm._ssrNode('<div class="meta-container">', "</div>", [
+                    _vm._ssrNode(
+                      '<div class="position-relative w-100">',
+                      "</div>",
+                      [
+                        _vm._ssrNode(
+                          "<a" +
+                            _vm._ssrAttr(
+                              "href",
+                              _vm._f("itemURL")(_vm.basketItem.variation.data)
+                            ) +
+                            ' class="item-name text-primary text-appearance small font-weight-bold text-break">' +
+                            _vm._ssrEscape(
+                              "\n                            " +
+                                _vm._s(
+                                  _vm._f("itemName")(
+                                    _vm.basketItem.variation.data
+                                  )
+                                ) +
+                                "\n                        "
+                            ) +
+                            '</a> <div class="item-base-price small">' +
+                            _vm._ssrEscape(
+                              "\n                            " +
+                                _vm._s(_vm._f("currency")(_vm.unitPrice)) +
+                                "\n                        "
+                            ) +
+                            "</div> "
+                        ),
+                        _c("item-bundle", {
+                          attrs: {
+                            "bundle-type":
+                              _vm.basketItem.variation.data.variation
+                                .bundleType,
+                            "bundle-components":
+                              _vm.basketItem.variation.data.bundleComponents
+                          }
+                        }),
+                        _vm._ssrNode(
+                          " " +
+                            (!(
+                              _vm.basketItem.variation.data.unit
+                                .unitOfMeasurement === "C62" &&
+                              _vm.basketItem.variation.data.unit.content === 1
+                            ) &&
+                            _vm.basketItem.variation.data.variation
+                              .mayShowUnitPrice
+                              ? '<div class="text-muted small"><div>' +
+                                _vm._ssrEscape(
+                                  "\n                                " +
+                                    _vm._s(_vm.basePrice) +
+                                    "\n                            "
+                                ) +
+                                "</div> <div><strong>" +
+                                _vm._ssrEscape(
+                                  _vm._s(
+                                    _vm.$translate(
+                                      "Ceres::Template.basketContent"
+                                    )
+                                  ) + ": "
+                                ) +
+                                "</strong>" +
+                                _vm._ssrEscape(
+                                  "\n                                " +
+                                    _vm._s(
+                                      _vm.basketItem.variation.data.unit.content
+                                    ) +
+                                    " " +
+                                    _vm._s(
+                                      _vm.basketItem.variation.data.unit.names
+                                        .name
+                                    ) +
+                                    "\n                            "
+                                ) +
+                                "</div></div>"
+                              : "<!---->") +
+                            " " +
+                            (_vm.basketItem.inputLength > 0 ||
+                            _vm.basketItem.inputWidth > 0
+                              ? '<div class="small"><div><strong>' +
+                                _vm._ssrEscape(
+                                  _vm._s(
+                                    _vm.$translate("Ceres::Template.itemInput")
+                                  ) +
+                                    " " +
+                                    _vm._s(
+                                      _vm._f("inputUnit")(_vm.basketItem, true)
+                                    ) +
+                                    ": "
+                                ) +
+                                "</strong>" +
+                                _vm._ssrEscape(
+                                  "\n                                " +
+                                    _vm._s(
+                                      _vm._f("inputUnit")(_vm.basketItem)
+                                    ) +
+                                    "\n                            "
+                                ) +
+                                "</div></div>"
+                              : "<!---->") +
+                            ' <div class="small">' +
+                            _vm._ssrList(
+                              _vm.basketItem.variation.data.attributes,
+                              function(attribute) {
+                                return (
+                                  "<div><strong>" +
+                                  _vm._ssrEscape(
+                                    _vm._s(attribute.attribute.names.name) +
+                                      ": "
+                                  ) +
+                                  "</strong> <span>" +
+                                  _vm._ssrEscape(
+                                    _vm._s(attribute.value.names.name)
+                                  ) +
+                                  "</span></div>"
+                                )
+                              }
+                            ) +
+                            '</div> <div class="text-muted small">' +
+                            _vm._ssrList(
+                              _vm.basketItem.variation.data.variationProperties,
+                              function(propertyGroup) {
+                                return _vm._ssrList(
+                                  propertyGroup.properties,
+                                  function(property) {
+                                    return (
+                                      "<div>" +
+                                      (propertyGroup.name
+                                        ? "<strong>" +
+                                          _vm._ssrEscape(
+                                            _vm._s(propertyGroup.name) + ": "
+                                          ) +
+                                          "</strong>"
+                                        : "<!---->") +
+                                      " <span>" +
+                                      _vm._ssrEscape(
+                                        _vm._s(property.names.name)
+                                      ) +
+                                      "</span> " +
+                                      (property.cast === "file"
+                                        ? "<span><a" +
+                                          _vm._ssrAttr(
+                                            "href",
+                                            _vm._f("propertyFileUrl")(
+                                              property.values.value
+                                            )
+                                          ) +
+                                          ' target="_blank">' +
+                                          _vm._s(property.values.value) +
+                                          "</a></span>"
+                                        : property.cast === "multiSelection" &&
+                                          property.values[0] !== undefined
+                                        ? '<ul class="pl-3">' +
+                                          _vm._ssrList(
+                                            property.values,
+                                            function(multiSelectProperty) {
+                                              return (
+                                                "<li>" +
+                                                _vm._ssrEscape(
+                                                  _vm._s(
+                                                    multiSelectProperty.value
+                                                  )
+                                                ) +
+                                                "</li>"
+                                              )
+                                            }
+                                          ) +
+                                          "</ul>"
+                                        : "<span>" +
+                                          _vm._s(property.values.value) +
+                                          "</span>") +
+                                      "</div>"
+                                    )
+                                  }
+                                )
+                              }
+                            ) +
+                            "</div>"
+                        )
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._ssrNode(" "),
+                  _vm.basketItem.price > 0
+                    ? _vm._ssrNode(
+                        '<div class="basket-item-container-right">',
+                        "</div>",
+                        [
+                          _vm._ssrNode(
+                            '<div class="qty-box-container">',
+                            "</div>",
+                            [
+                              _c("quantity-input", {
+                                attrs: {
+                                  value: _vm.basketItem.quantity,
+                                  waiting:
+                                    _vm.isInputLocked || _vm.isCheckoutReadonly,
+                                  min:
+                                    _vm.basketItem.variation.data.variation
+                                      .minimumOrderQuantity,
+                                  max:
+                                    _vm.basketItem.variation.data.variation
+                                      .maximumOrderQuantity,
+                                  interval:
+                                    _vm.basketItem.variation.data.variation
+                                      .intervalOrderQuantity
+                                },
+                                on: { "quantity-change": _vm.updateQuantity }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._ssrNode(" "),
+                          _vm._ssrNode(
+                            '<div class="price-box text-right ml-2 mt-1">',
+                            "</div>",
+                            [
+                              _vm._ssrNode(
+                                '<div class="item-total-price font-weight-bold text-nowrap">' +
+                                  _vm._ssrEscape(
+                                    _vm._s(
+                                      _vm._f("currency")(
+                                        _vm.basketItem.quantity * _vm.unitPrice,
+                                        _vm.basketItem.variation.data.prices
+                                          .default.currency
+                                      )
+                                    )
+                                  ) +
+                                  "</div> "
+                              ),
+                              _vm._ssrNode(
+                                "<button" +
+                                  _vm._ssrClass("btn btn-sm text-danger p-0", {
+                                    disabled:
+                                      _vm.waiting ||
+                                      _vm.isBasketLoading ||
+                                      _vm.isCheckoutReadonly ||
+                                      _vm.waitingForDelete
+                                  }) +
+                                  ">",
+                                "</button>",
+                                [
+                                  _vm._ssrNode(
+                                    _vm._ssrEscape(
+                                      "\n                            " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.basketDelete"
+                                          )
+                                        ) +
+                                        "\n                            "
+                                    )
+                                  ),
+                                  _c("icon", {
+                                    staticClass: "default-float",
+                                    attrs: {
+                                      icon: "trash-o",
+                                      loading: _vm.waitingForDelete
+                                    }
+                                  })
+                                ],
+                                2
+                              )
+                            ],
+                            2
+                          )
+                        ],
+                        2
+                      )
+                    : _vm._ssrNode(
+                        '<div class="basket-item-container-right">',
+                        "</div>",
+                        [
+                          _c("lazy-img", {
+                            attrs: {
+                              "picture-class":
+                                "d-block mw-100 mh-100 gift-item-image",
+                              "image-url":
+                                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/present_icon.jpg",
+                              alt: _vm.altText,
+                              title: _vm.itemName
+                            }
+                          })
+                        ],
+                        1
+                      )
+                ],
+                2
+              ),
+              _vm._ssrNode(" "),
+              _vm.basketItem.setComponents
+                ? _c("basket-set-component-list", {
+                    attrs: {
+                      "set-components": _vm.basketItem.setComponents,
+                      "set-item": _vm.basketItem
+                    }
+                  })
+                : _vm._e(),
+              _vm._ssrNode(" "),
+              _vm.basketItem.basketItemOrderParams &&
+              _vm.basketItem.basketItemOrderParams.length
+                ? _vm._ssrNode(
+                    '<div class="small">',
+                    "</div>",
+                    [
+                      _vm._ssrNode(
+                        '<div class="font-weight-bold my-1">' +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate(
+                                "Ceres::Template.basketAdditionalOptions"
+                              )
+                            ) + ":"
+                          ) +
+                          "</div> "
+                      ),
+                      _vm._ssrNode(
+                        '<ul class="ml-1 pl-3">',
+                        "</ul>",
+                        _vm._l(_vm.basketItem.basketItemOrderParams, function(
+                          property
+                        ) {
+                          return _vm._ssrNode(
+                            "<li" +
+                              _vm._ssrStyle(null, null, {
+                                display: _vm.isPropertyVisible(
+                                  property.propertyId
+                                )
+                                  ? ""
+                                  : "none"
+                              }) +
+                              ">",
+                            "</li>",
+                            [
+                              _vm._ssrNode(
+                                '<span class="d-block">',
+                                "</span>",
+                                [
+                                  _vm._ssrNode(
+                                    "<strong" +
+                                      _vm._ssrClass(null, {
+                                        colon: property.type.length > 0
+                                      }) +
+                                      ">" +
+                                      _vm._ssrEscape(
+                                        _vm._s(property.name) +
+                                          " (" +
+                                          _vm._s(
+                                            _vm.$translate(
+                                              "Ceres::Template.basketIncludeAbbr"
+                                            )
+                                          ) +
+                                          " " +
+                                          _vm._s(
+                                            _vm._f("currency")(
+                                              _vm._f("propertySurcharge")(
+                                                _vm.basketItem.variation.data
+                                                  .properties,
+                                                property.propertyId
+                                              )
+                                            )
+                                          ) +
+                                          ")"
+                                      ) +
+                                      "</strong> "
+                                  ),
+                                  _vm._ssrNode(
+                                    "<span>",
+                                    "</span>",
+                                    [
+                                      _c("order-property-value", {
+                                        attrs: { property: property }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                2
+                              )
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ],
+                    2
+                  )
+                : _vm._e(),
+              _vm._ssrNode(
+                " " +
+                  (_vm.showMoreInformation
+                    ? '<div class="small">' +
+                      (_vm.isDataFieldVisible("basket.item.item_id") &&
+                      _vm.basketItem.variation.data.item.id
+                        ? '<div class="mt-3"><strong>' +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketItemId")
+                            ) + ":"
+                          ) +
+                          "</strong> <span>" +
+                          _vm._ssrEscape(
+                            _vm._s(_vm.basketItem.variation.data.item.id)
+                          ) +
+                          "</span></div>"
+                        : "<!---->") +
+                      " " +
+                      (_vm.isDataFieldVisible("basket.item.customNumber")
+                        ? _vm.basketItem.variation.data.variation.number
+                          ? "<div><strong>" +
+                            _vm._ssrEscape(
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.basketItemNumber"
+                                )
+                              ) + ":"
+                            ) +
+                            "</strong> <span>" +
+                            _vm._ssrEscape(
+                              _vm._s(
+                                _vm.basketItem.variation.data.variation.number
+                              )
+                            ) +
+                            "</span></div>"
+                          : "<!---->"
+                        : "<!---->") +
+                      " " +
+                      (_vm.isDataFieldVisible("basket.item.availability")
+                        ? _vm.basketItem.variation.data.variation
+                            .availability &&
+                          _vm.basketItem.variation.data.variation.availability
+                            .names.name
+                          ? "<div><strong>" +
+                            _vm._ssrEscape(
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.basketAvailability"
+                                )
+                              ) + ":"
+                            ) +
+                            "</strong> <span>" +
+                            _vm._ssrEscape(
+                              _vm._s(
+                                _vm.basketItem.variation.data.variation
+                                  .availability.names.name
+                              )
+                            ) +
+                            "</span></div>"
+                          : "<!---->"
+                        : "<!---->") +
+                      " " +
+                      (_vm.isDataFieldVisible("basket.item.description_long")
+                        ? _vm.basketItem.variation.data.texts.description
+                          ? '<p class="my-3">' +
+                            _vm._s(
+                              _vm.basketItem.variation.data.texts.description
+                            ) +
+                            "</p>"
+                          : "<!---->"
+                        : "<!---->") +
+                      " " +
+                      (_vm.isDataFieldVisible("basket.item.description_short")
+                        ? _vm.basketItem.variation.data.texts.shortDescription
+                          ? '<p class="my-3">' +
+                            _vm._s(
+                              _vm.basketItem.variation.data.texts
+                                .shortDescription
+                            ) +
+                            "</p>"
+                          : "<!---->"
+                        : "<!---->") +
+                      "</div>"
+                    : "<!---->") +
+                  " " +
+                  (_vm.isMoreButtonVisible
+                    ? "<label" +
+                      _vm._ssrAttr(
+                        "data-show-more",
+                        _vm.$translate("Ceres::Template.basketShowMore")
+                      ) +
+                      _vm._ssrAttr(
+                        "data-show-less",
+                        _vm.$translate("Ceres::Template.basketShowLess")
+                      ) +
+                      _vm._ssrClass("btn-collapse", {
+                        collapsed: !_vm.showMoreInformation
+                      }) +
+                      "></label>"
+                    : "<!---->")
+              )
+            ],
+            2
+          )
+        ],
+        2
+      ),
+      _vm._ssrNode(" "),
+      _vm._t("after-basket-item")
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
             // Stop scripts or inline event handlers from being executed immediately
             // by using document.implementation
@@ -33156,12 +36086,126 @@ module.exports =
             };
           },
 
+<<<<<<< HEAD
           // position() relates an element's margin box to its offset parent's padding box
           // This corresponds to the behavior of CSS absolute positioning
           position: function () {
             if (!this[0]) {
               return;
             }
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/containers/LastSeenItemList.vue?vue&type=template&id=653923dd&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/containers/LastSeenItemList.vue?vue&type=template&id=653923dd& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.items.length,
+          expression: "items.length"
+        }
+      ],
+      staticClass: "row"
+    },
+    [
+      _vm._ssrNode(
+        '<div class="col-12" style="padding: 0;"><div class="widget-caption bg-appearance widget-item-list-caption mb-3" style="padding: 0;"><div><h2>Zuletzt angesehen</h2></div></div></div> '
+      ),
+      _vm._ssrNode('<div class="col-12">', "</div>", [
+        _vm._ssrNode(
+          '<div class="row">',
+          "</div>",
+          [
+            _vm._l(_vm.items, function(item, i) {
+              return [
+                _vm._ssrNode(
+                  '<div class="col-6 col-md-3 col-lg-3">',
+                  "</div>",
+                  [
+                    _c("category-item", {
+                      key: item.id,
+                      attrs: {
+                        "item-data": item.data,
+                        "decimal-count": _vm.$ceres.config.item.storeSpecial,
+                        "disable-carousel-on-mobile":
+                          _vm.items.length > _vm.itemsPerPage,
+                        "padding-classes": _vm.paddingClasses,
+                        "padding-inline-styles": _vm.paddingInlineStyles
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "before-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "beforePrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          },
+                          {
+                            key: "after-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "afterPrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          }
+                        ],
+                        null,
+                        true
+                      )
+                    })
+                  ],
+                  1
+                )
+              ]
+            })
+          ],
+          2
+        )
+      ])
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
             var offsetParent, offset, doc,
               elem = this[0],
@@ -33195,6 +36239,7 @@ module.exports =
               }
             }
 
+<<<<<<< HEAD
             // Subtract parent offsets and element margins
             return {
               top: offset.top - parentOffset.top - jQuery.css(elem, "marginTop", true),
@@ -41362,6 +44407,540 @@ module.exports =
                       '<div class="modal-header"><div class="modal-title h5">' +
                       _vm._ssrEscape(
                         _vm._s(_vm.$translate("Ceres::Template.singleItemAdded"))
+=======
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/customer/AddressInputGroup.vue?vue&type=template&id=1e4a3dec&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/customer/AddressInputGroup.vue?vue&type=template&id=1e4a3dec& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row" },
+    [
+      _vm.value.showPickupStation &&
+      _vm.selectedCountry.isoCode2 === "DE" &&
+      _vm.addressType === "2"
+        ? [
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode('<div class="row">', "</div>", [
+                _vm.isInOptionalFields("de", "delivery_address.salutation")
+                  ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: _vm.isInRequiredFields(
+                                "de",
+                                "delivery_address.salutation"
+                              ),
+                              expression:
+                                "isInRequiredFields('de', 'delivery_address.salutation')"
+                            }
+                          ],
+                          staticClass: "input-unit"
+                        },
+                        [
+                          _c("salutation-select", {
+                            attrs: {
+                              id: "txtSalutation" + _vm._uid,
+                              "address-type": _vm.addressType,
+                              "address-data": _vm.value,
+                              "enabled-address-fields":
+                                _vm.optionalAddressFields
+                            },
+                            on: {
+                              input: function($event) {
+                                return _vm.emitInputEvent(
+                                  $event.field,
+                                  $event.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._ssrNode(
+                            " <label" +
+                              _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
+                              ">" +
+                              _vm._ssrEscape(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(
+                                    _vm.transformTranslation(
+                                      "Ceres::Template.addressSalutation",
+                                      "de",
+                                      "delivery_address.salutation"
+                                    )
+                                  ) +
+                                  "\n\t\t\t\t\t\t\t"
+                              ) +
+                              "</label>"
+                          )
+                        ],
+                        2
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12"><div class="row">' +
+                ((_vm.isInOptionalFields("de", "delivery_address.salutation") &&
+                  _vm.value.gender === "company") ||
+                (_vm.isInOptionalFields("de", "delivery_address.name1") &&
+                  !_vm.isInOptionalFields("de", "delivery_address.salutation"))
+                  ? '<div class="col-12 col-sm-6"><div data-model="name1" data-validate="text" class="input-unit"><input type="text" name="company"' +
+                    _vm._ssrAttr("id", "txtCompany" + _vm._uid) +
+                    ' data-testing="packing-station-de-company"' +
+                    _vm._ssrAttr("value", _vm.value.name1) +
+                    "> <label" +
+                    _vm._ssrAttr("for", "txtCompany" + _vm._uid) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(_vm.$translate("Ceres::Template.addressCompany")) +
+                        "*"
+                    ) +
+                    "</label></div></div>"
+                  : "<!---->") +
+                "</div></div> "
+            ),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm.isInOptionalFields("de", "delivery_address.title")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.title"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.title')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "title" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="title"' +
+                                _vm._ssrAttr("id", "txtTitle" + _vm._uid) +
+                                _vm._ssrAttr("value", _vm.value.title) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTitle",
+                                        "de",
+                                        "delivery_address.title"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.areNameFieldsShown("de", "delivery_address")
+                    ? [
+                        _vm._ssrNode(
+                          '<div class="col-12 col-sm-4">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.areNameFieldsRequired(
+                                      "de",
+                                      "delivery_address"
+                                    ),
+                                    expression:
+                                      "areNameFieldsRequired('de', 'delivery_address')",
+                                    arg: "text"
+                                  }
+                                ],
+                                staticClass: "input-unit",
+                                attrs: { "data-model": "name2" }
+                              },
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="firstName"' +
+                                    _vm._ssrAttr(
+                                      "id",
+                                      "txtFirstName" + _vm._uid
+                                    ) +
+                                    ' data-testing="packing-station-de-firstname"' +
+                                    _vm._ssrAttr("value", _vm.value.name2) +
+                                    "> <label" +
+                                    _vm._ssrAttr(
+                                      "for",
+                                      "txtFirstName" + _vm._uid
+                                    ) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      _vm._s(
+                                        _vm.$translate(
+                                          "Ceres::Template.addressFirstName"
+                                        )
+                                      )
+                                    ) +
+                                    (_vm.areNameFieldsRequired(
+                                      "de",
+                                      "delivery_address"
+                                    )
+                                      ? "*"
+                                      : "<!---->") +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._ssrNode(" "),
+                        _vm._ssrNode(
+                          '<div class="col-12 col-sm-4">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.areNameFieldsRequired(
+                                      "de",
+                                      "delivery_address"
+                                    ),
+                                    expression:
+                                      "areNameFieldsRequired('de', 'delivery_address')",
+                                    arg: "text"
+                                  }
+                                ],
+                                staticClass: "input-unit",
+                                attrs: { "data-model": "name3" }
+                              },
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="lastName"' +
+                                    _vm._ssrAttr(
+                                      "id",
+                                      "txtLastName" + _vm._uid
+                                    ) +
+                                    ' data-testing="packing-station-de-lastname"' +
+                                    _vm._ssrAttr("value", _vm.value.name3) +
+                                    "> <label" +
+                                    _vm._ssrAttr(
+                                      "for",
+                                      "txtLastName" + _vm._uid
+                                    ) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      _vm._s(
+                                        _vm.$translate(
+                                          "Ceres::Template.addressLastName"
+                                        )
+                                      )
+                                    ) +
+                                    (_vm.areNameFieldsRequired(
+                                      "de",
+                                      "delivery_address"
+                                    )
+                                      ? "*"
+                                      : "<!---->") +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    : _vm._ssrNode('<div class="col-12 col-sm-8">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.contactPerson"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.contactPerson')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "contactPerson" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="lastName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.contactPerson) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressContactPerson",
+                                        "de",
+                                        "delivery_address.contactPerson"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ]),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "delivery_address.name4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.name4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.name4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "name4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.name4) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalName",
+                                        "de",
+                                        "delivery_address.name4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "delivery_address.phoneNumber")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.phoneNumber"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.phoneNumber')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "telephone" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="telephone"' +
+                                _vm._ssrAttr("id", "txtTelephone" + _vm._uid) +
+                                _vm._ssrAttr("value", _vm.value.telephone) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTelephone",
+                                        "de",
+                                        "delivery_address.phoneNumber"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              " " +
+                (_vm.isParcelOrOfficeAvailable
+                  ? '<div class="col-12"><div class="row"><div class="col-12"><input type="checkbox" name="togglePickup"' +
+                    _vm._ssrAttr("id", "showPickup" + _vm._uid) +
+                    _vm._ssrAttr("checked", _vm.value.showPickupStation) +
+                    "> <label" +
+                    _vm._ssrAttr("for", "showPickup" + _vm._uid) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.addressToPickupStation")
+                      )
+                    ) +
+                    "</label></div></div></div>"
+                  : "<!---->") +
+                ' <div class="col-12"><div class="row"><div class="col-12 col-sm-8"><div data-validate data-model="address1" class="input-unit"><select' +
+                _vm._ssrAttr("id", "address1" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.address1) +
+                ' class="custom-select">' +
+                (_vm.isParcelBoxAvailable
+                  ? '<option value="PACKSTATION"' +
+                    _vm._ssrAttr("selected", _vm.isPickupStation) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.addressPackingStation")
+                      )
+                    ) +
+                    "</option>"
+                  : "<!---->") +
+                " " +
+                (_vm.isPostOfficeAvailable
+                  ? '<option value="POSTFILIALE"' +
+                    _vm._ssrAttr("selected", _vm.isPostOffice) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.addressPostOffice")
+                      )
+                    ) +
+                    "</option>"
+                  : "<!---->") +
+                "</select> <label for=\"'address1' + _uid\">" +
+                _vm._ssrEscape(
+                  _vm._s(
+                    _vm.$translate("Ceres::Template.addressPickupLocation")
+                  )
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="address2" class="input-unit"><input type="text" name="housenumber" autocomplete="address-line2"' +
+                _vm._ssrAttr("id", "txtNumber" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.address2) +
+                "> " +
+                (_vm.isPickupStation
+                  ? "<label" +
+                    _vm._ssrAttr("for", "txtNumber" + _vm._uid) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate(
+                          "Ceres::Template.addressPackingStationNumber"
+                        )
+                      ) + "*"
+                    ) +
+                    "</label>"
+                  : "<!---->") +
+                " " +
+                (_vm.isPostOffice
+                  ? "<label" +
+                    _vm._ssrAttr("for", "txtNumber" + _vm._uid) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate(
+                          "Ceres::Template.addressPostOfficeNumber"
+                        )
+                      ) + "*"
+                    ) +
+                    "</label>"
+                  : "<!---->") +
+                "</div></div></div></div> "
+            ),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    '<div class="col-12 col-sm-6"><div data-validate="text" data-model="postNumber" class="input-unit"><input type="text" name="postnumber"' +
+                      _vm._ssrAttr("id", "postnumber" + _vm._uid) +
+                      ' data-testing="packing-station-de-postnumber"' +
+                      _vm._ssrAttr("value", _vm.value.postNumber) +
+                      "> <label" +
+                      _vm._ssrAttr("for", "postnumber" + _vm._uid) +
+                      ">" +
+                      _vm._ssrEscape(
+                        "\n\t\t\t\t\t\t\t\t" +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.addressPostNummer")
+                          ) +
+                          "*"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       ) +
                       '</div> <span class="text-muted ml-auto"><span class="timer"></span>s</span> <button type="button" data-dismiss="modal"' +
                       _vm._ssrAttr(
@@ -41452,6 +45031,7 @@ module.exports =
                                     "Ceres::Template.singleItemBasket"
                                   )
                                 ) +
+<<<<<<< HEAD
                                 "\n                    "
                               )
                             )
@@ -41479,6 +45059,19 @@ module.exports =
                                   _vm.$translate(
                                     "Ceres::Template.singleItemCheckout"
                                   )
+=======
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalAddress2",
+                                        "de",
+                                        "delivery_address.address4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "\n                    "
                               )
@@ -41593,6 +45186,7 @@ module.exports =
                 ],
                 2
               )
+<<<<<<< HEAD
               : _vm._e(),
             _vm._ssrNode(" "),
             _vm.showQuantity && !_vm.useLargeScale
@@ -41695,6 +45289,44 @@ module.exports =
                           )
                           : _c(
                             "button",
+=======
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12 col-sm-4"><div data-validate="text" data-model="postalCode" class="input-unit"><input type="text" name="zip"' +
+                _vm._ssrAttr("id", "txtZip" + _vm._uid) +
+                ' data-testing="packing-station-de-postalcode"' +
+                _vm._ssrAttr("value", _vm.value.postalCode) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtZip" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressZip")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="town" class="input-unit"><input type="text" name="town"' +
+                _vm._ssrAttr("id", "txtPlace" + _vm._uid) +
+                ' data-testing="packing-station-de-town"' +
+                _vm._ssrAttr("value", _vm.value.town) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtPlace" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressPlace")) + "*"
+                ) +
+                "</label></div></div> "
+            ),
+            _vm._t("custom-address-fields")
+          ]
+        : _vm.localeToShow == "DE" && _vm.addressType === "1"
+        ? [
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode('<div class="row">', "</div>", [
+                _vm.isInOptionalFields("de", "billing_address.salutation")
+                  ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                      _c(
+                        "div",
+                        {
+                          directives: [
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                             {
                               directives: [
                                 { name: "tooltip", rawName: "v-tooltip" }
@@ -41757,11 +45389,23 @@ module.exports =
                             _vm._ssrNode(
                               ' <span class="btn-text">' +
                               _vm._ssrEscape(
+<<<<<<< HEAD
                                 _vm._s(
                                   _vm.$translate(
                                     "Ceres::Template.singleItemAddToBasket"
                                   )
                                 )
+=======
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(
+                                    _vm.transformTranslation(
+                                      "Ceres::Template.addressSalutation",
+                                      "de",
+                                      "billing_address.salutation"
+                                    )
+                                  ) +
+                                  "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                               ) +
                               "</span>"
                             )
@@ -41893,6 +45537,7 @@ module.exports =
                               fn: function () {
                                 return [_vm._t("before-basket-item")]
                               },
+<<<<<<< HEAD
                               proxy: true
                             },
                             {
@@ -41905,6 +45550,33 @@ module.exports =
                           ],
                           null,
                           true
+=======
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="title"' +
+                                    _vm._ssrAttr("id", "txtTitle" + _vm._uid) +
+                                    ' data-autofocus data-testing="billing-address-de-title"' +
+                                    _vm._ssrAttr("value", _vm.value.title) +
+                                    "> <label" +
+                                    _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressTitle",
+                                            "de",
+                                            "billing_address.title"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         )
                       }),
                       _vm._ssrNode(" "),
@@ -41941,6 +45613,7 @@ module.exports =
                                   },
                                   proxy: true
                                 },
+<<<<<<< HEAD
                                 {
                                   key: "before-shipping-costs",
                                   fn: function () {
@@ -42009,12 +45682,127 @@ module.exports =
                                     href: _vm.$ceres.urls.basket,
                                     rel: "nofollow",
                                     title: _vm.$translate("Ceres::Template.basket")
+=======
+                                [
+                                  _vm._ssrNode(
+                                    '<input type="text" name="lastName"' +
+                                      _vm._ssrAttr(
+                                        "id",
+                                        "txtLastName" + _vm._uid
+                                      ) +
+                                      ' data-testing="billing-address-de-lastname"' +
+                                      _vm._ssrAttr("value", _vm.value.name3) +
+                                      "> <label" +
+                                      _vm._ssrAttr(
+                                        "for",
+                                        "txtLastName" + _vm._uid
+                                      ) +
+                                      ">" +
+                                      _vm._ssrEscape(
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.addressLastName"
+                                          )
+                                        )
+                                      ) +
+                                      (_vm.areNameFieldsRequired(
+                                        "de",
+                                        "billing_address"
+                                      )
+                                        ? "*"
+                                        : "<!---->") +
+                                      "</label>"
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      : _vm._ssrNode(
+                          '<div class="col-12 col-sm-8">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.isInRequiredFields(
+                                      "de",
+                                      "billing_address.contactPerson"
+                                    ),
+                                    expression:
+                                      "isInRequiredFields('de', 'billing_address.contactPerson')",
+                                    arg: "text"
+                                  }
+                                ],
+                                staticClass: "input-unit",
+                                attrs: { "data-model": "contactPerson" }
+                              },
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="lastName"' +
+                                    _vm._ssrAttr(
+                                      "id",
+                                      "txtContactPerson" + _vm._uid
+                                    ) +
+                                    _vm._ssrAttr(
+                                      "value",
+                                      _vm.value.contactPerson
+                                    ) +
+                                    "> <label" +
+                                    _vm._ssrAttr(
+                                      "for",
+                                      "txtContactPerson" + _vm._uid
+                                    ) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressContactPerson",
+                                            "de",
+                                            "billing_address.contactPerson"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                    _vm._ssrNode(" "),
+                    _vm.isInOptionalFields("de", "billing_address.name4")
+                      ? _vm._ssrNode(
+                          '<div class="col-12 col-sm-4">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.isInRequiredFields(
+                                      "de",
+                                      "billing_address.name4"
+                                    ),
+                                    expression:
+                                      "isInRequiredFields('de', 'billing_address.name4')",
+                                    arg: "text"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                   }
                                 },
                                 [
                                   _vm._ssrNode(
                                     '<i class="fa fa-shopping-cart"></i>' +
                                     _vm._ssrEscape(
+<<<<<<< HEAD
                                       "\n                            " +
                                       _vm._s(
                                         _vm.$translate("Ceres::Template.basket")
@@ -42043,12 +45831,55 @@ module.exports =
                                     title: _vm.$translate(
                                       "Ceres::Template.basketCheckout"
                                     )
+=======
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressAdditionalName",
+                                            "de",
+                                            "billing_address.name4"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._ssrNode(" "),
+                    _vm.isInOptionalFields("de", "billing_address.birthday")
+                      ? _vm._ssrNode(
+                          '<div class="col-12 col-sm-4">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:date",
+                                    value:
+                                      _vm.isInRequiredFields(
+                                        "de",
+                                        "billing_address.birthday"
+                                      ) ||
+                                      (!!_vm.value.birthday &&
+                                        !!_vm.value.birthday.length),
+                                    expression:
+                                      "isInRequiredFields('de', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length",
+                                    arg: "date"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                   }
                                 },
                                 [
                                   _vm._ssrNode(
                                     '<i aria-hidden="true" class="fa fa-arrow-right"></i>' +
                                     _vm._ssrEscape(
+<<<<<<< HEAD
                                       "\n                            " +
                                       _vm._s(
                                         _vm.$translate(
@@ -42199,6 +46030,21 @@ module.exports =
                                 _vm.basket.itemSumNet,
                                 _vm.basket.basketRebate
                               )
+=======
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressBirthdate",
+                                            "de",
+                                            "billing_address.birthday"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                             )
                           ) +
                           "\n                "
@@ -42353,6 +46199,7 @@ module.exports =
                     ),
                     _vm._t("after-item-sum"),
                     _vm._ssrNode(" "),
+<<<<<<< HEAD
                     _vm._t("before-shipping-costs"),
                     _vm._ssrNode(
                       " " +
@@ -42606,6 +46453,60 @@ module.exports =
                           _vm._ssrEscape(
                             _vm._s(
                               _vm.$translate("Ceres::Template.basketGross")
+=======
+                    _vm.isInOptionalFields("de", "billing_address.phoneNumber")
+                      ? _vm._ssrNode(
+                          '<div class="col-12 col-sm-4">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.isInRequiredFields(
+                                      "de",
+                                      "billing_address.phoneNumber"
+                                    ),
+                                    expression:
+                                      "isInRequiredFields('de', 'billing_address.phoneNumber')",
+                                    arg: "text"
+                                  }
+                                ],
+                                staticClass: "input-unit",
+                                attrs: { "data-model": "telephone" }
+                              },
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="telephone"' +
+                                    _vm._ssrAttr(
+                                      "id",
+                                      "txtTelephone" + _vm._uid
+                                    ) +
+                                    _vm._ssrAttr("value", _vm.value.telephone) +
+                                    "> <label" +
+                                    _vm._ssrAttr(
+                                      "for",
+                                      "txtTelephone" + _vm._uid
+                                    ) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressTelephone",
+                                            "de",
+                                            "billing_address.phoneNumber"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                             )
                           ) +
                           "</span>"
@@ -43067,6 +46968,7 @@ module.exports =
                                 ) +
                                 '</a> <div class="item-base-price small">' +
                                 _vm._ssrEscape(
+<<<<<<< HEAD
                                   "\n                            " +
                                   _vm._s(_vm._f("currency")(_vm.unitPrice)) +
                                   "\n                        "
@@ -43099,6 +47001,9 @@ module.exports =
                                   ) +
                                   "</div> <div><strong>" +
                                   _vm._ssrEscape(
+=======
+                                  "\n\t\t\t\t\t\t\t\t" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                     _vm._s(
                                       _vm.$translate(
                                         "Ceres::Template.basketContent"
@@ -43111,6 +47016,7 @@ module.exports =
                                     _vm._s(
                                       _vm.basketItem.variation.data.unit.content
                                     ) +
+<<<<<<< HEAD
                                     " " +
                                     _vm._s(
                                       _vm.basketItem.variation.data.unit.names
@@ -43161,6 +47067,44 @@ module.exports =
                                       "</span></div>"
                                     )
                                   }
+=======
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "billing_address.address4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-6">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "billing_address.address4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'billing_address.address4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateAddress"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress1" + _vm._uid
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 '</div> <div class="text-muted small">' +
                                 _vm._ssrList(
@@ -43221,6 +47165,7 @@ module.exports =
                                     )
                                   }
                                 ) +
+<<<<<<< HEAD
                                 "</div>"
                               )
                             ],
@@ -43491,6 +47436,48 @@ module.exports =
             [
               _vm._ssrNode(
                 '<div class="mb-2"><strong>' +
+=======
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalAddress2",
+                                        "de",
+                                        "billing_address.address4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12 col-sm-4"><div data-validate="text" data-model="postalCode" class="input-unit"><input type="text" name="zip"' +
+                _vm._ssrAttr("id", "txtZip" + _vm._uid) +
+                ' data-testing="billing-address-de-zip"' +
+                _vm._ssrAttr("value", _vm.value.postalCode) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtZip" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressZip")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="town" class="input-unit"><input type="text" name="town"' +
+                _vm._ssrAttr("id", "txtPlace" + _vm._uid) +
+                ' data-testing="billing-address-de-town"' +
+                _vm._ssrAttr("value", _vm.value.town) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtPlace" + _vm._uid) +
+                ">" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _vm._ssrEscape(
                   _vm._s(_vm.$translate("Ceres::Template.itemSetContent"))
                 ) +
@@ -43545,6 +47532,7 @@ module.exports =
               _vm._ssrEscape(_vm._s(_vm.quantity) + "x") +
               "</span> "
             ),
+<<<<<<< HEAD
             _vm._ssrNode(
               '<div class="image-container mx-1">',
               "</div>",
@@ -43801,6 +47789,9 @@ module.exports =
             _vm.scriptBlocked
               ? _vm._ssrNode("<div>", "</div>", [_vm._t("default")], 2)
               : _vm._e()
+=======
+            _vm._t("custom-address-fields")
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
           ]
         )
       }
@@ -43974,6 +47965,7 @@ module.exports =
                         '<div class="col-6 col-md-3 col-lg-3">',
                         "</div>",
                         [
+<<<<<<< HEAD
                           _c("category-item", {
                             key: item.id,
                             attrs: {
@@ -44027,6 +48019,58 @@ module.exports =
                               true
                             )
                           })
+=======
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
+                          _vm._ssrNode(
+                            " <label" +
+                              _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
+                              ">" +
+                              _vm._ssrEscape(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(
+                                    _vm.transformTranslation(
+                                      "Ceres::Template.addressSalutation",
+                                      "gb",
+                                      "billing_address.salutation"
+                                    )
+                                  ) +
+                                  "\n\t\t\t\t\t\t\t"
+                              ) +
+                              "</label>"
+                          )
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         ],
                         1
                       )
@@ -44232,6 +48276,7 @@ module.exports =
                                 ">" +
                                 _vm._ssrEscape(
                                   "\n\t\t\t\t\t\t\t\t" +
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressTitle",
@@ -44240,6 +48285,16 @@ module.exports =
                                     )
                                   ) +
                                   "\n\t\t\t\t\t\t\t"
+=======
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTitle",
+                                        "gb",
+                                        "billing_address.title"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "</label>"
                               )
@@ -44289,11 +48344,12 @@ module.exports =
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      _vm._s(
-                                        _vm.$translate(
-                                          "Ceres::Template.addressFirstName"
+                                      "\n\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.addressFirstName"
+                                          )
                                         )
-                                      )
                                     ) +
                                     (_vm.areNameFieldsRequired(
                                       "de",
@@ -44402,6 +48458,7 @@ module.exports =
                                 ">" +
                                 _vm._ssrEscape(
                                   "\n\t\t\t\t\t\t\t\t" +
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressContactPerson",
@@ -44410,6 +48467,16 @@ module.exports =
                                     )
                                   ) +
                                   "\n\t\t\t\t\t\t\t"
+=======
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressContactPerson",
+                                        "gb",
+                                        "billing_address.contactPerson"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "</label>"
                               )
@@ -44454,6 +48521,7 @@ module.exports =
                                 ">" +
                                 _vm._ssrEscape(
                                   "\n\t\t\t\t\t\t\t\t" +
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressAdditionalName",
@@ -44462,6 +48530,77 @@ module.exports =
                                     )
                                   ) +
                                   "\n\t\t\t\t\t\t\t"
+=======
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressGBNameAffix",
+                                        "gb",
+                                        "billing_address.name4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("gb", "billing_address.birthday")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:date",
+                                value:
+                                  _vm.isInRequiredFields(
+                                    "gb",
+                                    "billing_address.birthday"
+                                  ) ||
+                                  (!!_vm.value.birthday &&
+                                    !!_vm.value.birthday.length),
+                                expression:
+                                  "isInRequiredFields('gb', 'billing_address.birthday') || !!value.birthday && !!value.birthday.length",
+                                arg: "date"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "birthday" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="date" min="1901-12-14"' +
+                                _vm._ssrAttr(
+                                  "max",
+                                  new Date().toISOString().split("T")[0]
+                                ) +
+                                ' name="birthday"' +
+                                _vm._ssrAttr(
+                                  "placeholder",
+                                  _vm.$translate(
+                                    "Ceres::Template.addressBirthdatePlaceholder"
+                                  )
+                                ) +
+                                _vm._ssrAttr("id", "txtBirthdate" + _vm._uid) +
+                                _vm._ssrAttr("value", _vm.value.birthday) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtBirthdate" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressBirthdate",
+                                        "gb",
+                                        "billing_address.birthday"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "</label>"
                               )
@@ -44496,11 +48635,12 @@ module.exports =
                                 '<input type="text" name="telephone"' +
                                 _vm._ssrAttr("id", "txtTelephone" + _vm._uid) +
                                 _vm._ssrAttr("value", _vm.value.telephone) +
-                                "> <label" +
+                                ' class="formborder"> <label' +
                                 _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
                                   "\n\t\t\t\t\t\t\t\t" +
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressTelephone",
@@ -44509,6 +48649,16 @@ module.exports =
                                     )
                                   ) +
                                   "\n\t\t\t\t\t\t\t"
+=======
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTelephone",
+                                        "gb",
+                                        "billing_address.phoneNumber"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "</label>"
                               )
@@ -44521,6 +48671,7 @@ module.exports =
                   )
                 ]),
                 _vm._ssrNode(
+<<<<<<< HEAD
                   " " +
                   (_vm.isParcelOrOfficeAvailable
                     ? '<div class="col-12"><div class="row"><div class="col-12"><input type="checkbox" name="togglePickup"' +
@@ -44595,6 +48746,140 @@ module.exports =
                       _vm._s(
                         _vm.$translate(
                           "Ceres::Template.addressPostOfficeNumber"
+=======
+                  '<div class="row">',
+                  "</div>",
+                  [
+                    _vm._ssrNode(
+                      '<div class="col-12 col-sm-12"><div data-validate="text" data-model="address1" class="input-unit"><input type="text" name="street" autocomplete="address-line1"' +
+                        _vm._ssrAttr("id", "txtStreet" + _vm._uid) +
+                        _vm._ssrAttr("value", _vm.value.address1) +
+                        "> <label" +
+                        _vm._ssrAttr("for", "txtStreet" + _vm._uid) +
+                        ">" +
+                        _vm._ssrEscape(
+                          _vm._s(
+                            _vm.$translate(
+                              "Ceres::Template.addressENAddressLine1"
+                            )
+                          ) + "*"
+                        ) +
+                        "</label></div></div> "
+                    ),
+                    _vm.isInOptionalFields("gb", "billing_address.address2")
+                      ? _vm._ssrNode(
+                          '<div class="col-12 col-sm-12">',
+                          "</div>",
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "validate",
+                                    rawName: "v-validate:text",
+                                    value: _vm.isInRequiredFields(
+                                      "gb",
+                                      "billing_address.address2"
+                                    ),
+                                    expression:
+                                      "isInRequiredFields('gb', 'billing_address.address2')",
+                                    arg: "text"
+                                  }
+                                ],
+                                staticClass: "input-unit",
+                                attrs: { "data-model": "address2" }
+                              },
+                              [
+                                _vm._ssrNode(
+                                  '<input type="text" name="housenumber" autocomplete="address-line2"' +
+                                    _vm._ssrAttr("id", "txtNumber" + _vm._uid) +
+                                    _vm._ssrAttr("value", _vm.value.address2) +
+                                    "> <label" +
+                                    _vm._ssrAttr(
+                                      "for",
+                                      "txtNumber" + _vm._uid
+                                    ) +
+                                    ">" +
+                                    _vm._ssrEscape(
+                                      "\n\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.transformTranslation(
+                                            "Ceres::Template.addressENAddressLine2",
+                                            "gb",
+                                            "billing_address.address2"
+                                          )
+                                        ) +
+                                        "\n\t\t\t\t\t\t\t"
+                                    ) +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  ],
+                  2
+                )
+              ]
+            ),
+            _vm._ssrNode(" "),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm.isInOptionalFields("gb", "billing_address.address3")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-12">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "billing_address.address3"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'billing_address.address3')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address3" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="buildingName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.address3) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressENAddressLine3",
+                                        "gb",
+                                        "billing_address.address3"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         )
                       ) + "*"
                     ) +
@@ -44656,6 +48941,7 @@ module.exports =
                                 "> <label" +
                                 _vm._ssrAttr(
                                   "for",
+<<<<<<< HEAD
                                   "decorateAddress1" + _vm._uid
                                 ) +
                                 ">" +
@@ -44753,6 +49039,118 @@ module.exports =
                                 ">" +
                                 _vm._ssrEscape(
                                   "\n\t\t\t\t\t\t\t\t" +
+=======
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressENAddressLine4",
+                                        "gb",
+                                        "billing_address.address4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12 col-sm-4"><div data-validate="text" data-model="town" class="input-unit"><input type="text" name="town"' +
+                _vm._ssrAttr("id", "txtPlace" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.town) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtPlace" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressPlace")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="postalCode" class="input-unit"><input type="text" name="zip"' +
+                _vm._ssrAttr("id", "txtZip" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.postalCode) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtZip" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressZip")) + "*"
+                ) +
+                "</label></div></div> "
+            ),
+            _vm._t("custom-address-fields")
+          ]
+        : _vm.localeToShow == "DE" && _vm.addressType === "2"
+        ? [
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode('<div class="row">', "</div>", [
+                _vm.isInOptionalFields("de", "delivery_address.salutation")
+                  ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: _vm.isInRequiredFields(
+                                "de",
+                                "delivery_address.salutation"
+                              ),
+                              expression:
+                                "isInRequiredFields('de', 'delivery_address.salutation')"
+                            }
+                          ],
+                          staticClass: "input-unit"
+                        },
+                        [
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
+                          _vm._ssrNode(
+                            " <label" +
+                              _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
+                              ">" +
+                              _vm._ssrEscape(
+                                "\n\t\t\t\t\t\t\t\t" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -44761,11 +49159,16 @@ module.exports =
                                     )
                                   ) +
                                   "\n\t\t\t\t\t\t\t"
+<<<<<<< HEAD
                                 ) +
                                 "</label>"
                               )
                             ],
                             2
+=======
+                              ) +
+                              "</label>"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           )
                         ])
                         : _vm._e()
@@ -45310,6 +49713,7 @@ module.exports =
                             _c(
                               "div",
                               {
+<<<<<<< HEAD
                                 directives: [
                                   {
                                     name: "validate",
@@ -45342,6 +49746,33 @@ module.exports =
                                   ">" +
                                   _vm._ssrEscape(
                                     "\n\t\t\t\t\t\t\t\t" +
+=======
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.title"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.title')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "title" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="title"' +
+                                _vm._ssrAttr("id", "txtTitle" + _vm._uid) +
+                                " data-autofocus" +
+                                _vm._ssrAttr("value", _vm.value.title) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress1",
@@ -45350,10 +49781,15 @@ module.exports =
                                       )
                                     ) +
                                     "\n\t\t\t\t\t\t\t"
+<<<<<<< HEAD
                                   ) +
                                   "</label>"
                                 )
                               ]
+=======
+                                ) +
+                                "</label>"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                             )
                           ])
                           : _vm._e(),
@@ -46124,6 +50560,7 @@ module.exports =
                                       "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
+<<<<<<< HEAD
                                   )
                                 ]
                               )
@@ -46223,6 +50660,304 @@ module.exports =
                                       name: "validate",
                                       rawName: "v-validate",
                                       value: _vm.isInRequiredFields(
+=======
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    : _vm._ssrNode('<div class="col-12 col-sm-8">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.contactPerson"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.contactPerson')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "contactPerson" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="lastName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.contactPerson) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressContactPerson",
+                                        "de",
+                                        "delivery_address.contactPerson"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ]),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "delivery_address.name4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.name4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.name4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "name4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.name4) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalName",
+                                        "de",
+                                        "delivery_address.name4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "delivery_address.phoneNumber")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.phoneNumber"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.phoneNumber')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "telephone" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="telephone"' +
+                                _vm._ssrAttr("id", "txtTelephone" + _vm._uid) +
+                                _vm._ssrAttr("value", _vm.value.telephone) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTelephone",
+                                        "de",
+                                        "delivery_address.phoneNumber"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              " " +
+                (_vm.isParcelOrOfficeAvailable
+                  ? '<div class="col-12"><div class="row"><div class="col-12"><input type="checkbox" name="togglePickup"' +
+                    _vm._ssrAttr("id", "showPickup" + _vm._uid) +
+                    _vm._ssrAttr("checked", _vm.value.showPickupStation) +
+                    "> <label" +
+                    _vm._ssrAttr("for", "showPickup" + _vm._uid) +
+                    ">" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.addressToPickupStation")
+                      )
+                    ) +
+                    "</label></div></div></div>"
+                  : "<!---->") +
+                ' <div class="col-12"><div class="row"><div class="col-12 col-sm-8"><div data-validate="text" data-model="address1" class="input-unit"><input type="text" name="street" autocomplete="address-line1"' +
+                _vm._ssrAttr("id", "txtStreet" + _vm._uid) +
+                ' data-testing="delivery-address-de-street"' +
+                _vm._ssrAttr("value", _vm.value.address1) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtStreet" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressStreet")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="address2" class="input-unit"><input type="text" name="housenumber" autocomplete="address-line2"' +
+                _vm._ssrAttr("id", "txtNumber" + _vm._uid) +
+                ' data-testing="delivery-address-de-housenumber"' +
+                _vm._ssrAttr("value", _vm.value.address2) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtNumber" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressNumber")) + "*"
+                ) +
+                "</label></div></div></div></div> "
+            ),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm.isInOptionalFields("de", "delivery_address.address3")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-6">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.address3"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.address3')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address3" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateAddress"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.address3) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalAddress1",
+                                        "de",
+                                        "delivery_address.address3"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("de", "delivery_address.address4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-6">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "de",
+                                  "delivery_address.address4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('de', 'delivery_address.address4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateAddress"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress1" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.address4) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "decorateAddress1" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressAdditionalAddress2",
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                         "de",
                                         "delivery_address.salutation"
                                       ),
@@ -46281,6 +51016,7 @@ module.exports =
                                       ) +
                                       "\n\t\t\t\t\t\t\t"
                                     ) +
+<<<<<<< HEAD
                                     "</label>"
                                   )
                                 ],
@@ -46295,6 +51031,233 @@ module.exports =
                         _vm._ssrNode(
                           '<div class="row">',
                           "</div>",
+=======
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12 col-sm-4"><div data-validate="text" data-model="postalCode" class="input-unit"><input type="text" name="zip"' +
+                _vm._ssrAttr("id", "txtZip" + _vm._uid) +
+                ' data-testing="delivery-address-de-zip"' +
+                _vm._ssrAttr("value", _vm.value.postalCode) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtZip" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressZip")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="town" class="input-unit"><input type="text" name="town"' +
+                _vm._ssrAttr("id", "txtPlace" + _vm._uid) +
+                ' data-testing="delivery-address-de-town"' +
+                _vm._ssrAttr("value", _vm.value.town) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtPlace" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressPlace")) + "*"
+                ) +
+                "</label></div></div> "
+            ),
+            _vm._t("custom-address-fields")
+          ]
+        : _vm.localeToShow == "GB" && _vm.addressType === "2"
+        ? [
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode('<div class="row">', "</div>", [
+                _vm.isInOptionalFields("gb", "delivery_address.salutation")
+                  ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: _vm.isInRequiredFields(
+                                "gb",
+                                "delivery_address.salutation"
+                              ),
+                              expression:
+                                "isInRequiredFields('gb', 'delivery_address.salutation')"
+                            }
+                          ],
+                          staticClass: "input-unit"
+                        },
+                        [
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
+                          _vm._ssrNode(
+                            " <label" +
+                              _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
+                              ">" +
+                              _vm._ssrEscape(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(
+                                    _vm.transformTranslation(
+                                      "Ceres::Template.addressSalutation",
+                                      "gb",
+                                      "delivery_address.salutation"
+                                    )
+                                  ) +
+                                  "\n\t\t\t\t\t\t\t"
+                              ) +
+                              "</label>"
+                          )
+                        ],
+                        2
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._ssrNode(" "),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    ((_vm.isInOptionalFields(
+                      "gb",
+                      "delivery_address.salutation"
+                    ) &&
+                      _vm.value.gender === "company") ||
+                    (_vm.isInOptionalFields("gb", "delivery_address.name1") &&
+                      !_vm.isInOptionalFields(
+                        "gb",
+                        "delivery_address.salutation"
+                      ))
+                      ? '<div class="col-12 col-sm-6"><div data-validate="text" data-model="name1" class="input-unit"><input type="text" name="company"' +
+                        _vm._ssrAttr("id", "txtCompany" + _vm._uid) +
+                        " data-autofocus" +
+                        _vm._ssrAttr("value", _vm.value.name1) +
+                        "> <label" +
+                        _vm._ssrAttr("for", "txtCompany" + _vm._uid) +
+                        ">" +
+                        _vm._ssrEscape(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.addressCompany")
+                          ) + "*"
+                        ) +
+                        "</label></div></div>"
+                      : "<!---->") + " "
+                  ),
+                  _vm._ssrNode(
+                    '<div class="col-12 col-sm-6">',
+                    "</div>",
+                    [
+                      _c("vat-id", {
+                        attrs: {
+                          "is-required": _vm.isInRequiredFields(
+                            "gb",
+                            "delivery_address.vatNumber"
+                          ),
+                          "selected-country-id": _vm.value.countryId,
+                          value: _vm.value.vatNumber || "",
+                          "show-input":
+                            (_vm.isInOptionalFields(
+                              "gb",
+                              "delivery_address.salutation"
+                            ) &&
+                              _vm.value.gender === "company" &&
+                              _vm.isInOptionalFields(
+                                "gb",
+                                "delivery_address.vatNumber"
+                              )) ||
+                            (!_vm.isInOptionalFields(
+                              "gb",
+                              "delivery_address.salutation"
+                            ) &&
+                              _vm.isInOptionalFields(
+                                "gb",
+                                "delivery_address.name1"
+                              ) &&
+                              _vm.isInOptionalFields(
+                                "gb",
+                                "delivery_address.vatNumber"
+                              ))
+                        },
+                        on: {
+                          input: function($event) {
+                            return _vm.emitInputEvent("vatNumber", $event)
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(" "),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm.isInOptionalFields("gb", "delivery_address.title")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.title"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.title')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "title" }
+                          },
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           [
                             _vm._ssrNode(
                               ((_vm.isInOptionalFields(
@@ -46315,9 +51278,21 @@ module.exports =
                                 _vm._ssrAttr("for", "txtCompany" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.$translate("Ceres::Template.addressCompany")
                                   ) + "*"
+=======
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTitle",
+                                        "gb",
+                                        "delivery_address.title"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                 ) +
                                 "</label></div></div>"
                                 : "<!---->") + " "
@@ -47252,6 +52227,7 @@ module.exports =
                                         ) +
                                         "</label>"
                                       )
+<<<<<<< HEAD
                                     ]
                                   )
                                 ]),
@@ -47357,6 +52333,193 @@ module.exports =
                                 : _vm._e()
                             ],
                             2
+=======
+                                    ) +
+                                    (_vm.areNameFieldsRequired(
+                                      "gb",
+                                      "delivery_address"
+                                    )
+                                      ? "*"
+                                      : "<!---->") +
+                                    "</label>"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    : _vm._ssrNode('<div class="col-12 col-sm-8">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.contactPerson"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.contactPerson')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "contactPerson" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="lastName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.contactPerson) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtContactPerson" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressContactPerson",
+                                        "gb",
+                                        "delivery_address.contactPerson"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ]),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("gb", "delivery_address.name4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.name4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.name4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "name4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="decorateName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.name4) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "txtAdditionalName" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressGBNameAffix",
+                                        "gb",
+                                        "delivery_address.name4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("gb", "delivery_address.phoneNumber")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-4">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.phoneNumber"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.phoneNumber')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "telephone" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="telephone"' +
+                                _vm._ssrAttr("id", "txtTelephone" + _vm._uid) +
+                                _vm._ssrAttr("value", _vm.value.telephone) +
+                                "> <label" +
+                                _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressTelephone",
+                                        "gb",
+                                        "delivery_address.phoneNumber"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(" "),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    '<div class="col-12 col-sm-8"><div data-validate="text" data-model="address1" class="input-unit"><input type="text" name="street" autocomplete="address-line1"' +
+                      _vm._ssrAttr("id", "txtStreet" + _vm._uid) +
+                      _vm._ssrAttr("value", _vm.value.address1) +
+                      "> <label" +
+                      _vm._ssrAttr("for", "txtStreet" + _vm._uid) +
+                      ">" +
+                      _vm._ssrEscape(
+                        _vm._s(
+                          _vm.$translate(
+                            "Ceres::Template.addressENAddressLine1"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           )
                         ]),
                         _vm._ssrNode(" "),
@@ -47373,6 +52536,7 @@ module.exports =
                                 _vm._ssrAttr("for", "txtStreet" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
+<<<<<<< HEAD
                                   _vm._s(
                                     _vm.$translate(
                                       "Ceres::Template.addressENAddressLine1"
@@ -47620,6 +52784,217 @@ module.exports =
       }
       var staticRenderFns = []
       render._withStripped = true
+=======
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressENAddressLine2",
+                                        "gb",
+                                        "delivery_address.address2"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(" "),
+            _vm._ssrNode('<div class="col-12">', "</div>", [
+              _vm._ssrNode(
+                '<div class="row">',
+                "</div>",
+                [
+                  _vm.isInOptionalFields("gb", "delivery_address.address3")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-6">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.address3"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.address3')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address3" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="buildingName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.address3) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "decorateAddress0" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressENAddressLine3",
+                                        "gb",
+                                        "delivery_address.address3"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._ssrNode(" "),
+                  _vm.isInOptionalFields("gb", "delivery_address.address4")
+                    ? _vm._ssrNode('<div class="col-12 col-sm-12">', "</div>", [
+                        _c(
+                          "div",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate:text",
+                                value: _vm.isInRequiredFields(
+                                  "gb",
+                                  "delivery_address.address4"
+                                ),
+                                expression:
+                                  "isInRequiredFields('gb', 'delivery_address.address4')",
+                                arg: "text"
+                              }
+                            ],
+                            staticClass: "input-unit",
+                            attrs: { "data-model": "address4" }
+                          },
+                          [
+                            _vm._ssrNode(
+                              '<input type="text" name="buildingName"' +
+                                _vm._ssrAttr(
+                                  "id",
+                                  "decorateAddress1" + _vm._uid
+                                ) +
+                                _vm._ssrAttr("value", _vm.value.address4) +
+                                "> <label" +
+                                _vm._ssrAttr(
+                                  "for",
+                                  "decorateAddress1" + _vm._uid
+                                ) +
+                                ">" +
+                                _vm._ssrEscape(
+                                  "\n\t\t\t\t\t\t\t\t" +
+                                    _vm._s(
+                                      _vm.transformTranslation(
+                                        "Ceres::Template.addressENAddressLine4",
+                                        "gb",
+                                        "delivery_address.address4"
+                                      )
+                                    ) +
+                                    "\n\t\t\t\t\t\t\t"
+                                ) +
+                                "</label>"
+                            )
+                          ]
+                        )
+                      ])
+                    : _vm._e()
+                ],
+                2
+              )
+            ]),
+            _vm._ssrNode(
+              ' <div class="col-12 col-sm-4"><div data-validate="text" data-model="town" class="input-unit"><input type="text" name="town"' +
+                _vm._ssrAttr("id", "txtPlace" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.town) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtPlace" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressPlace")) + "*"
+                ) +
+                '</label></div></div> <div class="col-12 col-sm-4"><div data-validate="text" data-model="postalCode" class="input-unit"><input type="text" name="zip"' +
+                _vm._ssrAttr("id", "txtZip" + _vm._uid) +
+                _vm._ssrAttr("value", _vm.value.postalCode) +
+                "> <label" +
+                _vm._ssrAttr("for", "txtZip" + _vm._uid) +
+                ">" +
+                _vm._ssrEscape(
+                  _vm._s(_vm.$translate("Ceres::Template.addressZip")) + "*"
+                ) +
+                "</label></div></div> "
+            ),
+            _vm._t("custom-address-fields")
+          ]
+        : _vm._e(),
+      _vm._ssrNode(" "),
+      _vm._ssrNode(
+        '<div data-testing="address-country-select" class="col-12 col-sm-4">',
+        "</div>",
+        [
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: _vm.isInRequiredFields(
+                    "de",
+                    "delivery_address.salutation"
+                  ),
+                  expression:
+                    "isInRequiredFields('de', 'delivery_address.salutation')"
+                }
+              ]
+            },
+            [
+              _c("country-select", {
+                attrs: {
+                  "selected-country-id": _vm.value.countryId,
+                  "selected-state-id": _vm.value.stateId,
+                  "address-type": _vm.addressType,
+                  "optional-address-fields": _vm.optionalAddressFields,
+                  "required-address-fields": _vm.requiredAddressFields
+                },
+                on: {
+                  "country-changed": function($event) {
+                    return _vm.onSelectedCountryChanged($event)
+                  },
+                  "state-changed": function($event) {
+                    return _vm.emitInputEvent("stateId", $event)
+                  }
+                }
+              })
+            ],
+            1
+          )
+        ]
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -47744,7 +53119,11 @@ module.exports =
               _vm._ssrAttr("for", "country-id-select" + _vm._uid) +
               ">" +
               _vm._ssrEscape(
+<<<<<<< HEAD
                 _vm._s(_vm.$translate("Ceres::Template.headerCountry"))
+=======
+                "\n\t\t\t\t\t" + _vm._s(country.currLangName) + "\n\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               ) +
               "</label></div> "
             ),
@@ -47792,8 +53171,13 @@ module.exports =
                             ">" +
                             _vm._ssrEscape(
                               "\n\t\t\t\t\t\t" +
+<<<<<<< HEAD
                               _vm._s(state.name) +
                               "\n\t\t\t\t\t"
+=======
+                                _vm._s(state.name) +
+                                "\n\t\t\t\t\t"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                             ) +
                             "</option>"
                           )
@@ -47943,6 +53327,7 @@ module.exports =
                                           _vm.password = $event.target.value
                                         }
                                       }
+<<<<<<< HEAD
                                     })
                                   ]
                                 },
@@ -47961,6 +53346,46 @@ module.exports =
                                           )
                                         ) +
                                         "\n                        "
+=======
+                                      _vm.password = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          },
+                          {
+                            key: "title",
+                            fn: function() {
+                              return [
+                                _c("div", { staticClass: "kk-heading" }, [
+                                  _vm._v(
+                                    "\n                            " +
+                                      _vm._s(
+                                        _vm.$translate(
+                                          "Ceres::Template.regPasswordHintTitle"
+                                        )
+                                      ) +
+                                      "\n                        "
+                                  )
+                                ])
+                              ]
+                            },
+                            proxy: true
+                          },
+                          {
+                            key: "content",
+                            fn: function() {
+                              return [
+                                _c("ul", { staticClass: "pl-3" }, [
+                                  _c("li", [
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm.$translate(
+                                          "Ceres::Template.regPasswordHintLength"
+                                        )
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                       )
                                     ])
                                   ]
@@ -47990,6 +53415,7 @@ module.exports =
                                             )
                                           )
                                         )
+<<<<<<< HEAD
                                       ]),
                                       _vm._v(" "),
                                       _c("li", [
@@ -48025,6 +53451,32 @@ module.exports =
                         )
                       ],
                       2
+=======
+                                      )
+                                    )
+                                  ])
+                                ])
+                              ]
+                            },
+                            proxy: true
+                          }
+                        ],
+                        null,
+                        false,
+                        3448734965
+                      )
+                    }),
+                    _vm._ssrNode(
+                      " <label" +
+                        _vm._ssrAttr("for", "new-password-" + _vm._uid) +
+                        ">" +
+                        _vm._ssrEscape(
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.regPassword")
+                          ) + "*"
+                        ) +
+                        "</label>"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     )
                   ])
                   : _vm._e(),
@@ -48091,6 +53543,7 @@ module.exports =
                       })
                       : _vm._e()
                   ],
+<<<<<<< HEAD
                   1
                 ),
                 _vm._ssrNode(" "),
@@ -48111,6 +53564,65 @@ module.exports =
                           value: _vm.privacyPolicyAccepted,
                           callback: function ($$v) {
                             _vm.privacyPolicyAccepted = $$v
+=======
+                  2
+                )
+              ])
+            : _vm._e(),
+          _vm._ssrNode(
+            " " +
+              (!_vm.guestMode
+                ? '<div class="col-sm-6 input-unit-group"><div data-validate="ref"' +
+                  _vm._ssrClass("input-unit", {
+                    "no-bottom": _vm.modalElement
+                  }) +
+                  '><input type="password" name="password-repeat" autocomplete="new-password"' +
+                  _vm._ssrAttr("id", "new-password-repeat-" + _vm._uid) +
+                  _vm._ssrAttr(
+                    "data-validate-ref",
+                    "#new-password-" + _vm._uid
+                  ) +
+                  ' data-testing="repeat-password-register"' +
+                  _vm._ssrAttr("value", _vm.passwordRepeat) +
+                  "> <label" +
+                  _vm._ssrAttr("for", "new-password-repeat-" + _vm._uid) +
+                  ">" +
+                  _vm._ssrEscape(
+                    _vm._s(
+                      _vm.$translate("Ceres::Template.regRepeatPassword")
+                    ) + "*"
+                  ) +
+                  "</label></div></div>"
+                : "<!---->") +
+              ' <input type="text" name="username" autocomplete="new-password" tabindex="-1"' +
+              _vm._ssrAttr("value", _vm.honeypot) +
+              ' class="honey"> '
+          ),
+          _vm._ssrNode(
+            '<div class="col-12">',
+            "</div>",
+            [
+              !_vm.isSimpleRegistration
+                ? _c("address-input-group", {
+                    attrs: {
+                      template: "#vue-address-input-group",
+                      "address-type": "1",
+                      value: _vm.billingAddress,
+                      "optional-address-fields": _vm.shownFields,
+                      "required-address-fields": _vm.requiredFields
+                    },
+                    on: {
+                      input: function($event) {
+                        return _vm.setAddressDataField($event)
+                      }
+                    },
+                    scopedSlots: _vm._u(
+                      [
+                        {
+                          key: "custom-address-fields",
+                          fn: function() {
+                            return [_vm._t("custom-address-fields")]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           },
                           expression: "privacyPolicyAccepted"
                         }
@@ -48391,8 +53903,30 @@ module.exports =
           ]
         )
       }
+<<<<<<< HEAD
       var staticRenderFns = []
       render._withStripped = true
+=======
+    },
+    [
+      _vm._ssrNode(
+        '<option value disabled="disabled" selected="selected" hidden="hidden">Anrede</option> ' +
+          _vm._ssrList(_vm.currentSalutation, function(salutation, index) {
+            return (
+              "<option" +
+              _vm._ssrAttr("value", salutation.key) +
+              ">" +
+              _vm._ssrEscape("\n\t\t\t" + _vm._s(salutation.name) + "\n\t\t") +
+              "</option>"
+            )
+          })
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -48750,6 +54284,7 @@ module.exports =
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/customer/login/Login.vue?vue&type=template&id=0f0e37b8& ***!
   \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -48777,6 +54312,72 @@ module.exports =
                 "> <label" +
                 _vm._ssrAttr("for", "email" + _vm._uid) +
                 ">" +
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "login-pwd-reset" }, [
+    _vm._ssrNode(
+      "<form" +
+        _vm._ssrAttr("id", "login-form-" + _vm._uid) +
+        ' method="post">',
+      "</form>",
+      [
+        _vm._ssrNode(
+          "<div" +
+            _vm._ssrClass(null, { "modal-body": _vm.modalElement }) +
+            '><div class="row"><div class="col-12"><div data-validate="mail" class="input-unit"><input type="email" name="email" autocomplete="email"' +
+            _vm._ssrAttr("id", "email" + _vm._uid) +
+            " data-autofocus" +
+            _vm._ssrAttr("value", _vm.username) +
+            "> <label" +
+            _vm._ssrAttr("for", "email" + _vm._uid) +
+            ">" +
+            _vm._ssrEscape(
+              _vm._s(_vm.$translate("Ceres::Template.loginEmail")) + "*"
+            ) +
+            '</label></div> <span class="error-msg">' +
+            _vm._ssrEscape(
+              _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
+            ) +
+            '</span></div> <div class="col-12"><div data-validate="text"' +
+            _vm._ssrClass("input-unit ", { "no-bottom": _vm.modalElement }) +
+            '><input type="password" name="password" autocomplete="current-password"' +
+            _vm._ssrAttr("id", "password" + _vm._uid) +
+            _vm._ssrAttr("value", _vm.password) +
+            "> <label" +
+            _vm._ssrAttr("for", "password" + _vm._uid) +
+            ">" +
+            _vm._ssrEscape(
+              _vm._s(_vm.$translate("Ceres::Template.loginPassword")) + "*"
+            ) +
+            '</label></div> <span class="error-msg">' +
+            _vm._ssrEscape(
+              _vm._s(_vm.$translate("Ceres::Template.loginEmptyPassword"))
+            ) +
+            "</span></div></div></div> "
+        ),
+        _vm._ssrNode(
+          "<div" +
+            _vm._ssrClass(null, {
+              "modal-footer justify-content-between": _vm.modalElement,
+              "login-form-footer": !_vm.modalElement
+            }) +
+            ">",
+          "</div>",
+          [
+            _vm._ssrNode(
+              "<div" +
+                _vm._ssrClass(null, { "": !_vm.modalElement }) +
+                ' style="margin-bottom: 0.3rem;"><a href="javascript:void(0)" class="small text-appearance">' +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _vm._ssrEscape(
                   _vm._s(_vm.$translate("Ceres::Template.loginEmail")) + "*"
                 ) +
@@ -48804,6 +54405,7 @@ module.exports =
               _vm._ssrNode(
                 "<div" +
                 _vm._ssrClass(null, {
+<<<<<<< HEAD
                   "modal-footer justify-content-between": _vm.modalElement,
                   "login-form-footer": !_vm.modalElement
                 }) +
@@ -48906,6 +54508,90 @@ module.exports =
       }
       var staticRenderFns = []
       render._withStripped = true
+=======
+                  "d-flex text-sm-right": !_vm.modalElement
+                }) +
+                ">",
+              "</div>",
+              [
+                _vm._t("extend-overlay-buttons"),
+                _vm._ssrNode(" "),
+                _vm._ssrNode(
+                  "<button" +
+                    _vm._ssrAttr("disabled", _vm.isDisabled) +
+                    _vm._ssrClass("btn btn-primary btn-appearance btn-medium", [
+                      { "float-right": !_vm.modalElement },
+                      _vm.buttonSizeClass
+                    ]) +
+                    ">",
+                  "</button>",
+                  [
+                    _vm._ssrNode(
+                      _vm._ssrEscape(
+                        "\n\t\t\t\t\t\t" +
+                          _vm._s(_vm.$translate("Ceres::Template.login")) +
+                          "\n\t\t\t\t\t\t"
+                      )
+                    ),
+                    _c("icon", {
+                      attrs: { icon: "user", loading: _vm.isDisabled }
+                    })
+                  ],
+                  2
+                ),
+                _vm._ssrNode(" "),
+                _vm._ssrNode(
+                  "<div" +
+                    _vm._ssrClass(null, {
+                      btn: _vm.modalElement,
+                      "d-none": !_vm.modalElement
+                    }) +
+                    ' style="width:140px">',
+                  "</div>",
+                  [
+                    _vm._ssrNode(
+                      "<div onclick=\"$('.close').click(); $('.basket-preview-wrapper').hide(); event.preventDefault()\">",
+                      "</div>",
+                      [
+                        _c("user-login-handler", {
+                          staticClass: "register-btn-none",
+                          attrs: {
+                            "show-login": false,
+                            "show-registration": true
+                          }
+                        }),
+                        _vm._ssrNode(
+                          ' <a data-testing="register-select" data-toggle="modal" href="#registration" class="btn btn-primary btn-appearance btn-medium register-btn" style="color:#FFFFFF"><i aria-hidden="true" class="fa fa-user-plus"></i>' +
+                            _vm._ssrEscape(
+                              "\n\t\t\t\t\t\t\t\t" +
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.loginRegister"
+                                  )
+                                ) +
+                                "\n\t\t\t\t\t\t\t"
+                            ) +
+                            "</a>"
+                        )
+                      ],
+                      2
+                    )
+                  ]
+                )
+              ],
+              2
+            )
+          ],
+          2
+        )
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -48931,6 +54617,7 @@ module.exports =
           "div",
           { staticClass: "container-max mt-5" },
           [
+<<<<<<< HEAD
             _vm._ssrNode('<div class="row mb-5">', "</div>", [
               _vm._ssrNode(
                 '<div class="col-sm-10 offset-sm-1 col-md-6 offset-md-3">',
@@ -48939,6 +54626,25 @@ module.exports =
                   _vm._ssrNode(
                     "<div>",
                     "</div>",
+=======
+            _vm._ssrNode(
+              "<div>",
+              "</div>",
+              [
+                _vm._ssrNode(
+                  '<br> <h1 class="login-view-title kk-heading">' +
+                    _vm._ssrEscape(
+                      _vm._s(_vm.$translate("Ceres::Template.login"))
+                    ) +
+                    "</h1> "
+                ),
+                _c("login", {
+                  attrs: {
+                    backlink: _vm.sanitizedBacklink,
+                    "has-to-forward": true
+                  },
+                  scopedSlots: _vm._u(
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     [
                       _vm._ssrNode(
                         '<br> <h1 class="login-view-title kk-heading">' +
@@ -48952,6 +54658,7 @@ module.exports =
                           backlink: _vm.sanitizedBacklink,
                           "has-to-forward": true
                         },
+<<<<<<< HEAD
                         scopedSlots: _vm._u(
                           [
                             {
@@ -48991,10 +54698,45 @@ module.exports =
                       ? '<div class="col-sm-6"><button class="btn btn-primary btn-block mb-3"><i aria-hidden="true" class="fa fa-shopping-bag"></i>' +
                       _vm._ssrEscape(
                         "\n\t\t\t\t\t\t\t" +
+=======
+                        proxy: true
+                      }
+                    ],
+                    null,
+                    true
+                  )
+                })
+              ],
+              2
+            ),
+            _vm._ssrNode(
+              ' <hr> <div class="row"><div' +
+                _vm._ssrClass(
+                  "col-sm-{% if 'my-account' not in backlink %}6{% else %}12{% endif %}",
+                  {
+                    "col-sm-6": !_vm.myAccountInBacklink,
+                    "col-sm-12": _vm.myAccountInBacklink
+                  }
+                ) +
+                "><a" +
+                _vm._ssrAttr("href", _vm.registrationUrl) +
+                ' class="btn btn-primary btn-block mb-3"><i aria-hidden="true" class="fa fa-user-plus"></i>' +
+                _vm._ssrEscape(
+                  "\n\t\t\t\t\t\t\t" +
+                    _vm._s(_vm.$translate("Ceres::Template.loginRegister")) +
+                    "\n\t\t\t\t\t\t"
+                ) +
+                "</a></div> " +
+                (!_vm.myAccountInBacklink
+                  ? '<div class="col-sm-6"><button class="btn btn-primary btn-block mb-3"><i aria-hidden="true" class="fa fa-shopping-bag"></i>' +
+                    _vm._ssrEscape(
+                      "\n\t\t\t\t\t\t\t" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         _vm._s(
                           _vm.$translate("Ceres::Template.loginOrderAsGuest")
                         ) +
                         "\n\t\t\t\t\t\t"
+<<<<<<< HEAD
                       ) +
                       "</button></div>"
                       : "<!---->") +
@@ -49006,6 +54748,24 @@ module.exports =
               )
             ]),
             _vm._ssrNode(" "),
+=======
+                    ) +
+                    "</button></div>"
+                  : "<!---->") +
+                "</div> "
+            ),
+            _vm._t("additional-content-after-buttons")
+          ],
+          2
+        )
+      ]),
+      _vm._ssrNode(" "),
+      _vm._ssrNode(
+        '<div tabindex="-1" role="dialog" class="modal fade">',
+        "</div>",
+        [
+          _vm._ssrNode('<div class="modal-dialog">', "</div>", [
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             _vm._ssrNode(
               '<div tabindex="-1" role="dialog" class="modal fade">',
               "</div>",
@@ -49042,11 +54802,32 @@ module.exports =
                         ],
                         1
                       )
+<<<<<<< HEAD
                     ],
                     2
                   )
                 ])
               ]
+=======
+                    ) +
+                    '</div> <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button></div> '
+                ),
+                _vm._ssrNode(
+                  '<div class="modal-body">',
+                  "</div>",
+                  [
+                    _c("guest-login", {
+                      attrs: {
+                        backlink: _vm.sanitizedBacklink,
+                        "initial-email": _vm.guestEmail
+                      }
+                    })
+                  ],
+                  1
+                )
+              ],
+              2
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             )
           ],
           2
@@ -49270,6 +55051,7 @@ module.exports =
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/item/AddToWishList.vue?vue&type=template&id=4c3118d2& ***!
   \*****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -49313,6 +55095,50 @@ module.exports =
       }
       var staticRenderFns = []
       render._withStripped = true
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "a",
+    {
+      ref: "addToWishList",
+      staticClass: "btn btn-link btn-sm text-muted btn-wish-list",
+      attrs: {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "zu Wunschliste hinzufügen"
+      },
+      on: {
+        click: function($event) {
+          $event.preventDefault()
+          return _vm.switchState()
+        }
+      }
+    },
+    [
+      _vm._ssrNode(
+        (_vm.isVariationInWishList
+          ? '<img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png"' +
+            _vm._ssrAttr("loading", _vm.isLoading) +
+            ' class="default-float wishlist-icon">'
+          : '<img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png"' +
+            _vm._ssrAttr("loading", _vm.isLoading) +
+            ' class="default-float wishlist-icon">') + "\n    Wunschliste\n"
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -49649,6 +55475,7 @@ module.exports =
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/item/ItemImageCarousel.vue?vue&type=template&id=5285279e& ***!
   \*********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -49733,6 +55560,92 @@ module.exports =
       }
       var staticRenderFns = []
       render._withStripped = true
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { attrs: { itemscope: "", itemtype: "http://schema.org/Thing" } },
+    [
+      _vm._ssrNode(
+        '<link rel="preload" as="image"' +
+          _vm._ssrAttr("href", _vm.singleImages[0].url) +
+          "> "
+      ),
+      _vm._ssrNode(
+        '<div class="single-item-wishlist">',
+        "</div>",
+        [_c("add-to-wish-list-icon")],
+        1
+      ),
+      _vm._ssrNode(
+        ' <div class="single-carousel owl-carousel owl-theme owl-single-item mt-0">' +
+          _vm._ssrList(_vm.singleImages, function(image, i) {
+            return (
+              '<div class="prop-1-1"><a' +
+              _vm._ssrAttr("href", image.url) +
+              _vm._ssrAttr("data-lightbox", "single-item-image" + _vm._uid) +
+              ' class="single-item-image"><img' +
+              _vm._ssrAttr("src", image.url) +
+              _vm._ssrAttr("alt", _vm.getAltText(image)) +
+              _vm._ssrAttr("title", _vm.getImageName(image)) +
+              "></a></div>"
+            )
+          }) +
+          "</div> "
+      ),
+      _vm.showThumbs
+        ? _vm._ssrNode(
+            '<div id="thumb-carousel" class="owl-thumbs owl-carousel owl-theme owl-single-item">',
+            "</div>",
+            _vm._l(_vm.carouselImages, function(imagePreview, index) {
+              return _vm._ssrNode('<div class="prop-1-1">', "</div>", [
+                _vm._ssrNode(
+                  '<div class="image-container">',
+                  "</div>",
+                  [
+                    _c("lazy-img", {
+                      class: { active: _vm.currentItem === index },
+                      attrs: {
+                        "picture-class": "owl-thumb border-appearance",
+                        "image-url": imagePreview.url,
+                        alt: _vm.getAltText(imagePreview),
+                        title: _vm.getImageName(imagePreview)
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            }),
+            0
+          )
+        : _vm._e(),
+      _vm._ssrNode(
+        " " +
+          (!_vm.initialized
+            ? '<div class="single-carousel owl-carousel owl-loaded owl-theme owl-single-item mt-0"><div class="prop-1-1"><img' +
+              _vm._ssrAttr("src", _vm.singleImages[0].url) +
+              _vm._ssrAttr("alt", _vm.getAltText(_vm.singleImages[0].url)) +
+              _vm._ssrAttr("title", _vm.getImageName(_vm.singleImages[0].url)) +
+              ' class="owl-placeholder"></div></div>'
+            : "<!---->")
+      )
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -52545,6 +58458,7 @@ module.exports =
                       )
                     ) +
                     "</label></div></div>"
+<<<<<<< HEAD
                     : "<!---->")
                 )
               ]
@@ -52560,12 +58474,29 @@ module.exports =
 
       /***/
 }),
+=======
+                  : "<!---->")
+            )
+          ]
+        : [_vm._t("default")]
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/itemList/CategoryImageCarousel.vue?vue&type=template&id=62e5025e&":
 /*!*****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/CategoryImageCarousel.vue?vue&type=template&id=62e5025e& ***!
   \*****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -52663,12 +58594,111 @@ module.exports =
 
       /***/
 }),
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.$data.$_enableCarousel
+    ? _c(
+        "a",
+        {
+          staticClass: "owl-carousel owl-theme",
+          attrs: {
+            id: "owl-carousel-" + _vm._uid,
+            href: _vm.itemUrl,
+            role: "listbox",
+            "aria-label": _vm.$translate("Ceres::Template.itemImageCarousel")
+          }
+        },
+        _vm._l(_vm.imageUrls, function(imageUrl, index) {
+          return _vm._ssrNode(
+            "<div>",
+            "</div>",
+            [
+              index === 0 && !_vm.disableLazyLoad
+                ? _c("lazy-img", {
+                    ref: "itemLazyImage",
+                    refInFor: true,
+                    attrs: {
+                      "picture-class": "img-fluid",
+                      "image-url": imageUrl.url,
+                      alt: _vm.getAltText(imageUrl),
+                      title: _vm.getTitleText(imageUrl),
+                      role: "option"
+                    }
+                  })
+                : index !== 0 && !_vm.disableLazyLoad
+                ? _c("img", {
+                    staticClass: "img-fluid owl-lazy",
+                    attrs: {
+                      "data-src": imageUrl.url,
+                      alt: _vm.getAltText(imageUrl),
+                      title: _vm.getTitleText(imageUrl),
+                      role: "option"
+                    }
+                  })
+                : _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: {
+                      src: imageUrl.url,
+                      alt: _vm.getAltText(imageUrl),
+                      title: _vm.getAltText(imageUrl),
+                      role: "option"
+                    }
+                  })
+            ],
+            1
+          )
+        }),
+        0
+      )
+    : _c(
+        "a",
+        { attrs: { href: _vm.itemUrl } },
+        [
+          !_vm.disableLazyLoad
+            ? _c("lazy-img", {
+                ref: "itemLazyImage",
+                attrs: {
+                  "picture-class": "img-fluid",
+                  "image-url": _vm._f("itemImage")(_vm.imageUrls),
+                  alt: _vm.getAltText(_vm.imageUrls[0]),
+                  title: _vm.getTitleText(_vm.imageUrls[0])
+                }
+              })
+            : _c("img", {
+                staticClass: "img-fluid",
+                attrs: {
+                  src: _vm._f("itemImage")(_vm.imageUrls),
+                  alt: _vm.getAltText(_vm.imageUrls[0]),
+                  title: _vm.getTitleText(_vm.imageUrls[0])
+                }
+              })
+        ],
+        1
+      )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/app/components/itemList/CategoryItem.vue?vue&type=template&id=8ab526e6&":
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/CategoryItem.vue?vue&type=template&id=8ab526e6& ***!
   \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -52693,6 +58723,315 @@ module.exports =
               ">",
               "</div>",
               [
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "article",
+    {
+      staticClass: "cmp cmp-product-thumb",
+      class: "cmp-availability-" + _vm.item.variation.availability.id
+    },
+    [
+      _vm._ssrNode(
+        "<div" +
+          _vm._ssrClass(null, _vm.paddingClasses) +
+          _vm._ssrStyle(null, _vm.paddingInlineStyles, null) +
+          ">",
+        "</div>",
+        [
+          _c("add-to-basket", {
+            attrs: {
+              "variation-id": _vm.item.variation.id,
+              "is-salable": !!_vm.item.filter && _vm.item.filter.isSalable,
+              "has-children":
+                !!_vm.item.item && _vm.item.item.salableVariationCount > 1,
+              "interval-quantity":
+                _vm.item.variation.intervalOrderQuantity || 1,
+              "minimum-quantity": _vm.item.variation.minimumOrderQuantity,
+              "maximum-quantity":
+                !!_vm.item.variation.maximumOrderQuantity &&
+                _vm.item.variation.maximumOrderQuantity > 0
+                  ? _vm.item.variation.maximumOrderQuantity
+                  : null,
+              "order-properties": _vm.item.properties.filter(function(prop) {
+                return prop.property.isOderProperty
+              }),
+              "has-order-properties": _vm.item.hasOrderProperties,
+              "use-large-scale": true,
+              "show-quantity": false,
+              "item-url": _vm._f("itemURL")(_vm.item, _vm.urlWithVariationId),
+              "has-price": _vm._f("hasItemDefaultPrice")(_vm.item),
+              "item-type": _vm.item.item.itemType
+            }
+          }),
+          _vm._ssrNode(" "),
+          _vm._ssrNode(
+            '<div class="d-lg-none">',
+            "</div>",
+            [
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.item.variation.id }
+              })
+            ],
+            1
+          ),
+          _vm._ssrNode(" "),
+          _vm._ssrNode('<div class="thumb-image">', "</div>", [
+            _vm._ssrNode(
+              '<div class="prop-1-1">',
+              "</div>",
+              [
+                _vm._t("item-image", [
+                  _c("category-image-carousel", {
+                    ref: "categoryImageCarousel",
+                    attrs: {
+                      "image-urls-data": _vm._f("itemImages")(
+                        _vm.item.images,
+                        _vm.imageUrlAccessor
+                      ),
+                      "alt-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "title-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "item-url": _vm._f("itemURL")(
+                        _vm.item,
+                        _vm.urlWithVariationId
+                      ),
+                      "enable-carousel":
+                        _vm.$ceres.config.item.enableImageCarousel,
+                      "disable-carousel-on-mobile": _vm.disableCarouselOnMobile
+                    }
+                  })
+                ])
+              ],
+              2
+            )
+          ]),
+          _vm._ssrNode(" "),
+          _vm._t("store-special", [
+            (_vm.item.prices.specialOffer &&
+              _vm.item.prices.default.price.value >
+                _vm.item.prices.specialOffer.unitPrice.value) ||
+            (_vm.item.prices.rrp &&
+              _vm.item.prices.rrp.price.value >
+                _vm.item.prices.default.unitPrice.value)
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png"
+                  }
+                })
+              : _vm.item.item.condition.id === 0
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png"
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._ssrNode(" "),
+          _vm._t("item-details", [
+            _c(
+              "div",
+              { staticClass: "thumb-content" },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "thumb-title small",
+                    class: {
+                      "stretched-link":
+                        _vm.$ceres.config.global.shippingCostsCategoryId == 0
+                    },
+                    attrs: {
+                      href: _vm._f("itemURL")(_vm.item, _vm.urlWithVariationId)
+                    }
+                  },
+                  [
+                    _c("span", { staticClass: "category-item-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name2, "50"))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "category-item-sub-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name3, "20"))
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex justify-content-between align-items-end"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "thumb-meta mt-2" },
+                      [
+                        _vm._t("before-prices"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "prices" }, [
+                          _c(
+                            "div",
+                            { staticClass: "price-view-port" },
+                            [
+                              (_vm.item.prices.specialOffer &&
+                                _vm.item.prices.default.price.value >
+                                  _vm.item.prices.specialOffer.unitPrice
+                                    .value) ||
+                              (_vm.item.prices.rrp &&
+                                _vm.item.prices.rrp.price.value >
+                                  _vm.item.prices.default.unitPrice.value)
+                                ? [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm.item.prices.rrp.price.value >
+                                    _vm.item.prices.default.unitPrice.value
+                                      ? _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.rrp
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                      : _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.default
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                  ]
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "price" },
+                            [
+                              _vm.item.item.itemType === "set"
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.itemSetPrice",
+                                            { price: _vm.itemSetPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : !!_vm.item.item &&
+                                  _vm.item.item.salableVariationCount > 1 &&
+                                  _vm.$ceres.isCheapestSorting
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.categoryItemFromPrice",
+                                            { price: _vm.itemPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnly"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("specialOffer")(
+                                            _vm.item.prices.default.unitPrice
+                                              .formatted,
+                                            _vm.item.prices,
+                                            "unitPrice",
+                                            "formatted"
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ])
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _vm._t("after-prices"),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "availability",
+                      class:
+                        "availability-" + _vm.item.variation.availability.id
+                    })
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _c("add-to-basket", {
                   attrs: {
                     "variation-id": _vm.item.variation.id,
@@ -52721,6 +59060,7 @@ module.exports =
                       _vm.itemGraduatedPricesalableVariationCount,
                     "item-type": _vm.item.item.itemType
                   }
+<<<<<<< HEAD
                 }),
                 _vm._ssrNode(" "),
                 _vm._ssrNode(
@@ -53098,6 +59438,11 @@ module.exports =
   ])
               ],
 1
+=======
+                })
+              ],
+              1
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             )
           ])
         ],
@@ -53118,6 +59463,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/ItemSearch.vue?vue&type=template&id=010b1df7& ***!
   \******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -53227,15 +59573,83 @@ render._withStripped = true
                   2
                 )
               ]
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "container-max",
+      class: { "p-0": _vm.$ceres.isShopBuilder }
+    },
+    [
+      _vm._ssrNode('<div class="position-relative">', "</div>", [
+        _vm._ssrNode(
+          '<div class="d-flex flex-grow-1 position-relative clearable">',
+          "</div>",
+          [
+            _vm._ssrNode(
+              '<input type="text" id="query" name="q" placeholder="Wonach suchst Du?" class="search-input flex-grow-1"> <i class="clearable__clear">×</i> <button type="button" onclick="buttonOnClick(this)" class="search-button"><img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png"></button> '
+            ),
+            _vm.isSearchFocused
+              ? [
+                  _vm._ssrNode(
+                    "<div" +
+                      _vm._ssrStyle(null, null, {
+                        display: _vm.hasAutocompleteResults ? "" : "none"
+                      }) +
+                      ">",
+                    "</div>",
+                    [
+                      _vm._t("autocomplete-suggestions", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "autocomplete-suggestions shadow bg-white w-100 "
+                          },
+                          [
+                            _c("search-suggestion-item", {
+                              attrs: {
+                                "show-images": true,
+                                "suggestion-type": "item"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    2
+                  )
+                ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               : _vm._e()
           ],
           2
         )
+<<<<<<< HEAD
       ]
     )
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -53411,6 +59825,7 @@ render._withStripped = true
         [
           _vm._ssrNode(
             '<button type="button" data-toggle="collapse" data-target="#collapse-form-check" aria-expanded="false" aria-controls="collapse-form-check" class="category-menu-button card-header btn btn-link text-appearance collapsed"><h5 class="category-menu-header h3 py-0">' +
+<<<<<<< HEAD
             _vm._ssrEscape(
               "\n                " +
               _vm._s(_vm.facetName) +
@@ -53445,6 +59860,42 @@ render._withStripped = true
                 "</div></div></label></div></div>"
               )
             })
+=======
+              _vm._ssrEscape(
+                "\n                " +
+                  _vm._s(_vm.facetName) +
+                  "\n                    "
+              ) +
+              '<i class="fa fa-chevron-down"></i></h5></button> '
+          ),
+          _vm.facet.type === "price"
+            ? _vm._ssrNode("<div>", "</div>", [_c("item-filter-price")], 1)
+            : _vm._l(_vm.facets, function(value) {
+                return _vm._ssrNode(
+                  '<div id="collapse-form-check" class="form-check-wrapper collapse"><div class="form-check mb-0 pl-0"><input' +
+                    _vm._ssrAttr("id", "option-" + value.id + "-" + _vm._uid) +
+                    ' type="checkbox"' +
+                    _vm._ssrAttr(
+                      "disabled",
+                      _vm.isLoading || value.count <= 0
+                    ) +
+                    _vm._ssrAttr("checked", _vm.isSelected(value.id)) +
+                    ' class="form-check-input d-none"> <label' +
+                    _vm._ssrAttr("for", "option-" + value.id + "-" + _vm._uid) +
+                    _vm._ssrClass("form-check-label", [
+                      _vm.paddingClasses,
+                      _vm.isSelected(value.id) ? "bg-appearance" : "",
+                      "option-" + value.id
+                    ]) +
+                    _vm._ssrStyle(null, _vm.paddingInlineStyles, null) +
+                    '><div class="d-flex"><span class="flex-grow-1">' +
+                    _vm._ssrEscape(_vm._s(value.name)) +
+                    '</span> <div class="filter-badge">' +
+                    _vm._ssrEscape(_vm._s(value.count)) +
+                    "</div></div></label></div></div>"
+                )
+              })
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
         ],
         2
       )
@@ -53738,6 +60189,7 @@ render._withStripped = true
           '><div class="two-lines-of-text">' +
           _vm._ssrEscape(
             "\n                " +
+<<<<<<< HEAD
             _vm._s(
               (
                 _vm.liveShoppingData.item.texts.name1.match(/[^\ - ]+ -/) || [
@@ -53748,12 +60200,25 @@ render._withStripped = true
             " \n                " +
             _vm._s(_vm.liveShoppingData.item.texts.name2) +
             "\n            "
+=======
+              _vm._s(
+                (
+                  _vm.liveShoppingData.item.texts.name1.match(/[^\ - ]+ -/) || [
+                    ""
+                  ]
+                ).pop()
+              ) +
+              " \n                " +
+              _vm._s(_vm.liveShoppingData.item.texts.name2) +
+              "\n            "
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
           ) +
           '</div> <span class="live-shopping-item-name-condition two-lines-of-text">' +
           _vm._ssrEscape(_vm._s(_vm.liveShoppingData.item.texts.name3)) +
           "</span></a></div> " +
           (_vm.hasStarted
             ? '<div class="live-shopping-prices"><div class="live-shopping-prices-inner"><div class="live-shopping-prices-container">' +
+<<<<<<< HEAD
             (_vm.displaySettings.showCrossPrice &&
               _vm.prices.rrp &&
               _vm.prices.rrp.unitPrice.value > 0
@@ -54012,9 +60477,221 @@ render._withStripped = true
                 _vm.$translate("Ceres::Template.itemShippingCosts")
               ) +
               ">" +
+=======
+              (_vm.displaySettings.showCrossPrice &&
+              _vm.prices.rrp &&
+              _vm.prices.rrp.unitPrice.value > 0
+                ? "<span>" +
+                  (_vm.liveShoppingData.item.prices.default.unitPrice.value >
+                  _vm.liveShoppingData.item.prices.rrp.unitPrice.value
+                    ? "<span>\n                        statt <del>" +
+                      _vm._ssrEscape(
+                        _vm._s(
+                          _vm.liveShoppingData.item.prices.default.unitPrice
+                            .formatted
+                        )
+                      ) +
+                      "</del></span>"
+                    : "<span>\n                        statt <del>" +
+                      _vm._ssrEscape(
+                        _vm._s(
+                          _vm.liveShoppingData.item.prices.rrp.unitPrice
+                            .formatted
+                        )
+                      ) +
+                      "</del></span>") +
+                  "</span>"
+                : "<!---->") +
+              " " +
+              (_vm.displaySettings.showCrossPrice &&
+              _vm.prices.rrp &&
+              _vm.prices.rrp.unitPrice.value === 0
+                ? "<span><span> </span></span>"
+                : "<!---->") +
+              ' <div class="live-shopping-price"><strong><span class="d-none d-lg-inline">heute </span>' +
+              _vm._ssrEscape(
+                "nur " + _vm._s(_vm.prices.price.unitPrice.formatted)
+              ) +
+              '</strong></div></div></div> <div class="live-shopping-prices-additional-info">' +
+              (!(
+                _vm.liveShoppingData.item.unit.unitOfMeasurement === "C62" &&
+                _vm.liveShoppingData.item.unit.content === 1
+              )
+                ? "<div><span>" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.liveShoppingData.item.unit.content)
+                  ) +
+                  "</span> <span>" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.liveShoppingData.item.unit.names.name)
+                  ) +
+                  "</span> " +
+                  (_vm.liveShoppingData.item.variation.mayShowUnitPrice
+                    ? "<span>" +
+                      _vm._ssrEscape(
+                        "| " + _vm._s(_vm.prices.price.basePrice)
+                      ) +
+                      "</span>"
+                    : "<!---->") +
+                  "</div>"
+                : "<!---->") +
+              " " +
+              (_vm.showNetPrices
+                ? _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
+                  )
+                : _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemInclVAT"))
+                  )) +
+              _vm._ssrEscape(
+                " " +
+                  _vm._s(_vm.$translate("Ceres::Template.itemExclusive")) +
+                  "\n            "
+              ) +
+              (_vm.$ceres.config.global.shippingCostsCategoryId > 0
+                ? '<a href="https://www.konsolenkost.de/versand"' +
+                  _vm._ssrAttr(
+                    "title",
+                    _vm.$translate("Ceres::Template.itemShippingCosts")
+                  ) +
+                  ">" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemShippingCosts"))
+                  ) +
+                  "</a>"
+                : "<a" +
+                  _vm._ssrAttr(
+                    "title",
+                    _vm.$translate("Ceres::Template.itemShippingCosts")
+                  ) +
+                  ">" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemShippingCosts"))
+                  ) +
+                  "</a>") +
+              "</div></div>"
+            : "<!---->") +
+          " " +
+          (!_vm.hasClosed
+            ? "<div><a" +
+              _vm._ssrAttr(
+                "href",
+                _vm._f("itemURL")(_vm.liveShoppingData.item)
+              ) +
+              ' class="btn btn-primary d-block d-lg-inline-block my-lg-3">\n            Will ich haben <span class="d-none d-lg-inline">&gt;</span></a></div>'
+            : '<div><a class="btn btn-primary btn-danger text-white d-block d-lg-inline-block my-lg-3">\n           AUSVERKAUFT* <span class="d-none d-lg-inline"></span></a></div>') +
+          " "
+      ),
+      _vm._t("after-item-name"),
+      _vm._ssrNode(
+        " " +
+          (_vm.displaySettings.showTimer || _vm.displaySettings.showStock
+            ? '<div class="live-shopping-countdown">' +
+              (_vm.hasStarted && !_vm.hasClosed
+                ? _vm.displaySettings.showStock
+                  ? '<div class="live-shopping-progress">' +
+                    (_vm.displaySettings.showStockProgress
+                      ? '<div class="progress">' +
+                        (_vm.liveShoppingData.liveShopping.quantitySold <
+                        _vm.liveShoppingData.liveShopping.quantityMax
+                          ? '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"' +
+                            _vm._ssrClass(
+                              "progress-bar",
+                              "progress-" +
+                                Math.round(_vm.quantitySoldPercentage / 10) * 10
+                            ) +
+                            _vm._ssrStyle(
+                              null,
+                              "width:" + _vm.quantitySoldPercentage + "%",
+                              null
+                            ) +
+                            "></div>"
+                          : '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar-done" style="width: 100%"></div>') +
+                        "</div>"
+                      : "<!---->") +
+                    ' <div class="live-shopping-progress-heading"><span>' +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate(
+                          "Ceres::Template.liveShoppingRemainingStock",
+                          { quantitySoldPercentage: _vm.quantitySoldPercentage }
+                        )
+                      )
+                    ) +
+                    "</span></div></div>"
+                  : "<!---->"
+                : "<!---->") +
+              " " +
+              (_vm.hasClosed
+                ? _vm.displaySettings.showStock
+                  ? '<div class="live-shopping-progress">' +
+                    (_vm.displaySettings.showStockProgress
+                      ? '<div class="progress">' +
+                        (_vm.liveShoppingData.liveShopping.quantitySold <
+                        _vm.liveShoppingData.liveShopping.quantityMax
+                          ? '<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="progress-10" style="width: 100%"></div>'
+                          : '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar-done" style="width: 100%"></div>') +
+                        "</div>"
+                      : "<!---->") +
+                    ' <div class="live-shopping-progress-heading"><span>*Aktionsbestand ausverkauft</span></div></div>'
+                  : "<!---->"
+                : "<!---->") +
+              "</div>"
+            : '<div class="thumb-content"><div><div class="prices"><div class="price-view-port">' +
+              (_vm.displaySettings.showCrossPrice &&
+              _vm.prices.rrp.price.value > 0
+                ? '<del class="crossprice">' +
+                  _vm._ssrEscape(
+                    "\n                        " +
+                      _vm._s(
+                        _vm._f("itemCrossPrice")(_vm.prices.rrp.price.formatted)
+                      ) +
+                      "\n                    "
+                  ) +
+                  "</del>"
+                : "<!---->") +
+              '</div> <div class="price">' +
+              _vm._ssrEscape(
+                "\n                    " +
+                  _vm._s(_vm.prices.price.price.formatted) +
+                  " *\n                "
+              ) +
+              "</div></div> " +
+              (!(
+                _vm.liveShoppingData.item.unit.unitOfMeasurement === "C62" &&
+                _vm.liveShoppingData.item.unit.content === 1
+              )
+                ? '<div class="category-unit-price small"><span>' +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.liveShoppingData.item.unit.content)
+                  ) +
+                  "</span> <span>" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.liveShoppingData.item.unit.names.name)
+                  ) +
+                  "</span> " +
+                  (_vm.liveShoppingData.item.variation.mayShowUnitPrice
+                    ? "<span>" +
+                      _vm._ssrEscape(
+                        "| " + _vm._s(_vm.prices.price.basePrice)
+                      ) +
+                      "</span>"
+                    : "<!---->") +
+                  "</div>"
+                : "<!---->") +
+              ' <span class="vat small text-muted">' +
+              (_vm.showNetPrices
+                ? _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
+                  )
+                : _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemInclVAT"))
+                  )) +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               _vm._ssrEscape(
                 _vm._s(_vm.$translate("Ceres::Template.itemShippingCosts"))
               ) +
+<<<<<<< HEAD
               "</a>") +
             "</div></div>"
             : '<div class="thumb-content"><div><div class="prices"><div class="price-view-port">' +
@@ -54113,6 +60790,30 @@ render._withStripped = true
       ) +
       "</a>") +
     "</span></div></div>")
+=======
+              (_vm.$ceres.config.global.shippingCostsCategoryId > 0
+                ? '<a href="https://www.konsolenkost.de/versand"' +
+                  _vm._ssrAttr(
+                    "title",
+                    _vm.$translate("Ceres::Template.itemShippingCosts")
+                  ) +
+                  ">" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemShippingCosts"))
+                  ) +
+                  "</a>"
+                : "<a" +
+                  _vm._ssrAttr(
+                    "title",
+                    _vm.$translate("Ceres::Template.itemShippingCosts")
+                  ) +
+                  ">" +
+                  _vm._ssrEscape(
+                    _vm._s(_vm.$translate("Ceres::Template.itemShippingCosts"))
+                  ) +
+                  "</a>") +
+              "</span></div></div>")
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
       )
     ],
   2
@@ -54328,6 +61029,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/newsletter/NewsletterInput.vue?vue&type=template&id=73e680cd& ***!
   \*************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -54383,6 +61085,60 @@ render._withStripped = true
                 "></div></div>"
                 : "<!---->") +
               ' <div class="col-12"><div class="input-group"><div data-validate="mail" class="input-unit"><label' +
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.validateData($event)
+        }
+      }
+    },
+    [
+      _vm._ssrNode(
+        '<div class="row">' +
+          (_vm.showNameInputs
+            ? '<div class="col-6"><div class="input-unit"><label' +
+              _vm._ssrAttr("for", "first-name-input_" + _vm._uid) +
+              ">" +
+              _vm._ssrEscape(
+                _vm._s(_vm.$translate("Ceres::Template.newsletterFirstName"))
+              ) +
+              '</label> <input type="text"' +
+              _vm._ssrAttr("id", "first-name-input_" + _vm._uid) +
+              _vm._ssrAttr("value", _vm.firstName) +
+              "></div></div>"
+            : "<!---->") +
+          " " +
+          (_vm.showNameInputs
+            ? '<div class="col-6 pl-0"><div class="input-unit"><label' +
+              _vm._ssrAttr("for", "last-name-input_" + _vm._uid) +
+              ">" +
+              _vm._ssrEscape(
+                _vm._s(_vm.$translate("Ceres::Template.newsletterLastName"))
+              ) +
+              '</label> <input type="text"' +
+              _vm._ssrAttr("id", "last-name-input_" + _vm._uid) +
+              _vm._ssrAttr("value", _vm.lastName) +
+              "></div></div>"
+            : "<!---->") +
+          ' <div class="newsletter-input"><div class="input-group"><div data-validate="mail" class="input-unit border-0">' +
+          (_vm.showNameInputs
+            ? "<label" +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               _vm._ssrAttr("for", "email-input-id_" + _vm._uid) +
               ">" +
               _vm._ssrEscape(
@@ -54394,6 +61150,7 @@ render._withStripped = true
                   )
                 )
               ) +
+<<<<<<< HEAD
               '</label> <input type="email" autocomplete="email"' +
               _vm._ssrAttr("id", "email-input-id_" + _vm._uid) +
               ' data-testing="nl-mail"' +
@@ -54475,6 +61232,46 @@ render._withStripped = true
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+              "</label>"
+            : "<!---->") +
+          ' <input type="email" autocomplete="email"' +
+          _vm._ssrAttr("id", "email-input-id_" + _vm._uid) +
+          ' placeholder="Deine E-Mail"' +
+          _vm._ssrAttr("value", _vm.email) +
+          ' class="newsletter-input"></div> <input autocomplete="none" type="text" name="username" tabindex="-1"' +
+          _vm._ssrAttr("value", _vm.honeypot) +
+          ' class="honey"></div></div> ' +
+          (_vm.showPrivacyPolicyCheckbox
+            ? '<div class="col-12"><div data-validate class="form-check small"><input type="checkbox"' +
+              _vm._ssrAttr("id", "privacy-policy-accept-id_" + _vm._uid) +
+              ' name="privacy-policy-accept"' +
+              _vm._ssrAttr(
+                "checked",
+                Array.isArray(_vm.privacyPolicyValue)
+                  ? _vm._i(_vm.privacyPolicyValue, null) > -1
+                  : _vm.privacyPolicyValue
+              ) +
+              ' class="form-check-input"> <label' +
+              _vm._ssrAttr("for", "privacy-policy-accept-id_" + _vm._uid) +
+              ' class="form-check-label">' +
+              _vm._s(_vm.privacyPolicyText) +
+              "</label></div></div>"
+            : "<!---->") +
+          ' <div class="col-12 mt-3"><div class="input-group-btn"><button type="button"' +
+          _vm._ssrAttr("disabled", _vm.isDisabled) +
+          _vm._ssrClass(
+            "btn btn-block btn-primary btn-appearance newsletter-button",
+            _vm.buttonSizeClass
+          ) +
+          '><img width="13" height="13" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"><span class="newsletter-button-text">  Anmelden</span></button></div></div></div>'
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -55160,6 +61957,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/pageDesign/CookieBar.vue?vue&type=template&id=cb92f282& ***!
   \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -55183,11 +61981,37 @@ render._withStripped = true
       [
         _vm.isVisible
           ? _vm._ssrNode(
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
+      class: {
+        out: !_vm.isVisible,
+        "bg-smoke": _vm.isVisible,
+        "fixed-bottom": !_vm.isShopBuilder || false
+      }
+    },
+    [
+      _vm.isVisible
+        ? _vm._ssrNode(
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             '<div class="container-max kk-border bg-white">',
             "</div>",
             [
               _vm._ssrNode(
                 "<div" +
+<<<<<<< HEAD
                 _vm._ssrClass("row py-3", _vm.classes) +
                 _vm._ssrStyle(null, _vm.styles, {
                   display: !_vm.isExpanded ? "" : "none"
@@ -55310,6 +62134,116 @@ render._withStripped = true
                             _vm.$translate(
                               "Ceres::Template.cookieBarDenyAll"
                             )
+=======
+                  _vm._ssrClass("row py-3", _vm.classes) +
+                  _vm._ssrStyle(null, _vm.styles, {
+                    display: !_vm.isExpanded ? "" : "none"
+                  }) +
+                  '><div class="p-3"><p>' +
+                  _vm._s(_vm.text) +
+                  "</p> <div>" +
+                  _vm._ssrList(_vm.consentGroups, function(consentGroup) {
+                    return consentGroup.consents.length > 0
+                      ? '<span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox"' +
+                          _vm._ssrAttr(
+                            "id",
+                            _vm._uid + "-group-" + consentGroup.key
+                          ) +
+                          _vm._ssrAttr("disabled", consentGroup.necessary) +
+                          _vm._ssrAttr(
+                            "checked",
+                            _vm.isConsented(consentGroup.key) ||
+                              consentGroup.necessary
+                          ) +
+                          ' class="custom-control-input"> <label' +
+                          _vm._ssrAttr(
+                            "for",
+                            _vm._uid + "-group-" + consentGroup.key
+                          ) +
+                          ' class="custom-control-label">' +
+                          (consentGroup.label.length > 0
+                            ? _vm._ssrEscape(
+                                "\n                  " +
+                                  _vm._s(consentGroup.label) +
+                                  "\n                "
+                              )
+                            : _vm._ssrEscape(
+                                "\n                  " +
+                                  _vm._s(
+                                    _vm.$translate(
+                                      "Ceres::Template.privacySettingsDefaultGroup"
+                                    )
+                                  ) +
+                                  "\n                "
+                              )) +
+                          "</label></span>"
+                      : "<!---->"
+                  }) +
+                  ' <a href="#" class="text-primary text-appearance d-block d-md-inline-block">' +
+                  _vm._ssrEscape(
+                    _vm._s(
+                      _vm.$translate("Ceres::Template.cookieBarMoreSettings")
+                    )
+                  ) +
+                  '</a></div></div> <div class="p-3 w-100"><button class="btn btn-primary btn-block btn-appearance">' +
+                  _vm._ssrEscape(
+                    "\n          " +
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.cookieBarAcceptAll")
+                      ) +
+                      "\n        "
+                  ) +
+                  '</button> <button class="btn btn-default btn-block">' +
+                  _vm._ssrEscape(
+                    "\n          " +
+                      _vm._s(_vm.$translate("Ceres::Template.cookieBarSave")) +
+                      "\n        "
+                  ) +
+                  "</button></div></div> "
+              ),
+              _vm.isExpanded
+                ? _vm._ssrNode(
+                    "<div" +
+                      _vm._ssrClass("row py-3", _vm.classes) +
+                      _vm._ssrStyle(null, _vm.styles, null) +
+                      ">",
+                    "</div>",
+                    [
+                      _vm._ssrNode(
+                        '<div class="col-12 mb-3">',
+                        "</div>",
+                        [
+                          _c("privacy-settings", {
+                            attrs: { "consent-groups": _vm.consentGroups }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._ssrNode(
+                        ' <div class="col-12 col-md-6"><a href="#" class="text-primary text-appearance d-inline-block mb-3">' +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.cookieBarBack")
+                            )
+                          ) +
+                          '</a></div> <div class="col-6 col-md-3"><button class="btn btn-block btn-primary btn-appearance">' +
+                          _vm._ssrEscape(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.cookieBarAcceptAll"
+                                )
+                              ) +
+                              "\n        "
+                          ) +
+                          '</button></div> <div class="col-6 col-md-3"><button class="btn btn-block btn-block btn-default">' +
+                          _vm._ssrEscape(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.cookieBarSave")
+                              ) +
+                              "\n        "
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           ) +
                           "\n                        "
                         ) +
@@ -55332,12 +62266,21 @@ render._withStripped = true
             ],
             2
           )
+<<<<<<< HEAD
           : _vm._e()
       ]
     )
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -56138,6 +63081,7 @@ render._withStripped = true
         _vm._ssrNode(
           " " +
           (!_vm.isLoading &&
+<<<<<<< HEAD
             (!_vm.wishListItems || _vm.wishListItems.length === 0)
             ? '<p class="h4 text-muted text-center my-5">Du hast noch keine Artikel in deiner Wunschliste.</p>'
             : "<!---->") +
@@ -56147,13 +63091,28 @@ render._withStripped = true
         _vm._ssrNode(" <hr> "),
         !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
           ? _c("last-seen-item-list", {
+=======
+          (!_vm.wishListItems || _vm.wishListItems.length === 0)
+            ? '<p class="h4 text-muted text-center my-5">Du hast noch keine Artikel in deiner Wunschliste.</p>'
+            : "<!---->") +
+          " "
+      ),
+      _vm.isLoading ? _c("loading-animation") : _vm._e(),
+      _vm._ssrNode(" <hr> "),
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("last-seen-item-list", {
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             staticClass: "bordered-item-list",
             attrs: { "items-per-page": 4, "max-items": 4 },
             scopedSlots: _vm._u(
               [
                 {
                   key: "heading",
+<<<<<<< HEAD
                   fn: function () {
+=======
+                  fn: function() {
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     return [
                       _c(
                         "div",
@@ -56173,6 +63132,7 @@ render._withStripped = true
               4103951690
             )
           })
+<<<<<<< HEAD
           : _vm._e()
       ],
       2
@@ -56180,6 +63140,15 @@ render._withStripped = true
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -56238,6 +63207,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/wishList/WishListItem.vue?vue&type=template&id=adce5d40& ***!
   \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -56255,6 +63225,25 @@ render._withStripped = true
         [
           _vm._ssrNode(
             '<div class="image-container">' +
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "basket-list-item py-3" }, [
+    _vm._ssrNode(
+      '<div class="basket-item component-loading with-icon d-flex">',
+      "</div>",
+      [
+        _vm._ssrNode(
+          '<div class="image-container">' +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             (_vm.image
               ? "<img" +
               _vm._ssrAttr("src", _vm.image) +
@@ -56262,6 +63251,7 @@ render._withStripped = true
               ' class="d-block mw-100 mh-100">'
               : "<!---->") +
             "</div> "
+<<<<<<< HEAD
           ),
           _vm._ssrNode(
             '<div class="meta-container-wrapper">',
@@ -56269,18 +63259,37 @@ render._withStripped = true
             [
               _vm._ssrNode(
                 '<div class="meta-container-wrapper-inner mb-2"><div class="meta-container"><div class="position-relative w-100"><a' +
+=======
+        ),
+        _vm._ssrNode(
+          '<div class="meta-container-wrapper">',
+          "</div>",
+          [
+            _vm._ssrNode(
+              '<div class="meta-container-wrapper-inner mb-2"><div class="meta-container"><div class="position-relative w-100"><a' +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _vm._ssrAttr("href", _vm._f("itemURL")(_vm.wishListItem)) +
                 ' class="item-name text-appearance font-weight-bold text-break" style="color: #212529;">' +
                 _vm._ssrEscape(
                   "\n                            " +
+<<<<<<< HEAD
                   _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
                   "\n                        "
+=======
+                    _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
+                    "\n                        "
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 ) +
                 '</a> <div class="item-base-price">' +
                 _vm._ssrEscape(
                   "\n                            " +
+<<<<<<< HEAD
                   _vm._s(_vm._f("currency")(_vm.unitPrice)) +
                   "\n                        "
+=======
+                    _vm._s(_vm._f("currency")(_vm.unitPrice)) +
+                    "\n                        "
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 ) +
                 "</div> " +
                 (!(
@@ -56288,6 +63297,7 @@ render._withStripped = true
                   _vm.wishListItem.unit.content === 1
                 ) && _vm.wishListItem.variation.mayShowUnitPrice
                   ? '<div class="item-small-prices text-muted small"><div>' +
+<<<<<<< HEAD
                   _vm._ssrEscape(
                     "\n                                " +
                     _vm._s(_vm.basePrice) +
@@ -56311,6 +63321,31 @@ render._withStripped = true
                   : "<!---->") +
                 ' <div class="item-small-prices small">' +
                 _vm._ssrList(_vm.wishListItem.attributes, function (
+=======
+                    _vm._ssrEscape(
+                      "\n                                " +
+                        _vm._s(_vm.basePrice) +
+                        "\n                            "
+                    ) +
+                    "</div> <div><strong>" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.wishListContent")
+                      ) + ": "
+                    ) +
+                    "</strong>" +
+                    _vm._ssrEscape(
+                      "\n                                " +
+                        _vm._s(_vm.wishListItem.unit.content) +
+                        " " +
+                        _vm._s(_vm.wishListItem.unit.names.name) +
+                        "\n                            "
+                    ) +
+                    "</div></div>"
+                  : "<!---->") +
+                ' <div class="item-small-prices small">' +
+                _vm._ssrList(_vm.wishListItem.attributes, function(
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   attribute,
                   index
                 ) {
@@ -56325,10 +63360,17 @@ render._withStripped = true
                   )
                 }) +
                 '</div> <div class="item-small-prices text-muted small">' +
+<<<<<<< HEAD
                 _vm._ssrList(_vm.wishListItem.variationProperties, function (
                   propertyGroup
                 ) {
                   return _vm._ssrList(propertyGroup.properties, function (
+=======
+                _vm._ssrList(_vm.wishListItem.variationProperties, function(
+                  propertyGroup
+                ) {
+                  return _vm._ssrList(propertyGroup.properties, function(
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     property,
                     index
                   ) {
@@ -56336,14 +63378,20 @@ render._withStripped = true
                       "<div>" +
                       (propertyGroup.name
                         ? "<strong>" +
+<<<<<<< HEAD
                         _vm._ssrEscape(_vm._s(propertyGroup.name) + ": ") +
                         "</strong>"
+=======
+                          _vm._ssrEscape(_vm._s(propertyGroup.name) + ": ") +
+                          "</strong>"
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         : "<!---->") +
                       " <span>" +
                       _vm._ssrEscape(_vm._s(property.names.name)) +
                       "</span> " +
                       (property.cast === "file"
                         ? "<span><a" +
+<<<<<<< HEAD
                         _vm._ssrAttr(
                           "href",
                           _vm._f("propertyFileUrl")(property.values.value)
@@ -56354,11 +63402,24 @@ render._withStripped = true
                         : "<span>" +
                         _vm._s(property.values.value) +
                         "</span>") +
+=======
+                          _vm._ssrAttr(
+                            "href",
+                            _vm._f("propertyFileUrl")(property.values.value)
+                          ) +
+                          ' target="_blank">' +
+                          _vm._s(property.values.value) +
+                          "</a></span>"
+                        : "<span>" +
+                          _vm._s(property.values.value) +
+                          "</span>") +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       "</div>"
                     )
                   })
                 }) +
                 "</div></div></div></div> "
+<<<<<<< HEAD
               ),
               _vm._ssrNode(
                 '<div class="d-flex kk-wishlist-details-box">',
@@ -56370,10 +63431,24 @@ render._withStripped = true
                       "availability kk-wishlist-availability-icon mt-auto mb-auto",
                       "availability-" +
                       _vm.wishListItem.variation.availability.id
+=======
+            ),
+            _vm._ssrNode(
+              '<div class="d-flex kk-wishlist-details-box">',
+              "</div>",
+              [
+                _vm._ssrNode(
+                  '<div class="d-flex"><div' +
+                    _vm._ssrClass(
+                      "availability kk-wishlist-availability-icon mt-auto mb-auto",
+                      "availability-" +
+                        _vm.wishListItem.variation.availability.id
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     ) +
                     '></div> <div class="ml-2 mt-auto mb-auto">' +
                     _vm._ssrEscape(
                       "\n                        " +
+<<<<<<< HEAD
                       _vm._s(
                         _vm.wishListItem.variation.availability.names.name
                       ) +
@@ -56588,6 +63663,107 @@ render._withStripped = true
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+                        _vm._s(
+                          _vm.wishListItem.variation.availability.names.name
+                        ) +
+                        "\n                    "
+                    ) +
+                    "</div></div> "
+                ),
+                _vm._ssrNode(
+                  '<div class="d-flex kk-wishlist-delete-and-basket">',
+                  "</div>",
+                  [
+                    _vm._ssrNode(
+                      '<div class="btn btn-sm text-danger mt-auto mb-auto kk-border flex-style" style="width: 33px; height: 33px;">',
+                      "</div>",
+                      [
+                        _c(
+                          "i",
+                          {
+                            directives: [
+                              {
+                                name: "waiting-animation-infinite",
+                                rawName: "v-waiting-animation-infinite"
+                              }
+                            ],
+                            staticClass: "fa fa-trash-o default-float",
+                            staticStyle: {
+                              "font-size": "1.2rem",
+                              color: "grey"
+                            },
+                            attrs: { "aria-hidden": "true" }
+                          },
+                          []
+                        )
+                      ]
+                    ),
+                    _vm._ssrNode(" "),
+                    _vm._ssrNode(
+                      "<div>",
+                      "</div>",
+                      [
+                        _c("add-to-basket", {
+                          attrs: {
+                            "variation-id": _vm.wishListItem.variation.id,
+                            "is-salable":
+                              !!_vm.wishListItem.filter &&
+                              _vm.wishListItem.filter.isSalable,
+                            "has-children":
+                              !!_vm.wishListItem.filter &&
+                              _vm.wishListItem.filter.hasActiveChildren,
+                            "interval-quantity":
+                              _vm.wishListItem.variation
+                                .intervalOrderQuantity || 1,
+                            "minimum-quantity":
+                              _vm.wishListItem.variation.minimumOrderQuantity,
+                            "maximum-quantity":
+                              !!_vm.wishListItem.variation
+                                .maximumOrderQuantity &&
+                              _vm.wishListItem.variation.maximumOrderQuantity >
+                                0
+                                ? _vm.wishListItem.variation
+                                    .maximumOrderQuantity
+                                : null,
+                            "order-properties": _vm.wishListItem.properties.filter(
+                              function(prop) {
+                                return prop.property.isOderProperty
+                              }
+                            ),
+                            "has-order-properties":
+                              _vm.wishListItem.hasOrderProperties,
+                            "use-large-scale": false,
+                            "show-quantity": false,
+                            "item-url": _vm._f("itemURL")(_vm.wishListItem),
+                            "has-price": _vm._f("hasItemDefaultPrice")(
+                              _vm.wishListItem
+                            ),
+                            "is-wish-list": true,
+                            "prop-quantity": _vm.quantity,
+                            "item-type": _vm.wishListItem.item.itemType
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  2
+                )
+              ],
+              2
+            )
+          ],
+          2
+        )
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -60014,6 +67190,106 @@ render._withStripped = true
       _el = _el.parent;
     }
   }
+<<<<<<< HEAD
+=======
+  pushBuffer();
+
+  return mergedSegments.join('+')
+}
+
+/*  */
+
+var createCompiler$1 = createCompilerCreator(function baseCompile (
+  template,
+  options
+) {
+  var ast = parse(template.trim(), options);
+  optimize$1(ast, options);
+  var code = generate$1(ast, options);
+  return {
+    ast: ast,
+    render: code.render,
+    staticRenderFns: code.staticRenderFns
+  }
+});
+
+/*  */
+
+var ref$1 = createCompiler$1(baseOptions);
+var compile$1 = ref$1.compile;
+var compileToFunctions$1 = ref$1.compileToFunctions;
+
+/*  */
+
+exports.parseComponent = parseComponent;
+exports.compile = compile;
+exports.compileToFunctions = compileToFunctions;
+exports.ssrCompile = compile$1;
+exports.ssrCompileToFunctions = compileToFunctions$1;
+exports.generateCodeFrame = generateCodeFrame;
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-template-compiler/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vue-template-compiler/index.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+try {
+  var vueVersion = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.js").version
+} catch (e) {}
+
+var packageName = __webpack_require__(/*! ./package.json */ "./node_modules/vue-template-compiler/package.json").name
+var packageVersion = __webpack_require__(/*! ./package.json */ "./node_modules/vue-template-compiler/package.json").version
+if (vueVersion && vueVersion !== packageVersion) {
+  var vuePath = /*require.resolve*/(/*! vue */ "./node_modules/vue/dist/vue.js")
+  var packagePath = /*require.resolve*/(/*! ./package.json */ "./node_modules/vue-template-compiler/package.json")
+  throw new Error(
+    '\n\nVue packages version mismatch:\n\n' +
+    '- vue@' + vueVersion + ' (' + vuePath + ')\n' +
+    '- ' + packageName + '@' + packageVersion + ' (' + packagePath + ')\n\n' +
+    'This may cause things to work incorrectly. Make sure to use the same version for both.\n' +
+    'If you are using vue-loader@>=10.0, simply update vue-template-compiler.\n' +
+    'If you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump ' + packageName + ' to the latest.\n'
+  )
+}
+
+module.exports = __webpack_require__(/*! ./build */ "./node_modules/vue-template-compiler/build.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-template-compiler/package.json":
+/*!*********************************************************!*\
+  !*** ./node_modules/vue-template-compiler/package.json ***!
+  \*********************************************************/
+/*! exports provided: name, version, description, main, unpkg, jsdelivr, browser, types, repository, keywords, author, license, bugs, homepage, dependencies, devDependencies, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"vue-template-compiler\",\"version\":\"2.6.12\",\"description\":\"template compiler for Vue 2.0\",\"main\":\"index.js\",\"unpkg\":\"browser.js\",\"jsdelivr\":\"browser.js\",\"browser\":\"browser.js\",\"types\":\"types/index.d.ts\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/vuejs/vue.git\"},\"keywords\":[\"vue\",\"compiler\"],\"author\":\"Evan You\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/vuejs/vue/issues\"},\"homepage\":\"https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler#readme\",\"dependencies\":{\"he\":\"^1.1.0\",\"de-indent\":\"^1.0.2\"},\"devDependencies\":{\"vue\":\"file:../..\"}}");
+
+/***/ }),
+
+/***/ "./node_modules/vue/dist/vue.js":
+/*!**************************************!*\
+  !*** ./node_modules/vue/dist/vue.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
+ * Released under the MIT License.
+ */
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+}(this, function () { 'use strict';
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   /*  */
 
@@ -75854,7 +83130,20 @@ render._withStripped = true
     null,
     "cd590b12"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddItemToBasketOverlay_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddItemToBasketOverlay_vue_vue_type_template_id_71cf7942___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddItemToBasketOverlay_vue_vue_type_template_id_71cf7942___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "4a93dc16"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/AddItemToBasketOverlay.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -75915,6 +83204,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _AddToBasket_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _AddToBasket_vue_vue_type_template_id_729fe3ab___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -75923,6 +83213,18 @@ render._withStripped = true
     null,
     null,
     "35f09196"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddToBasket_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddToBasket_vue_vue_type_template_id_729fe3ab___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddToBasket_vue_vue_type_template_id_729fe3ab___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "1afc8650"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -75994,7 +83296,20 @@ render._withStripped = true
     null,
     "d9b14c54"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BasketPreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BasketPreview_vue_vue_type_template_id_614a7aab___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BasketPreview_vue_vue_type_template_id_614a7aab___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "701abc98"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/BasketPreview.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76055,6 +83370,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _BasketTotals_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _BasketTotals_vue_vue_type_template_id_3765131c___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76065,6 +83381,18 @@ render._withStripped = true
     "43abbade"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BasketTotals_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BasketTotals_vue_vue_type_template_id_3765131c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BasketTotals_vue_vue_type_template_id_3765131c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "988340e2"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/BasketTotals.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76134,7 +83462,20 @@ render._withStripped = true
     null,
     "c6ddc3bc"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Coupon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Coupon_vue_vue_type_template_id_127bda26___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Coupon_vue_vue_type_template_id_127bda26___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "515e71a0"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/Coupon.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76195,6 +83536,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _MailChangedInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _MailChangedInfo_vue_vue_type_template_id_2e21aa14___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76203,6 +83545,18 @@ render._withStripped = true
     null,
     null,
     "5c436a7f"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MailChangedInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MailChangedInfo_vue_vue_type_template_id_2e21aa14___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MailChangedInfo_vue_vue_type_template_id_2e21aa14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "6c2db67e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -76274,7 +83628,20 @@ render._withStripped = true
     null,
     "13817c09"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BasketList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BasketList_vue_vue_type_template_id_354088c4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BasketList_vue_vue_type_template_id_354088c4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "fdb1936a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/list/BasketList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76335,6 +83702,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _BasketListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _BasketListItem_vue_vue_type_template_id_3c2c335e___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76345,6 +83713,18 @@ render._withStripped = true
     "a1e10d88"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BasketListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BasketListItem_vue_vue_type_template_id_3c2c335e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BasketListItem_vue_vue_type_template_id_3c2c335e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "02ea427e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/list/BasketListItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76414,7 +83794,20 @@ render._withStripped = true
     null,
     "9a61c138"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BasketSetComponentList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BasketSetComponentList_vue_vue_type_template_id_8eecb10e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BasketSetComponentList_vue_vue_type_template_id_8eecb10e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "fd14f2b4"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/basket/list/BasketSetComponentList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76475,6 +83868,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _SetComponentItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _SetComponentItem_vue_vue_type_template_id_6813ea08___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76483,6 +83877,18 @@ render._withStripped = true
     null,
     null,
     "fbbf239a"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SetComponentItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SetComponentItem_vue_vue_type_template_id_6813ea08___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SetComponentItem_vue_vue_type_template_id_6813ea08___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "4a6deef5"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -76554,7 +83960,20 @@ render._withStripped = true
     null,
     "4414b6a7"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _StepByStepNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _StepByStepNavigation_vue_vue_type_template_id_1c90b572___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _StepByStepNavigation_vue_vue_type_template_id_1c90b572___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "f51163b6"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/category/StepByStepNavigation.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76615,6 +84034,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _BackgroundImg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _BackgroundImg_vue_vue_type_template_id_0570c6a3___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76625,6 +84045,18 @@ render._withStripped = true
     "374da5ce"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BackgroundImg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BackgroundImg_vue_vue_type_template_id_0570c6a3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _BackgroundImg_vue_vue_type_template_id_0570c6a3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "14410890"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/BackgroundImg.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76693,7 +84125,20 @@ render._withStripped = true
     null,
     "f2694264"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _ClientOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  "b4b27968"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/ClientOnly.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76744,7 +84189,20 @@ render._withStripped = true
     null,
     "2034f4a7"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GoogleMaps_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GoogleMaps_vue_vue_type_template_id_5bf88bf2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GoogleMaps_vue_vue_type_template_id_5bf88bf2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "3f105925"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/GoogleMaps.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76805,6 +84263,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _Intersect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _Intersect_vue_vue_type_template_id_3f22a3e6___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76813,6 +84272,18 @@ render._withStripped = true
     null,
     null,
     "3957dab8"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Intersect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Intersect_vue_vue_type_template_id_3f22a3e6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Intersect_vue_vue_type_template_id_3f22a3e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5b5eee7a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -76884,7 +84355,20 @@ render._withStripped = true
     null,
     "5cb9c188"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LazyImg_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LazyImg_vue_vue_type_template_id_48a7661d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LazyImg_vue_vue_type_template_id_48a7661d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "4196ddca"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/LazyImg.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -76945,6 +84429,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _LazyLoad_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _LazyLoad_vue_vue_type_template_id_6650877c___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -76955,6 +84440,18 @@ render._withStripped = true
     "56eccd1e"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LazyLoad_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LazyLoad_vue_vue_type_template_id_6650877c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LazyLoad_vue_vue_type_template_id_6650877c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "e95ff522"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/LazyLoad.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77023,7 +84520,20 @@ render._withStripped = true
     null,
     "789641a1"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _TabItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  "5d735de3"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/TabItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77073,7 +84583,20 @@ render._withStripped = true
     null,
     "fac88ca8"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _TabList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  "6778d5ee"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/common/TabList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77124,7 +84647,20 @@ render._withStripped = true
     null,
     "3cc5ee52"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LastSeenItemList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LastSeenItemList_vue_vue_type_template_id_653923dd___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LastSeenItemList_vue_vue_type_template_id_653923dd___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "64444d50"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/containers/LastSeenItemList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77185,6 +84721,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _AcceptPrivacyPolicyCheck_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _AcceptPrivacyPolicyCheck_vue_vue_type_template_id_b37bfc36___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77193,6 +84730,18 @@ render._withStripped = true
     null,
     null,
     "7cc8609a"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AcceptPrivacyPolicyCheck_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AcceptPrivacyPolicyCheck_vue_vue_type_template_id_b37bfc36___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AcceptPrivacyPolicyCheck_vue_vue_type_template_id_b37bfc36___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "d811edd0"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -77264,7 +84813,20 @@ render._withStripped = true
     null,
     "83ff1816"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddressInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddressInputGroup_vue_vue_type_template_id_1e4a3dec___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddressInputGroup_vue_vue_type_template_id_1e4a3dec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "11db3d37"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/AddressInputGroup.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77325,6 +84887,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ChangeEmailForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ChangeEmailForm_vue_vue_type_template_id_0bc3dede___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77335,6 +84898,18 @@ render._withStripped = true
     "26d1623c"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ChangeEmailForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChangeEmailForm_vue_vue_type_template_id_0bc3dede___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ChangeEmailForm_vue_vue_type_template_id_0bc3dede___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "7c1cd804"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/ChangeEmailForm.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77404,7 +84979,20 @@ render._withStripped = true
     null,
     "1ff5c484"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CountrySelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CountrySelect_vue_vue_type_template_id_7c39455a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CountrySelect_vue_vue_type_template_id_7c39455a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5daad800"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/CountrySelect.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77465,6 +85053,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ReCaptcha_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ReCaptcha_vue_vue_type_template_id_4424f830___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77473,6 +85062,18 @@ render._withStripped = true
     null,
     null,
     "bd839c5a"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ReCaptcha_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ReCaptcha_vue_vue_type_template_id_4424f830___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ReCaptcha_vue_vue_type_template_id_4424f830___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5dcf5d15"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -77544,7 +85145,20 @@ render._withStripped = true
     null,
     "6fce645d"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Registration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Registration_vue_vue_type_template_id_660f5e28___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Registration_vue_vue_type_template_id_660f5e28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "314759db"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/Registration.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77608,6 +85222,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ResetPasswordForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ResetPasswordForm_vue_vue_type_template_id_771fa8e2___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77618,6 +85233,18 @@ render._withStripped = true
     "dcd4830c"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ResetPasswordForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ResetPasswordForm_vue_vue_type_template_id_771fa8e2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ResetPasswordForm_vue_vue_type_template_id_771fa8e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  injectStyles,
+  null,
+  "351ef088"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/ResetPasswordForm.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77687,7 +85314,20 @@ render._withStripped = true
     null,
     "78009558"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SalutationSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SalutationSelect_vue_vue_type_template_id_0e49b1a3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SalutationSelect_vue_vue_type_template_id_0e49b1a3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "40e69bd6"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/SalutationSelect.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77748,6 +85388,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _VatId_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _VatId_vue_vue_type_template_id_0df56745___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77756,6 +85397,18 @@ render._withStripped = true
     null,
     null,
     "2207c2b0"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _VatId_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VatId_vue_vue_type_template_id_0df56745___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VatId_vue_vue_type_template_id_0df56745___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "06e4def2"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -77827,7 +85480,20 @@ render._withStripped = true
     null,
     "b1ce2730"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ForgotPassword_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ForgotPassword_vue_vue_type_template_id_7f94eb33___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ForgotPassword_vue_vue_type_template_id_7f94eb33___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2f08f834"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/login/ForgotPassword.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77888,6 +85554,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _GuestLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _GuestLogin_vue_vue_type_template_id_3b2359c6___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -77898,6 +85565,18 @@ render._withStripped = true
     "b64b850a"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GuestLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GuestLogin_vue_vue_type_template_id_3b2359c6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GuestLogin_vue_vue_type_template_id_3b2359c6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "6dc043f9"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/login/GuestLogin.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -77967,7 +85646,20 @@ render._withStripped = true
     null,
     "2a55c34f"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Login_vue_vue_type_template_id_0f0e37b8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Login_vue_vue_type_template_id_0f0e37b8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "07492611"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/login/Login.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78028,6 +85720,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _LoginView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _LoginView_vue_vue_type_template_id_06b1fb2e___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78036,6 +85729,18 @@ render._withStripped = true
     null,
     null,
     "295a5414"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LoginView_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LoginView_vue_vue_type_template_id_06b1fb2e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LoginView_vue_vue_type_template_id_06b1fb2e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "770af454"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -78107,7 +85812,20 @@ render._withStripped = true
     null,
     "4b50b116"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _UserLoginHandler_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserLoginHandler_vue_vue_type_template_id_166fadbe___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UserLoginHandler_vue_vue_type_template_id_166fadbe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "83293dd8"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/customer/login/UserLoginHandler.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78168,6 +85886,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _FormAttachment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _FormAttachment_vue_vue_type_template_id_64299210___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78178,6 +85897,18 @@ render._withStripped = true
     "0aeea185"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormAttachment_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormAttachment_vue_vue_type_template_id_64299210___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormAttachment_vue_vue_type_template_id_64299210___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "3efa42fa"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/form/FormAttachment.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78247,7 +85978,20 @@ render._withStripped = true
     null,
     "c58fbcfc"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddToWishList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddToWishList_vue_vue_type_template_id_4c3118d2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddToWishList_vue_vue_type_template_id_4c3118d2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "59c94cc4"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/AddToWishList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78308,6 +86052,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _GraduatedPrices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _GraduatedPrices_vue_vue_type_template_id_0fc0278e___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78316,6 +86061,18 @@ render._withStripped = true
     null,
     null,
     "29fccb64"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GraduatedPrices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GraduatedPrices_vue_vue_type_template_id_0fc0278e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GraduatedPrices_vue_vue_type_template_id_0fc0278e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "06f02e26"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -78387,7 +86144,20 @@ render._withStripped = true
     null,
     "48c8b09d"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemAvailability_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemAvailability_vue_vue_type_template_id_3f09aa68___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemAvailability_vue_vue_type_template_id_3f09aa68___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "0a41a61b"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/ItemAvailability.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78448,6 +86218,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ItemBundle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ItemBundle_vue_vue_type_template_id_4a0735cf___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78458,6 +86229,18 @@ render._withStripped = true
     "8f7f7078"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemBundle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemBundle_vue_vue_type_template_id_4a0735cf___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemBundle_vue_vue_type_template_id_4a0735cf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "6f06b3c2"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/ItemBundle.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78527,7 +86310,20 @@ render._withStripped = true
     null,
     "ea5f8e1c"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemDataTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemDataTable_vue_vue_type_template_id_7100e9f2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemDataTable_vue_vue_type_template_id_7100e9f2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "47616434"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/ItemDataTable.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78588,6 +86384,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ItemImageCarousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ItemImageCarousel_vue_vue_type_template_id_5285279e___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78596,6 +86393,18 @@ render._withStripped = true
     null,
     null,
     "feb22fee"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemImageCarousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemImageCarousel_vue_vue_type_template_id_5285279e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemImageCarousel_vue_vue_type_template_id_5285279e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2366bb6a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -78667,7 +86476,20 @@ render._withStripped = true
     null,
     "0065c477"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemPrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemPrice_vue_vue_type_template_id_27592de8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemPrice_vue_vue_type_template_id_27592de8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "357a3e8e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/ItemPrice.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78728,6 +86550,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _OrderPropertyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _OrderPropertyList_vue_vue_type_template_id_fe8a0bd2___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78738,6 +86561,18 @@ render._withStripped = true
     "a2468afc"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderPropertyList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderPropertyList_vue_vue_type_template_id_fe8a0bd2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderPropertyList_vue_vue_type_template_id_fe8a0bd2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "1c8274c4"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/OrderPropertyList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78807,7 +86642,20 @@ render._withStripped = true
     null,
     "3d30cbcd"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderPropertyListGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderPropertyListGroup_vue_vue_type_template_id_65a40158___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderPropertyListGroup_vue_vue_type_template_id_65a40158___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "64af2acb"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/OrderPropertyListGroup.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -78868,6 +86716,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _OrderPropertyListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _OrderPropertyListItem_vue_vue_type_template_id_6fc17f6c___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -78876,6 +86725,18 @@ render._withStripped = true
     null,
     null,
     "d5765996"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderPropertyListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderPropertyListItem_vue_vue_type_template_id_6fc17f6c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderPropertyListItem_vue_vue_type_template_id_6fc17f6c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2dc0c712"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -78947,7 +86808,20 @@ render._withStripped = true
     null,
     "3267dc0a"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderPropertyValue_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderPropertyValue_vue_vue_type_template_id_96d26c70___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderPropertyValue_vue_vue_type_template_id_96d26c70___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "dc82b68a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/OrderPropertyValueList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79078,6 +86952,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _QuantityInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _QuantityInput_vue_vue_type_template_id_62163595___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79088,6 +86963,18 @@ render._withStripped = true
     "2566e380"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _QuantityInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _QuantityInput_vue_vue_type_template_id_62163595___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _QuantityInput_vue_vue_type_template_id_62163595___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "3c0fe27c"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/QuantityInput.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79157,7 +87044,20 @@ render._withStripped = true
     null,
     "db52f5d4"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SetPrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SetPrice_vue_vue_type_template_id_26f10c3e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SetPrice_vue_vue_type_template_id_26f10c3e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "4723d894"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/SetPrice.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79218,6 +87118,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _SetQuantityInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _SetQuantityInput_vue_vue_type_template_id_836bc0d2___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79226,6 +87127,18 @@ render._withStripped = true
     null,
     null,
     "6fedb468"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SetQuantityInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SetQuantityInput_vue_vue_type_template_id_836bc0d2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SetQuantityInput_vue_vue_type_template_id_836bc0d2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "ecfbc96c"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -79297,7 +87210,20 @@ render._withStripped = true
     null,
     "1ca62dfb"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SingleAddToBasket_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SingleAddToBasket_vue_vue_type_template_id_22f724e0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SingleAddToBasket_vue_vue_type_template_id_22f724e0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "eb682f86"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/SingleAddToBasket.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79358,6 +87284,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _SingleItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _SingleItem_vue_vue_type_template_id_97e1d656___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79368,6 +87295,18 @@ render._withStripped = true
     "224826ca"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SingleItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SingleItem_vue_vue_type_template_id_97e1d656___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SingleItem_vue_vue_type_template_id_97e1d656___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "4de2da70"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/SingleItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79437,7 +87376,20 @@ render._withStripped = true
     null,
     "6a19b4ec"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SingleItemBundle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SingleItemBundle_vue_vue_type_template_id_605aaeb7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SingleItemBundle_vue_vue_type_template_id_605aaeb7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2b92aa6a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/SingleItemBundle.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79498,6 +87450,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _SingleItemSetComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _SingleItemSetComponent_vue_vue_type_template_id_014d5eb0___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79506,6 +87459,18 @@ render._withStripped = true
     null,
     null,
     "4e4badb6"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SingleItemSetComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SingleItemSetComponent_vue_vue_type_template_id_014d5eb0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SingleItemSetComponent_vue_vue_type_template_id_014d5eb0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "00588823"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -79577,7 +87542,20 @@ render._withStripped = true
     null,
     "6bee3719"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TagList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TagList_vue_vue_type_template_id_2a940624___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TagList_vue_vue_type_template_id_2a940624___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "eaed084a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/TagList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79638,6 +87616,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _VariationSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _VariationSelect_vue_vue_type_template_id_4a939d05___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79648,6 +87627,18 @@ render._withStripped = true
     "7c707c30"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _VariationSelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VariationSelect_vue_vue_type_template_id_4a939d05___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VariationSelect_vue_vue_type_template_id_4a939d05___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5963def2"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/item/VariationSelect.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79717,7 +87708,20 @@ render._withStripped = true
     null,
     "d0ecb788"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CategoryImageCarousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoryImageCarousel_vue_vue_type_template_id_62e5025e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoryImageCarousel_vue_vue_type_template_id_62e5025e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "fb0c0704"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/CategoryImageCarousel.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79778,6 +87782,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _CategoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _CategoryItem_vue_vue_type_template_id_8ab526e6___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79786,6 +87791,18 @@ render._withStripped = true
     null,
     null,
     "77371a7c"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CategoryItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoryItem_vue_vue_type_template_id_8ab526e6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoryItem_vue_vue_type_template_id_8ab526e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "f4452f80"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -79857,7 +87874,20 @@ render._withStripped = true
     null,
     "b05fa528"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemSearch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemSearch_vue_vue_type_template_id_010b1df7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemSearch_vue_vue_type_template_id_010b1df7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "7d646a6a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/ItemSearch.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79918,6 +87948,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ItemStoreSpecial_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ItemStoreSpecial_vue_vue_type_template_id_9410a8b2___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -79928,6 +87959,18 @@ render._withStripped = true
     "1fae8f5c"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemStoreSpecial_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemStoreSpecial_vue_vue_type_template_id_9410a8b2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemStoreSpecial_vue_vue_type_template_id_9410a8b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2ed6d44c"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/ItemStoreSpecial.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -79997,7 +88040,20 @@ render._withStripped = true
     null,
     "00f0cee0"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SearchSuggestionItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SearchSuggestionItem_vue_vue_type_template_id_4ff8d14a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SearchSuggestionItem_vue_vue_type_template_id_4ff8d14a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "40ea300e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/SearchSuggestionItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80058,6 +88114,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ItemFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ItemFilter_vue_vue_type_template_id_e3ecc314___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80066,6 +88123,18 @@ render._withStripped = true
     null,
     null,
     "5b2f3161"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemFilter_vue_vue_type_template_id_e3ecc314___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemFilter_vue_vue_type_template_id_e3ecc314___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "a1ec0aba"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -80137,7 +88206,20 @@ render._withStripped = true
     null,
     "5db83a9f"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemFilterList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemFilterList_vue_vue_type_template_id_d687d598___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemFilterList_vue_vue_type_template_id_d687d598___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "48a892e1"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/filter/ItemFilterList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80198,6 +88280,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ItemFilterPrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ItemFilterPrice_vue_vue_type_template_id_60aef3ba___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80208,6 +88291,18 @@ render._withStripped = true
     "26310e18"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemFilterPrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemFilterPrice_vue_vue_type_template_id_60aef3ba___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemFilterPrice_vue_vue_type_template_id_60aef3ba___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "cd6883d4"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/filter/ItemFilterPrice.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80277,7 +88372,20 @@ render._withStripped = true
     null,
     "442f72e7"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ItemFilterTagList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemFilterTagList_vue_vue_type_template_id_6da91432___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ItemFilterTagList_vue_vue_type_template_id_6da91432___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5b5e1b65"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/itemList/filter/ItemFilterTagList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80338,6 +88446,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _LiveShoppingDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _LiveShoppingDetails_vue_vue_type_template_id_c760b5b6___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80346,6 +88455,18 @@ render._withStripped = true
     null,
     null,
     "16d81bd0"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LiveShoppingDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LiveShoppingDetails_vue_vue_type_template_id_c760b5b6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LiveShoppingDetails_vue_vue_type_template_id_c760b5b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "07136b92"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -80417,7 +88538,20 @@ render._withStripped = true
     null,
     "641af7f5"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LiveShoppingItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LiveShoppingItem_vue_vue_type_template_id_3c96f6c0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LiveShoppingItem_vue_vue_type_template_id_3c96f6c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "b504e11a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/liveShopping/LiveShoppingItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80478,6 +88612,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _NewsletterInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _NewsletterInput_vue_vue_type_template_id_73e680cd___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80488,6 +88623,18 @@ render._withStripped = true
     "410c13b8"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NewsletterInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NewsletterInput_vue_vue_type_template_id_73e680cd___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NewsletterInput_vue_vue_type_template_id_73e680cd___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "d632460c"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/newsletter/NewsletterInput.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80557,7 +88704,20 @@ render._withStripped = true
     null,
     "2df9150a"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NewsletterUnsubscribeInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NewsletterUnsubscribeInput_vue_vue_type_template_id_e2350d74___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NewsletterUnsubscribeInput_vue_vue_type_template_id_e2350d74___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "00e4a20e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/newsletter/NewsletterUnsubscribeInput.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80618,6 +88778,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _OrderReturn_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _OrderReturn_vue_vue_type_template_id_5e5d016a___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80626,6 +88787,18 @@ render._withStripped = true
     null,
     null,
     "66e7cc40"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderReturn_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderReturn_vue_vue_type_template_id_5e5d016a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderReturn_vue_vue_type_template_id_5e5d016a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "a40d4b84"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -80697,7 +88870,20 @@ render._withStripped = true
     null,
     "49d4d5f3"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderReturnItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderReturnItem_vue_vue_type_template_id_72480b7e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderReturnItem_vue_vue_type_template_id_72480b7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "715334f1"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/orderReturn/OrderReturnItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80758,6 +88944,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _OrderReturnSetComponentList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _OrderReturnSetComponentList_vue_vue_type_template_id_204be6e4___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80768,6 +88955,18 @@ render._withStripped = true
     "6adba9d9"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OrderReturnSetComponentList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OrderReturnSetComponentList_vue_vue_type_template_id_204be6e4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OrderReturnSetComponentList_vue_vue_type_template_id_204be6e4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "07bd7bd7"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/orderReturn/OrderReturnSetComponentList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80837,7 +89036,20 @@ render._withStripped = true
     null,
     "179fbbd5"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Carousel_vue_vue_type_template_id_70daac60___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Carousel_vue_vue_type_template_id_70daac60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "25980e5a"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/Carousel.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -80898,6 +89110,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _CookieBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _CookieBar_vue_vue_type_template_id_cb92f282___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -80906,6 +89119,18 @@ render._withStripped = true
     null,
     null,
     "67d9342c"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CookieBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CookieBar_vue_vue_type_template_id_cb92f282___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CookieBar_vue_vue_type_template_id_cb92f282___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "adf26ea8"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -80977,7 +89202,20 @@ render._withStripped = true
     null,
     "5b17d8ee"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Icon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Icon_vue_vue_type_template_id_2642720e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Icon_vue_vue_type_template_id_2642720e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "11de44ec"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/Icon.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81038,6 +89276,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _LanguageDetection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _LanguageDetection_vue_vue_type_template_id_42e7aa86___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -81048,6 +89287,18 @@ render._withStripped = true
     "0ecea230"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LanguageDetection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LanguageDetection_vue_vue_type_template_id_42e7aa86___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LanguageDetection_vue_vue_type_template_id_42e7aa86___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "7e33a0ac"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/LanguageDetection.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81117,7 +89368,20 @@ render._withStripped = true
     null,
     "da8e71c6"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LoadingAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LoadingAnimation_vue_vue_type_template_id_89a806b0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LoadingAnimation_vue_vue_type_template_id_89a806b0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "8b91b3ca"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/LoadingAnimation.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81178,6 +89442,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _MobileNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _MobileNavigation_vue_vue_type_template_id_8786e754___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -81186,6 +89451,18 @@ render._withStripped = true
     null,
     null,
     "d86d526a"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MobileNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MobileNavigation_vue_vue_type_template_id_8786e754___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MobileNavigation_vue_vue_type_template_id_8786e754___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "8970946e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -81257,7 +89534,20 @@ render._withStripped = true
     null,
     "874cc47a"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Notifications_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Notifications_vue_vue_type_template_id_e0b367d0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Notifications_vue_vue_type_template_id_e0b367d0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "5779cf85"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/Notifications.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81318,6 +89608,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _Popper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _Popper_vue_vue_type_template_id_00b0102c___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -81328,6 +89619,18 @@ render._withStripped = true
     "76270e3e"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Popper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Popper_vue_vue_type_template_id_00b0102c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Popper_vue_vue_type_template_id_00b0102c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "38704542"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/Popper.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81397,7 +89700,20 @@ render._withStripped = true
     null,
     "1468d334"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PrivacySettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PrivacySettings_vue_vue_type_template_id_28a6037b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PrivacySettings_vue_vue_type_template_id_28a6037b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "49a65fa8"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/pageDesign/PrivacySettings.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81458,6 +89774,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _ShippingCountrySelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _ShippingCountrySelect_vue_vue_type_template_id_7b128e54___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -81466,6 +89783,18 @@ render._withStripped = true
     null,
     null,
     "14c9f602"
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ShippingCountrySelect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ShippingCountrySelect_vue_vue_type_template_id_7b128e54___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ShippingCountrySelect_vue_vue_type_template_id_7b128e54___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "3453567e"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   )
 
@@ -81537,7 +89866,20 @@ render._withStripped = true
     null,
     "4c60eee2"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _WishList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WishList_vue_vue_type_template_id_efb6f3a6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WishList_vue_vue_type_template_id_efb6f3a6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "6b3c5360"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/wishList/WishList.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81598,6 +89940,7 @@ render._withStripped = true
 
   /* normalize component */
 
+<<<<<<< HEAD
   var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
     _WishListCount_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
     _WishListCount_vue_vue_type_template_id_4cd32592___WEBPACK_IMPORTED_MODULE_0__["render"],
@@ -81608,6 +89951,18 @@ render._withStripped = true
     "7af4e5fd"
 
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _WishListCount_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WishListCount_vue_vue_type_template_id_4cd32592___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WishListCount_vue_vue_type_template_id_4cd32592___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "2ecabf82"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/wishList/WishListCount.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
@@ -81677,7 +90032,20 @@ render._withStripped = true
     null,
     "9a5050d6"
 
+<<<<<<< HEAD
   )
+=======
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _WishListItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _WishListItem_vue_vue_type_template_id_adce5d40___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _WishListItem_vue_vue_type_template_id_adce5d40___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  "7450cd13"
+  
+)
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
   component.options.__file = "resources/js/src/app/components/wishList/WishListItem.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);

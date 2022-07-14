@@ -72,6 +72,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 //
 //
 //
@@ -106,6 +107,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 =======
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -234,6 +237,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ItemFilter.vue */ "./resources/js/src/app/components/itemList/filter/ItemFilter.vue");
 /* harmony import */ var _mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../mixins/componentId.mixin */ "./resources/js/src/app/mixins/componentId.mixin.js");
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -280,6 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 <<<<<<< HEAD
 =======
+
 
 
 
@@ -666,6 +679,7 @@ var render = function() {
       _c(
         "div",
 <<<<<<< HEAD
+<<<<<<< HEAD
         {
           staticClass:
             "d-flex flex-wrap flex-column flex-sm-row justify-content-between mt-3"
@@ -673,10 +687,14 @@ var render = function() {
 =======
         { staticClass: "card pt-4 border-0" },
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+        { staticClass: "card pt-4 border-0" },
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
         [
           _c(
             "button",
             {
+<<<<<<< HEAD
 <<<<<<< HEAD
               staticClass: "btn btn-primary btn-appearance mt-1",
               class: _vm.buttonSizeClass,
@@ -697,6 +715,8 @@ var render = function() {
                 attrs: { "aria-hidden": "true" }
               })
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               staticClass:
                 "category-menu-button card-header btn btn-link text-appearance collapsed",
               attrs: {
@@ -716,7 +736,10 @@ var render = function() {
                 ),
                 _c("i", { staticClass: "fa fa-chevron-down" })
               ])
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             ]
           ),
           _vm._v(" "),
@@ -779,7 +802,10 @@ var render = function() {
                     key: value.id,
                     staticClass: "form-check-wrapper collapse",
                     attrs: { id: "collapse-form-check" }
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   },
                   [_vm._v("×")]
                 )

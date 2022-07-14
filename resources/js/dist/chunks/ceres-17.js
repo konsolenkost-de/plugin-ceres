@@ -165,7 +165,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -258,6 +292,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     save: function save() {
       var _this2 = this;
 
@@ -300,6 +335,8 @@ __webpack_require__.r(__webpack_exports__);
       this.email = "";
       this.privacyPolicyValue = false;
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
     isConsented: function isConsented(groupKey) {
       return this.$store.getters.isConsented(groupKey + ".*");
 >>>>>>> ed1465193 (chore: compile resources)
@@ -334,6 +371,7 @@ var render = function() {
     "form",
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       ref: "newsletterForm",
       attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
       on: {
@@ -355,6 +393,8 @@ var render = function() {
                 },
                 [
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
       staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
       class: {
         out: !_vm.isVisible,
@@ -557,16 +597,22 @@ var render = function() {
                     [
                       _vm._v(
 <<<<<<< HEAD
+<<<<<<< HEAD
                         _vm._s(
                           _vm.$translate("Ceres::Template.newsletterLastName")
                         )
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                         "\n          " +
                           _vm._s(
                             _vm.$translate("Ceres::Template.cookieBarAcceptAll")
                           ) +
                           "\n        "
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       )
                     ]
                   ),
@@ -636,7 +682,10 @@ var render = function() {
                             _vm.$translate("Ceres::Template.cookieBarSave")
                           ) +
                           "\n        "
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       )
                   )
                 ]),

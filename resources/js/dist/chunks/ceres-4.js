@@ -121,6 +121,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //
 //
@@ -133,6 +134,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -595,7 +598,10 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
 //
 //
 //
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 var NotificationService = __webpack_require__(/*! ../../services/NotificationService */ "./resources/js/src/app/services/NotificationService.js");
 
@@ -1537,7 +1543,10 @@ var render = function() {
                             href: _vm._f("itemURL")(
                               _vm.basketItem.variation.data
                             )
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           }
                         ]
                       }
@@ -1617,8 +1626,126 @@ var render = function() {
                     ]
                   )
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ]
               ),
+=======
+                ]),
+                _vm._v(" "),
+                _vm.basketItem.price > 0
+                  ? _c("div", { staticClass: "basket-item-container-right" }, [
+                      _c(
+                        "div",
+                        { staticClass: "qty-box-container" },
+                        [
+                          _c("quantity-input", {
+                            attrs: {
+                              value: _vm.basketItem.quantity,
+                              waiting:
+                                _vm.isInputLocked || _vm.isCheckoutReadonly,
+                              min:
+                                _vm.basketItem.variation.data.variation
+                                  .minimumOrderQuantity,
+                              max:
+                                _vm.basketItem.variation.data.variation
+                                  .maximumOrderQuantity,
+                              interval:
+                                _vm.basketItem.variation.data.variation
+                                  .intervalOrderQuantity
+                            },
+                            on: { "quantity-change": _vm.updateQuantity }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "price-box text-right ml-2 mt-1" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "item-total-price font-weight-bold text-nowrap"
+                            },
+                            [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency")(
+                                    _vm.basketItem.quantity * _vm.unitPrice,
+                                    _vm.basketItem.variation.data.prices.default
+                                      .currency
+                                  )
+                                )
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-sm text-danger p-0",
+                              class: {
+                                disabled:
+                                  _vm.waiting ||
+                                  _vm.isBasketLoading ||
+                                  _vm.isCheckoutReadonly ||
+                                  _vm.waitingForDelete
+                              },
+                              on: { click: _vm.deleteItem }
+                            },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(
+                                    _vm.$translate(
+                                      "Ceres::Template.basketDelete"
+                                    )
+                                  ) +
+                                  "\n                            "
+                              ),
+                              _c("icon", {
+                                staticClass: "default-float",
+                                attrs: {
+                                  icon: "trash-o",
+                                  loading: _vm.waitingForDelete
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ]
+                      )
+                    ])
+                  : _c(
+                      "div",
+                      { staticClass: "basket-item-container-right" },
+                      [
+                        _c("lazy-img", {
+                          attrs: {
+                            "picture-class":
+                              "d-block mw-100 mh-100 gift-item-image",
+                            "image-url":
+                              "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/present_icon.jpg",
+                            alt: _vm.altText,
+                            title: _vm.itemName
+                          }
+                        })
+                      ],
+                      1
+                    )
+              ]),
+              _vm._v(" "),
+              _vm.basketItem.setComponents
+                ? _c("basket-set-component-list", {
+                    attrs: {
+                      "set-components": _vm.basketItem.setComponents,
+                      "set-item": _vm.basketItem
+                    }
+                  })
+                : _vm._e(),
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               _vm._v(" "),
               _vm.selectedDescription
                 ? _c("popper", {

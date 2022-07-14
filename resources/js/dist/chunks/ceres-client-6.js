@@ -65,7 +65,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -261,13 +264,17 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
 =======
 >>>>>>> ed1465193 (chore: compile resources)
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "add-item-to-basket-overlay",
   components: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     OrderPropertyValueList: _item_OrderPropertyValueList_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   },
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
     ItemFilter: _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
   },
   mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__["ComponentIdMixin"]],
@@ -420,7 +427,10 @@ var ApiService = __webpack_require__(/*! ../../services/ApiService */ "./resourc
 
       return false;
     }
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
   }
 });
 

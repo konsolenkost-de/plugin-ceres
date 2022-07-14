@@ -311,7 +311,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+//
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "item-filter-list",
@@ -450,6 +454,37 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -507,6 +542,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
 <<<<<<< HEAD
   return _vm.facet.name
     ? _c(
@@ -649,6 +685,8 @@ var render = function() {
                   _vm._s(_vm.$translate("Ceres::Template.itemFilter")) +
                   "\n    "
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
   return _c(
     "div",
     { staticClass: "live-shopping-details" },
@@ -690,6 +728,7 @@ var render = function() {
         ? _c("div", { staticClass: "live-shopping-prices" }, [
             _c("div", { staticClass: "live-shopping-prices-inner" }, [
               _c("div", { staticClass: "live-shopping-prices-container" }, [
+<<<<<<< HEAD
                 _vm.displaySettings.showCrossPrice &&
                 _vm.prices.rrp &&
                 _vm.prices.rrp.unitPrice.value > 0
@@ -723,6 +762,41 @@ var render = function() {
                 _vm._v(" "),
                 _vm.displaySettings.showCrossPrice &&
                 _vm.prices.rrp &&
+=======
+                _vm.displaySettings.showCrossPrice &&
+                _vm.prices.rrp &&
+                _vm.prices.rrp.unitPrice.value > 0
+                  ? _c("span", [
+                      _vm.liveShoppingData.item.prices.default.unitPrice.value >
+                      _vm.liveShoppingData.item.prices.rrp.unitPrice.value
+                        ? _c("span", [
+                            _vm._v("\n                        statt "),
+                            _c("del", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm.liveShoppingData.item.prices.default
+                                    .unitPrice.formatted
+                                )
+                              )
+                            ])
+                          ])
+                        : _c("span", [
+                            _vm._v("\n                        statt "),
+                            _c("del", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm.liveShoppingData.item.prices.rrp.unitPrice
+                                    .formatted
+                                )
+                              )
+                            ])
+                          ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.displaySettings.showCrossPrice &&
+                _vm.prices.rrp &&
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _vm.prices.rrp.unitPrice.value === 0
                   ? _c("span", [_c("span", [_vm._v(" ")])])
                   : _vm._e(),
@@ -1009,6 +1083,7 @@ var render = function() {
                 },
                 [
 <<<<<<< HEAD
+<<<<<<< HEAD
                   _c(
                     "div",
                     { staticClass: "card-columns" },
@@ -1026,6 +1101,8 @@ var render = function() {
                       _c(
                         "button",
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   _vm.showNetPrices
                     ? [
                         _vm._v(

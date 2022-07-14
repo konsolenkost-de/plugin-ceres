@@ -556,7 +556,10 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? _c("hr")
               : _vm._e(),

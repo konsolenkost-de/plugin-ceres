@@ -184,7 +184,6 @@ import { mapMutations } from "vuex";
 import { ComponentIdMixin } from "../../mixins/componentId.mixin";
 
 export default {
-
   props: {
     styles: String,
     classes: String,
@@ -256,8 +255,7 @@ export default {
       return this.$translate("Ceres::Template.cookieBarHintText", links);
     },
   },
-
-    methods: {
+  methods: {
     ...mapMutations([ "storeConsents", "acceptAll", "denyAll" ]),
 
     close() {

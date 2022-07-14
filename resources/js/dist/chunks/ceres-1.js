@@ -212,6 +212,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "order-property-value-list-item",
@@ -312,7 +318,10 @@ var render = function() {
             _vm._v(" "),
             _c("add-to-wish-list-icon", {
               attrs: { "variation-id": _vm.variationId }
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             })
           : _vm._e()
       ],
@@ -326,6 +335,7 @@ var render = function() {
           "a",
           {
 <<<<<<< HEAD
+<<<<<<< HEAD
             staticClass:
               "item-name text-primary text-appearance font-weight-bold text-break",
             attrs: { href: _vm._f("itemURL")(_vm.variation) }
@@ -333,6 +343,10 @@ var render = function() {
             staticClass: "add-to-basket-lg-container d-none d-lg-block",
             attrs: { title: _vm.$translate("Ceres::Template.itemShowItem") }
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+            staticClass: "add-to-basket-lg-container d-none d-lg-block",
+            attrs: { title: _vm.$translate("Ceres::Template.itemShowItem") }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
           },
           [_vm._v("\n            " + _vm._s(_vm.itemName) + "\n        ")]
         ),
@@ -351,6 +365,7 @@ var render = function() {
           "div",
           { staticClass: "text-muted small" },
           [
+<<<<<<< HEAD
 <<<<<<< HEAD
             _vm._l(_vm.variation.variationProperties, function(propertyGroup) {
               return _vm._l(propertyGroup.properties, function(property) {
@@ -450,6 +465,33 @@ var render = function() {
               attrs: { "variation-id": _vm.variationId }
             })
           ],
+=======
+            _c(
+              "div",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.directToItem()
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.$translate("Ceres::Template.itemShowItem")) +
+                    "\n            "
+                ),
+                _c("i", {
+                  staticClass: "fa fa-arrow-right fa-lg d-none d-sm-block"
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("add-to-wish-list-icon", {
+              attrs: { "variation-id": _vm.variationId }
+            })
+          ],
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
           1
         )
       : _vm._e(),
@@ -648,7 +690,10 @@ var render = function() {
                       }
                     },
                     [_vm._v("\n                    Ausverkauft\n            ")]
+<<<<<<< HEAD
 >>>>>>> ed1465193 (chore: compile resources)
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   )
                 ]
               )

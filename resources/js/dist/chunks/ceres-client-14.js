@@ -97,6 +97,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -239,6 +248,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
 <<<<<<< HEAD
+<<<<<<< HEAD
   return _c(
     "div",
     [
@@ -325,8 +335,92 @@ var render = function() {
                     on: {
                       click: function($event) {
                         return _vm.loadChunk()
-                      }
+=======
+  return _c("div", { staticClass: "login-pwd-reset" }, [
+    _c("form", { attrs: { id: "login-form-" + _vm._uid, method: "post" } }, [
+      _c("div", { class: { "modal-body": _vm.modalElement } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _c(
+              "div",
+              { staticClass: "input-unit", attrs: { "data-validate": "mail" } },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.username,
+                      expression: "username"
                     }
+                  ],
+                  attrs: {
+                    type: "email",
+                    name: "email",
+                    autocomplete: "email",
+                    id: "email" + _vm._uid,
+                    "data-autofocus": ""
+                  },
+                  domProps: { value: _vm.username },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.username = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "email" + _vm._uid } }, [
+                  _vm._v(
+                    _vm._s(_vm.$translate("Ceres::Template.loginEmail")) + "*"
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "error-msg" }, [
+              _vm._v(
+                _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12" }, [
+            _c(
+              "div",
+              {
+                staticClass: "input-unit ",
+                class: { "no-bottom": _vm.modalElement },
+                attrs: { "data-validate": "text" }
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.password,
+                      expression: "password"
+                    }
+                  ],
+                  attrs: {
+                    type: "password",
+                    name: "password",
+                    autocomplete: "current-password",
+                    id: "password" + _vm._uid
+                  },
+                  domProps: { value: _vm.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
+                      }
+                      _vm.password = $event.target.value
+                    }
+<<<<<<< HEAD
                   },
                   [
                     _c("span", [
@@ -442,6 +536,8 @@ var render = function() {
                       }
                       _vm.password = $event.target.value
                     }
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   }
                 }),
                 _vm._v(" "),

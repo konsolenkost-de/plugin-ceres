@@ -37,7 +37,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 //
 //
 //
@@ -418,6 +421,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -466,6 +470,8 @@ __webpack_require__.r(__webpack_exports__);
 =======
 >>>>>>> ed1465193 (chore: compile resources)
 
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -1002,6 +1008,7 @@ var render = function() {
                               ])
                             : _vm._e()
                         ])
+<<<<<<< HEAD
 <<<<<<< HEAD
                       : _vm._e()
                   ]
@@ -1587,6 +1594,88 @@ var render = function() {
                         function(prop) {
                           return prop.property.isOderProperty
                         }
+=======
+                      })
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex kk-wishlist-details-box" }, [
+            _c("div", { staticClass: "d-flex" }, [
+              _c("div", {
+                staticClass:
+                  "availability kk-wishlist-availability-icon mt-auto mb-auto",
+                class:
+                  "availability-" + _vm.wishListItem.variation.availability.id
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "ml-2 mt-auto mb-auto" }, [
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(_vm.wishListItem.variation.availability.names.name) +
+                    "\n                    "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex kk-wishlist-delete-and-basket" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "btn btn-sm text-danger mt-auto mb-auto kk-border flex-style",
+                  staticStyle: { width: "33px", height: "33px" },
+                  on: {
+                    click: function($event) {
+                      return _vm.removeItem()
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    directives: [
+                      {
+                        name: "waiting-animation-infinite",
+                        rawName: "v-waiting-animation-infinite"
+                      }
+                    ],
+                    staticClass: "fa fa-trash-o default-float",
+                    staticStyle: { "font-size": "1.2rem", color: "grey" },
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                [
+                  _c("add-to-basket", {
+                    attrs: {
+                      "variation-id": _vm.wishListItem.variation.id,
+                      "is-salable":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.isSalable,
+                      "has-children":
+                        !!_vm.wishListItem.filter &&
+                        _vm.wishListItem.filter.hasActiveChildren,
+                      "interval-quantity":
+                        _vm.wishListItem.variation.intervalOrderQuantity || 1,
+                      "minimum-quantity":
+                        _vm.wishListItem.variation.minimumOrderQuantity,
+                      "maximum-quantity":
+                        !!_vm.wishListItem.variation.maximumOrderQuantity &&
+                        _vm.wishListItem.variation.maximumOrderQuantity > 0
+                          ? _vm.wishListItem.variation.maximumOrderQuantity
+                          : null,
+                      "order-properties": _vm.wishListItem.properties.filter(
+                        function(prop) {
+                          return prop.property.isOderProperty
+                        }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                       ),
                       "has-order-properties":
                         _vm.wishListItem.hasOrderProperties,

@@ -1787,6 +1787,7 @@
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -1811,6 +1812,8 @@
 //
 //
 
+=======
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -1926,6 +1929,7 @@
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
@@ -1950,6 +1954,33 @@
       function _objectSpread (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
       function _defineProperty (obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+=======
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
+/* harmony import */ var _services_ApiService__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -1963,9 +1994,8 @@
 
 
 
-//
-//
-//
+
+
 //
 //
 //
@@ -1996,6 +2026,7 @@
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+<<<<<<< HEAD
         name: "item-search",
         props: {
           showItemImages: {
@@ -2051,9 +2082,59 @@
           }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["defaultValue"])(this.timeout, 200));
           this.$nextTick(function () {
             var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_12__["default"].getUrlParams(document.location.search);
+=======
+  name: "item-search",
+  props: {
+    showItemImages: {
+      type: Boolean
+    },
+    forwardToSingleItem: {
+      type: Boolean,
+      default: App.config.search.forwardToSingleItem
+    },
+    timeout: {
+      type: Number,
+      default: 200
+    }
+  },
+  data: function data() {
+    return {
+      isSearchFocused: App.isShopBuilder,
+      onValueChanged: null,
+      searchString: ""
+    };
+  },
+  computed: _objectSpread({
+    hasAutocompleteResults: function hasAutocompleteResults() {
+      var item = this.autocompleteResult.item;
+      var category = this.autocompleteResult.category;
+      var suggestion = this.autocompleteResult.suggestion;
+      return App.isShopBuilder || item && item.length || category && category.length || suggestion && suggestion.length;
+    },
+    isShopBuilder: function isShopBuilder() {
+      return App.isShopBuilder;
+    }
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_16__["mapState"])({
+    autocompleteResult: function autocompleteResult(state) {
+      return state.itemSearch.autocompleteResult;
+    },
+    moduleSearchString: function moduleSearchString(state) {
+      return state.itemList.searchString;
+    }
+  })),
+  mounted: function mounted() {
+    var _this = this;
+
+    this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_17__["debounce"])(function (searchString) {
+      _this.autocomplete(searchString);
+    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["defaultValue"])(this.timeout, 200));
+    this.$nextTick(function () {
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_12__["default"].getUrlParams(document.location.search);
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
             _this.$store.commit("setItemListSearchString", urlParams.query);
 
+<<<<<<< HEAD
             _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
           });
           $('.search-input').each(function (index, input) {
@@ -2101,6 +2182,80 @@
           // hide search, if targetElement of the blur event is not a child of components' root element
           onBlurSearchField: function onBlurSearchField (event) {
             var target = event.relatedTarget;
+=======
+      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+    });
+    $('.search-input').each(function (index, input) {
+      $(input).keypress(function onEvent(event) {
+        if (event.key === "Enter") {
+          changeWindow(event.target.value);
+        }
+      });
+    });
+    $(".clearable").each(function () {
+      var $inp = $(this).find("input:text"),
+          $cle = $(this).find(".clearable__clear");
+      $inp.on("input", function () {
+        $cle.toggle(!!this.value);
+      });
+      $cle.on("click", function (e) {
+        e.preventDefault();
+        $inp.val("").trigger("input");
+      });
+    });
+  },
+  methods: {
+    search: function search() {
+      if (this.$refs.searchInput.value.length) {
+        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_14__["pathnameEquals"])(App.urls.search)) {
+          this.$store.dispatch("searchItems", this.$refs.searchInput.value);
+        } else {
+          window.open("".concat(App.urls.search, "?query=").concat(this.searchString), "_self", false);
+        }
+      }
+    },
+    autocomplete: function autocomplete(searchString) {
+      if (searchString.length >= 2) {
+        this.$store.dispatch("loadItemSearchAutocomplete", searchString);
+      } else {
+        this.$store.commit("setAutocompleteResult", {
+          item: [],
+          category: [],
+          suggestion: []
+        });
+      }
+    },
+    // hide search, if targetElement of the blur event is not a child of components' root element
+    onBlurSearchField: function onBlurSearchField(event) {
+      var target = event.relatedTarget;
+
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
+        this.isSearchFocused = false;
+      }
+    },
+    changeWindow: function changeWindow(value) {
+      var path = window.location.pathname.split("/")[1];
+      if (path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
+    },
+    buttonOnClick: function buttonOnClick(elem) {
+      $(elem).siblings("input").each(function (index, input) {
+        var e = jQuery.Event('keypress', {
+          key: "Enter"
+        });
+        $(input).trigger(e);
+      });
+    }
+  },
+  watch: {
+    // set the current search string, after clicking on a suggestion
+    moduleSearchString: function moduleSearchString(newVal) {
+      if (newVal && newVal.length) {
+        this.searchString = newVal;
+      }
+    }
+  }
+});
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
             if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
               this.isSearchFocused = false;
@@ -2527,6 +2682,7 @@
 //
 //
 //
+<<<<<<< HEAD
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2584,6 +2740,73 @@
           }
         })
       });
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    styles: String,
+    classes: String,
+    consentGroups: Object
+  },
+  data: function data() {
+    return {
+      isCollapsed: true,
+      isExpanded: false
+    };
+  },
+  computed: {
+    isVisible: function isVisible() {
+      return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
+    },
+    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+    // Experimental mixin, may be removed in the future.
+    data: function data() {
+      return {
+        isCollapsed: true,
+        isExpanded: false
+      };
+    },
+    text: function text() {
+      var links = {
+        gtc: '<a class="text-appearance" href="' + App.urls.gtc + '" target="_blank">' + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
+        cancellation: '<a class="text-appearance" href="' + App.urls.cancellationRights + '" target="_blank">' + this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        policy: '<a class="text-appearance" href="' + App.urls.privacyPolicy + '" target="_blank">' + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;"
+        }) + "</a>",
+        legal: '<a class="text-appearance" href="' + App.urls.legalDisclosure + '" target="_blank">' + this.$translate("Ceres::Template.footerLegalDisclosure") + "</a>"
+      };
+      return this.$translate("Ceres::Template.cookieBarHintText", links);
+    }
+  },
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_6__["mapMutations"])(["storeConsents", "acceptAll"])), {}, {
+    close: function close() {
+      this.isCollapsed = true;
+      this.isExpanded = false;
+    },
+    isConsented: function isConsented(groupKey) {
+      return this.$store.getters.isConsented(groupKey + ".*");
+    },
+    toggleConsent: function toggleConsent(groupKey) {
+      this.$store.commit("toggleConsent", groupKey + ".*");
+    }
+  })
+});
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
       /***/
 }),
@@ -38898,6 +39121,7 @@
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/CategoryItem.vue?vue&type=template&id=8ab526e6& ***!
   \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
       "use strict";
@@ -38915,10 +39139,315 @@
             class: "cmp-availability-" + _vm.item.variation.availability.id
           },
           [
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "article",
+    {
+      staticClass: "cmp cmp-product-thumb",
+      class: "cmp-availability-" + _vm.item.variation.availability.id
+    },
+    [
+      _c(
+        "div",
+        { class: _vm.paddingClasses, style: _vm.paddingInlineStyles },
+        [
+          _c("add-to-basket", {
+            attrs: {
+              "variation-id": _vm.item.variation.id,
+              "is-salable": !!_vm.item.filter && _vm.item.filter.isSalable,
+              "has-children":
+                !!_vm.item.item && _vm.item.item.salableVariationCount > 1,
+              "interval-quantity":
+                _vm.item.variation.intervalOrderQuantity || 1,
+              "minimum-quantity": _vm.item.variation.minimumOrderQuantity,
+              "maximum-quantity":
+                !!_vm.item.variation.maximumOrderQuantity &&
+                _vm.item.variation.maximumOrderQuantity > 0
+                  ? _vm.item.variation.maximumOrderQuantity
+                  : null,
+              "order-properties": _vm.item.properties.filter(function(prop) {
+                return prop.property.isOderProperty
+              }),
+              "has-order-properties": _vm.item.hasOrderProperties,
+              "use-large-scale": true,
+              "show-quantity": false,
+              "item-url": _vm._f("itemURL")(_vm.item, _vm.urlWithVariationId),
+              "has-price": _vm._f("hasItemDefaultPrice")(_vm.item),
+              "item-type": _vm.item.item.itemType
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-lg-none" },
+            [
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.item.variation.id }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "thumb-image" }, [
+            _c(
+              "div",
+              { staticClass: "prop-1-1" },
+              [
+                _vm._t("item-image", [
+                  _c("category-image-carousel", {
+                    ref: "categoryImageCarousel",
+                    attrs: {
+                      "image-urls-data": _vm._f("itemImages")(
+                        _vm.item.images,
+                        _vm.imageUrlAccessor
+                      ),
+                      "alt-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "title-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "item-url": _vm._f("itemURL")(
+                        _vm.item,
+                        _vm.urlWithVariationId
+                      ),
+                      "enable-carousel":
+                        _vm.$ceres.config.item.enableImageCarousel,
+                      "disable-carousel-on-mobile": _vm.disableCarouselOnMobile
+                    }
+                  })
+                ])
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _vm._t("store-special", [
+            (_vm.item.prices.specialOffer &&
+              _vm.item.prices.default.price.value >
+                _vm.item.prices.specialOffer.unitPrice.value) ||
+            (_vm.item.prices.rrp &&
+              _vm.item.prices.rrp.price.value >
+                _vm.item.prices.default.unitPrice.value)
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png"
+                  }
+                })
+              : _vm.item.item.condition.id === 0
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png"
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _vm._t("item-details", [
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             _c(
               "div",
               { class: _vm.paddingClasses, style: _vm.paddingInlineStyles },
               [
+<<<<<<< HEAD
+=======
+                _c(
+                  "a",
+                  {
+                    staticClass: "thumb-title small",
+                    class: {
+                      "stretched-link":
+                        _vm.$ceres.config.global.shippingCostsCategoryId == 0
+                    },
+                    attrs: {
+                      href: _vm._f("itemURL")(_vm.item, _vm.urlWithVariationId)
+                    }
+                  },
+                  [
+                    _c("span", { staticClass: "category-item-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name2, "50"))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "category-item-sub-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name3, "20"))
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex justify-content-between align-items-end"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "thumb-meta mt-2" },
+                      [
+                        _vm._t("before-prices"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "prices" }, [
+                          _c(
+                            "div",
+                            { staticClass: "price-view-port" },
+                            [
+                              (_vm.item.prices.specialOffer &&
+                                _vm.item.prices.default.price.value >
+                                  _vm.item.prices.specialOffer.unitPrice
+                                    .value) ||
+                              (_vm.item.prices.rrp &&
+                                _vm.item.prices.rrp.price.value >
+                                  _vm.item.prices.default.unitPrice.value)
+                                ? [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm.item.prices.rrp.price.value >
+                                    _vm.item.prices.default.unitPrice.value
+                                      ? _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.rrp
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                      : _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.default
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                  ]
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "price" },
+                            [
+                              _vm.item.item.itemType === "set"
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.itemSetPrice",
+                                            { price: _vm.itemSetPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : !!_vm.item.item &&
+                                  _vm.item.item.salableVariationCount > 1 &&
+                                  _vm.$ceres.isCheapestSorting
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.categoryItemFromPrice",
+                                            { price: _vm.itemPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnly"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("specialOffer")(
+                                            _vm.item.prices.default.unitPrice
+                                              .formatted,
+                                            _vm.item.prices,
+                                            "unitPrice",
+                                            "formatted"
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ])
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _vm._t("after-prices"),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "availability",
+                      class:
+                        "availability-" + _vm.item.variation.availability.id
+                    })
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                 _c("add-to-basket", {
                   attrs: {
                     "variation-id": _vm.item.variation.id,
@@ -38947,6 +39476,7 @@
                       _vm.itemGraduatedPricesalableVariationCount,
                     "item-type": _vm.item.item.itemType
                   }
+<<<<<<< HEAD
                 }),
                 _vm._v(" "),
                 _c(
@@ -39324,6 +39854,11 @@
   ])
               ],
 1
+=======
+                })
+              ],
+              1
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             )
           ])
         ],
@@ -39344,6 +39879,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/itemList/ItemSearch.vue?vue&type=template&id=010b1df7& ***!
   \******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -39495,10 +40031,86 @@ render._withStripped = true
                   2
                 )
               ]
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "container-max",
+      class: { "p-0": _vm.$ceres.isShopBuilder }
+    },
+    [
+      _c("div", { staticClass: "position-relative" }, [
+        _c(
+          "div",
+          { staticClass: "d-flex flex-grow-1 position-relative clearable" },
+          [
+            _c("input", {
+              staticClass: "search-input flex-grow-1",
+              attrs: {
+                type: "text",
+                id: "query",
+                name: "q",
+                placeholder: "Wonach suchst Du?"
+              }
+            }),
+            _vm._v(" "),
+            _c("i", { staticClass: "clearable__clear" }, [_vm._v("×")]),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _vm.isSearchFocused
+              ? [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.hasAutocompleteResults,
+                          expression: "hasAutocompleteResults"
+                        }
+                      ]
+                    },
+                    [
+                      _vm._t("autocomplete-suggestions", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "autocomplete-suggestions shadow bg-white w-100 "
+                          },
+                          [
+                            _c("search-suggestion-item", {
+                              attrs: {
+                                "show-images": true,
+                                "suggestion-type": "item"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    2
+                  )
+                ]
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
               : _vm._e()
           ],
           2
         )
+<<<<<<< HEAD
       ]
     )
   }
@@ -39525,6 +40137,35 @@ render._withStripped = true
     }
   ]
   render._withStripped = true
+=======
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "search-button",
+        attrs: { type: "button", onclick: "buttonOnClick(this)" }
+      },
+      [
+        _c("img", {
+          attrs: {
+            src:
+              "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png"
+          }
+        })
+      ]
+    )
+  }
+]
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
@@ -39642,6 +40283,7 @@ render._withStripped = true
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/app/components/pageDesign/CookieBar.vue?vue&type=template&id=cb92f282& ***!
   \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
+<<<<<<< HEAD
 /***/ (function (module, __webpack_exports__, __webpack_require__) {
 
   "use strict";
@@ -39665,6 +40307,31 @@ render._withStripped = true
       [
         _vm.isVisible
           ? _c("div", { staticClass: "container-max kk-border bg-white" }, [
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
+      class: {
+        out: !_vm.isVisible,
+        "bg-smoke": _vm.isVisible,
+        "fixed-bottom": !_vm.isShopBuilder || false
+      }
+    },
+    [
+      _vm.isVisible
+        ? _c("div", { staticClass: "container-max kk-border bg-white" }, [
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
             _c(
               "div",
               {
@@ -39725,6 +40392,7 @@ render._withStripped = true
                                   {
                                     staticClass: "custom-control-label",
                                     attrs: {
+<<<<<<< HEAD
                                       for:
                                         _vm._uid +
                                         "-group-" +
@@ -39746,6 +40414,56 @@ render._withStripped = true
                                           _vm._s(
                                             _vm.$translate(
                                               "Ceres::Template.privacySettingsDefaultGroup"
+=======
+                                      type: "checkbox",
+                                      id:
+                                        _vm._uid + "-group-" + consentGroup.key,
+                                      disabled: consentGroup.necessary
+                                    },
+                                    domProps: {
+                                      checked:
+                                        _vm.isConsented(consentGroup.key) ||
+                                        consentGroup.necessary
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        return _vm.toggleConsent(
+                                          consentGroup.key
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "custom-control-label",
+                                      attrs: {
+                                        for:
+                                          _vm._uid +
+                                          "-group-" +
+                                          consentGroup.key
+                                      }
+                                    },
+                                    [
+                                      consentGroup.label.length > 0
+                                        ? [
+                                            _vm._v(
+                                              "\n                  " +
+                                                _vm._s(consentGroup.label) +
+                                                "\n                "
+                                            )
+                                          ]
+                                        : [
+                                            _vm._v(
+                                              "\n                  " +
+                                                _vm._s(
+                                                  _vm.$translate(
+                                                    "Ceres::Template.privacySettingsDefaultGroup"
+                                                  )
+                                                ) +
+                                                "\n                "
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                                             )
                                           ) +
                                           "\n                "
@@ -39789,7 +40507,60 @@ render._withStripped = true
                   )
                 ]),
                 _vm._v(" "),
+<<<<<<< HEAD
                 _c(
+=======
+                _c("div", { staticClass: "p-3 w-100" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary btn-block btn-appearance",
+                      on: {
+                        click: function($event) {
+                          _vm.acceptAll()
+                          _vm.close()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarAcceptAll")
+                          ) +
+                          "\n        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default btn-block",
+                      on: {
+                        click: function($event) {
+                          _vm.storeConsents()
+                          _vm.close()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarSave")
+                          ) +
+                          "\n        "
+                      )
+                    ]
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _vm.isExpanded
+              ? _c(
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                   "div",
                   { staticClass: "button-order col-12 col-md-4 pt-3 pt-md-0" },
                   [
@@ -39824,8 +40595,13 @@ render._withStripped = true
                         "button",
                         {
                           staticClass:
+<<<<<<< HEAD
                             "btn btn-block btn-default btn-appearance button-order-2 mb-2 mt-0",
                           attrs: { "data-testing": "cookie-bar-deny-all" },
+=======
+                            "text-primary text-appearance d-inline-block mb-3",
+                          attrs: { href: "#" },
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           on: {
                             click: function ($event) {
                               _vm.denyAll()
@@ -39835,6 +40611,7 @@ render._withStripped = true
                         },
                         [
                           _vm._v(
+<<<<<<< HEAD
                             "\n                    " +
                             _vm._s(
                               _vm.$translate(
@@ -39842,11 +40619,17 @@ render._withStripped = true
                               )
                             ) +
                             "\n                "
+=======
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.cookieBarBack")
+                            )
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           )
                         ]
                       )
                       : _vm._e(),
                     _vm._v(" "),
+<<<<<<< HEAD
                     _c(
                       "button",
                       {
@@ -39857,6 +40640,19 @@ render._withStripped = true
                           click: function ($event) {
                             _vm.storeConsents()
                             _vm.close()
+=======
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-block btn-primary btn-appearance",
+                          on: {
+                            click: function($event) {
+                              _vm.acceptAll()
+                              _vm.close()
+                            }
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                           }
                         }
                       },
@@ -39926,6 +40722,7 @@ render._withStripped = true
                         "div",
                         { staticClass: "col-12 col-md-4 mt-2 mt-md-0" },
                         [
+<<<<<<< HEAD
                           _c(
                             "button",
                             {
@@ -40012,28 +40809,74 @@ render._withStripped = true
                           [
                             _vm._v(
                               "\n                            " +
+=======
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.cookieBarAcceptAll"
+                                )
+                              ) +
+                              "\n        "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-block btn-block btn-default",
+                          on: {
+                            click: function($event) {
+                              _vm.storeConsents()
+                              _vm.close()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          " +
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                               _vm._s(
                                 _vm.$translate(
                                   "Ceres::Template.cookieBarSave"
                                 )
                               ) +
+<<<<<<< HEAD
                               "\n                        "
                             )
                           ]
                         )
                       ])
+=======
+                              "\n        "
+                          )
+                        ]
+                      )
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
                     ])
                   ])
                 ]
               )
               : _vm._e()
           ])
+<<<<<<< HEAD
           : _vm._e()
       ]
     )
   }
   var staticRenderFns = []
   render._withStripped = true
+=======
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+>>>>>>> d5985bf94490045f12f75a485907f312a0e0743b
 
 
 
