@@ -1741,6 +1741,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -1765,6 +1766,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -1879,6 +1882,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
@@ -1898,6 +1902,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+=======
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
+/* harmony import */ var _services_ApiService__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+>>>>>>> bugfix/IT-3062/guest-login
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -1914,9 +1944,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-//
-//
-//
+
+
 //
 //
 //
@@ -1986,7 +2015,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     isShopBuilder: function isShopBuilder() {
       return App.isShopBuilder;
     }
+<<<<<<< HEAD
   }, Object(vuex__WEBPACK_IMPORTED_MODULE_13__["mapState"])({
+=======
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_16__["mapState"])({
+>>>>>>> bugfix/IT-3062/guest-login
     autocompleteResult: function autocompleteResult(state) {
       return state.itemSearch.autocompleteResult;
     },
@@ -2000,21 +2033,43 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     var _this = this;
 
+<<<<<<< HEAD
     this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_14__["debounce"])(function (searchString) {
+=======
+    this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_17__["debounce"])(function (searchString) {
+>>>>>>> bugfix/IT-3062/guest-login
       _this.autocomplete(searchString);
-    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["defaultValue"])(this.timeout, 200));
+    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["defaultValue"])(this.timeout, 200));
     this.$nextTick(function () {
-      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_10__["default"].getUrlParams(document.location.search);
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_12__["default"].getUrlParams(document.location.search);
 
       _this.$store.commit("setItemListSearchString", urlParams.query);
 
-      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+    });
+    $('.search-input').each(function (index, input) {
+      $(input).keypress(function onEvent(event) {
+        if (event.key === "Enter") {
+          changeWindow(event.target.value);
+        }
+      });
+    });
+    $(".clearable").each(function () {
+      var $inp = $(this).find("input:text"),
+          $cle = $(this).find(".clearable__clear");
+      $inp.on("input", function () {
+        $cle.toggle(!!this.value);
+      });
+      $cle.on("click", function (e) {
+        e.preventDefault();
+        $inp.val("").trigger("input");
+      });
     });
   },
   methods: {
     search: function search() {
       if (this.$refs.searchInput.value.length) {
-        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_12__["pathnameEquals"])(App.urls.search)) {
+        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_14__["pathnameEquals"])(App.urls.search)) {
           this.$store.dispatch("searchItems", this.$refs.searchInput.value);
         } else {
           window.open("".concat(App.urls.search, "?query=").concat(this.searchString), "_self", false);
@@ -2038,9 +2093,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     onBlurSearchField: function onBlurSearchField(event) {
       var target = event.relatedTarget;
 
-      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
         this.isSearchFocused = false;
       }
+    },
+    changeWindow: function changeWindow(value) {
+      var path = window.location.pathname.split("/")[1];
+      if (path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
+    },
+    buttonOnClick: function buttonOnClick(elem) {
+      $(elem).siblings("input").each(function (index, input) {
+        var e = jQuery.Event('keypress', {
+          key: "Enter"
+        });
+        $(input).trigger(e);
+      });
     }
   },
   watch: {
@@ -2448,6 +2515,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2460,8 +2542,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       default: true
     }
   },
-  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
-  // Experimental mixin, may be removed in the future.
   data: function data() {
     return {
       isCollapsed: true,
@@ -2472,19 +2552,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     isVisible: function isVisible() {
       return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
     },
-    isShopBuilder: function isShopBuilder() {
-      return App.isShopBuilder;
+    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+    // Experimental mixin, may be removed in the future.
+    data: function data() {
+      return {
+        isCollapsed: true,
+        isExpanded: false
+      };
     },
     text: function text() {
       var links = {
-        gtc: "<a class=\"text-appearance\" href=\"" + App.urls.gtc + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
-        cancellation: "<a class=\"text-appearance\" href=\"" + App.urls.cancellationRights + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutCancellationRight", {
-          "hyphen": "&shy;"
+        gtc: '<a class="text-appearance" href="' + App.urls.gtc + '" target="_blank">' + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
+        cancellation: '<a class="text-appearance" href="' + App.urls.cancellationRights + '" target="_blank">' + this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;"
         }) + "</a>",
-        policy: "<a class=\"text-appearance\" href=\"" + App.urls.privacyPolicy + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
-          "hyphen": "&shy;"
+        policy: '<a class="text-appearance" href="' + App.urls.privacyPolicy + '" target="_blank">' + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;"
         }) + "</a>",
-        legal: "<a class=\"text-appearance\" href=\"" + App.urls.legalDisclosure + "\" target=\"_blank\">" + this.$translate('Ceres::Template.footerLegalDisclosure') + "</a>"
+        legal: '<a class="text-appearance" href="' + App.urls.legalDisclosure + '" target="_blank">' + this.$translate("Ceres::Template.footerLegalDisclosure") + "</a>"
       };
       return this.$translate("Ceres::Template.cookieBarHintText", links);
     }
@@ -2493,9 +2578,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     close: function close() {
       this.isCollapsed = true;
       this.isExpanded = false;
-    },
-    open: function open() {
-      this.isCollapsed = false;
     },
     isConsented: function isConsented(groupKey) {
       return this.$store.getters.isConsented(groupKey + ".*");
@@ -38485,7 +38567,7 @@ var render = function() {
     "article",
     {
       staticClass: "cmp cmp-product-thumb",
-      attrs: { "data-testing": _vm.item.variation.id }
+      class: "cmp-availability-" + _vm.item.variation.availability.id
     },
     [
       _c(
@@ -38494,7 +38576,6 @@ var render = function() {
         [
           _c("add-to-basket", {
             attrs: {
-              "data-testing": "item-add-to-basket",
               "variation-id": _vm.item.variation.id,
               "is-salable": !!_vm.item.filter && _vm.item.filter.isSalable,
               "has-children":
@@ -38523,6 +38604,17 @@ var render = function() {
             }
           }),
           _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-lg-none" },
+            [
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.item.variation.id }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
           _c("div", { staticClass: "thumb-image" }, [
             _c(
               "div",
@@ -38536,8 +38628,16 @@ var render = function() {
                         _vm.item.images,
                         _vm.imageUrlAccessor
                       ),
-                      alt: _vm._f("itemName")(_vm.item),
-                      title: _vm._f("itemName")(_vm.item),
+                      "alt-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "title-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
                       "item-url": _vm._f("itemURL")(
                         _vm.item,
                         _vm.urlWithVariationId
@@ -38554,18 +38654,25 @@ var render = function() {
           ]),
           _vm._v(" "),
           _vm._t("store-special", [
-            _vm.storeSpecial ||
-            _vm.item.variation.bundleType === "bundle" ||
-            _vm.item.item.itemType === "set"
-              ? _c("item-store-special", {
+            (_vm.item.prices.specialOffer &&
+              _vm.item.prices.default.price.value >
+                _vm.item.prices.specialOffer.unitPrice.value) ||
+            (_vm.item.prices.rrp &&
+              _vm.item.prices.rrp.price.value >
+                _vm.item.prices.default.unitPrice.value)
+              ? _c("img", {
+                  staticClass: "store-special",
                   attrs: {
-                    "store-special": _vm.storeSpecial,
-                    "recommended-retail-price": _vm.item.prices.rrp,
-                    "variation-retail-price": _vm.item.prices.default,
-                    "special-offer-price": _vm.item.prices.specialOffer,
-                    "decimal-count": _vm.decimalCount,
-                    "bundle-type": _vm.item.variation.bundleType,
-                    "item-type": _vm.item.item.itemType
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png"
+                  }
+                })
+              : _vm.item.item.condition.id === 0
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png"
                   }
                 })
               : _vm._e()
@@ -38589,60 +38696,54 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm._f("itemName")(_vm.item))
-                    ),
-                    _vm._l(_vm.item.groupedAttributes, function(attribute) {
-                      return _c("span", [
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("translate")(
-                              "Ceres::Template.itemGroupedAttribute",
-                              attribute
-                            )
-                          )
-                        )
-                      ])
-                    })
-                  ],
-                  2
+                    _c("span", { staticClass: "category-item-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name2, "50"))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "category-item-sub-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name3, "20"))
+                      )
+                    ])
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "thumb-meta mt-2" },
+                  {
+                    staticClass:
+                      "d-flex justify-content-between align-items-end"
+                  },
                   [
-                    _vm._t("before-prices"),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "prices" }, [
-                      _vm.item.prices.rrp &&
-                      _vm.item.prices.rrp.price.value > 0 &&
-                      _vm.item.prices.rrp.price.value >
-                        _vm.item.prices.default.unitPrice.value
-                        ? _c("div", { staticClass: "price-view-port" }, [
-                            _vm.item.prices.specialOffer
-                              ? _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.default.unitPrice
-                                            .formatted,
-                                          true
+                    _c(
+                      "div",
+                      { staticClass: "thumb-meta mt-2" },
+                      [
+                        _vm._t("before-prices"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "prices" }, [
+                          _c(
+                            "div",
+                            { staticClass: "price-view-port" },
+                            [
+                              (_vm.item.prices.specialOffer &&
+                                _vm.item.prices.default.price.value >
+                                  _vm.item.prices.specialOffer.unitPrice
+                                    .value) ||
+                              (_vm.item.prices.rrp &&
+                                _vm.item.prices.rrp.price.value >
+                                  _vm.item.prices.default.unitPrice.value)
+                                ? [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale"
+                                          )
                                         )
-                                      ) +
-                                      "\n                            "
-                                  )
-                                ])
-                              : _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.rrp.unitPrice
-                                            .formatted
-                                        )
+<<<<<<< HEAD
                                       ) +
                                       "\n                            "
                                   )
@@ -38736,10 +38837,127 @@ var render = function() {
                         2
                       )
                     ])
+=======
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm.item.prices.rrp.price.value >
+                                    _vm.item.prices.default.unitPrice.value
+                                      ? _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.rrp
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                      : _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.default
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                  ]
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "price" },
+                            [
+                              _vm.item.item.itemType === "set"
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.itemSetPrice",
+                                            { price: _vm.itemSetPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : !!_vm.item.item &&
+                                  _vm.item.item.salableVariationCount > 1 &&
+                                  _vm.$ceres.isCheapestSorting
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.categoryItemFromPrice",
+                                            { price: _vm.itemPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnly"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("specialOffer")(
+                                            _vm.item.prices.default.unitPrice
+                                              .formatted,
+                                            _vm.item.prices,
+                                            "unitPrice",
+                                            "formatted"
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ])
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _vm._t("after-prices"),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "availability",
+                      class:
+                        "availability-" + _vm.item.variation.availability.id
+                    })
+>>>>>>> bugfix/IT-3062/guest-login
                   ],
                   2
                 ),
                 _vm._v(" "),
+<<<<<<< HEAD
                 _vm._t("after-prices"),
                 _vm._v(" "),
                 _vm.item.prices.default.lowestPrice.value && _vm.hasCrossPrice
@@ -38774,6 +38992,8 @@ var render = function() {
                     ])
                   : _vm._e(),
                 _vm._v(" "),
+=======
+>>>>>>> bugfix/IT-3062/guest-login
                 _c("add-to-basket", {
                   attrs: {
                     "variation-id": _vm.item.variation.id,
@@ -38810,6 +39030,7 @@ var render = function() {
                       _vm.itemGraduatedPricesalableVariationCount,
                     "item-type": _vm.item.item.itemType
                   }
+<<<<<<< HEAD
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "vat small text-muted" }, [
@@ -38877,8 +39098,11 @@ var render = function() {
                         ]
                       )
                 ])
+=======
+                })
+>>>>>>> bugfix/IT-3062/guest-login
               ],
-              2
+              1
             )
           ])
         ],
@@ -38916,6 +39140,7 @@ var render = function() {
       class: { "p-0": _vm.$ceres.isShopBuilder }
     },
     [
+<<<<<<< HEAD
       _c(
         "div",
         { staticClass: "position-relative" },
@@ -39054,10 +39279,94 @@ var render = function() {
         ],
         2
       )
+=======
+      _c("div", { staticClass: "position-relative" }, [
+        _c(
+          "div",
+          { staticClass: "d-flex flex-grow-1 position-relative clearable" },
+          [
+            _c("input", {
+              staticClass: "search-input flex-grow-1",
+              attrs: {
+                type: "text",
+                id: "query",
+                name: "q",
+                placeholder: "Wonach suchst Du?"
+              }
+            }),
+            _vm._v(" "),
+            _c("i", { staticClass: "clearable__clear" }, [_vm._v("×")]),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _vm.isSearchFocused
+              ? [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.hasAutocompleteResults,
+                          expression: "hasAutocompleteResults"
+                        }
+                      ]
+                    },
+                    [
+                      _vm._t("autocomplete-suggestions", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "autocomplete-suggestions shadow bg-white w-100 "
+                          },
+                          [
+                            _c("search-suggestion-item", {
+                              attrs: {
+                                "show-images": true,
+                                "suggestion-type": "item"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    2
+                  )
+                ]
+              : _vm._e()
+          ],
+          2
+        )
+      ])
+>>>>>>> bugfix/IT-3062/guest-login
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "search-button",
+        attrs: { type: "button", onclick: "buttonOnClick(this)" }
+      },
+      [
+        _c("img", {
+          attrs: {
+            src:
+              "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png"
+          }
+        })
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -39186,24 +39495,16 @@ var render = function() {
   return _c(
     "div",
     {
-      directives: [
-        {
-          name: "show",
-          rawName: "v-show",
-          value: !_vm.$ceres.isSSR,
-          expression: "!$ceres.isSSR"
-        }
-      ],
-      staticClass: "cookie-bar",
+      staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
       class: {
         out: !_vm.isVisible,
-        "border-top bg-white": _vm.isVisible,
+        "bg-smoke": _vm.isVisible,
         "fixed-bottom": !_vm.isShopBuilder || false
       }
     },
     [
       _vm.isVisible
-        ? _c("div", { staticClass: "container-max" }, [
+        ? _c("div", { staticClass: "container-max kk-border bg-white" }, [
             _c(
               "div",
               {
@@ -39220,7 +39521,7 @@ var render = function() {
                 style: _vm.styles
               },
               [
-                _c("div", { staticClass: "col-12 col-md-8" }, [
+                _c("div", { staticClass: "p-3" }, [
                   _c("p", { domProps: { innerHTML: _vm._s(_vm.text) } }),
                   _vm._v(" "),
                   _c(
@@ -39242,7 +39543,7 @@ var render = function() {
                                     attrs: {
                                       type: "checkbox",
                                       id:
-                                        _vm._cid + "-group-" + consentGroup.key,
+                                        _vm._uid + "-group-" + consentGroup.key,
                                       disabled: consentGroup.necessary
                                     },
                                     domProps: {
@@ -39265,7 +39566,7 @@ var render = function() {
                                       staticClass: "custom-control-label",
                                       attrs: {
                                         for:
-                                          _vm._cid +
+                                          _vm._uid +
                                           "-group-" +
                                           consentGroup.key
                                       }
@@ -39274,20 +39575,20 @@ var render = function() {
                                       consentGroup.label.length > 0
                                         ? [
                                             _vm._v(
-                                              "\n                                    " +
+                                              "\n                  " +
                                                 _vm._s(consentGroup.label) +
-                                                "\n                                "
+                                                "\n                "
                                             )
                                           ]
                                         : [
                                             _vm._v(
-                                              "\n                                    " +
+                                              "\n                  " +
                                                 _vm._s(
                                                   _vm.$translate(
                                                     "Ceres::Template.privacySettingsDefaultGroup"
                                                   )
                                                 ) +
-                                                "\n                                "
+                                                "\n                "
                                             )
                                           ]
                                     ],
@@ -39304,10 +39605,7 @@ var render = function() {
                         {
                           staticClass:
                             "text-primary text-appearance d-block d-md-inline-block",
-                          attrs: {
-                            href: "#",
-                            "data-testing": "cookie-bar-show-more-information"
-                          },
+                          attrs: { href: "#" },
                           on: {
                             click: function($event) {
                               $event.preventDefault()
@@ -39331,6 +39629,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
+<<<<<<< HEAD
                 _c(
                   "div",
                   { staticClass: "button-order col-12 col-md-4 pt-3 pt-md-0" },
@@ -39414,6 +39713,53 @@ var render = function() {
                     )
                   ]
                 )
+=======
+                _c("div", { staticClass: "p-3 w-100" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary btn-block btn-appearance",
+                      on: {
+                        click: function($event) {
+                          _vm.acceptAll()
+                          _vm.close()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarAcceptAll")
+                          ) +
+                          "\n        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default btn-block",
+                      on: {
+                        click: function($event) {
+                          _vm.storeConsents()
+                          _vm.close()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.cookieBarSave")
+                          ) +
+                          "\n        "
+                      )
+                    ]
+                  )
+                ])
+>>>>>>> bugfix/IT-3062/guest-login
               ]
             ),
             _vm._v(" "),
@@ -39443,10 +39789,7 @@ var render = function() {
                         {
                           staticClass:
                             "text-primary text-appearance d-inline-block mb-3",
-                          attrs: {
-                            href: "#",
-                            "data-testing": "cookie-bar-hide-more-information"
-                          },
+                          attrs: { href: "#" },
                           on: {
                             click: function($event) {
                               $event.preventDefault()
@@ -39457,16 +39800,15 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    " +
-                              _vm._s(
-                                _vm.$translate("Ceres::Template.cookieBarBack")
-                              ) +
-                              "\n                "
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.cookieBarBack")
+                            )
                           )
                         ]
                       )
                     ]),
                     _vm._v(" "),
+<<<<<<< HEAD
                     _c("div", { staticClass: "col-12 col-md-9" }, [
                       _c("div", { staticClass: "row" }, [
                         _c(
@@ -39567,6 +39909,54 @@ var render = function() {
                                   "\n                        "
                               )
                             ]
+=======
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-block btn-primary btn-appearance",
+                          on: {
+                            click: function($event) {
+                              _vm.acceptAll()
+                              _vm.close()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate(
+                                  "Ceres::Template.cookieBarAcceptAll"
+                                )
+                              ) +
+                              "\n        "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-md-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-block btn-block btn-default",
+                          on: {
+                            click: function($event) {
+                              _vm.storeConsents()
+                              _vm.close()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.cookieBarSave")
+                              ) +
+                              "\n        "
+>>>>>>> bugfix/IT-3062/guest-login
                           )
                         ])
                       ])
@@ -39575,37 +39965,7 @@ var render = function() {
                 )
               : _vm._e()
           ])
-        : _c("div", [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary btn-appearance",
-                attrs: {
-                  "aria-label": _vm.$translate(
-                    "Ceres::Template.cookieBarPrivacySettings"
-                  )
-                },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    $event.stopPropagation()
-                    _vm.isCollapsed = false
-                  }
-                }
-              },
-              [
-                _c("i", { staticClass: "fa fa-shield float-none" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "d-none d-sm-inline-block" }, [
-                  _vm._v(
-                    _vm._s(
-                      _vm.$translate("Ceres::Template.cookieBarPrivacySettings")
-                    )
-                  )
-                ])
-              ]
-            )
-          ])
+        : _vm._e()
     ]
   )
 }
@@ -59682,7 +60042,11 @@ function beforeCreate(context) {
     return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ./app/components/basket/list/BasketList.vue */ "./resources/js/src/app/components/basket/list/BasketList.vue"));
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("step-by-step-navigation", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 14).then(__webpack_require__.bind(null, /*! ./app/components/category/StepByStepNavigation.vue */ "./resources/js/src/app/components/category/StepByStepNavigation.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./app/components/category/StepByStepNavigation.vue */ "./resources/js/src/app/components/category/StepByStepNavigation.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("google-maps-widget", function () {
     return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ./app/components/common/GoogleMaps.vue */ "./resources/js/src/app/components/common/GoogleMaps.vue"));
@@ -59708,7 +60072,11 @@ function beforeCreate(context) {
     return __webpack_require__.e(/*! import() */ 28).then(__webpack_require__.bind(null, /*! ./app/components/customer/login/ForgotPassword.vue */ "./resources/js/src/app/components/customer/login/ForgotPassword.vue"));
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("guest-login", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 15).then(__webpack_require__.bind(null, /*! ./app/components/customer/login/GuestLogin.vue */ "./resources/js/src/app/components/customer/login/GuestLogin.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./app/components/customer/login/GuestLogin.vue */ "./resources/js/src/app/components/customer/login/GuestLogin.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("login", function () {
     return __webpack_require__.e(/*! import() */ 16).then(__webpack_require__.bind(null, /*! ./app/components/customer/login/Login.vue */ "./resources/js/src/app/components/customer/login/Login.vue"));
@@ -59738,7 +60106,11 @@ function beforeCreate(context) {
     return __webpack_require__.e(/*! import() */ 42).then(__webpack_require__.bind(null, /*! ./app/components/itemList/filter/ItemFilterTagList.vue */ "./resources/js/src/app/components/itemList/filter/ItemFilterTagList.vue"));
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("live-shopping-item", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./app/components/liveShopping/LiveShoppingItem.vue */ "./resources/js/src/app/components/liveShopping/LiveShoppingItem.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./app/components/liveShopping/LiveShoppingItem.vue */ "./resources/js/src/app/components/liveShopping/LiveShoppingItem.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("newsletter-input", function () {
     return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ./app/components/newsletter/NewsletterInput.vue */ "./resources/js/src/app/components/newsletter/NewsletterInput.vue"));
@@ -59764,7 +60136,11 @@ function beforeCreate(context) {
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("loading-animation", _app_components_pageDesign_LoadingAnimation_vue__WEBPACK_IMPORTED_MODULE_28__["default"]);
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("wish-list", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./app/components/wishList/WishList.vue */ "./resources/js/src/app/components/wishList/WishList.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./app/components/wishList/WishList.vue */ "./resources/js/src/app/components/wishList/WishList.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("wish-list-count", _app_components_wishList_WishListCount_vue__WEBPACK_IMPORTED_MODULE_29__["default"]);
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("lazy-load", _app_components_common_LazyLoad_vue__WEBPACK_IMPORTED_MODULE_16__["default"]);
@@ -59790,13 +60166,21 @@ function beforeCreate(context) {
     return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./app/components/item/OrderPropertyList.vue */ "./resources/js/src/app/components/item/OrderPropertyList.vue"));
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("variation-select", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ./app/components/item/VariationSelect.vue */ "./resources/js/src/app/components/item/VariationSelect.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 12).then(__webpack_require__.bind(null, /*! ./app/components/item/VariationSelect.vue */ "./resources/js/src/app/components/item/VariationSelect.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("item-availability", function () {
     return __webpack_require__.e(/*! import() */ 33).then(__webpack_require__.bind(null, /*! ./app/components/item/ItemAvailability.vue */ "./resources/js/src/app/components/item/ItemAvailability.vue"));
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("single-item-bundle", function () {
+<<<<<<< HEAD
     return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ./app/components/item/SingleItemBundle.vue */ "./resources/js/src/app/components/item/SingleItemBundle.vue"));
+=======
+    return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ./app/components/item/SingleItemBundle.vue */ "./resources/js/src/app/components/item/SingleItemBundle.vue"));
+>>>>>>> bugfix/IT-3062/guest-login
   });
   vue__WEBPACK_IMPORTED_MODULE_11___default.a.component("single-add-to-basket", function () {
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2), __webpack_require__.e(39)]).then(__webpack_require__.bind(null, /*! ./app/components/item/SingleAddToBasket.vue */ "./resources/js/src/app/components/item/SingleAddToBasket.vue"));

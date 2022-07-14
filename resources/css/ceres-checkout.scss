@@ -10601,7 +10601,7 @@ $border-width: 1px;
         padding: .5em 1.75rem;
         color: $white !important;
         background: $danger !important;
-        border-radius: .1rem;
+        // border-radius: .1rem;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
 
@@ -10763,7 +10763,7 @@ textarea.no-resize {
 .back-to-top {
     position: fixed;
     right: 2rem;
-    bottom: 2rem;
+    bottom: 7rem;
     z-index: $zindex-5;
     display: none;
     width: 40px;
@@ -12116,7 +12116,7 @@ html.crios {
             color: $success;
         }
     }
-
+    
     .graduated-base-price {
         font-style: normal !important; // stylelint-disable-line declaration-no-important
     }
@@ -12154,7 +12154,7 @@ html.crios {
 }
 
 .availability-2 {
-    @include context-bg($success);
+    @include context-bg($warning);
 }
 
 .availability-3 {
@@ -12162,7 +12162,7 @@ html.crios {
 }
 
 .availability-4 {
-    @include context-bg($warning);
+    @include context-bg($info);
 }
 
 .availability-5 {
@@ -13676,12 +13676,15 @@ $normalmenu-color: $primary !default;
 
 .navbar-brand {
     img {
-        max-height: 42px;
+        // max-height: 3rem;
     }
 }
 
 .navbar-toggler {
-    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 // When mobile navigation is open
@@ -13692,7 +13695,6 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
 
 .normalmenu {
     a {
-        padding: 1rem;
         color: inherit;
     }
 
@@ -13709,6 +13711,7 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
         min-width: 100%;
         max-height: 80vh;
         overflow: hidden;
+        overflow-y: auto;
         word-wrap: break-word;
         visibility: hidden;
         background: $normalmenu-color;
@@ -13724,14 +13727,18 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
             &:hover {
                 background: darken($normalmenu-color, 10%);
             }
+
+            a {
+                padding: 1rem;
+            }
         }
-    }
 
-    .bt-more {
-        text-transform: lowercase;
-
-        &:hover {
-            background: darken($normalmenu-color, 10%);
+        .bt-more {
+            text-transform: lowercase;
+    
+            &:hover {
+                background: darken($normalmenu-color, 10%);
+            }
         }
     }
 }
@@ -13808,7 +13815,7 @@ body.menu-is-visible { // stylelint-disable-line selector-no-qualifying-type
     .level3 {
         padding-left: 2.5em !important; // stylelint-disable-line declaration-no-important
     }
-
+    
     .bt-more {
         a {
             color: $gray-600 !important; // stylelint-disable-line declaration-no-important

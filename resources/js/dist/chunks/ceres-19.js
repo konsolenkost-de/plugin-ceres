@@ -116,6 +116,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -155,6 +156,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -270,6 +273,7 @@ var render = function() {
                 _c("div", { staticClass: "col-12 col-md-8" }, [
                   _c("p", { domProps: { innerHTML: _vm._s(_vm.text) } }),
                   _vm._v(" "),
+<<<<<<< HEAD
                   _c(
                     "div",
                     [
@@ -283,6 +287,70 @@ var render = function() {
                                   staticClass:
                                     "custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"
                                 },
+=======
+                  _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-body" }, [
+                  _c("div", { staticClass: "row is-table-row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-4",
+                        staticStyle: { "min-height": "80px" }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "img-fluid mx-auto",
+                          staticStyle: { "max-height": "140px" },
+                          attrs: {
+                            src: _vm.imageUrl,
+                            alt: _vm.imageAlternativeText || _vm.itemName,
+                            title: _vm.itemName
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-md-8" },
+                      [
+                        _c("p", [
+                          _c("strong", { staticClass: "basket-item-name" }, [
+                            _vm._v(_vm._s(_vm.itemName))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _c("strong", { staticClass: "basket-item-price" }, [
+                            _c("span", [
+                              _vm._v(_vm._s(_vm._f("currency")(_vm.price)))
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.variation.attributes, function(
+                          attribute,
+                          i
+                        ) {
+                          return _c("p", { key: i, staticClass: "small" }, [
+                            _c("strong", [
+                              _vm._v(_vm._s(attribute.attribute.names.name))
+                            ]),
+                            _vm._v(":\n                                "),
+                            _c("span", [
+                              _vm._v(_vm._s(attribute.value.names.name))
+                            ])
+                          ])
+                        }),
+                        _vm._v(" "),
+                        _vm.shownOrderProperties.length
+                          ? _c("div", { staticClass: "small" }, [
+                              _c(
+                                "div",
+                                { staticClass: "font-weight-bold my-1" },
+>>>>>>> bugfix/IT-3062/guest-login
                                 [
                                   _c("input", {
                                     staticClass: "custom-control-input",

@@ -219,7 +219,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -415,6 +427,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1701,6 +1719,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1979,6 +2017,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -3256,6 +3312,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3350,17 +3411,30 @@ __webpack_require__.r(__webpack_exports__);
   name: "accept-privacy-policy-check",
   props: {
     value: Boolean,
-    showError: Boolean
+    showError: Boolean,
+    type: String
   },
   computed: {
     labelHtml: function labelHtml() {
-      var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
-        "hyphen": "&shy;"
-      });
-      var html = "\n                <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                    <span>").concat(contactPrivacyPolicy, "</span>\n                </a><!---->\n            ");
-      return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {
-        policy: html
-      });
+      if (this.type) {
+        var contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
+          "hyphen": "&shy;"
+        });
+        var html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy2", {
+          policy: html
+        });
+      } else {
+        var _contactPrivacyPolicy = this.$translate("Ceres::Template.contactPrivacyPolicy", {
+          "hyphen": "&shy;"
+        });
+
+        var _html = "\n                    <!----><a href=\"".concat(App.urls.privacyPolicy, "\" target=\"_blank\" class=\"text-appearance\">\n                        <span>").concat(_contactPrivacyPolicy, "</span>\n                    </a><!---->\n                ");
+
+        return this.$translate("Ceres::Template.contactAcceptPrivacyPolicy", {
+          policy: _html
+        });
+      }
     }
   },
   methods: {
@@ -3419,240 +3493,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -4764,8 +4604,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -5070,19 +4908,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5559,9 +5384,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "salutation-select",
@@ -6016,7 +5838,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/ValidationService */ "./resources/js/src/app/services/ValidationService.js");
 /* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
 /* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+<<<<<<< HEAD
 /* harmony import */ var _services_ModalService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/ModalService */ "./resources/js/src/app/services/ModalService.js");
+=======
+/* harmony import */ var _AcceptPrivacyPolicyCheck_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../AcceptPrivacyPolicyCheck.vue */ "./resources/js/src/app/components/customer/AcceptPrivacyPolicyCheck.vue");
+//
+>>>>>>> bugfix/IT-3062/guest-login
 //
 //
 //
@@ -6036,6 +5863,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -6044,7 +5873,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "guest-login",
   mixins: [_mixins_buttonSizeProperty_mixin__WEBPACK_IMPORTED_MODULE_0__["ButtonSizePropertyMixin"]],
+  components: {
+    AcceptPrivacyPolicyCheck: _AcceptPrivacyPolicyCheck_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+  },
   props: {
     backlink: {
       type: String
@@ -6057,10 +5890,15 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       email: "",
-      isDisabled: false
+      isDisabled: false,
+      privacyPolicyAccepted: false,
+      privacyPolicyShowError: false,
+      enableConfirmingPrivacyPolicy: App.config.global.registrationRequirePrivacyPolicyConfirmation
     };
   },
   created: function created() {
+    console.log("cre" + this.checked);
+
     if (!Object(_helper_utils__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.initialEmail) && this.initialEmail.length > 0) {
       this.email = this.initialEmail;
     }
@@ -6068,6 +5906,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    console.log("moun" + this.checked);
     this.$nextTick(function () {
       var modal = _services_ModalService__WEBPACK_IMPORTED_MODULE_6__["default"].findModal(_this.$parent.$refs.guestModal); // for old login view only (input in modal)
 
@@ -6090,9 +5929,25 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__["default"].validate(this.$refs.form).done(function () {
-        _this2.authGuest();
+        if (!_this2.enableConfirmingPrivacyPolicy || _this2.privacyPolicyAccepted) {
+          _this2.authGuest();
+        } else {
+          _this2.privacyPolicyShowError = true;
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+            hyphen: "&shy;"
+          }));
+
+          _this2.resetRecaptcha();
+        }
       }).fail(function (invalidFields) {
         _services_ValidationService__WEBPACK_IMPORTED_MODULE_3__["default"].markInvalidFields(invalidFields, "error");
+
+        if (_this2.enableConfirmingPrivacyPolicy && !_this2.privacyPolicyAccepted) {
+          _this2.privacyPolicyShowError = true;
+          NotificationService.error(_this2.$translate("Ceres::Template.contactAcceptFormPrivacyPolicy", {
+            hyphen: "&shy;"
+          }));
+        }
       });
     },
     authGuest: function authGuest() {
@@ -6106,6 +5961,13 @@ __webpack_require__.r(__webpack_exports__);
       }).fail(function () {
         _this3.isDisabled = false;
       });
+    },
+    privacyPolicyValueChanged: function privacyPolicyValueChanged(value) {
+      this.privacyPolicyAccepted = value;
+
+      if (value) {
+        this.privacyPolicyShowError = false;
+      }
     }
   }
 });
@@ -6131,6 +5993,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ValidationService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../services/ValidationService */ "./resources/js/src/app/services/ValidationService.js");
 /* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../helper/utils */ "./resources/js/src/app/helper/utils.js");
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6324,6 +6195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_ModalService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/ModalService */ "./resources/js/src/app/services/ModalService.js");
 
 
+//
 //
 //
 //
@@ -10770,6 +10642,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -10794,6 +10667,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -10908,6 +10783,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
@@ -10927,6 +10803,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+=======
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var _helper_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../helper/utils */ "./resources/js/src/app/helper/utils.js");
+/* harmony import */ var _helper_url__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helper/url */ "./resources/js/src/app/helper/url.js");
+/* harmony import */ var _services_ApiService__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../services/ApiService */ "./resources/js/src/app/services/ApiService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _helper_debounce__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../helper/debounce */ "./resources/js/src/app/helper/debounce.js");
+>>>>>>> bugfix/IT-3062/guest-login
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -10943,9 +10845,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-//
-//
-//
+
+
 //
 //
 //
@@ -11015,7 +10916,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     isShopBuilder: function isShopBuilder() {
       return App.isShopBuilder;
     }
+<<<<<<< HEAD
   }, Object(vuex__WEBPACK_IMPORTED_MODULE_13__["mapState"])({
+=======
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_16__["mapState"])({
+>>>>>>> bugfix/IT-3062/guest-login
     autocompleteResult: function autocompleteResult(state) {
       return state.itemSearch.autocompleteResult;
     },
@@ -11029,21 +10934,43 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   mounted: function mounted() {
     var _this = this;
 
+<<<<<<< HEAD
     this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_14__["debounce"])(function (searchString) {
+=======
+    this.onValueChanged = Object(_helper_debounce__WEBPACK_IMPORTED_MODULE_17__["debounce"])(function (searchString) {
+>>>>>>> bugfix/IT-3062/guest-login
       _this.autocomplete(searchString);
-    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["defaultValue"])(this.timeout, 200));
+    }, Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["defaultValue"])(this.timeout, 200));
     this.$nextTick(function () {
-      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_10__["default"].getUrlParams(document.location.search);
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_12__["default"].getUrlParams(document.location.search);
 
       _this.$store.commit("setItemListSearchString", urlParams.query);
 
-      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+      _this.$refs.searchInput.value = !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(urlParams.query) ? urlParams.query : "";
+    });
+    $('.search-input').each(function (index, input) {
+      $(input).keypress(function onEvent(event) {
+        if (event.key === "Enter") {
+          changeWindow(event.target.value);
+        }
+      });
+    });
+    $(".clearable").each(function () {
+      var $inp = $(this).find("input:text"),
+          $cle = $(this).find(".clearable__clear");
+      $inp.on("input", function () {
+        $cle.toggle(!!this.value);
+      });
+      $cle.on("click", function (e) {
+        e.preventDefault();
+        $inp.val("").trigger("input");
+      });
     });
   },
   methods: {
     search: function search() {
       if (this.$refs.searchInput.value.length) {
-        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_12__["pathnameEquals"])(App.urls.search)) {
+        if (Object(_helper_url__WEBPACK_IMPORTED_MODULE_14__["pathnameEquals"])(App.urls.search)) {
           this.$store.dispatch("searchItems", this.$refs.searchInput.value);
         } else {
           window.open("".concat(App.urls.search, "?query=").concat(this.searchString), "_self", false);
@@ -11067,9 +10994,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     onBlurSearchField: function onBlurSearchField(event) {
       var target = event.relatedTarget;
 
-      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
+      if (Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) || !Object(_helper_utils__WEBPACK_IMPORTED_MODULE_13__["isNullOrUndefined"])(target) && !this.$el.contains(target)) {
         this.isSearchFocused = false;
       }
+    },
+    changeWindow: function changeWindow(value) {
+      var path = window.location.pathname.split("/")[1];
+      if (path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
+    },
+    buttonOnClick: function buttonOnClick(elem) {
+      $(elem).siblings("input").each(function (index, input) {
+        var e = jQuery.Event('keypress', {
+          key: "Enter"
+        });
+        $(input).trigger(e);
+      });
     }
   },
   watch: {
@@ -11548,19 +11487,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
-/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ItemFilter.vue */ "./resources/js/src/app/components/itemList/filter/ItemFilter.vue");
-/* harmony import */ var _mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../mixins/componentId.mixin */ "./resources/js/src/app/mixins/componentId.mixin.js");
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptor.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptor_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ "./node_modules/core-js/modules/es.object.get-own-property-descriptors.js");
+/* harmony import */ var core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_own_property_descriptors_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _services_UrlService__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../services/UrlService */ "./resources/js/src/app/services/UrlService.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ItemFilter.vue */ "./resources/js/src/app/components/itemList/filter/ItemFilter.vue");
+/* harmony import */ var _mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../mixins/componentId.mixin */ "./resources/js/src/app/mixins/componentId.mixin.js");
+
+
+
 
 
 
@@ -11613,12 +11562,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "item-filter-list",
   components: {
-    ItemFilter: _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    ItemFilter: _ItemFilter_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
   },
-  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_10__["ComponentIdMixin"]],
+  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_14__["ComponentIdMixin"]],
   // Experimental mixin, may be removed in the future.
   props: {
     filterListBulk: Boolean,
@@ -11643,7 +11593,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       default: null
     }
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_8__["mapState"])({
+  data: function data() {
+    return {
+      initialSelectedFacets: [],
+      initialPriceMin: "",
+      initialPriceMax: ""
+    };
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_12__["mapState"])({
     facets: function facets(state) {
       var _this = this;
 
@@ -11663,10 +11620,49 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   })),
   created: function created() {
+<<<<<<< HEAD
     var _this$$store$state$it;
 
     if (!((_this$$store$state$it = this.$store.state.itemList.facets) !== null && _this$$store$state$it !== void 0 && _this$$store$state$it.length)) {
       this.$store.commit("addFacets", this.facetData);
+=======
+    this.$store.commit("addFacets", this.facetData);
+    this.initSelectedFacets();
+  },
+  methods: {
+    initSelectedFacets: function initSelectedFacets() {
+      var urlParams = _services_UrlService__WEBPACK_IMPORTED_MODULE_11__["default"].getUrlParams(document.location.search);
+      var selectedFacets = [];
+
+      if (urlParams.facets) {
+        selectedFacets = urlParams.facets.split(",");
+      }
+
+      if (this.initPriceFacet(urlParams)) {
+        selectedFacets.push("price");
+      }
+
+      if (selectedFacets.length > 0) {
+        this.$store.commit("setSelectedFacetsByIds", selectedFacets);
+      }
+
+      this.initialSelectedFacets = selectedFacets;
+    },
+    initPriceFacet: function initPriceFacet(urlParams) {
+      if (urlParams.priceMin || urlParams.priceMax) {
+        var priceMin = urlParams.priceMin || "";
+        var priceMax = urlParams.priceMax || "";
+        this.$store.commit("setPriceFacet", {
+          priceMin: priceMin,
+          priceMax: priceMax
+        });
+        this.initialPriceMin = priceMin;
+        this.initialPriceMax = priceMax;
+        return true;
+      }
+
+      return false;
+>>>>>>> bugfix/IT-3062/guest-login
     }
   }
 });
@@ -12025,6 +12021,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -12032,6 +12029,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -12261,9 +12260,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -12436,7 +12438,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//
 //
 //
 //
@@ -13416,6 +13417,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -13428,8 +13444,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       default: true
     }
   },
-  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
-  // Experimental mixin, may be removed in the future.
   data: function data() {
     return {
       isCollapsed: true,
@@ -13440,19 +13454,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     isVisible: function isVisible() {
       return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
     },
-    isShopBuilder: function isShopBuilder() {
-      return App.isShopBuilder;
+    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+    // Experimental mixin, may be removed in the future.
+    data: function data() {
+      return {
+        isCollapsed: true,
+        isExpanded: false
+      };
     },
     text: function text() {
       var links = {
-        gtc: "<a class=\"text-appearance\" href=\"" + App.urls.gtc + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
-        cancellation: "<a class=\"text-appearance\" href=\"" + App.urls.cancellationRights + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutCancellationRight", {
-          "hyphen": "&shy;"
+        gtc: '<a class="text-appearance" href="' + App.urls.gtc + '" target="_blank">' + this.$translate("Ceres::Template.checkoutGtc") + "</a>",
+        cancellation: '<a class="text-appearance" href="' + App.urls.cancellationRights + '" target="_blank">' + this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;"
         }) + "</a>",
-        policy: "<a class=\"text-appearance\" href=\"" + App.urls.privacyPolicy + "\" target=\"_blank\">" + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
-          "hyphen": "&shy;"
+        policy: '<a class="text-appearance" href="' + App.urls.privacyPolicy + '" target="_blank">' + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;"
         }) + "</a>",
-        legal: "<a class=\"text-appearance\" href=\"" + App.urls.legalDisclosure + "\" target=\"_blank\">" + this.$translate('Ceres::Template.footerLegalDisclosure') + "</a>"
+        legal: '<a class="text-appearance" href="' + App.urls.legalDisclosure + '" target="_blank">' + this.$translate("Ceres::Template.footerLegalDisclosure") + "</a>"
       };
       return this.$translate("Ceres::Template.cookieBarHintText", links);
     }
@@ -13461,9 +13480,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     close: function close() {
       this.isCollapsed = true;
       this.isExpanded = false;
-    },
-    open: function open() {
-      this.isCollapsed = false;
     },
     isConsented: function isConsented(groupKey) {
       return this.$store.getters.isConsented(groupKey + ".*");
@@ -14747,6 +14763,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14941,6 +14962,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -14987,6 +15009,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+=======
+>>>>>>> bugfix/IT-3062/guest-login
 
 
 
@@ -40946,34 +40970,16 @@ var render = function() {
                         "</div>",
                         [
                           _vm._ssrNode(
-                            "<p><strong>" +
+                            '<p><strong class="basket-item-name">' +
                               _vm._ssrEscape(_vm._s(_vm.itemName)) +
-                              "</strong> <br> " +
-                              (_vm.countAdditionalBasketItems > 0
-                                ? "<span>" +
-                                  _vm._ssrEscape(
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.basketItemOverlayAdditionalCount",
-                                        {
-                                          count: _vm.countAdditionalBasketItems
-                                        }
-                                      )
-                                    )
-                                  ) +
-                                  "</span>"
-                                : "<!---->") +
-                              '</p> <p class="small"><strong><span class="text-muted">' +
-                              _vm._ssrEscape(
-                                _vm._s(_vm.basketItem.quantity) + " x "
-                              ) +
-                              "</span> <span>" +
+                              '</strong></p> <p><strong class="basket-item-price"><span>' +
                               _vm._ssrEscape(
                                 _vm._s(_vm._f("currency")(_vm.price))
                               ) +
                               "</span></strong></p> " +
                               _vm._ssrList(_vm.variation.attributes, function(
-                                attribute
+                                attribute,
+                                i
                               ) {
                                 return (
                                   '<p class="small"><strong>' +
@@ -41098,55 +41104,73 @@ var render = function() {
     "div",
     [
       !_vm.showQuantity && _vm.useLargeScale && _vm.canBeAddedToBasket
-        ? _c(
-            "div",
-            {
-              directives: [{ name: "tooltip", rawName: "v-tooltip" }],
-              staticClass: "add-to-basket-lg-container d-none d-lg-block",
-              class: { "no-pointer-events": _vm.isLoading },
-              attrs: {
-                "data-toggle": "tooltip",
-                "data-placement": "top",
-                title: _vm.$translate("Ceres::Template.singleItemAddToBasket")
-              },
-              on: {
-                click: function($event) {
-                  return _vm.addToBasket()
-                }
-              }
-            },
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrAttr(
+                "title",
+                _vm.$translate("Ceres::Template.singleItemAddToBasket")
+              ) +
+              _vm._ssrClass("add-to-basket-lg-container d-none d-lg-block", {
+                "no-pointer-events": _vm.isLoading
+              }) +
+              ">",
+            "</div>",
             [
-              _c("icon", {
-                staticClass: "fa-lg mobile-icon-right",
-                attrs: { icon: "cart-plus", loading: _vm.isLoading }
+              _vm._ssrNode(
+                "<div>",
+                "</div>",
+                [
+                  _vm._ssrNode(
+                    _vm._ssrEscape(
+                      "\n            " +
+                        _vm._s(
+                          _vm.$translate(
+                            "Ceres::Template.singleItemAddToBasket"
+                          )
+                        ) +
+                        "\n            "
+                    )
+                  ),
+                  _c("icon", {
+                    staticClass: "fa-lg mobile-icon-right",
+                    attrs: { icon: "cart-plus", loading: _vm.isLoading }
+                  })
+                ],
+                2
+              ),
+              _vm._ssrNode(" "),
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.variationId }
               })
             ],
-            1
+            2
           )
         : _vm._e(),
       _vm._ssrNode(" "),
       !_vm.showQuantity && _vm.useLargeScale && !_vm.canBeAddedToBasket
-        ? _c(
-            "div",
-            {
-              directives: [{ name: "tooltip", rawName: "v-tooltip" }],
-              staticClass: "add-to-basket-lg-container d-none d-lg-block",
-              attrs: {
-                "data-toggle": "tooltip",
-                "data-placement": "top",
-                title: _vm.$translate("Ceres::Template.itemShowItem")
-              },
-              on: {
-                click: function($event) {
-                  return _vm.directToItem()
-                }
-              }
-            },
+        ? _vm._ssrNode(
+            "<div" +
+              _vm._ssrAttr(
+                "title",
+                _vm.$translate("Ceres::Template.itemShowItem")
+              ) +
+              ' class="add-to-basket-lg-container d-none d-lg-block">',
+            "</div>",
             [
               _vm._ssrNode(
-                '<i class="fa fa-arrow-right fa-lg d-none d-sm-block"></i>'
-              )
-            ]
+                "<div>" +
+                  _vm._ssrEscape(
+                    "\n            " +
+                      _vm._s(_vm.$translate("Ceres::Template.itemShowItem")) +
+                      "\n            "
+                  ) +
+                  '<i class="fa fa-arrow-right fa-lg d-none d-sm-block"></i></div> '
+              ),
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.variationId }
+              })
+            ],
+            2
           )
         : _vm._e(),
       _vm._ssrNode(" "),
@@ -41197,7 +41221,7 @@ var render = function() {
                             { name: "tooltip", rawName: "v-tooltip" }
                           ],
                           staticClass:
-                            "btn btn-block btn-primary btn-appearance disabled",
+                            "btn btn-block btn-primary btn-basket btn-appearance disabled",
                           class: _vm.buttonClasses,
                           style: _vm.paddingInlineStyles,
                           attrs: {
@@ -41208,16 +41232,7 @@ var render = function() {
                         },
                         [
                           _vm._ssrNode(
-                            '<i aria-hidden="true" class="fa fa-shopping-cart"></i>' +
-                              _vm._ssrEscape(
-                                "\n                " +
-                                  _vm._s(
-                                    _vm.$translate(
-                                      "Ceres::Template.singleItemAddToBasket"
-                                    )
-                                  ) +
-                                  "\n            "
-                              )
+                            "\n                    Ausverkauft\n            "
                           )
                         ],
                         2
@@ -41230,7 +41245,7 @@ var render = function() {
                             _vm.isLoading || !_vm.hasPrice
                           ) +
                           _vm._ssrClass(
-                            "btn btn-block btn-primary btn-appearance",
+                            "btn btn-block btn-primary btn-basket btn-appearance",
                             _vm.buttonClasses
                           ) +
                           _vm._ssrStyle(null, _vm.paddingInlineStyles, null) +
@@ -41264,7 +41279,7 @@ var render = function() {
                             { name: "tooltip", rawName: "v-tooltip" }
                           ],
                           staticClass:
-                            "btn btn-block btn-primary btn-appearance disabled",
+                            "btn btn-block btn-primary btn-basket btn-appearance disabled",
                           class: _vm.buttonClasses,
                           style: _vm.paddingInlineStyles,
                           attrs: {
@@ -41278,25 +41293,10 @@ var render = function() {
                           }
                         },
                         [
-                          _c("icon", {
-                            attrs: {
-                              icon: "shopping-cart",
-                              waiting: _vm.isLoading
-                            }
-                          }),
                           _vm._ssrNode(
-                            _vm._ssrEscape(
-                              "\n                " +
-                                _vm._s(
-                                  _vm.$translate(
-                                    "Ceres::Template.singleItemAddToBasket"
-                                  )
-                                ) +
-                                "\n            "
-                            )
+                            "\n                    Ausverkauft\n            "
                           )
-                        ],
-                        2
+                        ]
                       )
                 ],
                 2
@@ -41320,7 +41320,7 @@ var render = function() {
                     ? _vm._ssrNode(
                         '<button type="button"' +
                           _vm._ssrClass(
-                            "btn btn-primary btn-appearance mobile-width-button",
+                            "btn btn-primary btn-basket btn-i-w btn-appearance mobile-width-button",
                             { "no-pointer-events": _vm.isLoading }
                           ) +
                           ">",
@@ -41334,31 +41334,34 @@ var render = function() {
                             }
                           }),
                           _vm._ssrNode(
-                            _vm._ssrEscape(
-                              "\n                " +
+                            ' <span class="btn-text">' +
+                              _vm._ssrEscape(
                                 _vm._s(
                                   _vm.$translate(
                                     "Ceres::Template.singleItemAddToBasket"
                                   )
-                                ) +
-                                "\n            "
-                            )
+                                )
+                              ) +
+                              "</span>"
                           )
                         ],
                         2
                       )
-                    : _vm._ssrNode(
-                        '<button type="button" class="btn btn-primary btn-appearance mobile-width-button"><i aria-hidden="true" class="fa fa-arrow-right fa-lg d-none d-sm-block"></i>' +
+                    : _vm._e(),
+                  _vm._ssrNode(
+                    " " +
+                      (!_vm.canBeAddedToBasket
+                        ? '<button type="button" class="btn btn-primary btn-basket btn-appearance mobile-width-button"><i aria-hidden="true" class="fa fa-arrow-right fa-lg d-none d-sm-block"></i> <span class="btn-text">' +
                           _vm._ssrEscape(
-                            "\n                " +
-                              _vm._s(
-                                _vm.$translate("Ceres::Template.itemShowItem")
-                              ) +
-                              "\n            "
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.itemShowItem")
+                            )
                           ) +
-                          "</button>"
-                      )
-                ]
+                          "</span></button>"
+                        : "<!---->")
+                  )
+                ],
+                2
               )
             ]
           )
@@ -41714,6 +41717,7 @@ var render = function() {
               _vm._t("before-item-sum"),
               _vm._ssrNode(
                 " " +
+<<<<<<< HEAD
                   ((_vm.visibleFields.includes("additionalCosts") ||
                     _vm.visibleFields.includes("basket.additional_costs")) &&
                   _vm.displayedProperties.length
@@ -41746,6 +41750,10 @@ var render = function() {
                   " " +
                   (_vm.visibleFields.includes("basketValueNet") ||
                   _vm.visibleFields.includes("basket.value_of_items_net")
+=======
+                  (_vm.visibleFields.includes("basketValueNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+>>>>>>> bugfix/IT-3062/guest-login
                     ? "<dt" +
                       _vm._ssrClass(null, {
                         "font-weight-bold": _vm.showNetPrices
@@ -41792,12 +41800,17 @@ var render = function() {
                           _vm._s(
                             _vm.$translate("Ceres::Template.basketValue")
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
+                          " "
                       ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
                       '</dt><dd data-testing="item-sum"' +
                       _vm._ssrClass(null, {
                         "font-weight-bold": !_vm.showNetPrices
@@ -41839,15 +41852,7 @@ var render = function() {
                                   "Ceres::Template.basketRebateSign"
                                 )
                               ) +
-                              _vm._s(
-                                _vm._f("currency")(
-                                  _vm.calculateBaseValue(
-                                    _vm.basket.itemSum,
-                                    _vm.basket.basketRebate
-                                  ) - _vm.basket.itemSum
-                                )
-                              ) +
-                              "\n                "
+                              "${calculateBaseValue(basket.itemSum, basket.basketRebate) - basket.itemSum | currency }\n                "
                           ) +
                           "</dd>"
                         : '<dd class="rebate-hint">' +
@@ -41903,12 +41908,17 @@ var render = function() {
                           _vm._s(
                             _vm.$translate("Ceres::Template.basketSubTotal")
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
+                          " "
                       ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
                       "</dt><dd" +
                       _vm._ssrClass(null, {
                         "font-weight-bold": !_vm.showNetPrices
@@ -41928,8 +41938,13 @@ var render = function() {
               _vm._t("before-shipping-costs"),
               _vm._ssrNode(
                 " " +
+<<<<<<< HEAD
                   (_vm.visibleFields.includes("shippingCostsNet") ||
                   _vm.visibleFields.includes("basket.shipping_costs_net")
+=======
+                  (_vm.visibleFields.includes("shippingCostsNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+>>>>>>> bugfix/IT-3062/guest-login
                     ? "<dt" +
                       _vm._ssrClass(null, {
                         "font-weight-bold": _vm.showNetPrices
@@ -41975,12 +41990,17 @@ var render = function() {
                               "Ceres::Template.basketShippingCosts"
                             )
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                "
+                          " "
                       ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
                       '</dt><dd data-testing="shipping-amount"' +
                       _vm._ssrClass(null, {
                         "font-weight-bold": !_vm.showNetPrices
@@ -42022,13 +42042,22 @@ var render = function() {
                       ) +
                       "</dd>"
                     : "<!---->") +
-                  " <hr> "
+                  " " +
+                  (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                    ? "<hr>"
+                    : "<!---->") +
+                  " "
               ),
               _vm._t("before-total-sum"),
               _vm._ssrNode(
                 " " +
+<<<<<<< HEAD
                   (_vm.visibleFields.includes("subAmount") ||
                   _vm.visibleFields.includes("basket.order_total_net")
+=======
+                  (_vm.visibleFields.includes("totalSumNet") &&
+                  _vm.basket.basketAmountNet != _vm.basket.basketAmount
+>>>>>>> bugfix/IT-3062/guest-login
                     ? "<dt" +
                       _vm._ssrClass(null, {
                         "font-weight-bold": _vm.showNetPrices
@@ -42162,12 +42191,17 @@ var render = function() {
                           _vm._s(
                             _vm.$translate("Ceres::Template.basketTotalSum")
                           ) +
-                          " " +
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.basketGross")
-                          ) +
-                          "\n                    "
+                          " "
                       ) +
+                      (_vm.basket.basketAmountNet != _vm.basket.basketAmount
+                        ? "<span>" +
+                          _vm._ssrEscape(
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.basketGross")
+                            )
+                          ) +
+                          "</span>"
+                        : "<!---->") +
                       '</dt><dd data-testing="basket-amount"' +
                       _vm._ssrClass(null, {
                         "font-weight-bold": !_vm.showNetPrices
@@ -42430,11 +42464,7 @@ var render = function() {
         [
           _vm._ssrNode(
             (!_vm.basketItems.length > 0
-              ? '<div><div class="h5 py-3">' +
-                _vm._ssrEscape(
-                  _vm._s(_vm.$translate("Ceres::Template.basketNoItems"))
-                ) +
-                "</div></div>"
+              ? '<div><div class="h5 py-3">Du hast noch keine Artikel im Warenkorb.</div></div>'
               : "<!---->") + " "
           ),
           _c(
@@ -42443,34 +42473,86 @@ var render = function() {
             [
               _vm._l(_vm.basketItems, function(basketItem) {
                 return [
-                  _c("basket-list-item", {
-                    key: basketItem.id,
-                    attrs: {
-                      "basket-item": basketItem,
-                      "is-preview": _vm.isPreview,
-                      "basket-details-data": _vm.basketDetailsData
-                    },
-                    scopedSlots: _vm._u(
-                      [
-                        {
-                          key: "before-basket-item",
-                          fn: function() {
-                            return [_vm._t("before-basket-item")]
-                          },
-                          proxy: true
+                  basketItem.price > 0
+                    ? _c("basket-list-item", {
+                        key: basketItem.id,
+                        attrs: {
+                          "basket-item": basketItem,
+                          "is-preview": _vm.isPreview,
+                          "basket-details-data": _vm.basketDetailsData
                         },
-                        {
-                          key: "after-basket-item",
-                          fn: function() {
-                            return [_vm._t("after-basket-item")]
-                          },
-                          proxy: true
-                        }
-                      ],
-                      null,
-                      true
-                    )
-                  })
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "before-basket-item",
+                              fn: function() {
+                                return [_vm._t("before-basket-item")]
+                              },
+                              proxy: true
+                            },
+                            {
+                              key: "after-basket-item",
+                              fn: function() {
+                                return [_vm._t("after-basket-item")]
+                              },
+                              proxy: true
+                            }
+                          ],
+                          null,
+                          true
+                        )
+                      })
+                    : _vm._e()
+                ]
+              })
+            ],
+            2
+          ),
+          _vm._ssrNode(
+            " " +
+              (_vm.basketItems.some(function(item) {
+                return item.price <= 0
+              })
+                ? "<div>Gratis Artikel:</div>"
+                : "<!---->") +
+              " "
+          ),
+          _c(
+            "transition-group",
+            { attrs: { name: "list-transition", tag: "div" } },
+            [
+              _vm._l(_vm.basketItems, function(basketItem) {
+                return [
+                  basketItem.price <= 0
+                    ? _c("basket-list-item", {
+                        key: basketItem.id,
+                        attrs: {
+                          "basket-item": basketItem,
+                          "is-preview": _vm.isPreview,
+                          "basket-details-data": _vm.basketDetailsData
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "before-basket-item",
+                              fn: function() {
+                                return [_vm._t("before-basket-item")]
+                              },
+                              proxy: true
+                            },
+                            {
+                              key: "after-basket-item",
+                              fn: function() {
+                                return [_vm._t("after-basket-item")]
+                              },
+                              proxy: true
+                            }
+                          ],
+                          null,
+                          true
+                        )
+                      })
+                    : _vm._e()
                 ]
               })
             ],
@@ -42524,31 +42606,23 @@ var render = function() {
           ">",
         "</div>",
         [
-          _vm._ssrNode('<div class="image-container">', "</div>", [
-            _vm._ssrNode(
-              "<a" +
-                _vm._ssrAttr(
-                  "href",
-                  _vm._f("itemURL")(_vm.basketItem.variation.data)
-                ) +
-                ">",
-              "</a>",
-              [
-                _vm.image
-                  ? _c("lazy-img", {
-                      attrs: {
-                        "picture-class": "d-block mw-100 mh-100",
-                        "image-url": _vm.image,
-                        alt: _vm.altText,
-                        title: _vm.itemName,
-                        "data-testing": "basket-item-img"
-                      }
-                    })
-                  : _vm._e()
-              ],
-              1
-            )
-          ]),
+          _vm._ssrNode(
+            '<div class="image-container">',
+            "</div>",
+            [
+              _vm.image
+                ? _c("lazy-img", {
+                    attrs: {
+                      "picture-class": "d-block mw-100 mh-100",
+                      "image-url": _vm.image,
+                      alt: _vm.altText,
+                      title: _vm.itemName
+                    }
+                  })
+                : _vm._e()
+            ],
+            1
+          ),
           _vm._ssrNode(" "),
           _vm._ssrNode(
             '<div class="meta-container-wrapper">',
@@ -42569,7 +42643,7 @@ var render = function() {
                               "href",
                               _vm._f("itemURL")(_vm.basketItem.variation.data)
                             ) +
-                            ' data-testing="basket-item-name" class="item-name text-primary text-appearance small font-weight-bold text-break">' +
+                            ' class="item-name text-primary text-appearance small font-weight-bold text-break">' +
                             _vm._ssrEscape(
                               "\n                            " +
                                 _vm._s(
@@ -42742,91 +42816,109 @@ var render = function() {
                     )
                   ]),
                   _vm._ssrNode(" "),
-                  _vm._ssrNode(
-                    '<div class="basket-item-container-right">',
-                    "</div>",
-                    [
-                      _vm._ssrNode(
-                        '<div class="qty-box-container">',
-                        "</div>",
-                        [
-                          _c("quantity-input", {
-                            attrs: {
-                              value: _vm.basketItem.quantity,
-                              waiting:
-                                _vm.isInputLocked || _vm.isCheckoutReadonly,
-                              min:
-                                _vm.basketItem.variation.data.variation
-                                  .minimumOrderQuantity,
-                              max:
-                                _vm.basketItem.variation.data.variation
-                                  .maximumOrderQuantity,
-                              interval:
-                                _vm.basketItem.variation.data.variation
-                                  .intervalOrderQuantity
-                            },
-                            on: { "quantity-change": _vm.updateQuantity }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._ssrNode(" "),
-                      _vm._ssrNode(
-                        '<div class="price-box text-right ml-2 mt-1">',
+                  _vm.basketItem.price > 0
+                    ? _vm._ssrNode(
+                        '<div class="basket-item-container-right">',
                         "</div>",
                         [
                           _vm._ssrNode(
-                            '<div class="item-total-price font-weight-bold text-nowrap">' +
-                              _vm._ssrEscape(
-                                _vm._s(
-                                  _vm._f("currency")(
-                                    _vm.basketItem.quantity * _vm.unitPrice,
-                                    _vm.basketItem.variation.data.prices.default
-                                      .currency
-                                  )
-                                )
-                              ) +
-                              "</div> "
+                            '<div class="qty-box-container">',
+                            "</div>",
+                            [
+                              _c("quantity-input", {
+                                attrs: {
+                                  value: _vm.basketItem.quantity,
+                                  waiting:
+                                    _vm.isInputLocked || _vm.isCheckoutReadonly,
+                                  min:
+                                    _vm.basketItem.variation.data.variation
+                                      .minimumOrderQuantity,
+                                  max:
+                                    _vm.basketItem.variation.data.variation
+                                      .maximumOrderQuantity,
+                                  interval:
+                                    _vm.basketItem.variation.data.variation
+                                      .intervalOrderQuantity
+                                },
+                                on: { "quantity-change": _vm.updateQuantity }
+                              })
+                            ],
+                            1
                           ),
+                          _vm._ssrNode(" "),
                           _vm._ssrNode(
-                            '<button data-testing="basket-item-delete"' +
-                              _vm._ssrClass("btn btn-sm text-danger p-0", {
-                                disabled:
-                                  _vm.waiting ||
-                                  _vm.isBasketLoading ||
-                                  _vm.isCheckoutReadonly ||
-                                  _vm.waitingForDelete
-                              }) +
-                              ">",
-                            "</button>",
+                            '<div class="price-box text-right ml-2 mt-1">',
+                            "</div>",
                             [
                               _vm._ssrNode(
-                                _vm._ssrEscape(
-                                  "\n                            " +
+                                '<div class="item-total-price font-weight-bold text-nowrap">' +
+                                  _vm._ssrEscape(
                                     _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.basketDelete"
+                                      _vm._f("currency")(
+                                        _vm.basketItem.quantity * _vm.unitPrice,
+                                        _vm.basketItem.variation.data.prices
+                                          .default.currency
                                       )
-                                    ) +
-                                    "\n                            "
-                                )
+                                    )
+                                  ) +
+                                  "</div> "
                               ),
-                              _c("icon", {
-                                staticClass: "default-float",
-                                attrs: {
-                                  icon: "trash-o",
-                                  loading: _vm.waitingForDelete
-                                }
-                              })
+                              _vm._ssrNode(
+                                "<button" +
+                                  _vm._ssrClass("btn btn-sm text-danger p-0", {
+                                    disabled:
+                                      _vm.waiting ||
+                                      _vm.isBasketLoading ||
+                                      _vm.isCheckoutReadonly ||
+                                      _vm.waitingForDelete
+                                  }) +
+                                  ">",
+                                "</button>",
+                                [
+                                  _vm._ssrNode(
+                                    _vm._ssrEscape(
+                                      "\n                            " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.basketDelete"
+                                          )
+                                        ) +
+                                        "\n                            "
+                                    )
+                                  ),
+                                  _c("icon", {
+                                    staticClass: "default-float",
+                                    attrs: {
+                                      icon: "trash-o",
+                                      loading: _vm.waitingForDelete
+                                    }
+                                  })
+                                ],
+                                2
+                              )
                             ],
                             2
                           )
                         ],
                         2
                       )
-                    ],
-                    2
-                  )
+                    : _vm._ssrNode(
+                        '<div class="basket-item-container-right">',
+                        "</div>",
+                        [
+                          _c("lazy-img", {
+                            attrs: {
+                              "picture-class":
+                                "d-block mw-100 mh-100 gift-item-image",
+                              "image-url":
+                                "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/present_icon.jpg",
+                              alt: _vm.altText,
+                              title: _vm.itemName
+                            }
+                          })
+                        ],
+                        1
+                      )
                 ],
                 2
               ),
@@ -43435,101 +43527,94 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row" },
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.items.length,
+          expression: "items.length"
+        }
+      ],
+      staticClass: "row"
+    },
     [
       _vm._ssrNode(
-        '<div class="col-12"' +
-          _vm._ssrStyle(null, null, {
-            display: _vm.mountedItems.length ? "" : "none"
-          }) +
-          ">",
-        "</div>",
-        [_vm._t("heading")],
-        2
+        '<div class="col-12" style="padding: 0;"><div class="widget-caption bg-appearance widget-item-list-caption mb-3" style="padding: 0;"><div><h2>Zuletzt angesehen</h2></div></div></div> '
       ),
-      _vm._ssrNode(" "),
-      _vm._ssrNode(
-        '<div class="col-12">',
-        "</div>",
-        [
-          _vm.mountedItems && _vm.mountedItems.length > 0
-            ? _c(
-                "carousel",
-                {
-                  ref: "carousel",
-                  attrs: { "items-per-page": _vm.itemsPerPage }
-                },
-                [
-                  _vm._l(_vm.items, function(item) {
-                    return _c(
-                      "template",
-                      { slot: "items" },
-                      [
-                        _c("category-item", {
-                          key: item.id,
-                          attrs: {
-                            "item-data": item.data,
-                            "decimal-count":
-                              _vm.$ceres.config.item.storeSpecial,
-                            "disable-carousel-on-mobile":
-                              _vm.mountedItems.length > _vm.itemsPerPage,
-                            "padding-classes": _vm.paddingClasses,
-                            "padding-inline-styles": _vm.paddingInlineStyles
+      _vm._ssrNode('<div class="col-12">', "</div>", [
+        _vm._ssrNode(
+          '<div class="row">',
+          "</div>",
+          [
+            _vm._l(_vm.items, function(item, i) {
+              return [
+                _vm._ssrNode(
+                  '<div class="col-6 col-md-3 col-lg-3">',
+                  "</div>",
+                  [
+                    _c("category-item", {
+                      key: item.id,
+                      attrs: {
+                        "item-data": item.data,
+                        "decimal-count": _vm.$ceres.config.item.storeSpecial,
+                        "disable-carousel-on-mobile":
+                          _vm.items.length > _vm.itemsPerPage,
+                        "padding-classes": _vm.paddingClasses,
+                        "padding-inline-styles": _vm.paddingInlineStyles
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "before-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "beforePrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
                           },
-                          scopedSlots: _vm._u(
-                            [
-                              {
-                                key: "before-prices",
-                                fn: function() {
-                                  return [
-                                    _c("div", {
-                                      domProps: {
-                                        innerHTML: _vm._s(
-                                          _vm.getContainerContentById(
-                                            item.id,
-                                            "beforePrices"
-                                          )
-                                        )
-                                      }
-                                    })
-                                  ]
-                                },
-                                proxy: true
-                              },
-                              {
-                                key: "after-prices",
-                                fn: function() {
-                                  return [
-                                    _c("div", {
-                                      domProps: {
-                                        innerHTML: _vm._s(
-                                          _vm.getContainerContentById(
-                                            item.id,
-                                            "afterPrices"
-                                          )
-                                        )
-                                      }
-                                    })
-                                  ]
-                                },
-                                proxy: true
-                              }
-                            ],
-                            null,
-                            true
-                          )
-                        })
-                      ],
-                      1
-                    )
-                  })
-                ],
-                2
-              )
-            : _vm._e()
-        ],
-        1
-      )
+                          {
+                            key: "after-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "afterPrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          }
+                        ],
+                        null,
+                        true
+                      )
+                    })
+                  ],
+                  1
+                )
+              ]
+            })
+          ],
+          2
+        )
+      ])
     ],
     2
   )
@@ -43648,7 +43733,7 @@ var render = function() {
                               _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
                               ">" +
                               _vm._ssrEscape(
-                                "\n                            " +
+                                "\n\t\t\t\t\t\t\t\t" +
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -43656,7 +43741,7 @@ var render = function() {
                                       "delivery_address.salutation"
                                     )
                                   ) +
-                                  "\n                        "
+                                  "\n\t\t\t\t\t\t\t"
                               ) +
                               "</label>"
                           )
@@ -43723,7 +43808,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTitle",
@@ -43731,7 +43816,7 @@ var render = function() {
                                         "delivery_address.title"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -43893,7 +43978,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressContactPerson",
@@ -43901,7 +43986,7 @@ var render = function() {
                                         "delivery_address.contactPerson"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -43945,7 +44030,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalName",
@@ -43953,7 +44038,7 @@ var render = function() {
                                         "delivery_address.name4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -43992,7 +44077,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTelephone",
@@ -44000,7 +44085,7 @@ var render = function() {
                                         "delivery_address.phoneNumber"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -44108,9 +44193,11 @@ var render = function() {
                       _vm._ssrAttr("for", "postnumber" + _vm._uid) +
                       ">" +
                       _vm._ssrEscape(
-                        _vm._s(
-                          _vm.$translate("Ceres::Template.addressPostNummer")
-                        ) + "*"
+                        "\n\t\t\t\t\t\t\t\t" +
+                          _vm._s(
+                            _vm.$translate("Ceres::Template.addressPostNummer")
+                          ) +
+                          "*"
                       ) +
                       "</label></div></div> "
                   ),
@@ -44150,7 +44237,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress2",
@@ -44158,7 +44245,7 @@ var render = function() {
                                         "delivery_address.address4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -44193,88 +44280,7 @@ var render = function() {
                 ) +
                 "</label></div></div> "
             ),
-            _vm._ssrNode(
-              '<div data-testing="address-country-select" class="col-12 col-sm-4">',
-              "</div>",
-              [
-                _c("country-select", {
-                  attrs: {
-                    "selected-country-id": _vm.value.countryId,
-                    "selected-state-id": _vm.value.stateId,
-                    "address-type": _vm.addressType,
-                    "optional-address-fields": _vm.optionalAddressFields,
-                    "required-address-fields": _vm.requiredAddressFields
-                  },
-                  on: {
-                    "country-changed": function($event) {
-                      return _vm.onSelectedCountryChanged($event)
-                    },
-                    "state-changed": function($event) {
-                      return _vm.emitInputEvent("stateId", $event)
-                    }
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._ssrNode(" "),
-            _vm._t("custom-address-fields"),
-            _vm._ssrNode(" "),
-            _vm._ssrNode(
-              '<div class="col-12">',
-              "</div>",
-              [
-                _vm._ssrNode('<hr class="mt-0"> '),
-                _vm._ssrNode('<div class="row">', "</div>", [
-                  _vm.isInOptionalFields("de", "delivery_address.email")
-                    ? _vm._ssrNode('<div class="col-12">', "</div>", [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "validate",
-                                rawName: "v-validate:text",
-                                value: _vm.isInRequiredFields(
-                                  "de",
-                                  "delivery_address.email"
-                                ),
-                                expression:
-                                  "isInRequiredFields('de', 'delivery_address.email')",
-                                arg: "text"
-                              }
-                            ],
-                            staticClass: "input-unit",
-                            attrs: { "data-model": "email" }
-                          },
-                          [
-                            _vm._ssrNode(
-                              '<input type="mail" name="email"' +
-                                _vm._ssrAttr("id", "email" + _vm._uid) +
-                                ' data-testing="packing-station-de-email-input"' +
-                                _vm._ssrAttr("value", _vm.value.email) +
-                                "> <label" +
-                                _vm._ssrAttr("for", "email" + _vm._uid) +
-                                ">" +
-                                _vm._ssrEscape(
-                                  _vm._s(
-                                    _vm.transformTranslation(
-                                      "Ceres::Template.addressMail",
-                                      "de",
-                                      "delivery_address.email"
-                                    )
-                                  )
-                                ) +
-                                "</label>"
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              ],
-              2
-            )
+            _vm._t("custom-address-fields")
           ]
         : _vm.localeToShow == "DE" && _vm.addressType === "1"
         ? [
@@ -44323,7 +44329,7 @@ var render = function() {
                               _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
                               ">" +
                               _vm._ssrEscape(
-                                "\n                            " +
+                                "\n\t\t\t\t\t\t\t\t" +
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -44331,7 +44337,7 @@ var render = function() {
                                       "billing_address.salutation"
                                     )
                                   ) +
-                                  "\n                        "
+                                  "\n\t\t\t\t\t\t\t"
                               ) +
                               "</label>"
                           )
@@ -44465,7 +44471,7 @@ var render = function() {
                                     _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressTitle",
@@ -44473,7 +44479,7 @@ var render = function() {
                                             "billing_address.title"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -44642,7 +44648,7 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressContactPerson",
@@ -44650,7 +44656,7 @@ var render = function() {
                                             "billing_address.contactPerson"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -44698,7 +44704,7 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressAdditionalName",
@@ -44706,7 +44712,7 @@ var render = function() {
                                             "billing_address.name4"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -44769,7 +44775,7 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressBirthdate",
@@ -44777,7 +44783,7 @@ var render = function() {
                                             "billing_address.birthday"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -44826,7 +44832,7 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressTelephone",
@@ -44834,7 +44840,7 @@ var render = function() {
                                             "billing_address.phoneNumber"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -44912,7 +44918,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress1",
@@ -44920,7 +44926,7 @@ var render = function() {
                                         "billing_address.address3"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -44965,7 +44971,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress2",
@@ -44973,7 +44979,7 @@ var render = function() {
                                         "billing_address.address4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45008,88 +45014,7 @@ var render = function() {
                 ) +
                 "</label></div></div> "
             ),
-            _vm._ssrNode(
-              '<div data-testing="address-country-select" class="col-12 col-sm-4">',
-              "</div>",
-              [
-                _c("country-select", {
-                  attrs: {
-                    "selected-country-id": _vm.value.countryId,
-                    "selected-state-id": _vm.value.stateId,
-                    "address-type": _vm.addressType,
-                    "optional-address-fields": _vm.optionalAddressFields,
-                    "required-address-fields": _vm.requiredAddressFields
-                  },
-                  on: {
-                    "country-changed": function($event) {
-                      return _vm.onSelectedCountryChanged($event)
-                    },
-                    "state-changed": function($event) {
-                      return _vm.emitInputEvent("stateId", $event)
-                    }
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._ssrNode(" "),
-            _vm._t("custom-address-fields"),
-            _vm._ssrNode(" "),
-            _vm._ssrNode(
-              '<div class="col-12">',
-              "</div>",
-              [
-                _vm._ssrNode('<hr class="mt-0"> '),
-                _vm._ssrNode('<div class="row">', "</div>", [
-                  _vm.isInOptionalFields("de", "billing_address.email")
-                    ? _vm._ssrNode('<div class="col-12">', "</div>", [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "validate",
-                                rawName: "v-validate:text",
-                                value: _vm.isInRequiredFields(
-                                  "de",
-                                  "billing_address.email"
-                                ),
-                                expression:
-                                  "isInRequiredFields('de', 'billing_address.email')",
-                                arg: "text"
-                              }
-                            ],
-                            staticClass: "input-unit",
-                            attrs: { "data-model": "email" }
-                          },
-                          [
-                            _vm._ssrNode(
-                              '<input type="mail" name="email"' +
-                                _vm._ssrAttr("id", "email" + _vm._uid) +
-                                ' data-testing="billing-address-de-email-input"' +
-                                _vm._ssrAttr("value", _vm.value.email) +
-                                "> <label" +
-                                _vm._ssrAttr("for", "email" + _vm._uid) +
-                                ">" +
-                                _vm._ssrEscape(
-                                  _vm._s(
-                                    _vm.transformTranslation(
-                                      "Ceres::Template.addressMail",
-                                      "de",
-                                      "billing_address.email"
-                                    )
-                                  )
-                                ) +
-                                "</label>"
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              ],
-              2
-            )
+            _vm._t("custom-address-fields")
           ]
         : _vm.localeToShow == "GB" && _vm.addressType === "1"
         ? [
@@ -45115,29 +45040,45 @@ var render = function() {
                           staticClass: "input-unit"
                         },
                         [
-                          _c("salutation-select", {
-                            attrs: {
-                              id: "txtSalutation" + _vm._uid,
-                              "address-type": _vm.addressType,
-                              "address-data": _vm.value,
-                              "enabled-address-fields":
-                                _vm.optionalAddressFields
-                            },
-                            on: {
-                              input: function($event) {
-                                return _vm.emitInputEvent(
-                                  $event.field,
-                                  $event.value
-                                )
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
                               }
-                            }
-                          }),
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
                           _vm._ssrNode(
                             " <label" +
                               _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
                               ">" +
                               _vm._ssrEscape(
-                                "\n                            " +
+                                "\n\t\t\t\t\t\t\t\t" +
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -45145,7 +45086,7 @@ var render = function() {
                                       "billing_address.salutation"
                                     )
                                   ) +
-                                  "\n                        "
+                                  "\n\t\t\t\t\t\t\t"
                               ) +
                               "</label>"
                           )
@@ -45273,7 +45214,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTitle",
@@ -45281,7 +45222,7 @@ var render = function() {
                                         "billing_address.title"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45331,11 +45272,12 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      _vm._s(
-                                        _vm.$translate(
-                                          "Ceres::Template.addressFirstName"
+                                      "\n\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.addressFirstName"
+                                          )
                                         )
-                                      )
                                     ) +
                                     (_vm.areNameFieldsRequired(
                                       "gb",
@@ -45443,7 +45385,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressContactPerson",
@@ -45451,7 +45393,7 @@ var render = function() {
                                         "billing_address.contactPerson"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45495,7 +45437,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressGBNameAffix",
@@ -45503,7 +45445,7 @@ var render = function() {
                                         "billing_address.name4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45556,7 +45498,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtBirthdate" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressBirthdate",
@@ -45564,7 +45506,7 @@ var render = function() {
                                         "billing_address.birthday"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45599,11 +45541,11 @@ var render = function() {
                               '<input type="text" name="telephone"' +
                                 _vm._ssrAttr("id", "txtTelephone" + _vm._uid) +
                                 _vm._ssrAttr("value", _vm.value.telephone) +
-                                "> <label" +
+                                ' class="formborder"> <label' +
                                 _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTelephone",
@@ -45611,7 +45553,7 @@ var render = function() {
                                         "billing_address.phoneNumber"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45684,7 +45626,7 @@ var render = function() {
                                     ) +
                                     ">" +
                                     _vm._ssrEscape(
-                                      "\n                            " +
+                                      "\n\t\t\t\t\t\t\t\t" +
                                         _vm._s(
                                           _vm.transformTranslation(
                                             "Ceres::Template.addressENAddressLine2",
@@ -45692,7 +45634,7 @@ var render = function() {
                                             "billing_address.address2"
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n\t\t\t\t\t\t\t"
                                     ) +
                                     "</label>"
                                 )
@@ -45748,7 +45690,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressENAddressLine3",
@@ -45756,7 +45698,7 @@ var render = function() {
                                         "billing_address.address3"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45801,7 +45743,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressENAddressLine4",
@@ -45809,7 +45751,7 @@ var render = function() {
                                         "billing_address.address4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -45842,88 +45784,7 @@ var render = function() {
                 ) +
                 "</label></div></div> "
             ),
-            _vm._ssrNode(
-              '<div data-testing="address-country-select" class="col-12 col-sm-4">',
-              "</div>",
-              [
-                _c("country-select", {
-                  attrs: {
-                    "selected-country-id": _vm.value.countryId,
-                    "selected-state-id": _vm.value.stateId,
-                    "address-type": _vm.addressType,
-                    "optional-address-fields": _vm.optionalAddressFields,
-                    "required-address-fields": _vm.requiredAddressFields
-                  },
-                  on: {
-                    "country-changed": function($event) {
-                      return _vm.onSelectedCountryChanged($event)
-                    },
-                    "state-changed": function($event) {
-                      return _vm.emitInputEvent("stateId", $event)
-                    }
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._ssrNode(" "),
-            _vm._t("custom-address-fields"),
-            _vm._ssrNode(" "),
-            _vm._ssrNode(
-              '<div class="col-12">',
-              "</div>",
-              [
-                _vm._ssrNode('<hr class="mt-0"> '),
-                _vm._ssrNode('<div class="row">', "</div>", [
-                  _vm.isInOptionalFields("gb", "billing_address.email")
-                    ? _vm._ssrNode('<div class="col-12">', "</div>", [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "validate",
-                                rawName: "v-validate:text",
-                                value: _vm.isInRequiredFields(
-                                  "gb",
-                                  "billing_address.email"
-                                ),
-                                expression:
-                                  "isInRequiredFields('gb', 'billing_address.email')",
-                                arg: "text"
-                              }
-                            ],
-                            staticClass: "input-unit",
-                            attrs: { "data-model": "email" }
-                          },
-                          [
-                            _vm._ssrNode(
-                              '<input type="mail" name="email"' +
-                                _vm._ssrAttr("id", "email" + _vm._uid) +
-                                ' data-testing="billing-address-gb-email-input"' +
-                                _vm._ssrAttr("value", _vm.value.email) +
-                                "> <label" +
-                                _vm._ssrAttr("for", "email" + _vm._uid) +
-                                ">" +
-                                _vm._ssrEscape(
-                                  _vm._s(
-                                    _vm.transformTranslation(
-                                      "Ceres::Template.addressMail",
-                                      "gb",
-                                      "billing_address.email"
-                                    )
-                                  )
-                                ) +
-                                "</label>"
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              ],
-              2
-            )
+            _vm._t("custom-address-fields")
           ]
         : _vm.localeToShow == "DE" && _vm.addressType === "2"
         ? [
@@ -45949,29 +45810,45 @@ var render = function() {
                           staticClass: "input-unit"
                         },
                         [
-                          _c("salutation-select", {
-                            attrs: {
-                              id: "txtSalutation" + _vm._uid,
-                              "address-type": _vm.addressType,
-                              "address-data": _vm.value,
-                              "enabled-address-fields":
-                                _vm.optionalAddressFields
-                            },
-                            on: {
-                              input: function($event) {
-                                return _vm.emitInputEvent(
-                                  $event.field,
-                                  $event.value
-                                )
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
                               }
-                            }
-                          }),
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
                           _vm._ssrNode(
                             " <label" +
                               _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
                               ">" +
                               _vm._ssrEscape(
-                                "\n                            " +
+                                "\n\t\t\t\t\t\t\t\t" +
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -45979,7 +45856,7 @@ var render = function() {
                                       "delivery_address.salutation"
                                     )
                                   ) +
-                                  "\n                        "
+                                  "\n\t\t\t\t\t\t\t"
                               ) +
                               "</label>"
                           )
@@ -46107,7 +45984,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTitle",
@@ -46115,7 +45992,7 @@ var render = function() {
                                         "delivery_address.title"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46277,7 +46154,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressContactPerson",
@@ -46285,7 +46162,7 @@ var render = function() {
                                         "delivery_address.contactPerson"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46329,7 +46206,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalName",
@@ -46337,7 +46214,7 @@ var render = function() {
                                         "delivery_address.name4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46376,7 +46253,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTelephone",
@@ -46384,7 +46261,7 @@ var render = function() {
                                         "delivery_address.phoneNumber"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46475,7 +46352,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress1",
@@ -46483,7 +46360,7 @@ var render = function() {
                                         "delivery_address.address3"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46528,7 +46405,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressAdditionalAddress2",
@@ -46536,7 +46413,7 @@ var render = function() {
                                         "delivery_address.address4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -46571,88 +46448,7 @@ var render = function() {
                 ) +
                 "</label></div></div> "
             ),
-            _vm._ssrNode(
-              '<div data-testing="address-country-select" class="col-12 col-sm-4">',
-              "</div>",
-              [
-                _c("country-select", {
-                  attrs: {
-                    "selected-country-id": _vm.value.countryId,
-                    "selected-state-id": _vm.value.stateId,
-                    "address-type": _vm.addressType,
-                    "optional-address-fields": _vm.optionalAddressFields,
-                    "required-address-fields": _vm.requiredAddressFields
-                  },
-                  on: {
-                    "country-changed": function($event) {
-                      return _vm.onSelectedCountryChanged($event)
-                    },
-                    "state-changed": function($event) {
-                      return _vm.emitInputEvent("stateId", $event)
-                    }
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._ssrNode(" "),
-            _vm._t("custom-address-fields"),
-            _vm._ssrNode(" "),
-            _vm._ssrNode(
-              '<div class="col-12">',
-              "</div>",
-              [
-                _vm._ssrNode('<hr class="mt-0"> '),
-                _vm._ssrNode('<div class="row">', "</div>", [
-                  _vm.isInOptionalFields("de", "delivery_address.email")
-                    ? _vm._ssrNode('<div class="col-12">', "</div>", [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "validate",
-                                rawName: "v-validate:text",
-                                value: _vm.isInRequiredFields(
-                                  "de",
-                                  "delivery_address.email"
-                                ),
-                                expression:
-                                  "isInRequiredFields('de', 'delivery_address.email')",
-                                arg: "text"
-                              }
-                            ],
-                            staticClass: "input-unit",
-                            attrs: { "data-model": "email" }
-                          },
-                          [
-                            _vm._ssrNode(
-                              '<input type="mail" name="email"' +
-                                _vm._ssrAttr("id", "email" + _vm._uid) +
-                                ' data-testing="delivery-address-de-email-input"' +
-                                _vm._ssrAttr("value", _vm.value.email) +
-                                "> <label" +
-                                _vm._ssrAttr("for", "email" + _vm._uid) +
-                                ">" +
-                                _vm._ssrEscape(
-                                  _vm._s(
-                                    _vm.transformTranslation(
-                                      "Ceres::Template.addressMail",
-                                      "de",
-                                      "delivery_address.email"
-                                    )
-                                  )
-                                ) +
-                                "</label>"
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              ],
-              2
-            )
+            _vm._t("custom-address-fields")
           ]
         : _vm.localeToShow == "GB" && _vm.addressType === "2"
         ? [
@@ -46678,29 +46474,45 @@ var render = function() {
                           staticClass: "input-unit"
                         },
                         [
-                          _c("salutation-select", {
-                            attrs: {
-                              id: "txtSalutation" + _vm._uid,
-                              "address-type": _vm.addressType,
-                              "address-data": _vm.value,
-                              "enabled-address-fields":
-                                _vm.optionalAddressFields
-                            },
-                            on: {
-                              input: function($event) {
-                                return _vm.emitInputEvent(
-                                  $event.field,
-                                  $event.value
-                                )
+                          _c(
+                            "salutation-select",
+                            {
+                              attrs: {
+                                id: "txtSalutation" + _vm._uid,
+                                "address-type": _vm.addressType,
+                                "address-data": _vm.value,
+                                "enabled-address-fields":
+                                  _vm.optionalAddressFields
+                              },
+                              on: {
+                                input: function($event) {
+                                  return _vm.emitInputEvent(
+                                    $event.field,
+                                    $event.value
+                                  )
+                                }
                               }
-                            }
-                          }),
+                            },
+                            [
+                              _c(
+                                "option",
+                                {
+                                  attrs: {
+                                    value: "",
+                                    disabled: "",
+                                    selected: ""
+                                  }
+                                },
+                                [_vm._v("Anrede")]
+                              )
+                            ]
+                          ),
                           _vm._ssrNode(
                             " <label" +
                               _vm._ssrAttr("for", "txtSalutation" + _vm._uid) +
                               ">" +
                               _vm._ssrEscape(
-                                "\n                            " +
+                                "\n\t\t\t\t\t\t\t\t" +
                                   _vm._s(
                                     _vm.transformTranslation(
                                       "Ceres::Template.addressSalutation",
@@ -46708,7 +46520,7 @@ var render = function() {
                                       "delivery_address.salutation"
                                     )
                                   ) +
-                                  "\n                        "
+                                  "\n\t\t\t\t\t\t\t"
                               ) +
                               "</label>"
                           )
@@ -46836,7 +46648,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTitle" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTitle",
@@ -46844,7 +46656,7 @@ var render = function() {
                                         "delivery_address.title"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47005,7 +46817,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressContactPerson",
@@ -47013,7 +46825,7 @@ var render = function() {
                                         "delivery_address.contactPerson"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47057,7 +46869,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressGBNameAffix",
@@ -47065,7 +46877,7 @@ var render = function() {
                                         "delivery_address.name4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47104,7 +46916,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtTelephone" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressTelephone",
@@ -47112,7 +46924,7 @@ var render = function() {
                                         "delivery_address.phoneNumber"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47176,7 +46988,7 @@ var render = function() {
                                 _vm._ssrAttr("for", "txtNumber" + _vm._uid) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressENAddressLine2",
@@ -47184,7 +46996,7 @@ var render = function() {
                                         "delivery_address.address2"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47238,7 +47050,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressENAddressLine3",
@@ -47246,7 +47058,7 @@ var render = function() {
                                         "delivery_address.address3"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47291,7 +47103,7 @@ var render = function() {
                                 ) +
                                 ">" +
                                 _vm._ssrEscape(
-                                  "\n                            " +
+                                  "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
                                       _vm.transformTranslation(
                                         "Ceres::Template.addressENAddressLine4",
@@ -47299,7 +47111,7 @@ var render = function() {
                                         "delivery_address.address4"
                                       )
                                     ) +
-                                    "\n                        "
+                                    "\n\t\t\t\t\t\t\t"
                                 ) +
                                 "</label>"
                             )
@@ -47332,90 +47144,53 @@ var render = function() {
                 ) +
                 "</label></div></div> "
             ),
-            _vm._ssrNode(
-              '<div data-testing="address-country-select" class="col-12 col-sm-4">',
-              "</div>",
-              [
-                _c("country-select", {
-                  attrs: {
-                    "selected-country-id": _vm.value.countryId,
-                    "selected-state-id": _vm.value.stateId,
-                    "address-type": _vm.addressType,
-                    "optional-address-fields": _vm.optionalAddressFields,
-                    "required-address-fields": _vm.requiredAddressFields
-                  },
-                  on: {
-                    "country-changed": function($event) {
-                      return _vm.onSelectedCountryChanged($event)
-                    },
-                    "state-changed": function($event) {
-                      return _vm.emitInputEvent("stateId", $event)
-                    }
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._ssrNode(" "),
-            _vm._t("custom-address-fields"),
-            _vm._ssrNode(" "),
-            _vm._ssrNode(
-              '<div class="col-12">',
-              "</div>",
-              [
-                _vm._ssrNode('<hr class="mt-0"> '),
-                _vm._ssrNode('<div class="row">', "</div>", [
-                  _vm.isInOptionalFields("gb", "delivery_address.email")
-                    ? _vm._ssrNode('<div class="col-12">', "</div>", [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "validate",
-                                rawName: "v-validate:text",
-                                value: _vm.isInRequiredFields(
-                                  "gb",
-                                  "delivery_address.email"
-                                ),
-                                expression:
-                                  "isInRequiredFields('gb', 'delivery_address.email')",
-                                arg: "text"
-                              }
-                            ],
-                            staticClass: "input-unit",
-                            attrs: { "data-model": "email" }
-                          },
-                          [
-                            _vm._ssrNode(
-                              '<input type="mail" name="email"' +
-                                _vm._ssrAttr("id", "email" + _vm._uid) +
-                                ' data-testing="delivery-address-gb-email-input"' +
-                                _vm._ssrAttr("value", _vm.value.email) +
-                                "> <label" +
-                                _vm._ssrAttr("for", "email" + _vm._uid) +
-                                ">" +
-                                _vm._ssrEscape(
-                                  _vm._s(
-                                    _vm.transformTranslation(
-                                      "Ceres::Template.addressMail",
-                                      "gb",
-                                      "delivery_address.email"
-                                    )
-                                  )
-                                ) +
-                                "</label>"
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              ],
-              2
-            )
+            _vm._t("custom-address-fields")
           ]
-        : _vm._e()
+        : _vm._e(),
+      _vm._ssrNode(" "),
+      _vm._ssrNode(
+        '<div data-testing="address-country-select" class="col-12 col-sm-4">',
+        "</div>",
+        [
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "validate",
+                  rawName: "v-validate",
+                  value: _vm.isInRequiredFields(
+                    "de",
+                    "delivery_address.salutation"
+                  ),
+                  expression:
+                    "isInRequiredFields('de', 'delivery_address.salutation')"
+                }
+              ]
+            },
+            [
+              _c("country-select", {
+                attrs: {
+                  "selected-country-id": _vm.value.countryId,
+                  "selected-state-id": _vm.value.stateId,
+                  "address-type": _vm.addressType,
+                  "optional-address-fields": _vm.optionalAddressFields,
+                  "required-address-fields": _vm.requiredAddressFields
+                },
+                on: {
+                  "country-changed": function($event) {
+                    return _vm.onSelectedCountryChanged($event)
+                  },
+                  "state-changed": function($event) {
+                    return _vm.emitInputEvent("stateId", $event)
+                  }
+                }
+              })
+            ],
+            1
+          )
+        ]
+      )
     ],
     2
   )
@@ -47535,9 +47310,7 @@ var render = function() {
               _vm._ssrAttr("selected", country.id === _vm.selectedCountryId) +
               ">" +
               _vm._ssrEscape(
-                "\n                " +
-                  _vm._s(country.currLangName) +
-                  "\n            "
+                "\n\t\t\t\t\t" + _vm._s(country.currLangName) + "\n\t\t\t\t"
               ) +
               "</option>"
             )
@@ -47593,9 +47366,9 @@ var render = function() {
                             ) +
                             ">" +
                             _vm._ssrEscape(
-                              "\n                    " +
+                              "\n\t\t\t\t\t\t" +
                                 _vm._s(state.name) +
-                                "\n                "
+                                "\n\t\t\t\t\t"
                             ) +
                             "</option>"
                           )
@@ -47752,7 +47525,7 @@ var render = function() {
                             key: "title",
                             fn: function() {
                               return [
-                                _c("div", [
+                                _c("div", { staticClass: "kk-heading" }, [
                                   _vm._v(
                                     "\n                            " +
                                       _vm._s(
@@ -47809,7 +47582,7 @@ var render = function() {
                         ],
                         null,
                         false,
-                        303377206
+                        3448734965
                       )
                     }),
                     _vm._ssrNode(
@@ -47868,8 +47641,7 @@ var render = function() {
                       "address-type": "1",
                       value: _vm.billingAddress,
                       "optional-address-fields": _vm.shownFields,
-                      "required-address-fields": _vm.requiredFields,
-                      "default-salutation": _vm.defaultSalutation
+                      "required-address-fields": _vm.requiredFields
                     },
                     on: {
                       input: function($event) {
@@ -48176,20 +47948,16 @@ var render = function() {
     },
     [
       _vm._ssrNode(
-        _vm._ssrList(_vm.currentSalutation, function(salutation, index) {
-          return (
-            "<option" +
-            _vm._ssrAttr("value", salutation.key) +
-            _vm._ssrAttr(
-              "selected",
-              _vm.addressData.gender === salutation.key &&
-                _vm.checkGenderCompany(salutation.key)
-            ) +
-            ">" +
-            _vm._ssrEscape("\n        " + _vm._s(salutation.name) + "\n    ") +
-            "</option>"
-          )
-        })
+        '<option value disabled="disabled" selected="selected" hidden="hidden">Anrede</option> ' +
+          _vm._ssrList(_vm.currentSalutation, function(salutation, index) {
+            return (
+              "<option" +
+              _vm._ssrAttr("value", salutation.key) +
+              ">" +
+              _vm._ssrEscape("\n\t\t\t" + _vm._s(salutation.name) + "\n\t\t") +
+              "</option>"
+            )
+          })
       )
     ]
   )
@@ -48506,6 +48274,35 @@ var render = function() {
             ) +
             "</span> "
         ),
+        _vm.enableConfirmingPrivacyPolicy
+          ? _vm._ssrNode(
+              '<div class="col-12 p-0">',
+              "</div>",
+              [
+                _c("accept-privacy-policy-check", {
+                  staticClass: "my-3 mb-0",
+                  attrs: {
+                    type: "guest-login",
+                    "show-error": _vm.privacyPolicyShowError
+                  },
+                  on: {
+                    input: function($event) {
+                      return _vm.privacyPolicyValueChanged($event)
+                    }
+                  },
+                  model: {
+                    value: _vm.privacyPolicyAccepted,
+                    callback: function($$v) {
+                      _vm.privacyPolicyAccepted = $$v
+                    },
+                    expression: "privacyPolicyAccepted"
+                  }
+                })
+              ],
+              1
+            )
+          : _vm._e(),
+        _vm._ssrNode(" "),
         _vm._ssrNode('<div class="text-right">', "</div>", [
           _vm._ssrNode(
             "<button" +
@@ -48569,7 +48366,7 @@ var render = function() {
         _vm._ssrNode(
           "<div" +
             _vm._ssrClass(null, { "modal-body": _vm.modalElement }) +
-            '><div class="row"><div class="col-12"><div data-validate="mail" class="input-unit"><input data-testing="email-login" type="email" name="email" autocomplete="email"' +
+            '><div class="row"><div class="col-12"><div data-validate="mail" class="input-unit"><input type="email" name="email" autocomplete="email"' +
             _vm._ssrAttr("id", "email" + _vm._uid) +
             " data-autofocus" +
             _vm._ssrAttr("value", _vm.username) +
@@ -48584,8 +48381,8 @@ var render = function() {
               _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
             ) +
             '</span></div> <div class="col-12"><div data-validate="text"' +
-            _vm._ssrClass("input-unit", { "no-bottom": _vm.modalElement }) +
-            '><input data-testing="password-login" type="password" name="password" autocomplete="current-password"' +
+            _vm._ssrClass("input-unit ", { "no-bottom": _vm.modalElement }) +
+            '><input type="password" name="password" autocomplete="current-password"' +
             _vm._ssrAttr("id", "password" + _vm._uid) +
             _vm._ssrAttr("value", _vm.password) +
             "> <label" +
@@ -48604,15 +48401,15 @@ var render = function() {
           "<div" +
             _vm._ssrClass(null, {
               "modal-footer justify-content-between": _vm.modalElement,
-              row: !_vm.modalElement
+              "login-form-footer": !_vm.modalElement
             }) +
             ">",
           "</div>",
           [
             _vm._ssrNode(
               "<div" +
-                _vm._ssrClass(null, { "col-7 col-sm-4": !_vm.modalElement }) +
-                '><a href="javascript:void(0)" class="small text-appearance">' +
+                _vm._ssrClass(null, { "": !_vm.modalElement }) +
+                ' style="margin-bottom: 0.3rem;"><a href="javascript:void(0)" class="small text-appearance">' +
                 _vm._ssrEscape(
                   _vm._s(
                     _vm.$translate("Ceres::Template.loginForgotPassword")
@@ -48623,7 +48420,7 @@ var render = function() {
             _vm._ssrNode(
               "<div" +
                 _vm._ssrClass(null, {
-                  "col-5 col-sm-8 text-sm-right": !_vm.modalElement
+                  "d-flex text-sm-right": !_vm.modalElement
                 }) +
                 ">",
               "</div>",
@@ -48631,7 +48428,7 @@ var render = function() {
                 _vm._t("extend-overlay-buttons"),
                 _vm._ssrNode(" "),
                 _vm._ssrNode(
-                  '<button data-testing="submit-login"' +
+                  "<button" +
                     _vm._ssrAttr("disabled", _vm.isDisabled) +
                     _vm._ssrClass("btn btn-primary btn-appearance btn-medium", [
                       { "float-right": !_vm.modalElement },
@@ -48642,9 +48439,9 @@ var render = function() {
                   [
                     _vm._ssrNode(
                       _vm._ssrEscape(
-                        "\n                    " +
+                        "\n\t\t\t\t\t\t" +
                           _vm._s(_vm.$translate("Ceres::Template.login")) +
-                          "\n                    "
+                          "\n\t\t\t\t\t\t"
                       )
                     ),
                     _c("icon", {
@@ -48652,6 +48449,45 @@ var render = function() {
                     })
                   ],
                   2
+                ),
+                _vm._ssrNode(" "),
+                _vm._ssrNode(
+                  "<div" +
+                    _vm._ssrClass(null, {
+                      btn: _vm.modalElement,
+                      "d-none": !_vm.modalElement
+                    }) +
+                    ' style="width:140px">',
+                  "</div>",
+                  [
+                    _vm._ssrNode(
+                      "<div onclick=\"$('.close').click(); $('.basket-preview-wrapper').hide(); event.preventDefault()\">",
+                      "</div>",
+                      [
+                        _c("user-login-handler", {
+                          staticClass: "register-btn-none",
+                          attrs: {
+                            "show-login": false,
+                            "show-registration": true
+                          }
+                        }),
+                        _vm._ssrNode(
+                          ' <a data-testing="register-select" data-toggle="modal" href="#registration" class="btn btn-primary btn-appearance btn-medium register-btn" style="color:#FFFFFF"><i aria-hidden="true" class="fa fa-user-plus"></i>' +
+                            _vm._ssrEscape(
+                              "\n\t\t\t\t\t\t\t\t" +
+                                _vm._s(
+                                  _vm.$translate(
+                                    "Ceres::Template.loginRegister"
+                                  )
+                                ) +
+                                "\n\t\t\t\t\t\t\t"
+                            ) +
+                            "</a>"
+                        )
+                      ],
+                      2
+                    )
+                  ]
                 )
               ],
               2
@@ -48700,7 +48536,7 @@ var render = function() {
               "</div>",
               [
                 _vm._ssrNode(
-                  '<h1 class="login-view-title mb-5">' +
+                  '<br> <h1 class="login-view-title kk-heading">' +
                     _vm._ssrEscape(
                       _vm._s(_vm.$translate("Ceres::Template.login"))
                     ) +
@@ -48741,19 +48577,19 @@ var render = function() {
                 _vm._ssrAttr("href", _vm.registrationUrl) +
                 ' class="btn btn-primary btn-block mb-3"><i aria-hidden="true" class="fa fa-user-plus"></i>' +
                 _vm._ssrEscape(
-                  "\n                        " +
+                  "\n\t\t\t\t\t\t\t" +
                     _vm._s(_vm.$translate("Ceres::Template.loginRegister")) +
-                    "\n                    "
+                    "\n\t\t\t\t\t\t"
                 ) +
                 "</a></div> " +
                 (!_vm.myAccountInBacklink
                   ? '<div class="col-sm-6"><button class="btn btn-primary btn-block mb-3"><i aria-hidden="true" class="fa fa-shopping-bag"></i>' +
                     _vm._ssrEscape(
-                      "\n                        " +
+                      "\n\t\t\t\t\t\t\t" +
                         _vm._s(
                           _vm.$translate("Ceres::Template.loginOrderAsGuest")
                         ) +
-                        "\n                    "
+                        "\n\t\t\t\t\t\t"
                     ) +
                     "</button></div>"
                   : "<!---->") +
@@ -48781,12 +48617,16 @@ var render = function() {
                         _vm.$translate("Ceres::Template.loginOrderAsGuest")
                       )
                     ) +
+<<<<<<< HEAD
                     '</div> <button type="button" data-testing="guest-login-modal" data-dismiss="modal" aria-hidden="true"' +
                     _vm._ssrAttr(
                       "aria-label",
                       _vm.$translate("Ceres::Template.closeIcon")
                     ) +
                     ' class="close">×</button></div> '
+=======
+                    '</div> <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button></div> '
+>>>>>>> bugfix/IT-3062/guest-login
                 ),
                 _vm._ssrNode(
                   '<div class="modal-body">',
@@ -49041,11 +48881,19 @@ var render = function() {
     {
       directives: [{ name: "tooltip", rawName: "v-tooltip" }],
       ref: "addToWishList",
+<<<<<<< HEAD
       staticClass: "btn btn-link btn-sm text-muted",
       attrs: {
         "data-toggle": "tooltip",
         "data-placement": "top",
         title: _vm.tooltipText
+=======
+      staticClass: "btn btn-link btn-sm text-muted btn-wish-list",
+      attrs: {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "zu Wunschliste hinzufügen"
+>>>>>>> bugfix/IT-3062/guest-login
       },
       on: {
         click: function($event) {
@@ -49055,20 +48903,16 @@ var render = function() {
       }
     },
     [
-      _c("icon", {
-        staticClass: "default-float",
-        class: { "text-appearance text-danger": _vm.isVariationInWishList },
-        attrs: { icon: "heart", loading: _vm.isLoading }
-      }),
       _vm._ssrNode(
-        _vm._ssrEscape(
-          "\n    " +
-            _vm._s(_vm.$translate("Ceres::Template.singleItemWishList")) +
-            "\n"
-        )
+        (_vm.isVariationInWishList
+          ? '<img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png"' +
+            _vm._ssrAttr("loading", _vm.isLoading) +
+            ' class="default-float wishlist-icon">'
+          : '<img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png"' +
+            _vm._ssrAttr("loading", _vm.isLoading) +
+            ' class="default-float wishlist-icon">') + "\n    Wunschliste\n"
       )
-    ],
-    2
+    ]
   )
 }
 var staticRenderFns = []
@@ -49418,51 +49262,60 @@ var render = function() {
     "div",
     { attrs: { itemscope: "", itemtype: "http://schema.org/Thing" } },
     [
-      [
-        _vm._ssrNode(
-          '<div class="single-carousel owl-carousel owl-theme owl-single-item mt-0">' +
-            _vm._ssrList(_vm.singleImages, function(image) {
-              return (
-                '<div class="prop-1-1"><a' +
-                _vm._ssrAttr("href", image.url) +
-                _vm._ssrAttr("data-lightbox", "single-item-image" + _vm._uid) +
-                "><img" +
-                _vm._ssrAttr("data-src", image.url) +
-                _vm._ssrAttr("alt", _vm.getAltText(image)) +
-                _vm._ssrAttr("title", _vm.getImageName(image)) +
-                ' class="owl-lazy"></a></div>'
-              )
-            }) +
-            "</div> "
-        ),
-        _vm.showThumbs
-          ? _vm._ssrNode(
-              '<div id="thumb-carousel" class="owl-thumbs owl-carousel owl-theme owl-single-item">',
-              "</div>",
-              _vm._l(_vm.carouselImages, function(imagePreview, index) {
-                return _vm._ssrNode('<div class="prop-1-1">', "</div>", [
-                  _vm._ssrNode(
-                    '<div class="image-container">',
-                    "</div>",
-                    [
-                      _c("lazy-img", {
-                        class: { active: _vm.currentItem === index },
-                        attrs: {
-                          "picture-class": "owl-thumb border-appearance",
-                          "image-url": imagePreview.url,
-                          alt: _vm.getAltText(imagePreview),
-                          title: _vm.getImageName(imagePreview)
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ])
-              }),
-              0
+      _vm._ssrNode(
+        '<link rel="preload" as="image"' +
+          _vm._ssrAttr("href", _vm.singleImages[0].url) +
+          "> "
+      ),
+      _vm._ssrNode(
+        '<div class="single-item-wishlist">',
+        "</div>",
+        [_c("add-to-wish-list-icon")],
+        1
+      ),
+      _vm._ssrNode(
+        ' <div class="single-carousel owl-carousel owl-theme owl-single-item mt-0">' +
+          _vm._ssrList(_vm.singleImages, function(image, i) {
+            return (
+              '<div class="prop-1-1"><a' +
+              _vm._ssrAttr("href", image.url) +
+              _vm._ssrAttr("data-lightbox", "single-item-image" + _vm._uid) +
+              ' class="single-item-image"><img' +
+              _vm._ssrAttr("src", image.url) +
+              _vm._ssrAttr("alt", _vm.getAltText(image)) +
+              _vm._ssrAttr("title", _vm.getImageName(image)) +
+              "></a></div>"
             )
-          : _vm._e()
-      ],
+          }) +
+          "</div> "
+      ),
+      _vm.showThumbs
+        ? _vm._ssrNode(
+            '<div id="thumb-carousel" class="owl-thumbs owl-carousel owl-theme owl-single-item">',
+            "</div>",
+            _vm._l(_vm.carouselImages, function(imagePreview, index) {
+              return _vm._ssrNode('<div class="prop-1-1">', "</div>", [
+                _vm._ssrNode(
+                  '<div class="image-container">',
+                  "</div>",
+                  [
+                    _c("lazy-img", {
+                      class: { active: _vm.currentItem === index },
+                      attrs: {
+                        "picture-class": "owl-thumb border-appearance",
+                        "image-url": imagePreview.url,
+                        alt: _vm.getAltText(imagePreview),
+                        title: _vm.getImageName(imagePreview)
+                      }
+                    })
+                  ],
+                  1
+                )
+              ])
+            }),
+            0
+          )
+        : _vm._e(),
       _vm._ssrNode(
         " " +
           (!_vm.initialized
@@ -52412,7 +52265,7 @@ var render = function() {
     "article",
     {
       staticClass: "cmp cmp-product-thumb",
-      attrs: { "data-testing": _vm.item.variation.id }
+      class: "cmp-availability-" + _vm.item.variation.availability.id
     },
     [
       _vm._ssrNode(
@@ -52424,7 +52277,6 @@ var render = function() {
         [
           _c("add-to-basket", {
             attrs: {
-              "data-testing": "item-add-to-basket",
               "variation-id": _vm.item.variation.id,
               "is-salable": !!_vm.item.filter && _vm.item.filter.isSalable,
               "has-children":
@@ -52453,6 +52305,17 @@ var render = function() {
             }
           }),
           _vm._ssrNode(" "),
+          _vm._ssrNode(
+            '<div class="d-lg-none">',
+            "</div>",
+            [
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.item.variation.id }
+              })
+            ],
+            1
+          ),
+          _vm._ssrNode(" "),
           _vm._ssrNode('<div class="thumb-image">', "</div>", [
             _vm._ssrNode(
               '<div class="prop-1-1">',
@@ -52466,8 +52329,16 @@ var render = function() {
                         _vm.item.images,
                         _vm.imageUrlAccessor
                       ),
-                      alt: _vm._f("itemName")(_vm.item),
-                      title: _vm._f("itemName")(_vm.item),
+                      "alt-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "title-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
                       "item-url": _vm._f("itemURL")(
                         _vm.item,
                         _vm.urlWithVariationId
@@ -52484,18 +52355,25 @@ var render = function() {
           ]),
           _vm._ssrNode(" "),
           _vm._t("store-special", [
-            _vm.storeSpecial ||
-            _vm.item.variation.bundleType === "bundle" ||
-            _vm.item.item.itemType === "set"
-              ? _c("item-store-special", {
+            (_vm.item.prices.specialOffer &&
+              _vm.item.prices.default.price.value >
+                _vm.item.prices.specialOffer.unitPrice.value) ||
+            (_vm.item.prices.rrp &&
+              _vm.item.prices.rrp.price.value >
+                _vm.item.prices.default.unitPrice.value)
+              ? _c("img", {
+                  staticClass: "store-special",
                   attrs: {
-                    "store-special": _vm.storeSpecial,
-                    "recommended-retail-price": _vm.item.prices.rrp,
-                    "variation-retail-price": _vm.item.prices.default,
-                    "special-offer-price": _vm.item.prices.specialOffer,
-                    "decimal-count": _vm.decimalCount,
-                    "bundle-type": _vm.item.variation.bundleType,
-                    "item-type": _vm.item.item.itemType
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png"
+                  }
+                })
+              : _vm.item.item.condition.id === 0
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png"
                   }
                 })
               : _vm._e()
@@ -52519,60 +52397,54 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm._f("itemName")(_vm.item))
-                    ),
-                    _vm._l(_vm.item.groupedAttributes, function(attribute) {
-                      return _c("span", [
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("translate")(
-                              "Ceres::Template.itemGroupedAttribute",
-                              attribute
-                            )
-                          )
-                        )
-                      ])
-                    })
-                  ],
-                  2
+                    _c("span", { staticClass: "category-item-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name2, "50"))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "category-item-sub-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name3, "20"))
+                      )
+                    ])
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "thumb-meta mt-2" },
+                  {
+                    staticClass:
+                      "d-flex justify-content-between align-items-end"
+                  },
                   [
-                    _vm._t("before-prices"),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "prices" }, [
-                      _vm.item.prices.rrp &&
-                      _vm.item.prices.rrp.price.value > 0 &&
-                      _vm.item.prices.rrp.price.value >
-                        _vm.item.prices.default.unitPrice.value
-                        ? _c("div", { staticClass: "price-view-port" }, [
-                            _vm.item.prices.specialOffer
-                              ? _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.default.unitPrice
-                                            .formatted,
-                                          true
+                    _c(
+                      "div",
+                      { staticClass: "thumb-meta mt-2" },
+                      [
+                        _vm._t("before-prices"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "prices" }, [
+                          _c(
+                            "div",
+                            { staticClass: "price-view-port" },
+                            [
+                              (_vm.item.prices.specialOffer &&
+                                _vm.item.prices.default.price.value >
+                                  _vm.item.prices.specialOffer.unitPrice
+                                    .value) ||
+                              (_vm.item.prices.rrp &&
+                                _vm.item.prices.rrp.price.value >
+                                  _vm.item.prices.default.unitPrice.value)
+                                ? [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale"
+                                          )
                                         )
-                                      ) +
-                                      "\n                            "
-                                  )
-                                ])
-                              : _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.rrp.unitPrice
-                                            .formatted
-                                        )
+<<<<<<< HEAD
                                       ) +
                                       "\n                            "
                                   )
@@ -52666,10 +52538,127 @@ var render = function() {
                         2
                       )
                     ])
+=======
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm.item.prices.rrp.price.value >
+                                    _vm.item.prices.default.unitPrice.value
+                                      ? _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.rrp
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                      : _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.default
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                  ]
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "price" },
+                            [
+                              _vm.item.item.itemType === "set"
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.itemSetPrice",
+                                            { price: _vm.itemSetPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : !!_vm.item.item &&
+                                  _vm.item.item.salableVariationCount > 1 &&
+                                  _vm.$ceres.isCheapestSorting
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.categoryItemFromPrice",
+                                            { price: _vm.itemPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnly"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("specialOffer")(
+                                            _vm.item.prices.default.unitPrice
+                                              .formatted,
+                                            _vm.item.prices,
+                                            "unitPrice",
+                                            "formatted"
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ])
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _vm._t("after-prices"),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "availability",
+                      class:
+                        "availability-" + _vm.item.variation.availability.id
+                    })
+>>>>>>> bugfix/IT-3062/guest-login
                   ],
                   2
                 ),
                 _vm._v(" "),
+<<<<<<< HEAD
                 _vm._t("after-prices"),
                 _vm._v(" "),
                 _vm.item.prices.default.lowestPrice.value && _vm.hasCrossPrice
@@ -52704,6 +52693,8 @@ var render = function() {
                     ])
                   : _vm._e(),
                 _vm._v(" "),
+=======
+>>>>>>> bugfix/IT-3062/guest-login
                 _c("add-to-basket", {
                   attrs: {
                     "variation-id": _vm.item.variation.id,
@@ -52740,6 +52731,7 @@ var render = function() {
                       _vm.itemGraduatedPricesalableVariationCount,
                     "item-type": _vm.item.item.itemType
                   }
+<<<<<<< HEAD
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "vat small text-muted" }, [
@@ -52807,8 +52799,11 @@ var render = function() {
                         ]
                       )
                 ])
+=======
+                })
+>>>>>>> bugfix/IT-3062/guest-login
               ],
-              2
+              1
             )
           ])
         ],
@@ -52846,6 +52841,7 @@ var render = function() {
       class: { "p-0": _vm.$ceres.isShopBuilder }
     },
     [
+<<<<<<< HEAD
       _vm._ssrNode(
         '<div class="position-relative">',
         "</div>",
@@ -52942,6 +52938,53 @@ var render = function() {
         ],
         2
       )
+=======
+      _vm._ssrNode('<div class="position-relative">', "</div>", [
+        _vm._ssrNode(
+          '<div class="d-flex flex-grow-1 position-relative clearable">',
+          "</div>",
+          [
+            _vm._ssrNode(
+              '<input type="text" id="query" name="q" placeholder="Wonach suchst Du?" class="search-input flex-grow-1"> <i class="clearable__clear">×</i> <button type="button" onclick="buttonOnClick(this)" class="search-button"><img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png"></button> '
+            ),
+            _vm.isSearchFocused
+              ? [
+                  _vm._ssrNode(
+                    "<div" +
+                      _vm._ssrStyle(null, null, {
+                        display: _vm.hasAutocompleteResults ? "" : "none"
+                      }) +
+                      ">",
+                    "</div>",
+                    [
+                      _vm._t("autocomplete-suggestions", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "autocomplete-suggestions shadow bg-white w-100 "
+                          },
+                          [
+                            _c("search-suggestion-item", {
+                              attrs: {
+                                "show-images": true,
+                                "suggestion-type": "item"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ],
+                    2
+                  )
+                ]
+              : _vm._e()
+          ],
+          2
+        )
+      ])
+>>>>>>> bugfix/IT-3062/guest-login
     ]
   )
 }
@@ -53437,89 +53480,51 @@ var render = function() {
       _vm._ssrNode(
         '<div class="h3 live-shopping-item-name"><a' +
           _vm._ssrAttr("href", _vm._f("itemURL")(_vm.liveShoppingData.item)) +
-          ">" +
+          '><div class="two-lines-of-text">' +
           _vm._ssrEscape(
-            "\n            " +
-              _vm._s(_vm._f("itemName")(_vm.liveShoppingData.item)) +
-              "\n        "
+            "\n                " +
+              _vm._s(
+                (
+                  _vm.liveShoppingData.item.texts.name1.match(/[^\ - ]+ -/) || [
+                    ""
+                  ]
+                ).pop()
+              ) +
+              " \n                " +
+              _vm._s(_vm.liveShoppingData.item.texts.name2) +
+              "\n            "
           ) +
-          "</a></div> "
-      ),
-      _vm._t("after-item-name"),
-      _vm._ssrNode(
-        " " +
-          (_vm.displaySettings.showTimer || _vm.displaySettings.showStock
-            ? '<div class="live-shopping-countdown"><hr class="live-shopping-countdown-separator"> ' +
-              (_vm.displaySettings.showTimer
-                ? '<div class="live-shopping-countdown-heading">' +
-                  (_vm.hasStarted
-                    ? "<div>" +
-                      _vm._ssrEscape(
-                        "\n                " +
-                          _vm._s(
-                            _vm.$translate(
-                              "Ceres::Template.liveShoppingOfferEndsIn"
-                            )
-                          ) +
-                          "\n            "
-                      ) +
-                      "</div>"
-                    : "<div>" +
-                      _vm._ssrEscape(
-                        "\n                " +
-                          _vm._s(
-                            _vm.$translate(
-                              "Ceres::Template.liveShoppingOfferBeginsIn"
-                            )
-                          ) +
-                          "\n            "
-                      ) +
-                      "</div>") +
-                  "</div>"
-                : "<!---->") +
-              " " +
-              (_vm.displaySettings.showTimer && !!_vm.duration
-                ? '<div class="live-shopping-countdown-thread-container">' +
-                  (_vm.duration.days > 0
-                    ? '<div class="live-shopping-countdown-thread"><div class="live-shopping-countdown-thread-number">' +
-                      _vm._ssrEscape(_vm._s(_vm.duration.days)) +
-                      '</div> <div class="small">' +
+          '</div> <span class="live-shopping-item-name-condition two-lines-of-text">' +
+          _vm._ssrEscape(_vm._s(_vm.liveShoppingData.item.texts.name3)) +
+          "</span></a></div> " +
+          (_vm.hasStarted
+            ? '<div class="live-shopping-prices"><div class="live-shopping-prices-inner"><div class="live-shopping-prices-container">' +
+              (_vm.displaySettings.showCrossPrice &&
+              _vm.prices.rrp &&
+              _vm.prices.rrp.unitPrice.value > 0
+                ? "<span>" +
+                  (_vm.liveShoppingData.item.prices.default.unitPrice.value >
+                  _vm.liveShoppingData.item.prices.rrp.unitPrice.value
+                    ? "<span>\n                        statt <del>" +
                       _vm._ssrEscape(
                         _vm._s(
-                          _vm.$translate("Ceres::Template.liveShoppingDays")
+                          _vm.liveShoppingData.item.prices.default.unitPrice
+                            .formatted
                         )
                       ) +
-                      "</div></div>"
-                    : "<!---->") +
-                  ' <div class="live-shopping-countdown-thread"><div class="live-shopping-countdown-thread-number">' +
-                  _vm._ssrEscape(_vm._s(_vm.duration.hours)) +
-                  '</div> <div class="small">' +
-                  _vm._ssrEscape(
-                    _vm._s(_vm.$translate("Ceres::Template.liveShoppingHours"))
-                  ) +
-                  '</div></div> <div class="live-shopping-countdown-thread"><div class="live-shopping-countdown-thread-number">' +
-                  _vm._ssrEscape(_vm._s(_vm.duration.minutes)) +
-                  '</div> <div class="small">' +
-                  _vm._ssrEscape(
-                    _vm._s(
-                      _vm.$translate("Ceres::Template.liveShoppingMinutes")
-                    )
-                  ) +
-                  "</div></div> " +
-                  (_vm.duration.days <= 0
-                    ? '<div class="live-shopping-countdown-thread"><div class="live-shopping-countdown-thread-number">' +
-                      _vm._ssrEscape(_vm._s(_vm.duration.seconds)) +
-                      '</div> <div class="small">' +
+                      "</del></span>"
+                    : "<span>\n                        statt <del>" +
                       _vm._ssrEscape(
                         _vm._s(
-                          _vm.$translate("Ceres::Template.liveShoppingSeconds")
+                          _vm.liveShoppingData.item.prices.rrp.unitPrice
+                            .formatted
                         )
                       ) +
-                      "</div></div>"
-                    : "<!---->") +
-                  "</div>"
+                      "</del></span>") +
+                  "</span>"
                 : "<!---->") +
               " " +
+<<<<<<< HEAD
               (_vm.hasStarted && !_vm.hasClosed
                 ? (_vm.displaySettings.showTimer &&
                   _vm.displaySettings.showTimerProgress
@@ -53611,6 +53616,18 @@ var render = function() {
                   "</span></div>"
                 : "<!---->") +
               " " +
+=======
+              (_vm.displaySettings.showCrossPrice &&
+              _vm.prices.rrp &&
+              _vm.prices.rrp.unitPrice.value === 0
+                ? "<span><span> </span></span>"
+                : "<!---->") +
+              ' <div class="live-shopping-price"><strong><span class="d-none d-lg-inline">heute </span>' +
+              _vm._ssrEscape(
+                "nur " + _vm._s(_vm.prices.price.unitPrice.formatted)
+              ) +
+              '</strong></div></div></div> <div class="live-shopping-prices-additional-info">' +
+>>>>>>> bugfix/IT-3062/guest-login
               (!(
                 _vm.liveShoppingData.item.unit.unitOfMeasurement === "C62" &&
                 _vm.liveShoppingData.item.unit.content === 1
@@ -53633,6 +53650,7 @@ var render = function() {
                     : "<!---->") +
                   "</div>"
                 : "<!---->") +
+<<<<<<< HEAD
               _vm._ssrEscape(
                 "\n\n            " +
                   _vm._s(
@@ -53640,6 +53658,9 @@ var render = function() {
                   ) +
                   " "
               ) +
+=======
+              " " +
+>>>>>>> bugfix/IT-3062/guest-login
               (_vm.showNetPrices
                 ? _vm._ssrEscape(
                     _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
@@ -53653,7 +53674,7 @@ var render = function() {
                   "\n            "
               ) +
               (_vm.$ceres.config.global.shippingCostsCategoryId > 0
-                ? '<a data-toggle="modal" href="#shippingscosts"' +
+                ? '<a href="https://www.konsolenkost.de/versand"' +
                   _vm._ssrAttr(
                     "title",
                     _vm.$translate("Ceres::Template.itemShippingCosts")
@@ -53674,6 +53695,73 @@ var render = function() {
                   ) +
                   "</a>") +
               "</div></div>"
+            : "<!---->") +
+          " " +
+          (!_vm.hasClosed
+            ? "<div><a" +
+              _vm._ssrAttr(
+                "href",
+                _vm._f("itemURL")(_vm.liveShoppingData.item)
+              ) +
+              ' class="btn btn-primary d-block d-lg-inline-block my-lg-3">\n            Will ich haben <span class="d-none d-lg-inline">&gt;</span></a></div>'
+            : '<div><a class="btn btn-primary btn-danger text-white d-block d-lg-inline-block my-lg-3">\n           AUSVERKAUFT* <span class="d-none d-lg-inline"></span></a></div>') +
+          " "
+      ),
+      _vm._t("after-item-name"),
+      _vm._ssrNode(
+        " " +
+          (_vm.displaySettings.showTimer || _vm.displaySettings.showStock
+            ? '<div class="live-shopping-countdown">' +
+              (_vm.hasStarted && !_vm.hasClosed
+                ? _vm.displaySettings.showStock
+                  ? '<div class="live-shopping-progress">' +
+                    (_vm.displaySettings.showStockProgress
+                      ? '<div class="progress">' +
+                        (_vm.liveShoppingData.liveShopping.quantitySold <
+                        _vm.liveShoppingData.liveShopping.quantityMax
+                          ? '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"' +
+                            _vm._ssrClass(
+                              "progress-bar",
+                              "progress-" +
+                                Math.round(_vm.quantitySoldPercentage / 10) * 10
+                            ) +
+                            _vm._ssrStyle(
+                              null,
+                              "width:" + _vm.quantitySoldPercentage + "%",
+                              null
+                            ) +
+                            "></div>"
+                          : '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar-done" style="width: 100%"></div>') +
+                        "</div>"
+                      : "<!---->") +
+                    ' <div class="live-shopping-progress-heading"><span>' +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate(
+                          "Ceres::Template.liveShoppingRemainingStock",
+                          { quantitySoldPercentage: _vm.quantitySoldPercentage }
+                        )
+                      )
+                    ) +
+                    "</span></div></div>"
+                  : "<!---->"
+                : "<!---->") +
+              " " +
+              (_vm.hasClosed
+                ? _vm.displaySettings.showStock
+                  ? '<div class="live-shopping-progress">' +
+                    (_vm.displaySettings.showStockProgress
+                      ? '<div class="progress">' +
+                        (_vm.liveShoppingData.liveShopping.quantitySold <
+                        _vm.liveShoppingData.liveShopping.quantityMax
+                          ? '<div role="progressbar" aria-valuemin="0" aria-valuemax="100" class="progress-10" style="width: 100%"></div>'
+                          : '<div role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar-done" style="width: 100%"></div>') +
+                        "</div>"
+                      : "<!---->") +
+                    ' <div class="live-shopping-progress-heading"><span>*Aktionsbestand ausverkauft</span></div></div>'
+                  : "<!---->"
+                : "<!---->") +
+              "</div>"
             : '<div class="thumb-content"><div><div class="prices"><div class="price-view-port">' +
               (_vm.isCrossPriceVisible
                 ? '<del class="crossprice">' +
@@ -53729,6 +53817,7 @@ var render = function() {
                   "</div>"
                 : "<!---->") +
               ' <span class="vat small text-muted">' +
+<<<<<<< HEAD
               _vm._ssrEscape(
                 "\n                " +
                   _vm._s(
@@ -53736,6 +53825,8 @@ var render = function() {
                   ) +
                   " "
               ) +
+=======
+>>>>>>> bugfix/IT-3062/guest-login
               (_vm.showNetPrices
                 ? _vm._ssrEscape(
                     _vm._s(_vm.$translate("Ceres::Template.itemExclVAT"))
@@ -53749,7 +53840,7 @@ var render = function() {
                   "\n                "
               ) +
               (_vm.$ceres.config.global.shippingCostsCategoryId > 0
-                ? '<a data-toggle="modal" href="#shippingscosts"' +
+                ? '<a href="https://www.konsolenkost.de/versand"' +
                   _vm._ssrAttr(
                     "title",
                     _vm.$translate("Ceres::Template.itemShippingCosts")
@@ -53807,8 +53898,7 @@ var render = function() {
               "decimal-count": _vm.$ceres.config.item.storeSpecial,
               "image-url-accessor": "urlMiddle",
               "padding-classes": _vm.paddingClasses,
-              "padding-inline-styles": _vm.paddingInlineStyles,
-              "force-url-with-variation-id": true
+              "padding-inline-styles": _vm.paddingInlineStyles
             },
             scopedSlots: _vm._u(
               [
@@ -53816,17 +53906,14 @@ var render = function() {
                   key: "store-special",
                   fn: function() {
                     return [
-                      !!_vm.storeSpecial
-                        ? _c("item-store-special", {
-                            attrs: {
-                              "store-special": _vm.storeSpecial,
-                              "recommended-retail-price": _vm.prices.rrp,
-                              "variation-retail-price": _vm.prices.price,
-                              "decimal-count":
-                                _vm.$ceres.config.item.storeSpecial
-                            }
-                          })
-                        : _vm._e()
+                      _c("item-store-special", {
+                        attrs: {
+                          "store-special": _vm.storeSpecial,
+                          "recommended-retail-price": _vm.prices.rrp,
+                          "variation-retail-price": _vm.prices.price,
+                          "decimal-count": _vm.$ceres.config.item.storeSpecial
+                        }
+                      })
                     ]
                   },
                   proxy: true
@@ -53864,9 +53951,7 @@ var render = function() {
                   },
                   proxy: true
                 },
-                !!_vm.currentOffer &&
-                _vm.whenIsCurrentOffer() !== 1 &&
-                _vm.isActiveByStock
+                !!_vm.currentOffer
                   ? {
                       key: "item-details",
                       fn: function() {
@@ -54003,7 +54088,6 @@ var render = function() {
   return _c(
     "form",
     {
-      ref: "newsletterForm",
       attrs: { id: "newsletter-input-form_" + _vm._uid, method: "post" },
       on: {
         submit: function($event) {
@@ -54014,6 +54098,7 @@ var render = function() {
     },
     [
       _vm._ssrNode(
+<<<<<<< HEAD
         '<div class="row">',
         "</div>",
         [
@@ -54046,6 +54131,37 @@ var render = function() {
                   "></div></div>"
                 : "<!---->") +
               ' <div class="col-12"><div class="input-group"><div data-validate="mail" class="input-unit"><label' +
+=======
+        '<div class="row">' +
+          (_vm.showNameInputs
+            ? '<div class="col-6"><div class="input-unit"><label' +
+              _vm._ssrAttr("for", "first-name-input_" + _vm._uid) +
+              ">" +
+              _vm._ssrEscape(
+                _vm._s(_vm.$translate("Ceres::Template.newsletterFirstName"))
+              ) +
+              '</label> <input type="text"' +
+              _vm._ssrAttr("id", "first-name-input_" + _vm._uid) +
+              _vm._ssrAttr("value", _vm.firstName) +
+              "></div></div>"
+            : "<!---->") +
+          " " +
+          (_vm.showNameInputs
+            ? '<div class="col-6 pl-0"><div class="input-unit"><label' +
+              _vm._ssrAttr("for", "last-name-input_" + _vm._uid) +
+              ">" +
+              _vm._ssrEscape(
+                _vm._s(_vm.$translate("Ceres::Template.newsletterLastName"))
+              ) +
+              '</label> <input type="text"' +
+              _vm._ssrAttr("id", "last-name-input_" + _vm._uid) +
+              _vm._ssrAttr("value", _vm.lastName) +
+              "></div></div>"
+            : "<!---->") +
+          ' <div class="newsletter-input"><div class="input-group"><div data-validate="mail" class="input-unit border-0">' +
+          (_vm.showNameInputs
+            ? "<label" +
+>>>>>>> bugfix/IT-3062/guest-login
               _vm._ssrAttr("for", "email-input-id_" + _vm._uid) +
               ">" +
               _vm._ssrEscape(
@@ -54057,6 +54173,7 @@ var render = function() {
                     )
                   )
               ) +
+<<<<<<< HEAD
               '</label> <input type="email" autocomplete="email"' +
               _vm._ssrAttr("id", "email-input-id_" + _vm._uid) +
               ' data-testing="nl-mail"' +
@@ -54134,6 +54251,42 @@ var render = function() {
         : _vm._e()
     ],
     2
+=======
+              "</label>"
+            : "<!---->") +
+          ' <input type="email" autocomplete="email"' +
+          _vm._ssrAttr("id", "email-input-id_" + _vm._uid) +
+          ' placeholder="Deine E-Mail"' +
+          _vm._ssrAttr("value", _vm.email) +
+          ' class="newsletter-input"></div> <input autocomplete="none" type="text" name="username" tabindex="-1"' +
+          _vm._ssrAttr("value", _vm.honeypot) +
+          ' class="honey"></div></div> ' +
+          (_vm.showPrivacyPolicyCheckbox
+            ? '<div class="col-12"><div data-validate class="form-check small"><input type="checkbox"' +
+              _vm._ssrAttr("id", "privacy-policy-accept-id_" + _vm._uid) +
+              ' name="privacy-policy-accept"' +
+              _vm._ssrAttr(
+                "checked",
+                Array.isArray(_vm.privacyPolicyValue)
+                  ? _vm._i(_vm.privacyPolicyValue, null) > -1
+                  : _vm.privacyPolicyValue
+              ) +
+              ' class="form-check-input"> <label' +
+              _vm._ssrAttr("for", "privacy-policy-accept-id_" + _vm._uid) +
+              ' class="form-check-label">' +
+              _vm._s(_vm.privacyPolicyText) +
+              "</label></div></div>"
+            : "<!---->") +
+          ' <div class="col-12 mt-3"><div class="input-group-btn"><button type="button"' +
+          _vm._ssrAttr("disabled", _vm.isDisabled) +
+          _vm._ssrClass(
+            "btn btn-block btn-primary btn-appearance newsletter-button",
+            _vm.buttonSizeClass
+          ) +
+          '><img width="13" height="13" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"><span class="newsletter-button-text">  Anmelden</span></button></div></div></div>'
+      )
+    ]
+>>>>>>> bugfix/IT-3062/guest-login
   )
 }
 var staticRenderFns = []
@@ -54830,25 +54983,17 @@ var render = function() {
   return _c(
     "div",
     {
-      directives: [
-        {
-          name: "show",
-          rawName: "v-show",
-          value: !_vm.$ceres.isSSR,
-          expression: "!$ceres.isSSR"
-        }
-      ],
-      staticClass: "cookie-bar",
+      staticClass: "cookie-bar bg-smoke flex-style fixed-bottom",
       class: {
         out: !_vm.isVisible,
-        "border-top bg-white": _vm.isVisible,
+        "bg-smoke": _vm.isVisible,
         "fixed-bottom": !_vm.isShopBuilder || false
       }
     },
     [
       _vm.isVisible
         ? _vm._ssrNode(
-            '<div class="container-max">',
+            '<div class="container-max kk-border bg-white">',
             "</div>",
             [
               _vm._ssrNode(
@@ -54857,7 +55002,7 @@ var render = function() {
                   _vm._ssrStyle(null, _vm.styles, {
                     display: !_vm.isExpanded ? "" : "none"
                   }) +
-                  '><div class="col-12 col-md-8"><p>' +
+                  '><div class="p-3"><p>' +
                   _vm._s(_vm.text) +
                   "</p> <div>" +
                   _vm._ssrList(_vm.consentGroups, function(consentGroup) {
@@ -54865,7 +55010,7 @@ var render = function() {
                       ? '<span class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"><input type="checkbox"' +
                           _vm._ssrAttr(
                             "id",
-                            _vm._cid + "-group-" + consentGroup.key
+                            _vm._uid + "-group-" + consentGroup.key
                           ) +
                           _vm._ssrAttr("disabled", consentGroup.necessary) +
                           _vm._ssrAttr(
@@ -54876,41 +55021,46 @@ var render = function() {
                           ' class="custom-control-input"> <label' +
                           _vm._ssrAttr(
                             "for",
-                            _vm._cid + "-group-" + consentGroup.key
+                            _vm._uid + "-group-" + consentGroup.key
                           ) +
                           ' class="custom-control-label">' +
                           (consentGroup.label.length > 0
                             ? _vm._ssrEscape(
-                                "\n                                    " +
+                                "\n                  " +
                                   _vm._s(consentGroup.label) +
-                                  "\n                                "
+                                  "\n                "
                               )
                             : _vm._ssrEscape(
-                                "\n                                    " +
+                                "\n                  " +
                                   _vm._s(
                                     _vm.$translate(
                                       "Ceres::Template.privacySettingsDefaultGroup"
                                     )
                                   ) +
-                                  "\n                                "
+                                  "\n                "
                               )) +
                           "</label></span>"
                       : "<!---->"
                   }) +
-                  ' <a href="#" data-testing="cookie-bar-show-more-information" class="text-primary text-appearance d-block d-md-inline-block">' +
+                  ' <a href="#" class="text-primary text-appearance d-block d-md-inline-block">' +
                   _vm._ssrEscape(
                     _vm._s(
                       _vm.$translate("Ceres::Template.cookieBarMoreSettings")
                     )
                   ) +
+<<<<<<< HEAD
                   '</a></div></div> <div class="button-order col-12 col-md-4 pt-3 pt-md-0"><button data-testing="cookie-bar-accept-all" class="btn btn-block btn-default btn-appearance button-order-1 mb-2 mt-0">' +
+=======
+                  '</a></div></div> <div class="p-3 w-100"><button class="btn btn-primary btn-block btn-appearance">' +
+>>>>>>> bugfix/IT-3062/guest-login
                   _vm._ssrEscape(
-                    "\n                    " +
+                    "\n          " +
                       _vm._s(
                         _vm.$translate("Ceres::Template.cookieBarAcceptAll")
                       ) +
-                      "\n                "
+                      "\n        "
                   ) +
+<<<<<<< HEAD
                   "</button> " +
                   (_vm.showRejectAll
                     ? '<button data-testing="cookie-bar-deny-all" class="btn btn-block btn-default btn-appearance button-order-2 mb-2 mt-0">' +
@@ -54924,10 +55074,13 @@ var render = function() {
                       "</button>"
                     : "<!---->") +
                   ' <button data-testing="cookie-bar-save" class="btn btn-block btn-default button-order-3 mb-2 mt-0">' +
+=======
+                  '</button> <button class="btn btn-default btn-block">' +
+>>>>>>> bugfix/IT-3062/guest-login
                   _vm._ssrEscape(
-                    "\n                    " +
+                    "\n          " +
                       _vm._s(_vm.$translate("Ceres::Template.cookieBarSave")) +
-                      "\n                "
+                      "\n        "
                   ) +
                   "</button></div></div> "
               ),
@@ -54950,22 +55103,31 @@ var render = function() {
                         1
                       ),
                       _vm._ssrNode(
+<<<<<<< HEAD
                         ' <div class="col-12 col-md-3"><a href="#" data-testing="cookie-bar-hide-more-information" class="text-primary text-appearance d-inline-block mb-3">' +
+=======
+                        ' <div class="col-12 col-md-6"><a href="#" class="text-primary text-appearance d-inline-block mb-3">' +
+>>>>>>> bugfix/IT-3062/guest-login
                           _vm._ssrEscape(
-                            "\n                    " +
-                              _vm._s(
-                                _vm.$translate("Ceres::Template.cookieBarBack")
-                              ) +
-                              "\n                "
+                            _vm._s(
+                              _vm.$translate("Ceres::Template.cookieBarBack")
+                            )
                           ) +
+<<<<<<< HEAD
                           '</a></div> <div class="col-12 col-md-9"><div class="row"><div class="col-12 col-md-4 mt-2 mt-md-0"><button data-testing="cookie-bar-expanded-accept-all" class="btn btn-block btn-default btn-appearance">' +
                           _vm._ssrEscape(
                             "\n                            " +
+=======
+                          '</a></div> <div class="col-6 col-md-3"><button class="btn btn-block btn-primary btn-appearance">' +
+                          _vm._ssrEscape(
+                            "\n          " +
+>>>>>>> bugfix/IT-3062/guest-login
                               _vm._s(
                                 _vm.$translate(
                                   "Ceres::Template.cookieBarAcceptAll"
                                 )
                               ) +
+<<<<<<< HEAD
                               "\n                        "
                           ) +
                           "</button></div> " +
@@ -54989,6 +55151,17 @@ var render = function() {
                                 _vm.$translate("Ceres::Template.cookieBarSave")
                               ) +
                               "\n                        "
+=======
+                              "\n        "
+                          ) +
+                          '</button></div> <div class="col-6 col-md-3"><button class="btn btn-block btn-block btn-default">' +
+                          _vm._ssrEscape(
+                            "\n          " +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.cookieBarSave")
+                              ) +
+                              "\n        "
+>>>>>>> bugfix/IT-3062/guest-login
                           ) +
                           "</button></div></div></div>"
                       )
@@ -54999,20 +55172,7 @@ var render = function() {
             ],
             2
           )
-        : _vm._ssrNode(
-            "<div><button" +
-              _vm._ssrAttr(
-                "aria-label",
-                _vm.$translate("Ceres::Template.cookieBarPrivacySettings")
-              ) +
-              ' class="btn btn-primary btn-appearance"><i class="fa fa-shield float-none"></i> <span class="d-none d-sm-inline-block">' +
-              _vm._ssrEscape(
-                _vm._s(
-                  _vm.$translate("Ceres::Template.cookieBarPrivacySettings")
-                )
-              ) +
-              "</span></button></div>"
-          )
+        : _vm._e()
     ]
   )
 }
@@ -55810,15 +55970,41 @@ var render = function() {
         " " +
           (!_vm.isLoading &&
           (!_vm.wishListItems || _vm.wishListItems.length === 0)
-            ? '<p class="h4 text-muted text-center my-5">' +
-              _vm._ssrEscape(
-                _vm._s(_vm.$translate("Ceres::Template.wishListNoItems"))
-              ) +
-              "</p>"
+            ? '<p class="h4 text-muted text-center my-5">Du hast noch keine Artikel in deiner Wunschliste.</p>'
             : "<!---->") +
           " "
       ),
-      _vm.isLoading ? _c("loading-animation") : _vm._e()
+      _vm.isLoading ? _c("loading-animation") : _vm._e(),
+      _vm._ssrNode(" <hr> "),
+      !_vm.isLoading && (!_vm.wishListItems || _vm.wishListItems.length === 0)
+        ? _c("last-seen-item-list", {
+            staticClass: "bordered-item-list",
+            attrs: { "items-per-page": 4, "max-items": 4 },
+            scopedSlots: _vm._u(
+              [
+                {
+                  key: "heading",
+                  fn: function() {
+                    return [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "widget-caption bg-appearance widget-item-list-caption mb-3"
+                        },
+                        [_c("div", [_c("h2", [_vm._v("Zuletzt angesehen")])])]
+                      )
+                    ]
+                  },
+                  proxy: true
+                }
+              ],
+              null,
+              false,
+              4103951690
+            )
+          })
+        : _vm._e()
     ],
     2
   )
@@ -55897,208 +56083,215 @@ var render = function() {
       "</div>",
       [
         _vm._ssrNode(
-          '<div class="image-container"><a' +
-            _vm._ssrAttr("href", _vm._f("itemURL")(_vm.wishListItem)) +
-            ">" +
+          '<div class="image-container">' +
             (_vm.image
               ? "<img" +
                 _vm._ssrAttr("src", _vm.image) +
                 _vm._ssrAttr("title", _vm._f("itemName")(_vm.wishListItem)) +
                 ' class="d-block mw-100 mh-100">'
               : "<!---->") +
-            "</a></div> "
+            "</div> "
         ),
         _vm._ssrNode(
           '<div class="meta-container-wrapper">',
           "</div>",
           [
             _vm._ssrNode(
-              '<div class="meta-container-wrapper-inner mb-2">',
+              '<div class="meta-container-wrapper-inner mb-2"><div class="meta-container"><div class="position-relative w-100"><a' +
+                _vm._ssrAttr("href", _vm._f("itemURL")(_vm.wishListItem)) +
+                ' class="item-name text-appearance font-weight-bold text-break" style="color: #212529;">' +
+                _vm._ssrEscape(
+                  "\n                            " +
+                    _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
+                    "\n                        "
+                ) +
+                '</a> <div class="item-base-price">' +
+                _vm._ssrEscape(
+                  "\n                            " +
+                    _vm._s(_vm._f("currency")(_vm.unitPrice)) +
+                    "\n                        "
+                ) +
+                "</div> " +
+                (!(
+                  _vm.wishListItem.unit.unitOfMeasurement === "C62" &&
+                  _vm.wishListItem.unit.content === 1
+                ) && _vm.wishListItem.variation.mayShowUnitPrice
+                  ? '<div class="item-small-prices text-muted small"><div>' +
+                    _vm._ssrEscape(
+                      "\n                                " +
+                        _vm._s(_vm.basePrice) +
+                        "\n                            "
+                    ) +
+                    "</div> <div><strong>" +
+                    _vm._ssrEscape(
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.wishListContent")
+                      ) + ": "
+                    ) +
+                    "</strong>" +
+                    _vm._ssrEscape(
+                      "\n                                " +
+                        _vm._s(_vm.wishListItem.unit.content) +
+                        " " +
+                        _vm._s(_vm.wishListItem.unit.names.name) +
+                        "\n                            "
+                    ) +
+                    "</div></div>"
+                  : "<!---->") +
+                ' <div class="item-small-prices small">' +
+                _vm._ssrList(_vm.wishListItem.attributes, function(
+                  attribute,
+                  index
+                ) {
+                  return (
+                    "<div><strong>" +
+                    _vm._ssrEscape(
+                      _vm._s(attribute.attribute.names.name) + ": "
+                    ) +
+                    "</strong> <span>" +
+                    _vm._ssrEscape(_vm._s(attribute.value.names.name)) +
+                    "</span></div>"
+                  )
+                }) +
+                '</div> <div class="item-small-prices text-muted small">' +
+                _vm._ssrList(_vm.wishListItem.variationProperties, function(
+                  propertyGroup
+                ) {
+                  return _vm._ssrList(propertyGroup.properties, function(
+                    property,
+                    index
+                  ) {
+                    return (
+                      "<div>" +
+                      (propertyGroup.name
+                        ? "<strong>" +
+                          _vm._ssrEscape(_vm._s(propertyGroup.name) + ": ") +
+                          "</strong>"
+                        : "<!---->") +
+                      " <span>" +
+                      _vm._ssrEscape(_vm._s(property.names.name)) +
+                      "</span> " +
+                      (property.cast === "file"
+                        ? "<span><a" +
+                          _vm._ssrAttr(
+                            "href",
+                            _vm._f("propertyFileUrl")(property.values.value)
+                          ) +
+                          ' target="_blank">' +
+                          _vm._s(property.values.value) +
+                          "</a></span>"
+                        : "<span>" +
+                          _vm._s(property.values.value) +
+                          "</span>") +
+                      "</div>"
+                    )
+                  })
+                }) +
+                "</div></div></div></div> "
+            ),
+            _vm._ssrNode(
+              '<div class="d-flex kk-wishlist-details-box">',
               "</div>",
               [
                 _vm._ssrNode(
-                  '<div class="meta-container"><div class="position-relative w-100"><a' +
-                    _vm._ssrAttr("href", _vm._f("itemURL")(_vm.wishListItem)) +
-                    ' class="item-name text-primary text-appearance small font-weight-bold text-break">' +
-                    _vm._ssrEscape(
-                      "\n                            " +
-                        _vm._s(_vm._f("itemName")(_vm.wishListItem)) +
-                        "\n                        "
+                  '<div class="d-flex"><div' +
+                    _vm._ssrClass(
+                      "availability kk-wishlist-availability-icon mt-auto mb-auto",
+                      "availability-" +
+                        _vm.wishListItem.variation.availability.id
                     ) +
-                    '</a> <div class="item-base-price small">' +
+                    '></div> <div class="ml-2 mt-auto mb-auto">' +
                     _vm._ssrEscape(
-                      "\n                            " +
-                        _vm._s(_vm._f("currency")(_vm.unitPrice)) +
-                        "\n                        "
+                      "\n                        " +
+                        _vm._s(
+                          _vm.wishListItem.variation.availability.names.name
+                        ) +
+                        "\n                    "
                     ) +
-                    "</div> " +
-                    (!(
-                      _vm.wishListItem.unit.unitOfMeasurement === "C62" &&
-                      _vm.wishListItem.unit.content === 1
-                    ) && _vm.wishListItem.variation.mayShowUnitPrice
-                      ? '<div class="item-small-prices text-muted small"><div>' +
-                        _vm._ssrEscape(
-                          "\n                                " +
-                            _vm._s(_vm.basePrice) +
-                            "\n                            "
-                        ) +
-                        "</div> <div><strong>" +
-                        _vm._ssrEscape(
-                          _vm._s(
-                            _vm.$translate("Ceres::Template.wishListContent")
-                          ) + ": "
-                        ) +
-                        "</strong>" +
-                        _vm._ssrEscape(
-                          "\n                                " +
-                            _vm._s(_vm.wishListItem.unit.content) +
-                            " " +
-                            _vm._s(_vm.wishListItem.unit.names.name) +
-                            "\n                            "
-                        ) +
-                        "</div></div>"
-                      : "<!---->") +
-                    ' <div class="item-small-prices small">' +
-                    _vm._ssrList(_vm.wishListItem.attributes, function(
-                      attribute,
-                      index
-                    ) {
-                      return (
-                        "<div><strong>" +
-                        _vm._ssrEscape(
-                          _vm._s(attribute.attribute.names.name) + ": "
-                        ) +
-                        "</strong> <span>" +
-                        _vm._ssrEscape(_vm._s(attribute.value.names.name)) +
-                        "</span></div>"
-                      )
-                    }) +
-                    '</div> <div class="item-small-prices text-muted small">' +
-                    _vm._ssrList(_vm.wishListItem.variationProperties, function(
-                      propertyGroup
-                    ) {
-                      return _vm._ssrList(propertyGroup.properties, function(
-                        property,
-                        index
-                      ) {
-                        return (
-                          "<div>" +
-                          (propertyGroup.name
-                            ? "<strong>" +
-                              _vm._ssrEscape(
-                                _vm._s(propertyGroup.name) + ": "
-                              ) +
-                              "</strong>"
-                            : "<!---->") +
-                          " <span>" +
-                          _vm._ssrEscape(_vm._s(property.names.name)) +
-                          "</span> " +
-                          (property.cast === "file"
-                            ? "<span><a" +
-                              _vm._ssrAttr(
-                                "href",
-                                _vm._f("propertyFileUrl")(property.values.value)
-                              ) +
-                              ' target="_blank">' +
-                              _vm._s(property.values.value) +
-                              "</a></span>"
-                            : "<span>" +
-                              _vm._s(property.values.value) +
-                              "</span>") +
-                          "</div>"
-                        )
-                      })
-                    }) +
-                    "</div></div></div> "
+                    "</div></div> "
                 ),
                 _vm._ssrNode(
-                  '<div class="basket-item-container-right">',
+                  '<div class="d-flex kk-wishlist-delete-and-basket">',
                   "</div>",
                   [
                     _vm._ssrNode(
-                      '<div class="qty-box-container ml-3">',
+                      '<div class="btn btn-sm text-danger mt-auto mb-auto kk-border flex-style" style="width: 33px; height: 33px;">',
                       "</div>",
                       [
-                        _c("quantity-input", {
-                          attrs: {
-                            value:
-                              _vm.wishListItem.variation.intervalOrderQuantity,
-                            min:
-                              _vm.wishListItem.variation.minimumOrderQuantity,
-                            max:
-                              _vm.wishListItem.variation.maximumOrderQuantity,
-                            timeout: 0,
-                            interval:
-                              _vm.wishListItem.variation.intervalOrderQuantity,
-                            "variation-id": _vm.wishListItem.variation.id
+                        _c(
+                          "i",
+                          {
+                            directives: [
+                              {
+                                name: "waiting-animation-infinite",
+                                rawName: "v-waiting-animation-infinite"
+                              }
+                            ],
+                            staticClass: "fa fa-trash-o default-float",
+                            staticStyle: {
+                              "font-size": "1.2rem",
+                              color: "grey"
+                            },
+                            attrs: { "aria-hidden": "true" }
                           },
-                          on: {
-                            "quantity-change": function($event) {
-                              _vm.quantity = $event
-                            }
+                          []
+                        )
+                      ]
+                    ),
+                    _vm._ssrNode(" "),
+                    _vm._ssrNode(
+                      "<div>",
+                      "</div>",
+                      [
+                        _c("add-to-basket", {
+                          attrs: {
+                            "variation-id": _vm.wishListItem.variation.id,
+                            "is-salable":
+                              !!_vm.wishListItem.filter &&
+                              _vm.wishListItem.filter.isSalable,
+                            "has-children":
+                              !!_vm.wishListItem.filter &&
+                              _vm.wishListItem.filter.hasActiveChildren,
+                            "interval-quantity":
+                              _vm.wishListItem.variation
+                                .intervalOrderQuantity || 1,
+                            "minimum-quantity":
+                              _vm.wishListItem.variation.minimumOrderQuantity,
+                            "maximum-quantity":
+                              !!_vm.wishListItem.variation
+                                .maximumOrderQuantity &&
+                              _vm.wishListItem.variation.maximumOrderQuantity >
+                                0
+                                ? _vm.wishListItem.variation
+                                    .maximumOrderQuantity
+                                : null,
+                            "order-properties": _vm.wishListItem.properties.filter(
+                              function(prop) {
+                                return prop.property.isOderProperty
+                              }
+                            ),
+                            "has-order-properties":
+                              _vm.wishListItem.hasOrderProperties,
+                            "use-large-scale": false,
+                            "show-quantity": false,
+                            "item-url": _vm._f("itemURL")(_vm.wishListItem),
+                            "has-price": _vm._f("hasItemDefaultPrice")(
+                              _vm.wishListItem
+                            ),
+                            "is-wish-list": true,
+                            "prop-quantity": _vm.quantity,
+                            "item-type": _vm.wishListItem.item.itemType
                           }
                         })
                       ],
                       1
-                    ),
-                    _vm._ssrNode(" "),
-                    _vm._ssrNode(
-                      '<div class="price-box text-right my-1 ml-2">',
-                      "</div>",
-                      [
-                        _vm._ssrNode(
-                          '<div class="item-total-price font-weight-bold text-nowrap">' +
-                            _vm._ssrEscape(
-                              "\n                            " +
-                                _vm._s(
-                                  _vm._f("currency")(
-                                    _vm.quantity * _vm.unitPrice
-                                  )
-                                ) +
-                                "\n                        "
-                            ) +
-                            "</div> "
-                        ),
-                        _vm._ssrNode(
-                          '<div data-testing="remove-wlist-item" class="btn btn-sm text-danger p-0">',
-                          "</div>",
-                          [
-                            _vm._ssrNode(
-                              _vm._ssrEscape(
-                                "\n                            " +
-                                  _vm._s(
-                                    _vm.$translate(
-                                      "Ceres::Template.wishListDelete"
-                                    )
-                                  ) +
-                                  "\n                            "
-                              )
-                            ),
-                            _c(
-                              "i",
-                              {
-                                directives: [
-                                  {
-                                    name: "waiting-animation-infinite",
-                                    rawName: "v-waiting-animation-infinite"
-                                  }
-                                ],
-                                staticClass: "fa fa-trash-o default-float",
-                                attrs: { "aria-hidden": "true" }
-                              },
-                              []
-                            )
-                          ],
-                          2
-                        )
-                      ],
-                      2
                     )
                   ],
                   2
                 )
               ],
               2
+<<<<<<< HEAD
             ),
             _vm._ssrNode(" "),
             _vm._ssrNode(
@@ -56214,6 +56407,8 @@ var render = function() {
                     : "<!---->"
                   : "<!---->") +
                 "</div>"
+=======
+>>>>>>> bugfix/IT-3062/guest-login
             )
           ],
           2
@@ -61785,7 +61980,11 @@ module.exports = __webpack_require__(/*! ./build */ "./node_modules/vue-template
 /*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, types, unpkg, version, default */
 /***/ (function(module) {
 
+<<<<<<< HEAD
 module.exports = JSON.parse("{\"_args\":[[\"vue-template-compiler@2.6.12\",\"/home/runner/work/plugin-ceres/plugin-ceres\"]],\"_from\":\"vue-template-compiler@2.6.12\",\"_id\":\"vue-template-compiler@2.6.12\",\"_inBundle\":false,\"_integrity\":\"sha512-OzzZ52zS41YUbkCBfdXShQTe69j1gQDZ9HIX8miuC9C3rBCk9wIRjLiZZLrmX9V+Ftq/YEyv1JaVr5Y/hNtByg==\",\"_location\":\"/vue-template-compiler\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"vue-template-compiler@2.6.12\",\"name\":\"vue-template-compiler\",\"escapedName\":\"vue-template-compiler\",\"rawSpec\":\"2.6.12\",\"saveSpec\":null,\"fetchSpec\":\"2.6.12\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/vue-template-compiler/-/vue-template-compiler-2.6.12.tgz\",\"_spec\":\"2.6.12\",\"_where\":\"/home/runner/work/plugin-ceres/plugin-ceres\",\"author\":{\"name\":\"Evan You\"},\"browser\":\"browser.js\",\"bugs\":{\"url\":\"https://github.com/vuejs/vue/issues\"},\"dependencies\":{\"de-indent\":\"^1.0.2\",\"he\":\"^1.1.0\"},\"description\":\"template compiler for Vue 2.0\",\"devDependencies\":{\"vue\":\"file:../..\"},\"homepage\":\"https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler#readme\",\"jsdelivr\":\"browser.js\",\"keywords\":[\"vue\",\"compiler\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"vue-template-compiler\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/vuejs/vue.git\"},\"types\":\"types/index.d.ts\",\"unpkg\":\"browser.js\",\"version\":\"2.6.12\"}");
+=======
+module.exports = JSON.parse("{\"_args\":[[\"vue-template-compiler@2.6.12\",\"/home/thien/Desktop/KonsolenKostGit/plugin-ceres\"]],\"_from\":\"vue-template-compiler@2.6.12\",\"_id\":\"vue-template-compiler@2.6.12\",\"_inBundle\":false,\"_integrity\":\"sha512-OzzZ52zS41YUbkCBfdXShQTe69j1gQDZ9HIX8miuC9C3rBCk9wIRjLiZZLrmX9V+Ftq/YEyv1JaVr5Y/hNtByg==\",\"_location\":\"/vue-template-compiler\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"vue-template-compiler@2.6.12\",\"name\":\"vue-template-compiler\",\"escapedName\":\"vue-template-compiler\",\"rawSpec\":\"2.6.12\",\"saveSpec\":null,\"fetchSpec\":\"2.6.12\"},\"_requiredBy\":[\"/\"],\"_resolved\":\"https://registry.npmjs.org/vue-template-compiler/-/vue-template-compiler-2.6.12.tgz\",\"_spec\":\"2.6.12\",\"_where\":\"/home/thien/Desktop/KonsolenKostGit/plugin-ceres\",\"author\":{\"name\":\"Evan You\"},\"browser\":\"browser.js\",\"bugs\":{\"url\":\"https://github.com/vuejs/vue/issues\"},\"dependencies\":{\"de-indent\":\"^1.0.2\",\"he\":\"^1.1.0\"},\"description\":\"template compiler for Vue 2.0\",\"devDependencies\":{\"vue\":\"file:../..\"},\"homepage\":\"https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler#readme\",\"jsdelivr\":\"browser.js\",\"keywords\":[\"vue\",\"compiler\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"vue-template-compiler\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/vuejs/vue.git\"},\"types\":\"types/index.d.ts\",\"unpkg\":\"browser.js\",\"version\":\"2.6.12\"}");
+>>>>>>> bugfix/IT-3062/guest-login
 
 /***/ }),
 
@@ -75463,7 +75662,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "cd590b12"
+=======
+  "dd413dca"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75530,7 +75733,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "35f09196"
+=======
+  "05d26972"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75597,7 +75804,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "d9b14c54"
+=======
+  "1c1aaa9c"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75664,7 +75875,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "43abbade"
+=======
+  "0a834635"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75731,7 +75946,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "c6ddc3bc"
+=======
+  "86326674"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75798,7 +76017,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "5c436a7f"
+=======
+  "357df45b"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75865,7 +76088,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "13817c09"
+=======
+  "2687f436"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75932,7 +76159,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "a1e10d88"
+=======
+  "1c0c95d0"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -75999,7 +76230,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "9a61c138"
+=======
+  "c7c48180"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76066,7 +76301,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "fbbf239a"
+=======
+  "9929b9e2"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76133,7 +76372,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "4414b6a7"
+=======
+  "3c209d4b"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76200,7 +76443,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "374da5ce"
+=======
+  "d3ce12ac"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76266,7 +76513,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "f2694264"
+=======
+  "11a11b72"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76315,7 +76566,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "2034f4a7"
+=======
+  "a9ea9d6a"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76382,7 +76637,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "3957dab8"
+=======
+  "0c45f994"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76449,7 +76708,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "5cb9c188"
+=======
+  "4719e764"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76516,7 +76779,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "56eccd1e"
+=======
+  "362e2f15"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76582,7 +76849,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "789641a1"
+=======
+  "62f6677d"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76630,7 +76901,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "fac88ca8"
+=======
+  "6cfbdf88"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76679,7 +76954,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "3cc5ee52"
+=======
+  "57232df6"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76746,7 +77025,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "7cc8609a"
+=======
+  "2978553e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76813,7 +77096,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "83ff1816"
+=======
+  "00eaafd1"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76880,7 +77167,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "26d1623c"
+=======
+  "c8de35d0"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -76947,7 +77238,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "1ff5c484"
+=======
+  "6d80b0cc"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77014,7 +77309,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "bd839c5a"
+=======
+  "712009af"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77081,7 +77380,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "6fce645d"
+=======
+  "2b25a1fe"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77151,7 +77454,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   injectStyles,
   null,
+<<<<<<< HEAD
   "dcd4830c"
+=======
+  "57000b54"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77218,7 +77525,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "78009558"
+=======
+  "c99d2408"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77285,7 +77596,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "2207c2b0"
+=======
+  "0c67e88c"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77352,7 +77667,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "b1ce2730"
+=======
+  "c1b659e8"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77419,7 +77738,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "b64b850a"
+=======
+  "6fe9d3c2"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77486,7 +77809,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "2a55c34f"
+=======
+  "edbdd7aa"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77553,7 +77880,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "295a5414"
+=======
+  "c3cc5220"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77620,7 +77951,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "4b50b116"
+=======
+  "6ffd7eba"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77687,7 +78022,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "0aeea185"
+=======
+  "3747c529"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77754,7 +78093,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "c58fbcfc"
+=======
+  "6d19f95e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77821,7 +78164,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "29fccb64"
+=======
+  "ee6fc780"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77888,7 +78235,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "48c8b09d"
+=======
+  "7931097e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -77955,7 +78306,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "8f7f7078"
+=======
+  "19e4dd68"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78022,7 +78377,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "ea5f8e1c"
+=======
+  "5ab210ce"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78089,7 +78448,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "feb22fee"
+=======
+  "59e171e5"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78156,7 +78519,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "0065c477"
+=======
+  "2a742b5a"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78223,7 +78590,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "a2468afc"
+=======
+  "efd17744"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78290,7 +78661,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "3d30cbcd"
+=======
+  "578e0b71"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78357,7 +78732,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "d5765996"
+=======
+  "4fa1e1de"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78424,7 +78803,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "3267dc0a"
+=======
+  "ce786f3e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78558,7 +78941,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "2566e380"
+=======
+  "156e8948"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78625,7 +79012,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "db52f5d4"
+=======
+  "9aa7988c"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78692,7 +79083,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "6fedb468"
+=======
+  "42a7f070"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78759,7 +79154,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "1ca62dfb"
+=======
+  "143e9052"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78826,7 +79225,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "224826ca"
+=======
+  "f8268724"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78893,7 +79296,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "6a19b4ec"
+=======
+  "368f00e0"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -78960,7 +79367,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "4e4badb6"
+=======
+  "19912e6e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79027,7 +79438,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "6bee3719"
+=======
+  "3ed3b816"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79094,7 +79509,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "7c707c30"
+=======
+  "498865e8"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79161,7 +79580,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "d0ecb788"
+=======
+  "be0adbd0"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79228,7 +79651,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "77371a7c"
+=======
+  "3f033d66"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79295,7 +79722,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "b05fa528"
+=======
+  "57ad5de0"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79362,7 +79793,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "1fae8f5c"
+=======
+  "42df6800"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79429,7 +79864,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "00f0cee0"
+=======
+  "10d90198"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79496,7 +79935,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "5b2f3161"
+=======
+  "c3cd2586"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79563,7 +80006,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "5db83a9f"
+=======
+  "6729287b"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79630,7 +80077,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "26310e18"
+=======
+  "4adddbbc"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79697,7 +80148,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "442f72e7"
+=======
+  "1e4130ea"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79764,7 +80219,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "16d81bd0"
+=======
+  "f075faa8"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79831,7 +80290,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "641af7f5"
+=======
+  "5c26de99"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79898,7 +80361,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "410c13b8"
+=======
+  "f81360d8"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -79965,7 +80432,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "2df9150a"
+=======
+  "1da0781f"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80032,7 +80503,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "66e7cc40"
+=======
+  "96030438"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80099,7 +80574,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "49d4d5f3"
+=======
+  "64321597"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80166,7 +80645,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "6adba9d9"
+=======
+  "277ad906"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80233,7 +80716,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "179fbbd5"
+=======
+  "43f8df79"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80300,7 +80787,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "67d9342c"
+=======
+  "2adeb6c6"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80367,7 +80858,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "5b17d8ee"
+=======
+  "868722dc"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80434,7 +80929,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "0ecea230"
+=======
+  "29e363c4"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80501,7 +81000,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "da8e71c6"
+=======
+  "a5d3f27e"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80568,7 +81071,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "d86d526a"
+=======
+  "a3b2d322"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80635,7 +81142,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "874cc47a"
+=======
+  "3119209f"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80702,7 +81213,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "76270e3e"
+=======
+  "4fc23585"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80769,7 +81284,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "1468d334"
+=======
+  "38b5d242"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80836,7 +81355,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "14c9f602"
+=======
+  "6687ebdb"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80903,7 +81426,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "4c60eee2"
+=======
+  "5192a8f4"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -80970,7 +81497,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "7af4e5fd"
+=======
+  "542f6fd9"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 
@@ -81037,7 +81568,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   false,
   null,
   null,
+<<<<<<< HEAD
   "9a5050d6"
+=======
+  "2d76a239"
+>>>>>>> bugfix/IT-3062/guest-login
   
 )
 

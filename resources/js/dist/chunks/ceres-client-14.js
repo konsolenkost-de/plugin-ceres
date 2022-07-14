@@ -74,6 +74,36 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+>>>>>>> bugfix/IT-3062/guest-login
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -208,6 +238,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c(
     "div",
     [
@@ -327,6 +358,243 @@ var render = function() {
     ],
     2
   )
+=======
+  return _c("div", { staticClass: "login-pwd-reset" }, [
+    _c("form", { attrs: { id: "login-form-" + _vm._uid, method: "post" } }, [
+      _c("div", { class: { "modal-body": _vm.modalElement } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _c(
+              "div",
+              { staticClass: "input-unit", attrs: { "data-validate": "mail" } },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.username,
+                      expression: "username"
+                    }
+                  ],
+                  attrs: {
+                    type: "email",
+                    name: "email",
+                    autocomplete: "email",
+                    id: "email" + _vm._uid,
+                    "data-autofocus": ""
+                  },
+                  domProps: { value: _vm.username },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.username = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "email" + _vm._uid } }, [
+                  _vm._v(
+                    _vm._s(_vm.$translate("Ceres::Template.loginEmail")) + "*"
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "error-msg" }, [
+              _vm._v(
+                _vm._s(_vm.$translate("Ceres::Template.loginEnterConfirmEmail"))
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12" }, [
+            _c(
+              "div",
+              {
+                staticClass: "input-unit ",
+                class: { "no-bottom": _vm.modalElement },
+                attrs: { "data-validate": "text" }
+              },
+              [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.password,
+                      expression: "password"
+                    }
+                  ],
+                  attrs: {
+                    type: "password",
+                    name: "password",
+                    autocomplete: "current-password",
+                    id: "password" + _vm._uid
+                  },
+                  domProps: { value: _vm.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.password = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "password" + _vm._uid } }, [
+                  _vm._v(
+                    _vm._s(_vm.$translate("Ceres::Template.loginPassword")) +
+                      "*"
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "error-msg" }, [
+              _vm._v(
+                _vm._s(_vm.$translate("Ceres::Template.loginEmptyPassword"))
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          class: {
+            "modal-footer justify-content-between": _vm.modalElement,
+            "login-form-footer": !_vm.modalElement
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              class: { "": !_vm.modalElement },
+              staticStyle: { "margin-bottom": "0.3rem" }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass: "small text-appearance",
+                  attrs: { href: "javascript:void(0)" },
+                  on: { click: _vm.showResetPwdView }
+                },
+                [
+                  _vm._v(
+                    _vm._s(
+                      _vm.$translate("Ceres::Template.loginForgotPassword")
+                    ) + "?"
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { class: { "d-flex text-sm-right": !_vm.modalElement } },
+            [
+              _vm._t("extend-overlay-buttons"),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary btn-appearance btn-medium",
+                  class: [
+                    { "float-right": !_vm.modalElement },
+                    _vm.buttonSizeClass
+                  ],
+                  attrs: { disabled: _vm.isDisabled },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.validateLogin($event)
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n\t\t\t\t\t\t" +
+                      _vm._s(_vm.$translate("Ceres::Template.login")) +
+                      "\n\t\t\t\t\t\t"
+                  ),
+                  _c("icon", {
+                    attrs: { icon: "user", loading: _vm.isDisabled }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  class: { btn: _vm.modalElement, "d-none": !_vm.modalElement },
+                  staticStyle: { width: "140px" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      attrs: {
+                        onclick:
+                          "$('.close').click(); $('.basket-preview-wrapper').hide(); event.preventDefault()"
+                      }
+                    },
+                    [
+                      _c("user-login-handler", {
+                        staticClass: "register-btn-none",
+                        attrs: {
+                          "show-login": false,
+                          "show-registration": true
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "btn btn-primary btn-appearance btn-medium register-btn",
+                          staticStyle: { color: "#FFFFFF" },
+                          attrs: {
+                            "data-testing": "register-select",
+                            "data-toggle": "modal",
+                            href: "#registration"
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-user-plus",
+                            attrs: { "aria-hidden": "true" }
+                          }),
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t" +
+                              _vm._s(
+                                _vm.$translate("Ceres::Template.loginRegister")
+                              ) +
+                              "\n\t\t\t\t\t\t\t"
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              )
+            ],
+            2
+          )
+        ]
+      )
+    ])
+  ])
+>>>>>>> bugfix/IT-3062/guest-login
 }
 var staticRenderFns = []
 render._withStripped = true
