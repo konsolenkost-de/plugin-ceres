@@ -26,38 +26,14 @@ class PerformanceStep extends Step
                           . $this->hasRequiredSettings(),
             "sections" => [
                 $this->generateSsrSection(),
+                $this->generateHeaderSection(),
                 $this->generateLoggingOptionsSection(),
                 $this->generatePerformanceSection(),
                 $this->generatePerformanceEventPropagationSection()
             ]
         ];
         
-        if ($this->isModuleS3Active()) {
-            array_unshift($step["sections"], $this->generateShopBoosterSection());
-        }
-        
         return $step;
-    }
-
-    /**
-     * @return array
-     */
-    private function generateShopBoosterSection():array
-    {
-        return [
-            "title" => "Wizard.shopBooster",
-            "description" => "Wizard.shopBoosterDescription",
-            "condition" => $this->globalsCondition,
-            "form" => [
-                "performance_shopBooster" => [
-                    "type" => "toggle",
-                    "defaultValue" => false,
-                    "options" => [
-                        "name" =>  "Wizard.activateShopBooster"
-                    ]
-                ]
-            ]
-        ];
     }
     
     private function generateSsrSection():array
@@ -71,6 +47,26 @@ class PerformanceStep extends Step
                     "defaultValue" => false,
                     "options" => [
                         "name" =>  "Wizard.activateSsr"
+                    ]
+                ]
+            ]
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    private function generateHeaderSection():array
+    {
+        return [
+            "title" => "Wizard.fixedHeaderOptions",
+            "description" => "Wizard.fixedHeaderOptionsDescription",
+            "form" => [
+                "performance_headerOptions" => [
+                    "type" => "checkbox",
+                    "default" => true,
+                    "options" => [
+                        "name" => "Wizard.performanceHeaderOptionsCheck"
                     ]
                 ]
             ]
@@ -154,12 +150,5 @@ class PerformanceStep extends Step
                 ]
             ]
         ];
-    }
-    
-    private function isModuleS3Active()
-    {
-        /** @var PlentyModuleRepositoryContract $moduleRepo */
-        $moduleRepo = pluginApp(PlentyModuleRepositoryContract::class);
-        return $moduleRepo->isActive('cdn.contentCache.s3');
     }
 }

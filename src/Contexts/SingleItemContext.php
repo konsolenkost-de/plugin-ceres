@@ -6,6 +6,7 @@ use IO\Helper\Utils;
 use IO\Helper\ContextInterface;
 use IO\Services\CategoryService;
 use IO\Services\CustomerService;
+use Plenty\Modules\Webshop\Helpers\UrlQuery;
 use Plenty\Plugin\ConfigRepository;
 use Plenty\Modules\Webshop\Contracts\ContactRepositoryContract;
 use Plenty\Modules\Category\Models\Category;
@@ -136,6 +137,11 @@ class SingleItemContext extends GlobalContext implements ContextInterface
     public $sku = '';
 
     /**
+     * @var string $conditionOfItem Contains the condition of the current item for structured data.
+     */
+    public $conditionOfItem = '';
+
+    /**
      * @inheritDoc
      */
     public function init($params)
@@ -152,6 +158,9 @@ class SingleItemContext extends GlobalContext implements ContextInterface
 
         $this->item = $params['item'];
         $itemData = $this->item['documents'][0]['data'];
+
+
+        $this->conditionOfItem = $this->detectItemCondition($itemData['item']['condition']['id']);
 
         $availabilityId = $itemData['variation']['availability']['id'];
         $mappedAvailability = $configRepository->get('Ceres.availability.mapping.availability' . $availabilityId);
@@ -250,7 +259,9 @@ class SingleItemContext extends GlobalContext implements ContextInterface
 
         $this->setComponents = $params['setComponents'];
         $this->setAttributeMap = $params['setAttributeMap'];
-        $this->requestedVariationUrl = explode('?', $this->request->getUri())[0];
+        /** @var UrlQuery $urlQuery */
+        $urlQuery = pluginApp(UrlQuery::class, ['path' => $this->request->getRequestUri(), 'lang' => Utils::getLang()]);
+        $this->requestedVariationUrl = $urlQuery->toAbsoluteUrl(Utils::getLang() !== $this->webstoreConfig->defaultLanguage);
         $defaultCategoryId = 0;
         $plentyId = Utils::getPlentyId();
         foreach ($this->item['documents'][0]['data']['defaultCategories'] as $category) {
@@ -270,6 +281,36 @@ class SingleItemContext extends GlobalContext implements ContextInterface
         $this->bodyClasses[] = "variation-" . $itemData['variation']['id'];
     }
 
+    /**
+     * Returns schema.org value for the given condition id
+     *
+     * @param int $conditionId
+     * @return string
+     */
+    private function detectItemCondition(int $conditionId): string
+    {
+        switch($conditionId)
+        {
+            case 0:
+                $conditionString = $this->ceresConfig->seo->itemCondition0;
+                break;
+            case 1:
+                $conditionString = $this->ceresConfig->seo->itemCondition1;
+                break;
+            case 2:
+                $conditionString = $this->ceresConfig->seo->itemCondition2;
+                break;
+            case 3:
+                $conditionString = $this->ceresConfig->seo->itemCondition3;
+                break;
+            case 4:
+                $conditionString = $this->ceresConfig->seo->itemCondition4;
+                break;
+            default:
+                $conditionString = 'https://schema.org/NewCondition';
+        }
+        return $conditionString;
+    }
     /**
      * @param $referrers
      *
@@ -327,7 +368,7 @@ class SingleItemContext extends GlobalContext implements ContextInterface
     /**
      * @param $barcodes
      * @param $barcodeMappingId
-     * 
+     *
      * @return string
      */
     private function getBarcodeWithId($barcodes, $barcodeMappingId){

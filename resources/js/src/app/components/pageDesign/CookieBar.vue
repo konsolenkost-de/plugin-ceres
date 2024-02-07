@@ -1,43 +1,23 @@
 <template>
-    <!-- v-show is required to prevent CLS for ssr -->
-    <div
-    class="cookie-bar bg-smoke flex-style fixed-bottom"
-    :class="{
-      out: !isVisible,
-      'bg-smoke': isVisible,
-      'fixed-bottom': !isShopBuilder || false,
-    }"
-  >
+  <!-- v-show is required to prevent CLS for ssr -->
+  <div class="cookie-bar bg-smoke flex-style fixed-bottom" :class="{
+    out: !isVisible,
+    'bg-smoke': isVisible,
+    'fixed-bottom': !isShopBuilder || false,
+  }">
     <div class="container-max kk-border bg-white" v-if="isVisible">
-      <div
-        class="row py-3"
-        v-show="!isExpanded"
-        :class="classes"
-        :style="styles"
-      >
+      <div class="row py-3" v-show="!isExpanded" :class="classes" :style="styles">
         <div class="p-3">
           <p v-html="text"></p>
           <div>
             <template v-for="consentGroup in consentGroups">
-              <span
-                v-if="consentGroup.consents.length > 0"
+              <span v-if="consentGroup.consents.length > 0"
                 class="custom-control custom-switch custom-control-appearance d-md-inline-block mr-3"
-                :key="consentGroup.key"
-              >
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  :id="_uid + '-group-' + consentGroup.key"
-                  :disabled="consentGroup.necessary"
-                  :checked="
-                    isConsented(consentGroup.key) || consentGroup.necessary
-                  "
-                  @change="toggleConsent(consentGroup.key)"
-                />
-                <label
-                  class="custom-control-label"
-                  :for="_uid + '-group-' + consentGroup.key"
-                >
+                :key="consentGroup.key">
+                <input type="checkbox" class="custom-control-input" :id="_uid + '-group-' + consentGroup.key"
+                  :disabled="consentGroup.necessary" :checked="isConsented(consentGroup.key) || consentGroup.necessary
+                    " @change="toggleConsent(consentGroup.key)" />
+                <label class="custom-control-label" :for="_uid + '-group-' + consentGroup.key">
                   <template v-if="consentGroup.label.length > 0">
                     {{ consentGroup.label }}
                   </template>
@@ -50,31 +30,21 @@
               </span>
             </template>
 
-            <a
-              href="#"
-              class="text-primary text-appearance d-block d-md-inline-block"
-              @click.prevent.stop="isExpanded = true"
-              >{{ $translate("Ceres::Template.cookieBarMoreSettings") }}</a
-            >
+            <a href="#" class="text-primary text-appearance d-block d-md-inline-block"
+              @click.prevent.stop="isExpanded = true">{{ $translate("Ceres::Template.cookieBarMoreSettings") }}</a>
           </div>
         </div>
         <div class="p-3 w-100">
-          <button
-            class="btn btn-primary btn-block btn-appearance"
-            @click="
-              acceptAll();
-              close();
-            "
-          >
+          <button class="btn btn-primary btn-block btn-appearance" @click="
+            acceptAll();
+          close();
+          ">
             {{ $translate("Ceres::Template.cookieBarAcceptAll") }}
           </button>
-          <button
-            class="btn btn-default btn-block"
-            @click="
-              storeConsents();
-              close();
-            "
-          >
+          <button class="btn btn-default btn-block" @click="
+            storeConsents();
+          close();
+          ">
             {{ $translate("Ceres::Template.cookieBarSave") }}
           </button>
         </div>
@@ -84,32 +54,22 @@
           <privacy-settings :consent-groups="consentGroups"></privacy-settings>
         </div>
         <div class="col-12 col-md-6">
-          <a
-            href="#"
-            class="text-primary text-appearance d-inline-block mb-3"
-            @click.prevent.stop="isExpanded = false"
-            >{{ $translate("Ceres::Template.cookieBarBack") }}</a
-          >
+          <a href="#" class="text-primary text-appearance d-inline-block mb-3" @click.prevent.stop="isExpanded = false">{{
+            $translate("Ceres::Template.cookieBarBack") }}</a>
         </div>
         <div class="col-6 col-md-3">
-          <button
-            class="btn btn-block btn-primary btn-appearance"
-            @click="
-              acceptAll();
-              close();
-            "
-          >
+          <button class="btn btn-block btn-primary btn-appearance" @click="
+            acceptAll();
+          close();
+          ">
             {{ $translate("Ceres::Template.cookieBarAcceptAll") }}
           </button>
         </div>
         <div class="col-6 col-md-3">
-          <button
-            class="btn btn-block btn-block btn-default"
-            @click="
-              storeConsents();
-              close();
-            "
-          >
+          <button class="btn btn-block btn-block btn-default" @click="
+            storeConsents();
+          close();
+          ">
             {{ $translate("Ceres::Template.cookieBarSave") }}
           </button>
         </div>
@@ -135,92 +95,76 @@ import { mapMutations } from "vuex";
 import { ComponentIdMixin } from "../../mixins/componentId.mixin";
 
 export default {
-  props: {
+  props:
+  {
     styles: String,
     classes: String,
     consentGroups: Object,
     showRejectAll: {
-        type: Boolean,
-        default: true
-    },
+      type: Boolean,
+      default: true
+    }
   },
 
-  data() {
+  mixins: [ComponentIdMixin], // Experimental mixin, may be removed in the future.
+
+  data () {
     return {
       isCollapsed: true,
-      isExpanded: false,
+      isExpanded: false
     };
   },
 
-  computed: {
-    isVisible() {
-      return (
-        App.isShopBuilder ||
-        !this.$store.state.consents.hasResponse ||
-        !this.isCollapsed
-      );
-    },
+  text () {
+    const links = {
+      gtc:
+        '<a class="text-appearance" href="' +
+        App.urls.gtc +
+        '" target="_blank">' +
+        this.$translate("Ceres::Template.checkoutGtc") +
+        "</a>",
+      cancellation:
+        '<a class="text-appearance" href="' +
+        App.urls.cancellationRights +
+        '" target="_blank">' +
+        this.$translate("Ceres::Template.checkoutCancellationRight", {
+          hyphen: "&shy;",
+        }) +
+        "</a>",
+      policy:
+        '<a class="text-appearance" href="' +
+        App.urls.privacyPolicy +
+        '" target="_blank">' +
+        this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+          hyphen: "&shy;",
+        }) +
+        "</a>",
+      legal:
+        '<a class="text-appearance" href="' +
+        App.urls.legalDisclosure +
+        '" target="_blank">' +
+        this.$translate("Ceres::Template.footerLegalDisclosure") +
+        "</a>",
+    };
 
-    mixins: [ComponentIdMixin], // Experimental mixin, may be removed in the future.
-
-    data()
-    {
-        return {
-            isCollapsed: true,
-            isExpanded: false
-        };
-    },
-
-    text() {
-      const links = {
-        gtc:
-          '<a class="text-appearance" href="' +
-          App.urls.gtc +
-          '" target="_blank">' +
-          this.$translate("Ceres::Template.checkoutGtc") +
-          "</a>",
-        cancellation:
-          '<a class="text-appearance" href="' +
-          App.urls.cancellationRights +
-          '" target="_blank">' +
-          this.$translate("Ceres::Template.checkoutCancellationRight", {
-            hyphen: "&shy;",
-          }) +
-          "</a>",
-        policy:
-          '<a class="text-appearance" href="' +
-          App.urls.privacyPolicy +
-          '" target="_blank">' +
-          this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
-            hyphen: "&shy;",
-          }) +
-          "</a>",
-        legal:
-          '<a class="text-appearance" href="' +
-          App.urls.legalDisclosure +
-          '" target="_blank">' +
-          this.$translate("Ceres::Template.footerLegalDisclosure") +
-          "</a>",
-      };
-
-      return this.$translate("Ceres::Template.cookieBarHintText", links);
-    },
+    return this.$translate("Ceres::Template.cookieBarHintText", links);
   },
-  methods: {
-    ...mapMutations([ "storeConsents", "acceptAll", "denyAll" ]),
+},
+methods: {
+    ...mapMutations(["storeConsents", "acceptAll", "denyAll"]),
 
     close() {
-      this.isCollapsed = true;
-      this.isExpanded = false;
-    },
-
-    isConsented(groupKey) {
-      return this.$store.getters.isConsented(groupKey + ".*");
-    },
-
-    toggleConsent(groupKey) {
-      this.$store.commit("toggleConsent", groupKey + ".*");
-    },
+    this.isCollapsed = true;
+    this.isExpanded = false;
   },
+
+  isConsented(groupKey) {
+    return this.$store.getters.isConsented(groupKey + ".*");
+  },
+
+  toggleConsent(groupKey) {
+    this.$store.commit("toggleConsent", groupKey + ".*");
+  },
+},
 };
 </script>
