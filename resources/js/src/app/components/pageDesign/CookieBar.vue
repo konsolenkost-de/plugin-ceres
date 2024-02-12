@@ -115,56 +115,69 @@ export default {
     };
   },
 
-  text () {
-    const links = {
-      gtc:
-        '<a class="text-appearance" href="' +
-        App.urls.gtc +
-        '" target="_blank">' +
-        this.$translate("Ceres::Template.checkoutGtc") +
-        "</a>",
-      cancellation:
-        '<a class="text-appearance" href="' +
-        App.urls.cancellationRights +
-        '" target="_blank">' +
-        this.$translate("Ceres::Template.checkoutCancellationRight", {
-          hyphen: "&shy;",
-        }) +
-        "</a>",
-      policy:
-        '<a class="text-appearance" href="' +
-        App.urls.privacyPolicy +
-        '" target="_blank">' +
-        this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
-          hyphen: "&shy;",
-        }) +
-        "</a>",
-      legal:
-        '<a class="text-appearance" href="' +
-        App.urls.legalDisclosure +
-        '" target="_blank">' +
-        this.$translate("Ceres::Template.footerLegalDisclosure") +
-        "</a>",
-    };
+  computed: {
 
-    return this.$translate("Ceres::Template.cookieBarHintText", links);
+    isVisible()
+    {
+        return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
+    },
+
+    isShopBuilder()
+    {
+        return App.isShopBuilder;
+    },
+
+    text () {
+      const links = {
+        gtc:
+          '<a class="text-appearance" href="' +
+          App.urls.gtc +
+          '" target="_blank">' +
+          this.$translate("Ceres::Template.checkoutGtc") +
+          "</a>",
+        cancellation:
+          '<a class="text-appearance" href="' +
+          App.urls.cancellationRights +
+          '" target="_blank">' +
+          this.$translate("Ceres::Template.checkoutCancellationRight", {
+            hyphen: "&shy;",
+          }) +
+          "</a>",
+        policy:
+          '<a class="text-appearance" href="' +
+          App.urls.privacyPolicy +
+          '" target="_blank">' +
+          this.$translate("Ceres::Template.checkoutPrivacyPolicy", {
+            hyphen: "&shy;",
+          }) +
+          "</a>",
+        legal:
+          '<a class="text-appearance" href="' +
+          App.urls.legalDisclosure +
+          '" target="_blank">' +
+          this.$translate("Ceres::Template.footerLegalDisclosure") +
+          "</a>",
+      };
+
+      return this.$translate("Ceres::Template.cookieBarHintText", links);
+    },
   },
-},
-methods: {
+
+  methods: {
     ...mapMutations(["storeConsents", "acceptAll", "denyAll"]),
 
     close() {
-    this.isCollapsed = true;
-    this.isExpanded = false;
-  },
+      this.isCollapsed = true;
+      this.isExpanded = false;
+    },
 
-  isConsented(groupKey) {
-    return this.$store.getters.isConsented(groupKey + ".*");
-  },
+    isConsented(groupKey) {
+      return this.$store.getters.isConsented(groupKey + ".*");
+    },
 
-  toggleConsent(groupKey) {
-    this.$store.commit("toggleConsent", groupKey + ".*");
+    toggleConsent(groupKey) {
+      this.$store.commit("toggleConsent", groupKey + ".*");
+    },
   },
-},
 };
 </script>

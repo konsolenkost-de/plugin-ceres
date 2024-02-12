@@ -128,46 +128,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -180,6 +140,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       default: true
     }
   },
+  mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
+  // Experimental mixin, may be removed in the future.
   data: function data() {
     return {
       isCollapsed: true,
@@ -190,13 +152,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     isVisible: function isVisible() {
       return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
     },
-    mixins: [_mixins_componentId_mixin__WEBPACK_IMPORTED_MODULE_7__["ComponentIdMixin"]],
-    // Experimental mixin, may be removed in the future.
-    data: function data() {
-      return {
-        isCollapsed: true,
-        isExpanded: false
-      };
+    isShopBuilder: function isShopBuilder() {
+      return App.isShopBuilder;
     },
     text: function text() {
       var links = {

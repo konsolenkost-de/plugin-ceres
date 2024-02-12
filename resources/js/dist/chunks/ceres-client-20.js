@@ -283,6 +283,50 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -482,6 +526,7 @@ var render = function() {
                           )
                         ]
                       ),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {
@@ -519,6 +564,7 @@ var render = function() {
                       )
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -568,6 +614,7 @@ var render = function() {
                         : _vm._e()
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -603,6 +650,7 @@ var render = function() {
                         "\n                "
                     )
                   ]),
+                  _vm._v(" "),
                   !_vm.showNetPrices
                     ? _c("dd", { staticClass: "rebate-hint" }, [
                         _vm._v(
@@ -610,7 +658,7 @@ var render = function() {
                             _vm._s(
                               _vm.$translate("Ceres::Template.basketRebateSign")
                             ) +
-                            "${calculateBaseValue(basket.itemSum, basket.basketRebate) - basket.itemSum | currency }\n                "
+                            "${calculateBaseValue(basket.itemSum,\n                    basket.basketRebate) - basket.itemSum | currency }\n                "
                         )
                       ])
                     : _c("dd", { staticClass: "rebate-hint" }, [
@@ -646,6 +694,7 @@ var render = function() {
                       )
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     { class: { "font-weight-bold": _vm.showNetPrices } },
@@ -680,6 +729,7 @@ var render = function() {
                         : _vm._e()
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     { class: { "font-weight-bold": !_vm.showNetPrices } },
@@ -718,6 +768,7 @@ var render = function() {
                       )
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -764,6 +815,7 @@ var render = function() {
                         : _vm._e()
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -797,6 +849,7 @@ var render = function() {
                         "\n                "
                     )
                   ]),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -816,13 +869,18 @@ var render = function() {
                 ]
               : _vm._e(),
             _vm._v(" "),
+            (_vm.visibleFields.includes("subAmount") ||
+              _vm.visibleFields.includes("basket.order_total_net") ||
+              _vm.visibleFields.includes("vats") ||
+              _vm.visibleFields.includes("basket.vat")) &&
             _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? _c("hr")
               : _vm._e(),
             _vm._v(" "),
             _vm._t("before-total-sum"),
             _vm._v(" "),
-            _vm.visibleFields.includes("totalSumNet") &&
+            (_vm.visibleFields.includes("subAmount") ||
+              _vm.visibleFields.includes("basket.order_total_net")) &&
             _vm.basket.basketAmountNet != _vm.basket.basketAmount
               ? [
                   _c(
@@ -840,6 +898,7 @@ var render = function() {
                       )
                     ]
                   ),
+                  _vm._v(" "),
                   _c(
                     "dd",
                     {
@@ -872,6 +931,7 @@ var render = function() {
                           "%\n                "
                       )
                     ]),
+                    _vm._v(" "),
                     _c("dd", { attrs: { "data-testing": "vat-amount" } }, [
                       _vm._v(
                         "\n                    " +
@@ -908,6 +968,7 @@ var render = function() {
                           )
                         ]
                       ),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {
@@ -953,6 +1014,7 @@ var render = function() {
                           )
                         ]
                       ),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {
@@ -999,6 +1061,7 @@ var render = function() {
                             : _vm._e()
                         ]
                       ),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {
@@ -1032,6 +1095,7 @@ var render = function() {
                             "\n                    "
                         )
                       ]),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {
@@ -1064,6 +1128,7 @@ var render = function() {
                             "\n                    "
                         )
                       ]),
+                      _vm._v(" "),
                       _c(
                         "dd",
                         {

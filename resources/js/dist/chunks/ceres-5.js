@@ -303,6 +303,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -814,7 +821,7 @@ var render = function() {
                                     .value) ||
                               (_vm.item.prices.rrp &&
                                 _vm.item.prices.rrp.price.value >
-                                  _vm.item.prices.default.unitPrice.value)
+                                  _vm.item.prices.default.price.value)
                                 ? [
                                     _c("span", { staticClass: "small" }, [
                                       _vm._v(
