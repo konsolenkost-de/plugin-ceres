@@ -110,6 +110,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -420,16 +425,17 @@ var render = function() {
                         staticStyle: { "min-height": "80px" }
                       },
                       [
-                        _c("img", {
-                          staticClass: "img-fluid mx-auto",
-                          staticStyle: { "max-height": "140px" },
+                        _c("lazy-img", {
+                          style: { maxHeight: "140px" },
                           attrs: {
-                            src: _vm.imageUrl,
+                            "image-url": _vm.imageUrl,
                             alt: _vm.imageAlternativeText || _vm.itemName,
-                            title: _vm.itemName
+                            title: _vm.itemName,
+                            "picture-class": "img-fluid mx-auto"
                           }
                         })
-                      ]
+                      ],
+                      1
                     ),
                     _vm._v(" "),
                     _c(

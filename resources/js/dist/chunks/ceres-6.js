@@ -324,6 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "order-return-item",
@@ -688,18 +689,23 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("article", { staticClass: "basket-list-item py-3" }, [
     _c("div", { staticClass: "basket-item d-flex" }, [
-      _c("div", { staticClass: "image-container" }, [
-        _vm.orderItemImage
-          ? _c("img", {
-              staticClass: "d-block mw-100 mh-100",
-              attrs: {
-                src: _vm.orderItemImage,
-                alt: _vm._f("itemBundleName")(_vm.orderItem),
-                title: _vm._f("itemBundleName")(_vm.orderItem)
-              }
-            })
-          : _vm._e()
-      ]),
+      _c(
+        "div",
+        { staticClass: "image-container" },
+        [
+          _vm.orderItemImage
+            ? _c("lazy-img", {
+                attrs: {
+                  "image-url": _vm.orderItemImage,
+                  alt: _vm._f("itemBundleName")(_vm.orderItem),
+                  title: _vm._f("itemBundleName")(_vm.orderItem),
+                  "picture-class": "d-block mw-100 mh-100"
+                }
+              })
+            : _vm._e()
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "meta-container-wrapper" }, [
         _c("div", { staticClass: "meta-container-wrapper-inner" }, [

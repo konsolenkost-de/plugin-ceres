@@ -343,6 +343,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -748,23 +752,30 @@ var render = function() {
           }
         },
         [
-          _c(
-            "div",
-            { staticClass: "image-container" },
-            [
-              _vm.image
-                ? _c("lazy-img", {
-                    attrs: {
-                      "picture-class": "d-block mw-100 mh-100",
-                      "image-url": _vm.image,
-                      alt: _vm.altText,
-                      title: _vm.itemName
-                    }
-                  })
-                : _vm._e()
-            ],
-            1
-          ),
+          _c("div", { staticClass: "image-container" }, [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: _vm._f("itemURL")(_vm.basketItem.variation.data)
+                }
+              },
+              [
+                _vm.image
+                  ? _c("lazy-img", {
+                      attrs: {
+                        "image-url": _vm.image,
+                        alt: _vm.altText,
+                        title: _vm.itemName,
+                        "picture-class": "d-block mw-100 mh-100",
+                        "data-testing": "basket-item-img"
+                      }
+                    })
+                  : _vm._e()
+              ],
+              1
+            )
+          ]),
           _vm._v(" "),
           _c(
             "div",

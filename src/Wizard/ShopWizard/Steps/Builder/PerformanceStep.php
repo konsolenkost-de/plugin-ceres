@@ -29,7 +29,8 @@ class PerformanceStep extends Step
                 $this->generateHeaderSection(),
                 $this->generateLoggingOptionsSection(),
                 $this->generatePerformanceSection(),
-                $this->generatePerformanceEventPropagationSection()
+                $this->generatePerformanceEventPropagationSection(),
+                $this->generateModernImageConversionSection()
             ]
         ];
         
@@ -146,6 +147,26 @@ class PerformanceStep extends Step
                     "default" => true,
                     "options" => [
                         "name" => "Wizard.performanceEventPropagation"
+                    ]
+                ]
+            ]
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    private function generateModernImageConversionSection():array
+    {
+        return [
+            "title" => "Wizard.modernImageConversionTitle",
+            "description" => "Wizard.modernImageConversionDescription",
+            "form" => [
+                "performance_modernImagesConversion" => [
+                    "type" => "toggle",
+                    "defaultValue" => false,
+                    "options" => [
+                        "name" =>  "Wizard.modernImageConversionName"
                     ]
                 ]
             ]

@@ -45,6 +45,12 @@ class PerformanceMapping
             "global"   => false,
             "optional" => true,
         ],
+        "performance_modernImagesConversion" => [
+            "field"    => "log.performance.modernImagesConversion",
+            "type"     => "boolean",
+            "global"   => false,
+            "optional" => true,
+        ],
     ];
     
     /**

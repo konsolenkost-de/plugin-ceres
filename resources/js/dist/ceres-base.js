@@ -451,10 +451,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_match_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _plugins_lozad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../plugins/lozad */ "./resources/js/src/app/plugins/lozad.js");
-/* harmony import */ var _helper_featureDetect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../helper/featureDetect */ "./resources/js/src/app/helper/featureDetect.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _plugins_lozad__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../plugins/lozad */ "./resources/js/src/app/plugins/lozad.js");
+/* harmony import */ var _helper_featureDetect__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../helper/featureDetect */ "./resources/js/src/app/helper/featureDetect.js");
 
 
+
+
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -470,69 +483,153 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    imageUrl: String,
-    fallbackUrl: String,
-    isBackgroundImage: Boolean,
-    pictureClass: String,
-    alt: String,
-    title: String
+    convertImage: {
+      type: Boolean,
+      default: true
+    },
+    imageUrl: {
+      type: String,
+      default: null
+    },
+    fallbackUrl: {
+      type: String,
+      default: null
+    },
+    isBackgroundImage: {
+      type: Boolean,
+      default: false
+    },
+    pictureClass: {
+      type: String,
+      default: null
+    },
+    alt: {
+      type: String,
+      default: null
+    },
+    title: {
+      type: String,
+      default: null
+    }
   },
   data: function data() {
     return {
-      supported: undefined
+      imageConversionEnabled: App.config.log.modernImagesConversion,
+      receivedImageExtension: null,
+      browserSupportedImgExtension: null,
+      defaultImageUrl: this.imageUrl,
+      avifSupported: false,
+      avifExtension: 'avif',
+      webpSupported: false,
+      webpExtension: 'webp',
+      imgRegex: /.?(\.\w+)(?:$|\?)/
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    Object(_helper_featureDetect__WEBPACK_IMPORTED_MODULE_3__["detectWebP"])(function (supported) {
-      _this.supported = supported;
+    Object(_helper_featureDetect__WEBPACK_IMPORTED_MODULE_5__["detectAvif"])(function (avifSupported) {
+      _this.avifSupported = avifSupported;
 
-      _this.$nextTick(function () {
-        if (!_this.isBackgroundImage) {
-          _this.$el.classList.toggle("lozad");
-        }
+      if (avifSupported) {
+        _this.$nextTick(function () {
+          if (!_this.isBackgroundImage) _this.$el.classList.toggle('lozad');
+          Object(_plugins_lozad__WEBPACK_IMPORTED_MODULE_4__["default"])(_this.$el).observe();
+        });
 
-        Object(_plugins_lozad__WEBPACK_IMPORTED_MODULE_2__["default"])(_this.$el).observe();
-      });
+        _this.propagateImageFormat();
+      }
+
+      if (!avifSupported) {
+        Object(_helper_featureDetect__WEBPACK_IMPORTED_MODULE_5__["detectWebP"])(function (webpSupported) {
+          _this.webpSupported = webpSupported;
+
+          if (webpSupported) {
+            _this.$nextTick(function () {
+              if (!_this.isBackgroundImage) _this.$el.classList.toggle('lozad');
+              Object(_plugins_lozad__WEBPACK_IMPORTED_MODULE_4__["default"])(_this.$el).observe();
+            });
+
+            _this.propagateImageFormat();
+          }
+        });
+      }
     });
   },
   watch: {
-    imageUrl: function imageUrl() {
+    defaultImageUrl: function defaultImageUrl() {
       var _this2 = this;
 
       this.$nextTick(function () {
-        _this2.$el.setAttribute("data-loaded", false);
+        _this2.$el.setAttribute('data-loaded', 'false');
 
-        Object(_plugins_lozad__WEBPACK_IMPORTED_MODULE_2__["default"])(_this2.$el).triggerLoad(_this2.$el);
+        Object(_plugins_lozad__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2.$el).triggerLoad(_this2.$el);
       });
     }
   },
   computed: {
-    /**
-     *  Determine appropriate image url to use as background source
-     */
-    backgroundSource: function backgroundSource() {
-      if (this.imageUrl && this.mimeType) {
-        return this.supported ? this.imageUrl : this.fallbackUrl;
-      } else {
-        return this.imageUrl || this.fallbackUrl;
-      }
-    },
-
-    /**
-     * Check if url points to a .webp image and return appropriate mime-type
-     */
     mimeType: function mimeType() {
+      var _this$defaultImageUrl;
+
+      var matches = (_this$defaultImageUrl = this.defaultImageUrl) === null || _this$defaultImageUrl === void 0 ? void 0 : _this$defaultImageUrl.match(this.imgRegex);
+      if (matches) return "image/".concat(matches[1].split('.').pop());
+      return null;
+    },
+    convertedImageUrl: function convertedImageUrl() {
+      return "".concat(this.imageUrl, ".").concat(this.browserSupportedImgExtension);
+    }
+  },
+  methods: {
+    propagateImageFormat: function propagateImageFormat() {
+      this.setReceivedImageExtension();
+      this.setBrowserSupportedImageExtension();
+      this.setDefaultImageUrl();
+    },
+    setReceivedImageExtension: function setReceivedImageExtension() {
       var _this$imageUrl;
 
-      var matches = (_this$imageUrl = this.imageUrl) === null || _this$imageUrl === void 0 ? void 0 : _this$imageUrl.match(/.?(\.\w+)(?:$|\?)/);
-
-      if (matches) {
-        return matches[1] === ".webp" ? "image/webp" : null;
+      var matches = (_this$imageUrl = this.imageUrl) === null || _this$imageUrl === void 0 ? void 0 : _this$imageUrl.match(this.imgRegex);
+      if (matches) this.receivedImageExtension = matches[1].split('.').pop();
+    },
+    setBrowserSupportedImageExtension: function setBrowserSupportedImageExtension() {
+      if (this.avifSupported) {
+        this.browserSupportedImgExtension = this.avifExtension;
+        return;
       }
 
-      return null;
+      if (this.webpSupported) {
+        this.browserSupportedImgExtension = this.webpExtension;
+        return;
+      }
+
+      this.browserSupportedImgExtension = this.receivedImageExtension !== this.avifExtension && this.receivedImageExtension !== this.webpExtension ? this.receivedImageExtension : 'jpeg';
+    },
+    setDefaultImageUrl: function setDefaultImageUrl() {
+      if (this.receivedImageExtension === this.avifExtension) {
+        this.defaultImageUrl = this.browserSupportedImgExtension === this.avifExtension ? this.imageUrl : this.convertedImageUrl;
+        return;
+      }
+
+      if (this.receivedImageExtension === this.webpExtension) {
+        if (this.browserSupportedImgExtension === this.avifExtension) {
+          this.defaultImageUrl = this.convertedImageUrl;
+          return;
+        }
+
+        if (this.browserSupportedImgExtension === this.webpExtension) {
+          this.defaultImageUrl = this.imageUrl;
+          return;
+        }
+
+        this.defaultImageUrl = this.convertedImageUrl;
+        return;
+      }
+
+      this.defaultImageUrl = this.imageShouldBeConverted() ? this.convertedImageUrl : this.imageUrl || this.fallbackUrl;
+    },
+    imageShouldBeConverted: function imageShouldBeConverted() {
+      var cdnPathRegex = /\/item\/images\//;
+      return this.convertImage && this.imageConversionEnabled && this.browserSupportedImgExtension !== this.receivedImageExtension && cdnPathRegex.test(this.imageUrl);
     }
   }
 });
@@ -36184,7 +36281,7 @@ var render = function() {
         "picture",
         {
           attrs: {
-            "data-iesrc": _vm.fallbackUrl || _vm.imageUrl,
+            "data-iesrc": _vm.defaultImageUrl,
             "data-picture-class": _vm.pictureClass,
             "data-alt": _vm.alt,
             "data-title": _vm.title
@@ -36193,7 +36290,13 @@ var render = function() {
         [
           _vm._t("additionalimages"),
           _vm._v(" "),
-          _c("source", { attrs: { srcset: _vm.imageUrl, type: _vm.mimeType } }),
+          _c("source", {
+            attrs: { srcset: _vm.defaultImageUrl, type: _vm.mimeType }
+          }),
+          _vm._v(" "),
+          _vm.defaultImageUrl !== _vm.imageUrl
+            ? _c("source", { attrs: { srcset: _vm.imageUrl } })
+            : _vm._e(),
           _vm._v(" "),
           _vm.fallbackUrl
             ? _c("source", { attrs: { srcset: _vm.fallbackUrl } })
@@ -36205,7 +36308,9 @@ var render = function() {
         "div",
         {
           class: _vm.pictureClass,
-          attrs: { "data-background-image": _vm.backgroundSource }
+          attrs: {
+            "data-background-image": _vm.defaultImageUrl || _vm.fallbackUrl
+          }
         },
         [_vm._t("default")],
         2
@@ -61516,11 +61621,12 @@ function executeReCaptcha(form) {
 /*!******************************************************!*\
   !*** ./resources/js/src/app/helper/featureDetect.js ***!
   \******************************************************/
-/*! exports provided: detectWebP, detectPassiveEvents, detectIntersectionObserver */
+/*! exports provided: detectAvif, detectWebP, detectPassiveEvents, detectIntersectionObserver */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectAvif", function() { return detectAvif; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectWebP", function() { return detectWebP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectPassiveEvents", function() { return detectPassiveEvents; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIntersectionObserver", function() { return detectIntersectionObserver; });
@@ -61568,28 +61674,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 var _supportsPassive;
 /**
- * Asynchronous function to detect webP support
+ * Function to detect avif support
  * @param callback
  */
 
 
-function detectWebP(callback) {
-  if (!Object(_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(App.features.webp)) {
-    callback(App.features.webp);
+function detectAvif(callback) {
+  if (!Object(_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(App.features.avif)) {
+    callback(App.features.avif);
     return;
   }
 
   var testUris = {
-    "lossy": "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
-    "lossless": "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
-    "alpha": "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
-    "animation": "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    "avif": "AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAABYAAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgSAAAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAB5tZGF0EgAKBzgADlAgIGkyCR/wAABAAACvcA=="
   };
   var promises = [];
 
   var _loop = function _loop(uri) {
     promises.push(new Promise(function (resolve, reject) {
-      _detectWebPSupport(testUris[uri], resolve);
+      _detectModernImageSupport("avif", testUris[uri], resolve);
     }));
   };
 
@@ -61613,23 +61716,69 @@ function detectWebP(callback) {
       _iterator.f();
     }
 
+    App.features.avif = isSupported;
+    callback(isSupported);
+  });
+}
+/**
+ * Function to detect webP support
+ * @param callback
+ */
+
+function detectWebP(callback) {
+  if (!Object(_utils__WEBPACK_IMPORTED_MODULE_11__["isNullOrUndefined"])(App.features.webp)) {
+    callback(App.features.webp);
+    return;
+  }
+
+  var testUris = {
+    "webp": "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="
+  };
+  var promises = [];
+
+  var _loop2 = function _loop2(uri) {
+    promises.push(new Promise(function (resolve, reject) {
+      _detectModernImageSupport("webp", testUris[uri], resolve);
+    }));
+  };
+
+  for (var uri in testUris) {
+    _loop2(uri);
+  }
+
+  var isSupported = true;
+  Promise.all(promises).then(function (values) {
+    var _iterator2 = _createForOfIteratorHelper(values),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var value = _step2.value;
+        isSupported = isSupported && value;
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+
     App.features.webp = isSupported;
     callback(isSupported);
   });
 }
 
-function _detectWebPSupport(uri, resolve) {
+function _detectModernImageSupport(targetExtension, uri, resolve) {
   var img = new Image();
 
   img.onload = function () {
-    resolve(img.width > 0 && img.height > 0);
+    resolve(true);
   };
 
   img.onerror = function () {
     resolve(false);
   };
 
-  img.src = "data:image/webp;base64," + uri;
+  img.src = "data:image/" + targetExtension + ";base64," + uri;
 }
 /**
  * Detect if the parameter passive is supported for the method addEventListener (MSIE is not)
