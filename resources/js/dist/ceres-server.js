@@ -54839,7 +54839,9 @@ var render = function() {
                   '</button> <button class="btn btn-default btn-block">' +
                   _vm._ssrEscape(
                     "\n          " +
-                      _vm._s(_vm.$translate("Ceres::Template.cookieBarSave")) +
+                      _vm._s(
+                        _vm.$translate("Ceres::Template.cookieBarDenyAll")
+                      ) +
                       "\n        "
                   ) +
                   "</button></div></div> "

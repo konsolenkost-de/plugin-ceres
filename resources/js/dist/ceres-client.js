@@ -39441,7 +39441,7 @@ var render = function() {
                       staticClass: "btn btn-default btn-block",
                       on: {
                         click: function($event) {
-                          _vm.storeConsents()
+                          _vm.denyAll()
                           _vm.close()
                         }
                       }
@@ -39450,7 +39450,7 @@ var render = function() {
                       _vm._v(
                         "\n          " +
                           _vm._s(
-                            _vm.$translate("Ceres::Template.cookieBarSave")
+                            _vm.$translate("Ceres::Template.cookieBarDenyAll")
                           ) +
                           "\n        "
                       )
