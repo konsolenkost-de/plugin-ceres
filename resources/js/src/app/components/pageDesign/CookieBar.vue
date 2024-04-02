@@ -42,10 +42,10 @@
             {{ $translate("Ceres::Template.cookieBarAcceptAll") }}
           </button>
           <button class="btn btn-default btn-block" @click="
-            storeConsents();
+            denyAll();
           close();
           ">
-            {{ $translate("Ceres::Template.cookieBarSave") }}
+            {{ $translate("Ceres::Template.cookieBarDenyAll") }}
           </button>
         </div>
       </div>
