@@ -4,11 +4,13 @@
         :data-iesrc="defaultImageUrl"
         :data-picture-class="pictureClass"
         :data-alt="alt"
-        :data-title="title">
+        :data-title="title"
+        :id="uuid">
         <slot name="additionalimages"></slot>
         <source :srcset="defaultImageUrl" :type="mimeType">
         <source v-if="defaultImageUrl !== imageUrl" :srcset="imageUrl">
         <source v-if="fallbackUrl" :srcset="fallbackUrl">
+        <img v-if="receivedImageExtension === 'tif'" :src="defaultImageUrl" :alt="alt" type="image/tiff">
     </picture>
 
     <div v-else :data-background-image="defaultImageUrl || fallbackUrl" :class="pictureClass">
@@ -63,6 +65,7 @@ export default {
             avifExtension: 'avif',
             webpSupported: false,
             webpExtension: 'webp',
+            uuid: null,
             imgRegex: /.?(\.\w+)(?:$|\?)/
         }
     },
@@ -103,6 +106,15 @@ export default {
             this.$nextTick(() => {
                 this.$el.setAttribute('data-loaded', 'false');
                 lozad(this.$el).triggerLoad(this.$el);
+            });
+            this.$el.classList.remove('lozad');
+        },
+        imageUrl()
+        {
+            this.generateUuid();
+            this.$nextTick(() => {
+                this.propagateImageFormat();
+                document.getElementById(this.uuid).getElementsByTagName('img')?.[0].remove();
             });
         }
     },
@@ -153,39 +165,46 @@ export default {
         },
         setDefaultImageUrl()
         {
-            if (this.receivedImageExtension === this.avifExtension) {
-                this.defaultImageUrl = this.browserSupportedImgExtension === this.avifExtension
-                    ? this.imageUrl
-                    : this.convertedImageUrl;
-                return;
-            }
-
-            if (this.receivedImageExtension === this.webpExtension) {
-                if (this.browserSupportedImgExtension === this.avifExtension) {
-                    this.defaultImageUrl = this.convertedImageUrl;
+            if (this.imageShouldBeConverted()) {
+                if (this.receivedImageExtension === this.avifExtension) {
+                    this.defaultImageUrl = this.browserSupportedImgExtension === this.avifExtension
+                        ? this.imageUrl
+                        : this.convertedImageUrl;
                     return;
                 }
+                if (this.receivedImageExtension === this.webpExtension) {
+                    if (this.browserSupportedImgExtension === this.avifExtension) {
+                        this.defaultImageUrl = this.convertedImageUrl;
+                        return;
+                    }
+                    if (this.browserSupportedImgExtension === this.webpExtension) {
+                        this.defaultImageUrl = this.imageUrl;
+                        return;
+                    }
 
-                if (this.browserSupportedImgExtension === this.webpExtension) {
                     this.defaultImageUrl = this.imageUrl;
                     return;
                 }
 
+                // convert anything other than avif or webp into browser supported format.
                 this.defaultImageUrl = this.convertedImageUrl;
                 return;
             }
-
-            this.defaultImageUrl = this.imageShouldBeConverted()
-                ? this.convertedImageUrl
-                : this.imageUrl || this.fallbackUrl;
+            this.defaultImageUrl = this.imageUrl || this.fallbackUrl;
         },
         imageShouldBeConverted()
         {
-            const cdnPathRegex = /\/item\/images\//;
+            const validConversionExtensions = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'webp'];
+
             return this.convertImage 
                 && this.imageConversionEnabled
+                && /\/item\/images\//.test(this.imageUrl)
                 && this.browserSupportedImgExtension !== this.receivedImageExtension
-                && cdnPathRegex.test(this.imageUrl)
+                && validConversionExtensions.includes(this.receivedImageExtension)
+        },
+        generateUuid()
+        {
+            this.uuid = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div itemscope itemtype="'https://schema.org/Thing'">
+    <div itemscope itemtype="https://schema.org/Thing">
         <link rel="preload" as="image" :href="singleImages[0].url" />
         <div class="single-item-wishlist"><add-to-wish-list-icon /></div>
         <div ref="single" class="single-carousel owl-carousel owl-theme owl-single-item mt-0">
