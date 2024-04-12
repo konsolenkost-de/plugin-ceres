@@ -7,9 +7,9 @@
         :data-title="title"
         :id="uuid">
         <slot name="additionalimages"></slot>
-        <source :srcset="defaultImageUrl" :type="mimeType">
-        <source v-if="defaultImageUrl !== imageUrl" :srcset="imageUrl">
-        <source v-if="fallbackUrl" :srcset="fallbackUrl">
+        <source :srcset="defaultImageUrl" :type="mimeType(defaultImageUrl)">
+        <source v-if="defaultImageUrl !== imageUrl" :srcset="imageUrl" :type="mimeType(imageUrl)">
+        <source v-if="fallbackUrl" :srcset="fallbackUrl" :type="mimeType(fallbackUrl)">
         <img v-if="receivedImageExtension === 'tif'" :src="defaultImageUrl" :alt="alt" type="image/tiff">
     </picture>
 
@@ -21,6 +21,7 @@
 <script>
 import lozad from "../../plugins/lozad";
 import {detectAvif, detectWebP} from "../../helper/featureDetect";
+const mime = require('mime-types')
 
 export default {
     props:
@@ -71,15 +72,12 @@ export default {
     },
     mounted()
     {
+        this.generateUuid();
+
         detectAvif(((avifSupported) => {
             this.avifSupported = avifSupported;
 
             if (avifSupported) {
-                this.$nextTick(() => {
-                    if (!this.isBackgroundImage) this.$el.classList.toggle('lozad');
-                    lozad(this.$el).observe();
-                });
-
                 this.propagateImageFormat();
             }
 
@@ -88,30 +86,38 @@ export default {
                     this.webpSupported = webpSupported;
 
                     if (webpSupported) {
-                        this.$nextTick(() => {
-                            if (!this.isBackgroundImage) this.$el.classList.toggle('lozad');
-                            lozad(this.$el).observe();
-                        });
-
                         this.propagateImageFormat();
                     }
                 }));
             }
+
+            lozad(this.$el, {
+                loaded: function(el) {
+                    el.classList.remove('lozad');
+                }
+            }).triggerLoad(this.$el);
         }));
     },
     watch:
     {
-        defaultImageUrl()
-        {
+        defaultImageUrl(){
             this.$nextTick(() => {
                 this.$el.setAttribute('data-loaded', 'false');
-                lozad(this.$el).triggerLoad(this.$el);
+
+                const images = document.getElementById(this.uuid).getElementsByTagName('img');
+                if (images.length > 0) {
+                    images[0].remove();
+                }
+
+                lozad(this.$el, {
+                    loaded: function(el) {
+                        el.classList.remove('lozad');
+                    }
+                }).triggerLoad(this.$el);
             });
-            this.$el.classList.remove('lozad');
         },
         imageUrl()
         {
-            this.generateUuid();
             this.$nextTick(() => {
                 this.propagateImageFormat();
                 document.getElementById(this.uuid).getElementsByTagName('img')?.[0].remove();
@@ -120,14 +126,6 @@ export default {
     },
     computed:
     {
-        mimeType()
-        {
-            const matches = this.defaultImageUrl?.match(this.imgRegex);
-
-            if (matches) return `image/${matches[1].split('.').pop()}`;
-
-            return null;
-        },
         convertedImageUrl()
         {
             return `${this.imageUrl}.${this.browserSupportedImgExtension}`;
@@ -135,6 +133,9 @@ export default {
     },
     methods:
     {
+        mimeType(url){
+            return mime.lookup(url);
+        },
         propagateImageFormat()
         {
             this.setReceivedImageExtension();
