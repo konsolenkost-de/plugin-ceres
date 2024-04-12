@@ -64,7 +64,11 @@ export default Vue.component("address-select", {
             type: String,
             default: null
         },
-        email: String
+        email: String,
+        isInvalidShippingCountry: {
+            type: Boolean,
+            default: false
+        }
     },
 
     data()
@@ -89,7 +93,8 @@ export default Vue.component("address-select", {
                 9: "birthday",
                 11: "title",
                 12: "contactPerson"
-            }
+            },
+            isShopBuilder: App.isShopBuilder
         };
     },
 
@@ -296,6 +301,34 @@ export default Vue.component("address-select", {
                 );
         },
 
+        /**
+         * Set the current address as the primary
+         * @param address
+         * @param addressType
+         */
+        setPrimaryAddress(address, addressType = 1, event)
+        {
+            event.preventDefault();
+            event.stopPropagation();
+            const addressRefs = Object.keys(this.$refs).filter(ref => ref.startsWith("Address_" + addressType));
+
+            addressRefs.forEach(ref =>
+            {
+                this.$refs[ref].classList.remove("d-none");
+            });
+            address.pivot.isPrimary = 1;
+            this.$store.dispatch("updateAddress", { address: address, addressType: addressType })
+                .then(
+                    () =>
+                    {
+                        this.$refs["Address_" + addressType + "_" + address.id].classList.add("d-none");
+                    },
+                    error =>
+                    {
+                        this._handleError(error.error);
+                    }
+                );
+        },
         /**
          * Close the current create/update address modal
          */

@@ -36,11 +36,17 @@
                             {% set discountAmount = itemAmount.priceOriginalGross - itemAmount.priceGross %}
                             {% set itemPriceTotal = item.quantity * itemAmount.priceGross %}
                         {% endif %}
+                        {% set imagePath = orderData.itemImages | getObjectValue(currentVariationId) %}
 
                         <div class="col-sm-12 item">
                             <div class="py-3 d-flex{% if not loop.first %} border-top{% endif %}">
                                 <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
-                                    <img class="d-inline-block" src="{{ orderData.itemImages | getObjectValue(currentVariationId) }}" alt="{{ item.orderItemName }}" title="{{ item.orderItemName }}">
+                                    <lazy-img
+                                            :image-url="{{ imagePath | json_encode }}"
+                                            :alt="{{ item.orderItemName | json_encode }}"
+                                            :title="{{ item.orderItemName | json_encode }}"
+                                            picture-class="d-inline-block">
+                                    </lazy-img>
                                 </a>
 
                                 <div class="flex-fill item-description pl-3">
@@ -58,10 +64,10 @@
                                                     <div class="image-container mx-1">
                                                         {% if imageData %}
                                                             <lazy-img
-                                                                picture-class="d-block mw-100 mh-100"
                                                                 :image-url="{{ imageData.url | json_encode }}"
                                                                 :alt="{{ altText | json_encode }}"
-                                                                :title="{{ setComponent.orderItemName | json_encode }}">
+                                                                :title="{{ setComponent.orderItemName | json_encode }}"
+                                                                picture-class="d-block mw-100 mh-100">
                                                             </lazy-img>
                                                         {% endif %}
                                                     </div>
@@ -242,6 +248,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="{{ orderData.itemURLs | getObjectValue(currentVariationId) }}">
+                                <button type="button" class="btn btn-primary btn-appearance feedback-btn">Bewerte diesen Artikel!</button>
+                            </a>
                         </div>
                     {% endif %}
                 {% endfor %}
@@ -325,14 +334,6 @@
             </template>
 
             {{ LayoutContainer.show("Ceres::MyAccount.OrderHistoryPaymentInformation", orderData.order) }}
-
-            {% if orderData.isReturnable %}
-                <a v-if="allowReturn" v-waiting-animation-infinite class="btn btn-block btn-appearance mb-2" href="{{ urls.returns(orderData.order.id) }}" {{ set_testing_attr("data-testing", "order-history-return") }}>
-                    <i class="fa fa-repeat fa-flip-horizontal" aria-hidden="true"></i>
-                    {{ trans("Ceres::Template.orderHistoryReturnSendBack") }}
-                </a>
-            {% endif %}
-
             <order-documents :documents="{{ orderData.order.documents | json_encode }}"></order-documents>
         </div>
     </div>

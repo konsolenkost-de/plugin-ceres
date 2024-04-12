@@ -6,6 +6,7 @@ use Ceres\Wizard\ShopWizard\Config\OnlineStoreConfig;
 use Ceres\Wizard\ShopWizard\Helpers\LanguagesHelper;
 use Ceres\Wizard\ShopWizard\Helpers\StepHelper;
 use Plenty\Modules\Authorization\Services\AuthHelper;
+use Plenty\Modules\Order\Shipping\Countries\Contracts\CountryRepositoryContract;
 use Plenty\Modules\Order\Status\Contracts\OrderStatusRepositoryContract;
 use Plenty\Modules\System\Module\Contracts\PlentyModuleRepositoryContract;
 
@@ -20,6 +21,16 @@ class OnlineStoreStep extends Step
      * @var array Collection of order status.
      */
     private static $orderStatusList = null;
+
+    /**
+     * @var array
+     */
+    private $deliveryCountries;
+
+    /**
+     * @var string
+     */
+    private $language;
 
     /**
      * @return array
@@ -44,6 +55,7 @@ class OnlineStoreStep extends Step
                 $this->buildSessionLifeTimeSection(),
                 $this->buildStoreCallistoSettings(),
                 $this->buildExternalVatIdCheckSettings(),
+                $this->buildAlreadyPaidSettings(),
                 $this->buildLoginModeSettings()
             ]
         ];
@@ -309,6 +321,37 @@ class OnlineStoreStep extends Step
                     "options" => [
                         "name" => "Wizard.recaptchaThreshold"
                     ]
+                ],
+                "onlineStore_recaptchaConsentGroup" => [
+                    "type" => "select",
+                    "defaultValue" => "media",
+                    "options" => [
+                        "name" => "Wizard.recaptchaConsentGroup",
+                        "listBoxValues" => [
+                            [
+                                "value" => "necessary",
+                                "caption" => "Wizard.recaptchaConsentGroupNecessary"
+                            ],
+                            [
+                                "value" => "media",
+                                "caption" => "Wizard.recaptchaConsentGroupMedia"
+                            ]
+                        ]
+                    ]
+                ],
+                "onlineStore_recaptchaConsentNecessary" => [
+                    "type" => "checkbox",
+                    "defaultValue" => false,
+                    "options" => [
+                        "name" => "Wizard.recaptchaConsentNecessary"
+                    ]
+                ],
+                "onlineStore_recaptchaConsentOptOut" => [
+                    "type" => "checkbox",
+                    "defaultValue" => false,
+                    "options" => [
+                        "name" => "Wizard.recaptchaConsentOptOut"
+                    ]
                 ]
             ]
         ];
@@ -403,10 +446,12 @@ class OnlineStoreStep extends Step
                     "defaultValue" => 0.0,
                     "options" => [
                         "name" => "Wizard.externalVatIdCheckServiceUnavailableFallbackStatus",
-                        "listBoxValues" => array_merge([                            [
+                        "listBoxValues" => array_merge([
+                            [
                                 "value" => 0.0,
                                 "caption" => "Wizard.serviceUnavailableFallbackStatus"
-                            ],], $this->getOrderStatusListBoxValues())
+                            ],
+                        ], $this->getOrderStatusListBoxValues())
                     ]
                 ]
             ]
@@ -455,7 +500,7 @@ class OnlineStoreStep extends Step
      */
     private function getOrderStatusListBoxValues()
     {
-        if(isset(self::$orderStatusList) && count(self::$orderStatusList)) {
+        if (isset(self::$orderStatusList) && count(self::$orderStatusList)) {
             return self::$orderStatusList;
         }
         $currentLang = LanguagesHelper::getUserLang();
@@ -464,26 +509,59 @@ class OnlineStoreStep extends Step
         $authHelper = pluginApp(AuthHelper::class);
         /** @var OrderStatusRepositoryContract $orderStatusRepo */
         $orderStatusRepo = pluginApp(OrderStatusRepositoryContract::class);
-        $orderStatusCollection = $authHelper->processUnguarded(function() use ($orderStatusRepo) {
+        $orderStatusCollection = $authHelper->processUnguarded(function () use ($orderStatusRepo) {
             return $orderStatusRepo->all();
         });
 
         $orderStatusList = [];
         foreach ($orderStatusCollection as $status) {
-                $statusName = $status->names[$currentLang] ?? '';
-                $prefix = '[' . $status->statusId . ']';
-                if (substr($statusName, 0, strlen($prefix)) !== $prefix) {
-                    $statusName = $prefix . $statusName;
-                }
+            $statusName = $status->names[$currentLang] ?? '';
+            $prefix = '[' . $status->statusId . ']';
+            if (substr($statusName, 0, strlen($prefix)) !== $prefix) {
+                $statusName = $prefix . $statusName;
+            }
 
-                $orderStatusList[] = [
-                    "value" => $status->statusId,
-                    "caption" => $statusName
-                ];
+            $orderStatusList[] = [
+                "value" => $status->statusId,
+                "caption" => $statusName
+            ];
         }
         self::$orderStatusList = $orderStatusList;
         return $orderStatusList;
     }
+
+    private function buildAlreadyPaidSettings()
+    {
+        $countriesListForm = $this->getCountriesListForm();
+        $defaultValues = array_map(function ($country) {
+            return $country['value'];
+        }, $countriesListForm);
+
+        return [
+            "title" => 'Wizard.alreadyPaidShippingCountriesTitle',
+            "description" => 'Wizard.alreadyPaidShippingCountriesDescription',
+            "form" => [
+                "onlineStore_alreadyPaidShippingCountries" => [
+                    'type' => 'checkboxGroup',
+                    'defaultValue' => $defaultValues,
+                    'options' => [
+                        'name' => 'Wizard.alreadyPaidShippingCountries',
+                        'checkboxValues' => $countriesListForm,
+                    ],
+                ],
+                "onlineStore_alreadyPaidIconUrl" => [
+                    'type' => 'file',
+                    'defaultValue' => '',
+                    'showPreview' => true,
+                    'options' => [
+                        'name' => 'Wizard.alreadyPaidIconUrl'
+                    ]
+                ],
+            ],
+
+        ];
+    }
+
 
     private function buildLoginModeSettings()
     {
@@ -511,5 +589,27 @@ class OnlineStoreStep extends Step
                 ]
             ]
         ];
+    }
+
+    /**
+     * @return array
+     */
+    private function getCountriesListForm()
+    {
+        if ($this->deliveryCountries === null) {
+            /** @var CountryRepositoryContract $countryRepository */
+            $countryRepository = pluginApp(CountryRepositoryContract::class);
+            $countries = $countryRepository->getCountriesList(true, ['names']);
+            $this->deliveryCountries = [];
+            foreach ($countries as $country) {
+                $name = $country->names->where('lang', $this->language)->first()->name ?? $country->names->first(
+                )->name;
+                $this->deliveryCountries[] = [
+                    'caption' => $name ?? $country->name,
+                    'value' => $country->id
+                ];
+            }
+        }
+        return $this->deliveryCountries;
     }
 }

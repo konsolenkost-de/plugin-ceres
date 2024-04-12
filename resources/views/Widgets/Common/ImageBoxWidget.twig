@@ -103,7 +103,12 @@
         {{ Twig.endif() }}
 
         {% if preloadImage %}
-            {{ Twig.print("add_asset(imageUrl,'image')") }}
+            {{ Twig.if("ceresConfig.log.modernImagesConversion") }}
+                {{ Twig.set("preloadAvif", "imageUrl ~ '.avif'")}}
+                {{ Twig.print("add_asset(preloadAvif, 'image')") }}
+             {{ Twig.else() }}
+                {{ Twig.print("add_asset(imageUrl,'image')") }}
+            {{ Twig.endif() }}
         {% endif %}
 
         {% if widget.settings.lazyLoading.mobile %}
@@ -134,6 +139,7 @@
     {{ Twig.endif() }}
 
     <a{{ Twig.if("url | trim is not empty") }} href="{{ Twig.print("url") }}"{{ Twig.endif() }}{% if openInNewTab == true %} target="_blank"{% endif %}{% if urlType == 'external' %} rel="noopener"{% endif %} class="widget-inner">
+        {% if style != "no-caption" %}
         <div class="widget-caption widget-image-box-caption {{ style }}">
             {% if customCaption %}
                 <div {{ WidgetHelper.makeEditable("headline", TOOLBAR_LAYOUT.INLINE, isPreview, "widget-image-box-caption " ~ style ) }}>
@@ -150,5 +156,6 @@
                 {{ Twig.endif() }}
             {% endif %}
         </div>
+        {% endif %}
     </a>
 </div>

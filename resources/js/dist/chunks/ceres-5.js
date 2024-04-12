@@ -27,6 +27,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "category-image-carousel",
   props: {
@@ -72,6 +86,9 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     imageUrls: function imageUrls() {
       return this.imageUrlsData;
+    },
+    imageOrItemImage: function imageOrItemImage() {
+      return this.imageUrls.length ? this.imageUrls[0].url : this.itemImage;
     }
   },
   mounted: function mounted() {
@@ -173,6 +190,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+//
+//
+//
+//
 //
 //
 //
@@ -552,8 +573,8 @@ var render = function() {
           attrs: {
             id: "owl-carousel-" + _vm._uid,
             href: _vm.itemUrl,
-            role: "listbox",
-            "aria-label": _vm.$translate("Ceres::Template.itemImageCarousel")
+            "aria-label": _vm.$translate("Ceres::Template.itemImageCarousel"),
+            role: "listbox"
           }
         },
         _vm._l(_vm.imageUrls, function(imageUrl, index) {
@@ -561,37 +582,17 @@ var render = function() {
             "div",
             { key: index },
             [
-              index === 0 && !_vm.disableLazyLoad
-                ? _c("lazy-img", {
-                    ref: "itemLazyImage",
-                    refInFor: true,
-                    attrs: {
-                      "picture-class": "img-fluid",
-                      "image-url": imageUrl.url,
-                      alt: _vm.getAltText(imageUrl),
-                      title: _vm.getTitleText(imageUrl),
-                      role: "option"
-                    }
-                  })
-                : index !== 0 && !_vm.disableLazyLoad
-                ? _c("img", {
-                    staticClass: "img-fluid owl-lazy",
-                    attrs: {
-                      "data-src": imageUrl.url,
-                      alt: _vm.getAltText(imageUrl),
-                      title: _vm.getTitleText(imageUrl),
-                      role: "option"
-                    }
-                  })
-                : _c("img", {
-                    staticClass: "img-fluid",
-                    attrs: {
-                      src: imageUrl.url,
-                      alt: _vm.getAltText(imageUrl),
-                      title: _vm.getAltText(imageUrl),
-                      role: "option"
-                    }
-                  })
+              _c("lazy-img", {
+                ref: { itemLazyImage: index === 0 },
+                refInFor: true,
+                attrs: {
+                  "image-url": imageUrl.url,
+                  alt: _vm.getAltText(imageUrl),
+                  title: _vm.getTitleText(imageUrl),
+                  "picture-class": "img-fluid",
+                  role: "option"
+                }
+              })
             ],
             1
           )
@@ -602,24 +603,15 @@ var render = function() {
         "a",
         { attrs: { href: _vm.itemUrl } },
         [
-          !_vm.disableLazyLoad
-            ? _c("lazy-img", {
-                ref: "itemLazyImage",
-                attrs: {
-                  "picture-class": "img-fluid",
-                  "image-url": _vm._f("itemImage")(_vm.imageUrls),
-                  alt: _vm.getAltText(_vm.imageUrls[0]),
-                  title: _vm.getTitleText(_vm.imageUrls[0])
-                }
-              })
-            : _c("img", {
-                staticClass: "img-fluid",
-                attrs: {
-                  src: _vm._f("itemImage")(_vm.imageUrls),
-                  alt: _vm.getAltText(_vm.imageUrls[0]),
-                  title: _vm.getTitleText(_vm.imageUrls[0])
-                }
-              })
+          _c("lazy-img", {
+            ref: { itemLazyImage: !_vm.disableLazyLoad },
+            attrs: {
+              "image-url": _vm.imageOrItemImage,
+              alt: _vm.getAltText(_vm.imageUrls[0]),
+              title: _vm.getTitleText(_vm.imageUrls[0]),
+              "picture-class": "img-fluid"
+            }
+          })
         ],
         1
       )
@@ -650,7 +642,7 @@ var render = function() {
     "article",
     {
       staticClass: "cmp cmp-product-thumb",
-      attrs: { "data-testing": _vm.item.variation.id }
+      class: "cmp-availability-" + _vm.item.variation.availability.id
     },
     [
       _c(
@@ -659,7 +651,6 @@ var render = function() {
         [
           _c("add-to-basket", {
             attrs: {
-              "data-testing": "item-add-to-basket",
               "variation-id": _vm.item.variation.id,
               "is-salable": !!_vm.item.filter && _vm.item.filter.isSalable,
               "has-children":
@@ -688,6 +679,17 @@ var render = function() {
             }
           }),
           _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-lg-none" },
+            [
+              _c("add-to-wish-list-icon", {
+                attrs: { "variation-id": _vm.item.variation.id }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
           _c("div", { staticClass: "thumb-image" }, [
             _c(
               "div",
@@ -701,8 +703,16 @@ var render = function() {
                         _vm.item.images,
                         _vm.imageUrlAccessor
                       ),
-                      alt: _vm._f("itemName")(_vm.item),
-                      title: _vm._f("itemName")(_vm.item),
+                      "alt-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
+                      "title-text":
+                        _vm.item.texts.name2 +
+                        " " +
+                        _vm.item.texts.name3 +
+                        " kaufen",
                       "item-url": _vm._f("itemURL")(
                         _vm.item,
                         _vm.urlWithVariationId
@@ -719,18 +729,25 @@ var render = function() {
           ]),
           _vm._v(" "),
           _vm._t("store-special", [
-            _vm.storeSpecial ||
-            _vm.item.variation.bundleType === "bundle" ||
-            _vm.item.item.itemType === "set"
-              ? _c("item-store-special", {
+            (_vm.item.prices.specialOffer &&
+              _vm.item.prices.default.price.value >
+                _vm.item.prices.specialOffer.unitPrice.value) ||
+            (_vm.item.prices.rrp &&
+              _vm.item.prices.rrp.price.value >
+                _vm.item.prices.default.unitPrice.value)
+              ? _c("img", {
+                  staticClass: "store-special",
                   attrs: {
-                    "store-special": _vm.storeSpecial,
-                    "recommended-retail-price": _vm.item.prices.rrp,
-                    "variation-retail-price": _vm.item.prices.default,
-                    "special-offer-price": _vm.item.prices.specialOffer,
-                    "decimal-count": _vm.decimalCount,
-                    "bundle-type": _vm.item.variation.bundleType,
-                    "item-type": _vm.item.item.itemType
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/sale-category-item.png"
+                  }
+                })
+              : _vm.item.item.condition.id === 0
+              ? _c("img", {
+                  staticClass: "store-special",
+                  attrs: {
+                    src:
+                      "https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Category/neu-category-item.png"
                   }
                 })
               : _vm._e()
@@ -754,158 +771,164 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm._f("itemName")(_vm.item))
-                    ),
-                    _vm._l(_vm.item.groupedAttributes, function(attribute) {
-                      return _c("span", [
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("translate")(
-                              "Ceres::Template.itemGroupedAttribute",
-                              attribute
-                            )
-                          )
-                        )
-                      ])
-                    })
-                  ],
-                  2
+                    _c("span", { staticClass: "category-item-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name2, "50"))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "category-item-sub-name" }, [
+                      _vm._v(
+                        _vm._s(_vm._f("truncate")(_vm.item.texts.name3, "20"))
+                      )
+                    ])
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "thumb-meta mt-2" },
+                  {
+                    staticClass:
+                      "d-flex justify-content-between align-items-end"
+                  },
                   [
-                    _vm._t("before-prices"),
+                    _c(
+                      "div",
+                      { staticClass: "thumb-meta mt-2" },
+                      [
+                        _vm._t("before-prices"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "prices" }, [
+                          _c(
+                            "div",
+                            { staticClass: "price-view-port" },
+                            [
+                              (_vm.item.prices.specialOffer &&
+                                _vm.item.prices.default.price.value >
+                                  _vm.item.prices.specialOffer.unitPrice
+                                    .value) ||
+                              (_vm.item.prices.rrp &&
+                                _vm.item.prices.rrp.price.value >
+                                  _vm.item.prices.default.price.value)
+                                ? [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnlySale"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm.item.prices.rrp.price.value >
+                                    _vm.item.prices.default.unitPrice.value
+                                      ? _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.rrp
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                      : _c(
+                                          "del",
+                                          { staticClass: "crossprice" },
+                                          [
+                                            _vm._v(
+                                              "\n                                        " +
+                                                _vm._s(
+                                                  _vm._f("itemCrossPrice")(
+                                                    _vm.item.prices.default
+                                                      .unitPrice.formatted
+                                                  )
+                                                ) +
+                                                "\n                                    "
+                                            )
+                                          ]
+                                        )
+                                  ]
+                                : _vm._e()
+                            ],
+                            2
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "price" },
+                            [
+                              _vm.item.item.itemType === "set"
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.itemSetPrice",
+                                            { price: _vm.itemSetPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : !!_vm.item.item &&
+                                  _vm.item.item.salableVariationCount > 1 &&
+                                  _vm.$ceres.isCheapestSorting
+                                ? [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(
+                                          _vm.$translate(
+                                            "Ceres::Template.categoryItemFromPrice",
+                                            { price: _vm.itemPrice }
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                : [
+                                    _c("span", { staticClass: "small" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.trans(
+                                            "d2gPmThemeKonsolenkost::Theme.categoryItemOnly"
+                                          )
+                                        )
+                                      )
+                                    ]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm._f("specialOffer")(
+                                            _vm.item.prices.default.unitPrice
+                                              .formatted,
+                                            _vm.item.prices,
+                                            "unitPrice",
+                                            "formatted"
+                                          )
+                                        ) +
+                                        "\n                                "
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ])
+                      ],
+                      2
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "prices" }, [
-                      _vm.item.prices.rrp &&
-                      _vm.item.prices.rrp.price.value > 0 &&
-                      _vm.item.prices.rrp.price.value >
-                        _vm.item.prices.default.unitPrice.value
-                        ? _c("div", { staticClass: "price-view-port" }, [
-                            _vm.item.prices.specialOffer
-                              ? _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.default.unitPrice
-                                            .formatted,
-                                          true
-                                        )
-                                      ) +
-                                      "\n                            "
-                                  )
-                                ])
-                              : _c("del", { staticClass: "crossprice" }, [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(
-                                        _vm._f("itemCrossPrice")(
-                                          _vm.item.prices.rrp.unitPrice
-                                            .formatted
-                                        )
-                                      ) +
-                                      "\n                            "
-                                  )
-                                ])
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "price" },
-                        [
-                          _vm.item.item.itemType === "set"
-                            ? [
-                                _vm._v(
-                                  "\n                                " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemSetPrice",
-                                        { price: _vm.itemSetPrice }
-                                      )
-                                    ) +
-                                    " " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFootnote"
-                                      )
-                                    ) +
-                                    "\n                            "
-                                )
-                              ]
-                            : _vm.itemGraduatedPriceisCheapestSorting
-                            ? [
-                                _vm._v(
-                                  "\n                                " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFromPrice",
-                                        { price: _vm.itemPriceGraduated }
-                                      )
-                                    ) +
-                                    " " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFootnote"
-                                      )
-                                    ) +
-                                    "\n                            "
-                                )
-                              ]
-                            : _vm.itemGraduatedPricesalableVariationCount
-                            ? [
-                                _vm._v(
-                                  "\n                                " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFromPrice",
-                                        { price: _vm.itemPriceGraduated }
-                                      )
-                                    ) +
-                                    " " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFootnote"
-                                      )
-                                    ) +
-                                    "\n                            "
-                                )
-                              ]
-                            : [
-                                _vm._v(
-                                  "\n                                " +
-                                    _vm._s(
-                                      _vm._f("specialOffer")(
-                                        _vm.item.prices.default.unitPrice
-                                          .formatted,
-                                        _vm.item.prices,
-                                        "unitPrice",
-                                        "formatted"
-                                      )
-                                    ) +
-                                    " " +
-                                    _vm._s(
-                                      _vm.$translate(
-                                        "Ceres::Template.itemFootnote"
-                                      )
-                                    ) +
-                                    "\n                            "
-                                )
-                              ]
-                        ],
-                        2
-                      )
-                    ])
+                    _vm._t("after-prices")
                   ],
                   2
                 ),
-                _vm._v(" "),
-                _vm._t("after-prices"),
                 _vm._v(" "),
                 _vm.item.prices.default.lowestPrice.value && _vm.hasCrossPrice
                   ? _c("div", { staticClass: "category-lowest-price small" }, [
@@ -935,7 +958,13 @@ var render = function() {
                       _vm._v(" "),
                       _vm.item.variation.mayShowUnitPrice
                         ? _c("span", [_vm._v(" | " + _vm._s(_vm.basePrice))])
-                        : _vm._e()
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("span", {
+                        staticClass: "availability",
+                        class:
+                          "availability-" + _vm.item.variation.availability.id
+                      })
                     ])
                   : _vm._e(),
                 _vm._v(" "),
@@ -1043,7 +1072,7 @@ var render = function() {
                       )
                 ])
               ],
-              2
+              1
             )
           ])
         ],

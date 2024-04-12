@@ -89,11 +89,23 @@ class CeresSeoConfig extends PluginConfig
     public $skuMapping;
 
     /**
+     * @var string $imageSeo Selected option value for image in rich snippet.
+     */
+    public $imageSeo;
+    /**
      * @var string $skuMappingId Property ID for SKU rich snippet.
      */
     public $skuMappingId;
 
-
+    public $itemCondition0;
+    public $itemCondition1;
+    public $itemCondition2;
+    public $itemCondition3;
+    public $itemCondition4;
+    public $itemRobotsMapping;
+    public $itemRobotsMappingId;
+    public $itemRobotsMappingParameter;
+    public $itemCanonicalID;
 
     /**
      * @inheritDoc
@@ -124,5 +136,16 @@ class CeresSeoConfig extends PluginConfig
         $this->priceValidUntilMappingId = $this->getTextValue('priceValidUntil.mapping.priceValidUntilID','');
         $this->skuMapping = $this->getTextValue('sku.mapping.sku','1');
         $this->skuMappingId = $this->getTextValue('sku.mapping.skuID','');
+        $this->itemCondition0 = $this->getTextValue('condition.mapping.condition0', 'https://schema.org/NewCondition');
+        $this->itemCondition1 = $this->getTextValue('condition.mapping.condition1', 'https://schema.org/UsedCondition');
+        $this->itemCondition2 = $this->getTextValue('condition.mapping.condition2', 'https://schema.org/NewCondition');
+        $this->itemCondition3 = $this->getTextValue('condition.mapping.condition3', 'https://schema.org/NewCondition');
+        $this->itemCondition4 = $this->getTextValue('condition.mapping.condition4', 'https://schema.org/UsedCondition');
+        $this->imageSeo = $this->getTextValue('imageSeo.mapping.image', 'url');
+        $this->itemRobotsMapping = $this->getTextValue('itemRobots.mapping.itemRobots','all');
+        $this->itemRobotsMappingId = $this->getTextValue('itemRobots.mapping.itemRobotsID','');
+        $value = $this->getTextValue('itemRobots.mapping.itemRobotsParameter','false');
+        $this->itemRobotsMappingParameter = $value === 'true';
+        $this->itemCanonicalID = $this->getTextValue('itemCanonical.mapping.itemCanonicalID','');
     }
 }

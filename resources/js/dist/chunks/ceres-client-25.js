@@ -46,6 +46,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -129,108 +134,116 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c(
-      "div",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.mountedItems.length,
-            expression: "mountedItems.length"
-          }
-        ],
-        staticClass: "col-12"
-      },
-      [_vm._t("heading")],
-      2
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "col-12" },
-      [
-        _vm.mountedItems && _vm.mountedItems.length > 0
-          ? _c(
-              "carousel",
-              {
-                ref: "carousel",
-                attrs: { "items-per-page": _vm.itemsPerPage }
-              },
-              [
-                _vm._l(_vm.items, function(item) {
-                  return _c(
-                    "template",
-                    { slot: "items" },
-                    [
-                      _c("category-item", {
-                        key: item.id,
-                        attrs: {
-                          "item-data": item.data,
-                          "decimal-count": _vm.$ceres.config.item.storeSpecial,
-                          "disable-carousel-on-mobile":
-                            _vm.mountedItems.length > _vm.itemsPerPage,
-                          "padding-classes": _vm.paddingClasses,
-                          "padding-inline-styles": _vm.paddingInlineStyles
-                        },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "before-prices",
-                              fn: function() {
-                                return [
-                                  _c("div", {
-                                    domProps: {
-                                      innerHTML: _vm._s(
-                                        _vm.getContainerContentById(
-                                          item.id,
-                                          "beforePrices"
-                                        )
-                                      )
-                                    }
-                                  })
-                                ]
-                              },
-                              proxy: true
-                            },
-                            {
-                              key: "after-prices",
-                              fn: function() {
-                                return [
-                                  _c("div", {
-                                    domProps: {
-                                      innerHTML: _vm._s(
-                                        _vm.getContainerContentById(
-                                          item.id,
-                                          "afterPrices"
-                                        )
-                                      )
-                                    }
-                                  })
-                                ]
-                              },
-                              proxy: true
-                            }
-                          ],
-                          null,
-                          true
-                        )
-                      })
-                    ],
-                    1
-                  )
-                })
-              ],
-              2
-            )
-          : _vm._e()
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.items.length,
+          expression: "items.length"
+        }
       ],
-      1
-    )
-  ])
+      staticClass: "row"
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-12" }, [
+        _c(
+          "div",
+          { staticClass: "row" },
+          [
+            _vm._l(_vm.items, function(item, i) {
+              return [
+                _c(
+                  "div",
+                  { key: i, staticClass: "col-6 col-md-3 col-lg-3" },
+                  [
+                    _c("category-item", {
+                      key: item.id,
+                      attrs: {
+                        "item-data": item.data,
+                        "decimal-count": _vm.$ceres.config.item.storeSpecial,
+                        "disable-carousel-on-mobile":
+                          _vm.items.length > _vm.itemsPerPage,
+                        "padding-classes": _vm.paddingClasses,
+                        "padding-inline-styles": _vm.paddingInlineStyles
+                      },
+                      scopedSlots: _vm._u(
+                        [
+                          {
+                            key: "before-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "beforePrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          },
+                          {
+                            key: "after-prices",
+                            fn: function() {
+                              return [
+                                _c("div", {
+                                  domProps: {
+                                    innerHTML: _vm._s(
+                                      _vm.getContainerContentById(
+                                        item.id,
+                                        "afterPrices"
+                                      )
+                                    )
+                                  }
+                                })
+                              ]
+                            },
+                            proxy: true
+                          }
+                        ],
+                        null,
+                        true
+                      )
+                    })
+                  ],
+                  1
+                )
+              ]
+            })
+          ],
+          2
+        )
+      ])
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12", staticStyle: { padding: "0" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "widget-caption bg-appearance widget-item-list-caption mb-3",
+          staticStyle: { padding: "0" }
+        },
+        [_c("div", [_c("h2", [_vm._v("Zuletzt angesehen")])])]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 

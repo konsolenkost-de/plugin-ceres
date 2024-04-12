@@ -6,10 +6,10 @@ use IO\Helper\Utils;
 use IO\Helper\ContextInterface;
 use IO\Services\CategoryService;
 use IO\Services\CustomerService;
+use Plenty\Modules\Webshop\Helpers\UrlQuery;
 use Plenty\Plugin\ConfigRepository;
 use Plenty\Modules\Webshop\Contracts\ContactRepositoryContract;
 use Plenty\Modules\Category\Models\Category;
-
 
 /**
  * Class SingleItemContext
@@ -136,6 +136,31 @@ class SingleItemContext extends GlobalContext implements ContextInterface
     public $sku = '';
 
     /**
+     * @var string $imageSeo Contains the image path for SEO attribute
+     */
+    public $imageSeo = '';
+
+    /**
+     * @var string $robots Contains a robots value for a specific variation
+     */
+    public $robots = '';
+
+    /**
+     * @var bool $forceRobotsValue Contains a bool if the robots setting should also be used whith parameter
+     */
+    public $forceRobotsValue = false;
+
+    /**
+     * @var string forcedCanonicalUrl Contains a string with a canonical url
+     */
+    public $forcedCanonicalUrl = '';
+
+    /**
+     * @var string $conditionOfItem Contains the condition of the current item for structured data.
+     */
+    public $conditionOfItem = '';
+
+    /**
      * @inheritDoc
      */
     public function init($params)
@@ -152,6 +177,8 @@ class SingleItemContext extends GlobalContext implements ContextInterface
 
         $this->item = $params['item'];
         $itemData = $this->item['documents'][0]['data'];
+
+        $this->conditionOfItem = $this->detectItemCondition($itemData['item']['condition']['id']);
 
         $availabilityId = $itemData['variation']['availability']['id'];
         $mappedAvailability = $configRepository->get('Ceres.availability.mapping.availability' . $availabilityId);
@@ -241,6 +268,39 @@ class SingleItemContext extends GlobalContext implements ContextInterface
                 $this->sku = $itemData['item']['id'];
         }
 
+        $robotsMapping = $this->ceresConfig->seo->itemRobotsMapping;
+        $robotsMappingId = $this->ceresConfig->seo->itemRobotsMappingId;
+        $this->forceRobotsValue = $this->ceresConfig->seo->itemRobotsMappingParameter;
+
+        switch ($robotsMapping) {
+            case "all":
+                $this->robots = "all";
+                break;
+            case "index":
+                $this->robots = "index";
+                break;
+            case "nofollow":
+                $this->robots = "nofollow";
+                break;
+            case "noindex":
+                $this->robots = "noindex";
+                break;
+            case "noindex, nofollow":
+                $this->robots = "noindex, nofollow";
+                break;
+            case "varProp":
+                $this->robots = $this->getVariationProperty($itemData['variationProperties'], $robotsMappingId);
+                break;
+        }
+
+        $canonicalPropertyId = $this->ceresConfig->seo->itemCanonicalID;
+        $canonicalUrl = $this->getVariationProperty($itemData['variationProperties'], $canonicalPropertyId);
+
+        if(!empty($canonicalUrl)){
+            $this->forcedCanonicalUrl = $canonicalUrl;
+        }
+
+        $this->imageSeo = $itemData['images']['all'][0][$this->ceresConfig->seo->imageSeo] ?? '';
         $this->isItemSet = $params['isItemSet'];
 
         $this->attributes = $params['variationAttributeMap']['attributes'];
@@ -250,7 +310,9 @@ class SingleItemContext extends GlobalContext implements ContextInterface
 
         $this->setComponents = $params['setComponents'];
         $this->setAttributeMap = $params['setAttributeMap'];
-        $this->requestedVariationUrl = explode('?', $this->request->getUri())[0];
+        /** @var UrlQuery $urlQuery */
+        $urlQuery = pluginApp(UrlQuery::class, ['path' => $this->request->getRequestUri(), 'lang' => Utils::getLang()]);
+        $this->requestedVariationUrl = $urlQuery->toAbsoluteUrl(Utils::getLang() !== $this->webstoreConfig->defaultLanguage);
         $defaultCategoryId = 0;
         $plentyId = Utils::getPlentyId();
         foreach ($this->item['documents'][0]['data']['defaultCategories'] as $category) {
@@ -270,6 +332,36 @@ class SingleItemContext extends GlobalContext implements ContextInterface
         $this->bodyClasses[] = "variation-" . $itemData['variation']['id'];
     }
 
+    /**
+     * Returns schema.org value for the given condition id
+     *
+     * @param int $conditionId
+     * @return string
+     */
+    private function detectItemCondition(int $conditionId): string
+    {
+        switch($conditionId)
+        {
+            case 0:
+                $conditionString = $this->ceresConfig->seo->itemCondition0;
+                break;
+            case 1:
+                $conditionString = $this->ceresConfig->seo->itemCondition1;
+                break;
+            case 2:
+                $conditionString = $this->ceresConfig->seo->itemCondition2;
+                break;
+            case 3:
+                $conditionString = $this->ceresConfig->seo->itemCondition3;
+                break;
+            case 4:
+                $conditionString = $this->ceresConfig->seo->itemCondition4;
+                break;
+            default:
+                $conditionString = 'https://schema.org/NewCondition';
+        }
+        return $conditionString;
+    }
     /**
      * @param $referrers
      *
@@ -327,7 +419,7 @@ class SingleItemContext extends GlobalContext implements ContextInterface
     /**
      * @param $barcodes
      * @param $barcodeMappingId
-     * 
+     *
      * @return string
      */
     private function getBarcodeWithId($barcodes, $barcodeMappingId){

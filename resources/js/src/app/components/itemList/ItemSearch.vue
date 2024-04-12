@@ -1,20 +1,19 @@
 <template>
-    <div class="container-max" :class="{'p-0' : $ceres.isShopBuilder}"> 
+    <div class="container-max" :class="{ 'p-0': $ceres.isShopBuilder }">
         <div class="position-relative">
             <div class="d-flex flex-grow-1 position-relative clearable">
-            <input type="text" id="query" name="q" placeholder="Wonach suchst Du?" class="search-input flex-grow-1"> 
+                <input type="text" id="query" name="q" placeholder="Wonach suchst Du?" class="search-input flex-grow-1">
                 <i class="clearable__clear">&times;</i>
                 <button type="button" class="search-button" onclick="buttonOnClick(this)">
-                    <img src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png">
+                    <img
+                        src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Header/Navigation/magnifier-white.png">
                 </button>
 
                 <template v-if="isSearchFocused">
-                    <div v-show="hasAutocompleteResults">
+                    <div v-show="hasInitialInput || $ceres.isShopBuilder">
                         <slot name="autocomplete-suggestions">
-                            <div class="autocomplete-suggestions shadow bg-white w-100 ">
-                                <search-suggestion-item
-                                    :show-images="true"
-                                    suggestion-type="item">
+                            <div class="autocomplete-suggestions shadow bg-white w-100">
+                                <search-suggestion-item :show-images="showItemImages" suggestion-type="item">
                                 </search-suggestion-item>
                             </div>
                         </slot>
@@ -58,8 +57,7 @@ export default {
         }
     },
 
-    data()
-    {
+    data () {
         return {
             isSearchFocused: App.isShopBuilder,
             onValueChanged: null,
@@ -70,17 +68,15 @@ export default {
 
     computed:
     {
-        hasAutocompleteResults()
-        {
-            const item       = this.autocompleteResult.item;
-            const category   = this.autocompleteResult.category;
+        hasAutocompleteResults () {
+            const item = this.autocompleteResult.item;
+            const category = this.autocompleteResult.category;
             const suggestion = this.autocompleteResult.suggestion;
 
             return App.isShopBuilder || (item && item.length) || (category && category.length) || (suggestion && suggestion.length);
         },
 
-        isShopBuilder()
-        {
+        isShopBuilder () {
             return App.isShopBuilder;
         },
 
@@ -91,15 +87,12 @@ export default {
         })
     },
 
-    mounted()
-    {
-        this.onValueChanged = debounce(searchString =>
-        {
+    mounted () {
+        this.onValueChanged = debounce(searchString => {
             this.autocomplete(searchString);
         }, defaultValue(this.timeout, 200));
 
-        this.$nextTick(() =>
-        {
+        this.$nextTick(() => {
             const urlParams = UrlService.getUrlParams(document.location.search);
 
             this.$store.commit("setItemListSearchString", urlParams.query);
@@ -107,53 +100,47 @@ export default {
             this.$refs.searchInput.value = !isNullOrUndefined(urlParams.query) ? urlParams.query : "";
         });
 
-        $('.search-input').each( (index, input) => {$(input).keypress( function onEvent(event) {
+        $('.search-input').each((index, input) => {
+            $(input).keypress(function onEvent (event) {
                 if (event.key === "Enter") {
                     changeWindow(event.target.value);
                 }
             });
         });
-        $(".clearable").each(function() {
+        $(".clearable").each(function () {
             const $inp = $(this).find("input:text"),
                 $cle = $(this).find(".clearable__clear");
 
-            $inp.on("input", function(){
+            $inp.on("input", function () {
                 $cle.toggle(!!this.value);
             });
-            
-            $cle.on("click", function(e) {
+
+            $cle.on("click", function (e) {
                 e.preventDefault();
                 $inp.val("").trigger("input");
             });
-            
+
         });
     },
 
     methods:
     {
-        search()
-        {
-            if (this.$refs.searchInput.value.length)
-            {
-                if (pathnameEquals(App.urls.search))
-                {
+        search () {
+            if (this.$refs.searchInput.value.length) {
+                if (pathnameEquals(App.urls.search)) {
                     this.$store.dispatch("searchItems", this.$refs.searchInput.value);
                 }
-                else
-                {
-                    window.open(`${App.urls.search}?query=${ this.searchString }`, "_self", false);
+                else {
+                    window.open(`${App.urls.search}?query=${this.searchString}`, "_self", false);
                 }
             }
         },
 
-        autocomplete(searchString)
-        {
-            if (searchString.length >= this.searchMinLength)
-            {
+        autocomplete (searchString) {
+            if (searchString.length >= this.searchMinLength) {
                 this.$store.dispatch("loadItemSearchAutocomplete", searchString);
             }
-            else
-            {
+            else {
                 this.$store.commit("setAutocompleteResult", { item: [], category: [], suggestion: [] });
 
                 // hide the autocomplete box
@@ -162,25 +149,23 @@ export default {
         },
 
         // hide search, if targetElement of the blur event is not a child of components' root element
-        onBlurSearchField(event)
-        {
+        onBlurSearchField (event) {
             const target = event.relatedTarget;
 
-            if (isNullOrUndefined(target) || !isNullOrUndefined(target) && !this.$el.contains(target))
-            {
+            if (isNullOrUndefined(target) || !isNullOrUndefined(target) && !this.$el.contains(target)) {
                 this.isSearchFocused = false;
             }
         },
 
-        changeWindow(value){
+        changeWindow (value) {
             let path = window.location.pathname.split("/")[1];
-            if(path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
+            if (path != "suche") window.location = "https://www.konsolenkost.de/suche/?q=" + encodeURIComponent(value);
         },
 
-        buttonOnClick(elem){
-            $(elem).siblings("input").each( (index, input) => { 
-                let e = jQuery.Event( 'keypress', { key: "Enter" });
-                $(input).trigger(e); 
+        buttonOnClick (elem) {
+            $(elem).siblings("input").each((index, input) => {
+                let e = jQuery.Event('keypress', { key: "Enter" });
+                $(input).trigger(e);
             });
         }
     },
@@ -188,15 +173,13 @@ export default {
     watch:
     {
         // set the current search string, after clicking on a suggestion
-        moduleSearchString(newVal)
-        {
-            if (newVal && newVal.length)
-            {
+        moduleSearchString (newVal) {
+            if (newVal && newVal.length) {
                 this.searchString = newVal;
             }
         },
 
-        autocompleteIsLoading(newVal, oldVal) {
+        autocompleteIsLoading (newVal, oldVal) {
             // when client was loading and has stopped now, the autocomplete box should be shown
             if (oldVal && !newVal) {
                 this.hasInitialInput = true;

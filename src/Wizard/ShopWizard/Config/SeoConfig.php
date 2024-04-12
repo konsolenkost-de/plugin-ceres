@@ -18,15 +18,23 @@ class SeoConfig
 
     private static $availabilitiesOptions = [
         "availabilityNotSet"               => "",
-        "availabilityInStock"              => "http://schema.org/InStock",
-        "availabilityOutOfStock"           => "http://schema.org/OutOfStock",
-        "availabilityPreOrder"             => "http://schema.org/PreOrder",
-        "availabilityDiscontinued"         => "http://schema.org/Discontinued",
-        "availabilityInStoreOnly"          => "http://schema.org/InStoreOnly",
-        "availabilityLimitedAvailability"  => "http://schema.org/LimitedAvailability",
-        "availabilityOnlineOnly"           => "http://schema.org/OnlineOnly",
-        "availabilityPreSale"              => "http://schema.org/PreSale",
-        "availabilitySoldOut"              => "http://schema.org/SoldOut",
+        "availabilityInStock"              => "https://schema.org/InStock",
+        "availabilityOutOfStock"           => "https://schema.org/OutOfStock",
+        "availabilityPreOrder"             => "https://schema.org/PreOrder",
+        "availabilityDiscontinued"         => "https://schema.org/Discontinued",
+        "availabilityInStoreOnly"          => "https://schema.org/InStoreOnly",
+        "availabilityLimitedAvailability"  => "https://schema.org/LimitedAvailability",
+        "availabilityOnlineOnly"           => "https://schema.org/OnlineOnly",
+        "availabilityPreSale"              => "https://schema.org/PreSale",
+        "availabilitySoldOut"              => "https://schema.org/SoldOut",
+        "availabilityBackOrder"            => "https://schema.org/BackOrder"
+    ];
+
+    private static $conditionOptions = [
+        "conditionNew"                  => "https://schema.org/NewCondition",
+        "conditionUsed"                 => "https://schema.org/UsedCondition",
+        "conditionDamaged"              => "https://schema.org/DamagedCondition",
+        "conditionRefurbished"          => "https://schema.org/RefurbishedCondition",
     ];
 
     private static $siteMapOptions = [
@@ -85,6 +93,13 @@ class SeoConfig
         "skuItemID"                   => "4",
     ];
 
+    private static $imageSeoOptions = [
+        "imageSeoUrl"                         => "url",
+        "imageSeoUrlPreview"                  => "urlPreview",
+        "imageSeoUrlSecondPreview"            => "urlSecondPreview",
+        "imageSeoUrlMiddle"                   => "urlMiddle",
+    ];
+
     /**
      * @return array
      */
@@ -99,6 +114,14 @@ class SeoConfig
     public static function getAvailabilitiesOptions()
     {
         return self::$availabilitiesOptions;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getConditionOptions()
+    {
+        return self::$conditionOptions;
     }
 
     /**
@@ -171,5 +194,13 @@ class SeoConfig
     public static function getSkuOptions()
     {
         return self::$skuOptions;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getImageSeoOtions()
+    {
+        return self::$imageSeoOptions;
     }
 }

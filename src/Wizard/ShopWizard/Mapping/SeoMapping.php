@@ -21,6 +21,36 @@ class SeoMapping
             'global'   => false,
             'optional' => true
         ],
+        'seo_itemConditionNew' => [
+            'field'    => 'condition.mapping.condition0',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemConditionUsed' => [
+            'field'    => 'condition.mapping.condition1',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemConditionNewBox' => [
+            'field'    => 'condition.mapping.condition2',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemConditionNewLabel' => [
+            'field'    => 'condition.mapping.condition3',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemConditionBStock' => [
+            'field'    => 'condition.mapping.condition4',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
         'seo_availability1' => [
             'field'    => 'availability.mapping.availability1',
             'type'     => 'string',
@@ -171,7 +201,7 @@ class SeoMapping
             'global'   => false,
             'optional' => true
         ],
-         'seo_sku' => [
+        'seo_sku' => [
             'field'    => 'sku.mapping.sku',
             'type'     => 'string',
             'global'   => false,
@@ -180,6 +210,36 @@ class SeoMapping
         'seo_skuId' => [
             'field'    => 'sku.mapping.skuID',
             'type'     => 'integer',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_image' => [
+            'field'    => 'imageSeo.mapping.image',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemRobots' => [
+            'field'    => 'itemRobots.mapping.itemRobots',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemRobotsID' => [
+            'field'    => 'itemRobots.mapping.itemRobotsID',
+            'type'     => 'integer',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemRobotsParameter' => [
+            'field'    => 'itemRobots.mapping.itemRobotsParameter',
+            'type'     => 'string',
+            'global'   => false,
+            'optional' => true
+        ],
+        'seo_itemCanonical' => [
+            'field'    => 'itemCanonical.mapping.itemCanonicalID',
+            'type'     => 'string',
             'global'   => false,
             'optional' => true
         ],

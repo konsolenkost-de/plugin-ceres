@@ -7,12 +7,13 @@
                 v-model="inputValue"
                 v-tooltip
                 data-toggle="tooltip"
+                maxlength="128"
                 :title="property.names.description"
                 :data-testing="'order-property-input-' + inputType">
             <label class="d-flex">
                 <span class="text-truncate">{{ property.names.name }}</span>
                 <strong class="ml-1">
-                    <template v-if="surcharge > 0">( {{ inclOrPlus }} {{ surcharge | currency }})</template>
+                    <template v-if="surcharge > 0">({{ inclOrPlus }} {{ surcharge | currency }})</template>
                     <span>{{ footnotes }} {{ requiredFootnotes }}</span>
                 </strong>
             </label>
@@ -45,7 +46,7 @@
                     :data-testing="'order-property-label-' + inputType">
                 <span class="text-wrap">{{ property.names.name }}</span>
                 <strong class="ml-1">
-                    <template v-if="surcharge > 0">( {{ inclOrPlus }} {{ surcharge | currency }})</template>
+                    <template v-if="surcharge > 0">({{ inclOrPlus }} {{ surcharge | currency }})</template>
                     <span>{{ footnotes }} {{ requiredFootnotes }}</span>
                 </strong>
             </label>
@@ -65,7 +66,7 @@
                 <label class="d-flex w-100" for="order-property-input-select">
                     <span class="text-truncate">{{ property.names.name }}</span>
                     <strong class="ml-1">
-                        <template v-if="surcharge > 0">( {{ inclOrPlus }} {{ surcharge | currency }})</template>
+                        <template v-if="surcharge > 0">({{ inclOrPlus }} {{ surcharge | currency }})</template>
                         <span>{{ footnotes }} {{ requiredFootnotes }}</span>
                     </strong>
                 </label>
@@ -87,7 +88,7 @@
                 <span class="input-unit-label d-flex">
                     <span class="text-truncate">{{ property.names.name }}</span>
                     <strong class="ml-1">
-                        <template v-if="surcharge > 0">( {{ inclOrPlus }} {{ surcharge | currency }})</template>
+                        <template v-if="surcharge > 0">({{ inclOrPlus }} {{ surcharge | currency }})</template>
                         <span>{{ footnotes }} {{ requiredFootnotes }}</span>
                     </strong>
                 </span>
