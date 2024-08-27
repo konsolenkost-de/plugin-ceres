@@ -6,8 +6,8 @@
             :class="{ 'sending is-loading': waiting, 'is-loading': isCheckoutReadonly }">
             <div class="image-container">
                 <a :href="basketItem.variation.data | itemURL">
-                    <lazy-img v-if="image" :image-url="image" :alt="altText" :title="itemName"
-                        picture-class="d-block mw-100 mh-100" data-testing="basket-item-img" />
+                    <lazy-img v-if="image" :image-url="image" :alt="altText" :title="itemName" :height="height"
+                        :width="width" picture-class="d-block mw-100 mh-100 h-auto" data-testing="basket-item-img" />
                 </a>
             </div>
 
@@ -36,14 +36,14 @@
                                 <div>
                                     <strong>{{ $translate("Ceres::Template.basketContent") }}: </strong>
                                     {{ basketItem.variation.data.unit.content }} {{
-                basketItem.variation.data.unit.names.name }}
+                                        basketItem.variation.data.unit.names.name }}
                                 </div>
                             </div>
 
                             <div class="small" v-if="basketItem.inputLength > 0 || basketItem.inputWidth > 0">
                                 <div>
                                     <strong>{{ $translate("Ceres::Template.itemInput") }} {{ basketItem |
-                inputUnit(true) }}: </strong>
+                                        inputUnit(true) }}: </strong>
                                     {{ basketItem | inputUnit }}
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                             v-else-if="property.cast === 'multiSelection' && property.values[0] !== undefined">
                                             <ul class="pl-3">
                                                 <li v-for="multiSelectProperty in property.values">{{
-                multiSelectProperty.value }}</li>
+                                                    multiSelectProperty.value }}</li>
                                             </ul>
                                         </template>
                                         <span v-else v-html="property.values.value"></span>
@@ -90,8 +90,8 @@
 
                         <div class="price-box text-right ml-2 mt-1">
                             <div class="item-total-price font-weight-bold text-nowrap">{{ basketItem.quantity *
-                unitPrice |
-                currency(basketItem.variation.data.prices.default.currency) }}</div>
+                                unitPrice |
+                                currency(basketItem.variation.data.prices.default.currency) }}</div>
 
                             <button class="btn btn-sm text-danger p-0"
                                 :class="{ 'disabled': waiting || isBasketLoading || isCheckoutReadonly || waitingForDelete }"
@@ -215,6 +215,18 @@ export default {
             const itemImages = this.$options.filters.itemImages(this.basketItem.variation.data.images, "urlPreview");
 
             return this.$options.filters.itemImage(itemImages);
+        },
+
+        width () {
+            const itemImages = this.$options.filters.itemImages(this.basketItem.variation.data.images, "urlPreview");
+
+            return this.$options.filters.itemImageWidth(itemImages);
+        },
+
+        height () {
+            const itemImages = this.$options.filters.itemImages(this.basketItem.variation.data.images, "urlPreview");
+
+            return this.$options.filters.itemImageHeight(itemImages);
         },
 
         altText () {

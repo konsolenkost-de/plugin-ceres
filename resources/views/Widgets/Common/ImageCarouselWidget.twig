@@ -150,7 +150,7 @@
 
                         {% if preloadImage %}
                             {{ Twig.if("loop.first") }}
-                                {{ Twig.if("ceresConfig.log.modernImagesConversion and slide.type == 'item'") }}
+                                {{ Twig.if("ceresConfig.log.modernImagesConversion and slide.type == 'item' and slide.imageUrl matches '{item\/images}'") }}
                                     {{ Twig.set("preloadAvif", "slide.imageUrl ~ '.avif'")}}
                                     {{ Twig.print("add_asset(preloadAvif, 'image')") }}
                                 {{ Twig.else() }}
@@ -175,7 +175,7 @@
                                     title="{{ Twig.print("imgTitle") }}">
                             </noscript>
                         {% else %}
-                            <picture>
+                            <picture data-alt="{{ Twig.print("altText") }}">
                                 <source srcset="{{ Twig.print("slide.imageUrl") }}" {{ Twig.if("slide.imageUrl matches '/.?(\\\\.webp)(?:$|\\\\?)/'") }} type="image/webp" {{ Twig.endif() }}>
                                 <img
                                     class="img-cover"

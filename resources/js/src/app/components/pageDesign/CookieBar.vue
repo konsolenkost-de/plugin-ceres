@@ -31,7 +31,8 @@
             </template>
 
             <a href="#" class="text-primary text-appearance d-block d-md-inline-block"
-              @click.prevent.stop="isExpanded = true">{{ $translate("Ceres::Template.cookieBarMoreSettings") }}</a>
+              @click.prevent.stop="isExpanded = true">{{
+                $translate("Ceres::Template.cookieBarMoreSettings") }}</a>
           </div>
         </div>
         <div class="p-3 w-100">
@@ -54,8 +55,9 @@
           <privacy-settings :consent-groups="consentGroups"></privacy-settings>
         </div>
         <div class="col-12 col-md-6">
-          <a href="#" class="text-primary text-appearance d-inline-block mb-3" @click.prevent.stop="isExpanded = false">{{
-            $translate("Ceres::Template.cookieBarBack") }}</a>
+          <a href="#" class="text-primary text-appearance d-inline-block mb-3"
+            @click.prevent.stop="isExpanded = false">{{
+              $translate("Ceres::Template.cookieBarBack") }}</a>
         </div>
         <div class="col-6 col-md-3">
           <button class="btn btn-block btn-primary btn-appearance" @click="
@@ -117,14 +119,12 @@ export default {
 
   computed: {
 
-    isVisible()
-    {
-        return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
+    isVisible () {
+      return App.isShopBuilder || !this.$store.state.consents.hasResponse || !this.isCollapsed;
     },
 
-    isShopBuilder()
-    {
-        return App.isShopBuilder;
+    isShopBuilder () {
+      return App.isShopBuilder;
     },
 
     text () {
@@ -166,18 +166,22 @@ export default {
   methods: {
     ...mapMutations(["storeConsents", "acceptAll", "denyAll"]),
 
-    close() {
+    close () {
       this.isCollapsed = true;
       this.isExpanded = false;
     },
 
-    isConsented(groupKey) {
+    isConsented (groupKey) {
       return this.$store.getters.isConsented(groupKey + ".*");
     },
 
-    toggleConsent(groupKey) {
+    toggleConsent (groupKey) {
       this.$store.commit("toggleConsent", groupKey + ".*");
     },
-  },
-};
+
+    necessaryOnly (obj) {
+      return obj.key === 'media' && obj.consents.every(consent => consent.necessary === true)
+    }
+  }
+}
 </script>

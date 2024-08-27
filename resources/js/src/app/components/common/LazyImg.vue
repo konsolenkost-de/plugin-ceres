@@ -5,12 +5,14 @@
         :data-picture-class="pictureClass"
         :data-alt="alt"
         :data-title="title"
+        :data-height="height"
+        :data-width="width"
         :id="uuid">
         <slot name="additionalimages"></slot>
         <source :srcset="defaultImageUrl" :type="mimeType(defaultImageUrl)">
         <source v-if="defaultImageUrl !== imageUrl" :srcset="imageUrl" :type="mimeType(imageUrl)">
         <source v-if="fallbackUrl" :srcset="fallbackUrl" :type="mimeType(fallbackUrl)">
-        <img v-if="receivedImageExtension === 'tif'" :src="defaultImageUrl" :alt="alt" type="image/tiff">
+        <img v-if="receivedImageExtension === 'tif'" :src="defaultImageUrl" :alt="alt" :height="getHeight()" :width="getWidth()" type="image/tiff" class="mw-100 h-auto">
     </picture>
 
     <div v-else :data-background-image="defaultImageUrl || fallbackUrl" :class="pictureClass">
@@ -53,6 +55,14 @@ export default {
         title: {
             type: String,
             default: null
+        },
+        height: {
+          type: Number | null,
+          default: null
+        },
+        width: {
+          type: Number | null,
+          default: null
         }
     },
     data()
@@ -78,6 +88,10 @@ export default {
             this.avifSupported = avifSupported;
 
             if (avifSupported) {
+                this.$nextTick(() => {
+                    if (!this.isBackgroundImage) this.$el.classList.toggle('lozad');
+                    lozad(this.$el).observe();
+                });
                 this.propagateImageFormat();
             }
 
@@ -86,21 +100,20 @@ export default {
                     this.webpSupported = webpSupported;
 
                     if (webpSupported) {
+                        this.$nextTick(() => {
+                            if (!this.isBackgroundImage) this.$el.classList.toggle('lozad');
+                            lozad(this.$el).observe();
+                        });
                         this.propagateImageFormat();
                     }
                 }));
             }
-
-            lozad(this.$el, {
-                loaded: function(el) {
-                    el.classList.remove('lozad');
-                }
-            }).triggerLoad(this.$el);
         }));
     },
     watch:
     {
-        defaultImageUrl(){
+        defaultImageUrl()
+        {
             this.$nextTick(() => {
                 this.$el.setAttribute('data-loaded', 'false');
 
@@ -135,6 +148,18 @@ export default {
     {
         mimeType(url){
             return mime.lookup(url);
+        },
+        getHeight() {
+            if (this.height && this.height > 0) {
+                return this.height;
+            }
+            return undefined;
+        },
+        getWidth() {
+            if (this.width && this.width > 0) {
+                return this.width;
+            }
+            return undefined;
         },
         propagateImageFormat()
         {
@@ -197,7 +222,7 @@ export default {
         {
             const validConversionExtensions = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'webp'];
 
-            return this.convertImage 
+            return this.convertImage
                 && this.imageConversionEnabled
                 && /\/item\/images\//.test(this.imageUrl)
                 && this.browserSupportedImgExtension !== this.receivedImageExtension
