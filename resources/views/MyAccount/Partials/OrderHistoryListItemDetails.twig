@@ -44,7 +44,6 @@
                                     <lazy-img
                                             :image-url="{{ imagePath | json_encode }}"
                                             :alt="{{ item.orderItemName | json_encode }}"
-                                            :title="{{ item.orderItemName | json_encode }}"
                                             picture-class="d-inline-block">
                                     </lazy-img>
                                 </a>
@@ -137,7 +136,7 @@
                                                                 aria-controls="collapseOrderProperties"
                                                                 data-show-more="{{ trans("Ceres::Template.basketShowMore") }}"
                                                                 data-show-less="{{ trans("Ceres::Template.basketShowLess") }}">
-                                                                <i class="fa fa-caret-down fa-lg"></i>
+                                                                <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
                                                             </label>
                                                         {% endif %}
 

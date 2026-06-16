@@ -9,7 +9,7 @@
 <meta name="apple-itunes-app" content="app-id=1504088049">
 
 {% set defaultFavicon = '/tpl/favicon_' ~ webstoreConfig.webstoreId ~ '.ico' %}
-<link rel="icon" type="img/ico" href="{{ webstoreConfig.faviconPath | default(ceresConfig.global.favicon) | default(defaultFavicon) }}">
+<link rel="icon" type="image/x-icon" href="{{ webstoreConfig.faviconPath | default(ceresConfig.global.favicon) | default(defaultFavicon) }}">
 
 
 {% set canonicalUrl = services.url.getCanonicalURL() %}

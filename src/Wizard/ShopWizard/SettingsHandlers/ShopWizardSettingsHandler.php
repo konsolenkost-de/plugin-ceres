@@ -3,14 +3,12 @@
 namespace Ceres\Wizard\ShopWizard\SettingsHandlers;
 
 use Ceres\Wizard\ShopWizard\Helpers\LanguagesHelper;
-use Ceres\Wizard\ShopWizard\Interfaces\ShopWizardPreviewConfigurationInterface;
 use Ceres\Wizard\ShopWizard\Models\ShopWizardPreviewConfiguration;
 use Ceres\Wizard\ShopWizard\Repositories\ShopWizardConfigRepository;
+use Ceres\Wizard\ShopWizard\Services\AlreadyPaidShippingCountriesService;
 use Ceres\Wizard\ShopWizard\Services\MappingService;
 use Ceres\Wizard\ShopWizard\Services\SettingsHandlerService;
-use Ceres\Wizard\ShopWizard\Services\AlreadyPaidShippingCountriesService;
 use Plenty\Modules\ContentCache\Contracts\ContentCacheInvalidationRepositoryContract;
-use Plenty\Modules\ContentCache\Contracts\ContentCacheSettingsRepositoryContract;
 use Plenty\Modules\Item\Search\Contracts\VariationElasticSearchSettingsRepositoryContract;
 use Plenty\Modules\Order\Currency\Contracts\CurrencyRepositoryContract;
 use Plenty\Modules\Order\Shipping\Countries\Contracts\CountryRepositoryContract;
@@ -65,7 +63,7 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
             $webstoreConfig = pluginApp(WebstoreConfigurationRepositoryContract::class);
             $settingsHandlerService = pluginApp(SettingsHandlerService::class);
 
-            list($webstore, $pluginSet) = explode(".", $optionId);
+            [$webstore, $pluginSet] = explode(".", $optionId);
 
             $webstoreId = explode('_', $webstore)[1];
             $pluginSetId = explode('_', $pluginSet)[1];
@@ -133,7 +131,7 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
                     'other' => $intermediarBrowserLanguage
                 ];
                 foreach ($data as $dataKey => $dataValue) {
-                    if (strpos($dataKey, "languages_browserLang_") !== false) {
+                    if (str_contains($dataKey, "languages_browserLang_")) {
                         $exploded = explode("_", $dataKey);
                         $key = end($exploded);
                         $globalData['browserLanguage'][$key] = $dataValue;
@@ -149,7 +147,7 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
                 if (isset($data['onlineStore_externalVatIdCheck'])) {
                     $webstoreData['externalVatCheckInactive'] = $data['onlineStore_externalVatIdCheck'];
                 }
-    
+
                 if (isset($data['onlineStore_loginMode'])) {
                     $webstoreData['loginMode'] = $data['onlineStore_loginMode'];
                 }
@@ -181,7 +179,7 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
                     $webstoreData['urlTitleItemName'] = $data['seo_itemMetaTitle'];
                 }
 
-                if(!empty($data["onlineStore_storeFavicon"])) {
+                if (!empty($data["onlineStore_storeFavicon"])) {
                     /** @var WebshopWebstoreConfigurationRepositoryContract $webshopConfigRepository */
                     $webshopConfigRepository = pluginApp(WebshopWebstoreConfigurationRepositoryContract::class);
                     $webshopConfigRepository->setFaviconFromWebspace($plentyId, $data["onlineStore_storeFavicon"]);
@@ -258,10 +256,12 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
                     $itemSearchSettingsData = [];
 
                     foreach ($searchSettings as $searchSetting) {
-                        if (!empty($data[$searchSetting['key']]) && !in_array(
+                        if (
+                            !empty($data[$searchSetting['key']]) && !in_array(
                                 $data[$searchSetting['key']],
                                 $completedSettings ?? []
-                            )) {
+                            )
+                        ) {
                             $itemSearchSettingsData[] = [
                                 "key" => $data[$searchSetting['key']],
                                 "boost" => 2000 - (intval($searchSetting['position']) * 100),
@@ -302,7 +302,7 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
                 ];
 
                 $this->savePreviewConfig($pluginSetId, $previewConfData, (int)$webstoreId);
-                
+
                 //invalidate caching
                 $cacheInvalidRepo = pluginApp(ContentCacheInvalidationRepositoryContract::class);
                 $cacheInvalidRepo->invalidateAll($plentyId);
@@ -348,42 +348,11 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
 
                 $configRepo->saveConfiguration($pluginId, $configData, $pluginSetId);
             }
-        } catch (\Exception $exception) {
+        } catch (\Exception) {
             return false;
         }
 
         return true;
-    }
-
-    /**
-     * @return array
-     */
-    private function setSearchSettingComplete(): array
-    {
-        $searchSettings = [];
-
-        for ($i = 0; $i < 13; $i++) {
-            switch ($i) {
-                case 1:
-                    $key = "search_firstSearchField";
-                    break;
-                case 2:
-                    $key = "search_secondSearchField";
-                    break;
-                case 3:
-                    $key = "search_thirdSearchField";
-                    break;
-                default:
-                    $key = "search_{$i}thSearchField";
-            }
-
-            $searchSettings[] = [
-                "key" => $key,
-                "position" => $i
-            ];
-        }
-
-        return $searchSettings;
     }
 
     private function getSearchSetingsKeys(array $settingsData): array
@@ -397,6 +366,29 @@ class ShopWizardSettingsHandler implements WizardSettingsHandler
         return $searchKeys;
     }
 
+    /**
+     * @return array
+     */
+    private function setSearchSettingComplete(): array
+    {
+        $searchSettings = [];
+
+        for ($i = 0; $i < 13; $i++) {
+            $key = match ($i) {
+                1 => "search_firstSearchField",
+                2 => "search_secondSearchField",
+                3 => "search_thirdSearchField",
+                default => "search_{$i}thSearchField",
+            };
+
+            $searchSettings[] = [
+                "key" => $key,
+                "position" => $i
+            ];
+        }
+
+        return $searchSettings;
+    }
 
     private function savePreviewConfig($pluginSetId, $previewConfData, $webstoreId = null)
     {

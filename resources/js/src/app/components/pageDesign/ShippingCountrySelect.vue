@@ -11,14 +11,14 @@
                 :data-title="$translate('Ceres::Template.headerChangeDeliveryCountry')"
                 :aria-label="$translate('Ceres::Template.headerChangeDeliveryCountry')">
 
-                <i :class="'flag-icon flag-icon-' + shippingCountry.isoCode2.toLowerCase()"></i>
+                <i :class="'flag-icon flag-icon-' + shippingCountry.isoCode2.toLowerCase()" aria-hidden="true"></i>
                 {{ shippingCountry.currLangName }}
             </a>
         </li>
     </ul>
     <div v-else>
-        <div class="h3">{{ $translate('Ceres::Template.headerSelectShippingCountry') }}</div>
-        <select v-if="localization.shippingCountries.length > 1" class="form-control" @change="setShippingCountry($event.target.value)">
+        <label :for="'shipping-country-select' + _uid" class="h3">{{ $translate('Ceres::Template.headerSelectShippingCountry') }}</label>
+        <select :id="'shipping-country-select' + _uid" v-if="localization.shippingCountries.length > 1" class="form-control" @change="setShippingCountry($event.target.value)">
             <option v-for="shippingCountry in localization.shippingCountries"
                     :value="shippingCountry.id"
                     :disabled="isDisabled"

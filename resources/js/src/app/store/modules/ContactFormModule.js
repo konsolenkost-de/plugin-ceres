@@ -160,8 +160,13 @@ const actions =
                                 resetRecaptcha(recaptchaEl);
                                 executeReCaptcha(event.target).then((recaptchaToken2) =>
                                 {
+                                    const formType = event.target.dataset.formType;
+                                    const endpoint = formType === "contract-withdrawal"
+                                        ? "/rest/io/cancellation"
+                                        : "/rest/io/customer/contact/mail";
+
                                     ApiService.post(
-                                        "/rest/io/customer/contact/mail",
+                                        endpoint,
                                         {
                                             data:       formData,
                                             recipient:  formOptions.recipient,
@@ -194,7 +199,13 @@ const actions =
                                         {
                                             resetRecaptcha(recaptchaEl);
                                             disableForm(event.target, false);
-                                            NotificationService.error(TranslationService.translate("Ceres::Template.contactSendFail"));
+                                            let errorMsgKey = "Ceres::Template.contactSendFail";
+
+                                            if (event.target.dataset.formType === "contract-withdrawal")
+                                            {
+                                                errorMsgKey = "Ceres::Template.contactSubmissionFail";
+                                            }
+                                            NotificationService.error(TranslationService.translate(errorMsgKey));
                                         });
                                 });
                             },

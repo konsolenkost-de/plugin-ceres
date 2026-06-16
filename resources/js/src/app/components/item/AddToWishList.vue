@@ -1,12 +1,11 @@
 <template>
-    <a class="btn btn-link btn-sm text-muted btn-wish-list"
-        @click.prevent="switchState()"
-        data-toggle="tooltip"
-        data-placement="top"
-        ref="addToWishList"
-        title="zu Wunschliste hinzufügen">
-        <img v-if="isVariationInWishList" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png" class="default-float wishlist-icon" :loading="isLoading" />
-        <img v-else src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png" class="default-float wishlist-icon" :loading="isLoading" />
+    <a class="btn btn-link btn-sm text-muted color-gray-700 btn-wish-list" @click.prevent="switchState()"
+        data-toggle="tooltip" data-placement="top" ref="addToWishList" title="zu Wunschliste hinzufügen">
+        <img v-if="isVariationInWishList"
+            src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_rot.png"
+            class="default-float wishlist-icon" :loading="isLoading" />
+        <img v-else src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Artikel/heart_grau.png"
+            class="default-float wishlist-icon" :loading="isLoading" />
         Wunschliste
     </a>
 </template>
@@ -31,8 +30,7 @@ export default {
         }
     },
 
-    data()
-    {
+    data () {
         return {
             isLoading: false
         };
@@ -40,30 +38,25 @@ export default {
 
     computed:
     {
-        isVariationInWishList()
-        {
+        isVariationInWishList () {
             return this.wishListIds.includes(this.currentVariationId);
         },
 
-        currentVariationId()
-        {
+        currentVariationId () {
             return !isNullOrUndefined(this.variationId) ? this.variationId : this.currentVariationVariationId;
         },
 
-        currentVariationVariationId()
-        {
+        currentVariationVariationId () {
             const currentVariation = this.$store.getters[`${this.itemId}/currentItemVariation`];
 
-            if (isNullOrUndefined(currentVariation))
-            {
+            if (isNullOrUndefined(currentVariation)) {
                 return null;
             }
 
             return currentVariation && currentVariation.variation && currentVariation.variation.id;
         },
 
-        tooltipText()
-        {
+        tooltipText () {
             const tooltipText = this.$translate(
                 "Ceres::Template." + (this.isVariationInWishList ? "singleItemWishListRemove" : "singleItemWishListAdd")
             );
@@ -79,54 +72,43 @@ export default {
 
     methods:
     {
-        switchState()
-        {
-            if (this.isVariationInWishList)
-            {
+        switchState () {
+            if (this.isVariationInWishList) {
                 this.removeFromWishList();
             }
-            else
-            {
+            else {
                 this.addToWishList();
             }
         },
 
-        addToWishList()
-        {
-            if (!this.isLoading)
-            {
+        addToWishList () {
+            if (!this.isLoading) {
                 this.isLoading = true;
                 this.$store.dispatch("addToWishList", parseInt(this.currentVariationId)).then(
-                    response =>
-                    {
+                    response => {
                         this.isLoading = false;
 
                         NotificationService.success(
                             this.$translate("Ceres::Template.singleItemWishListAdded")
                         ).closeAfter(3000);
                     },
-                    error =>
-                    {
+                    error => {
                         this.isLoading = false;
                     });
             }
         },
 
-        removeFromWishList()
-        {
-            if (!this.isLoading)
-            {
+        removeFromWishList () {
+            if (!this.isLoading) {
                 this.isLoading = true;
-                this.$store.dispatch("removeWishListItem", { id: parseInt(this.currentVariationId) }).then(response =>
-                    {
-                        this.isLoading = false;
+                this.$store.dispatch("removeWishListItem", { id: parseInt(this.currentVariationId) }).then(response => {
+                    this.isLoading = false;
 
-                        NotificationService.success(
-                            this.$translate("Ceres::Template.singleItemWishListRemoved")
-                        ).closeAfter(3000);
-                    },
-                    error =>
-                    {
+                    NotificationService.success(
+                        this.$translate("Ceres::Template.singleItemWishListRemoved")
+                    ).closeAfter(3000);
+                },
+                    error => {
                         this.isLoading = false;
                     });
             }

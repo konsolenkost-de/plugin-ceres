@@ -46,7 +46,7 @@ context("Address", () =>
     {
         cy.getByTestingAttr("billing-address-select-add").click();
         cy.getByTestingAttr("salutation-select").eq(0).select("Firma");
-        cy.getByTestingAttr("billing-address-de-company").type("x").clear().type("plentysystems AG");
+        cy.getByTestingAttr("billing-address-de-company").type("x").clear().type("PlentyONE GmbH");
         cy.getByTestingAttr("vat-id").type("250560740", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="street"]`).type("Abby Road", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="housenumber"]`).type("1337", { delay: 15 });
@@ -73,7 +73,7 @@ context("Address", () =>
     {
         cy.getByTestingAttr("billing-address-select-add").click();
         cy.getByTestingAttr("salutation-select").eq(0).select("Firma");
-        cy.getByTestingAttr("billing-address-de-company").type("x").clear().type("plentysystems AG");
+        cy.getByTestingAttr("billing-address-de-company").type("x").clear().type("PlentyONE GmbH");
         cy.getByTestingAttr("vat-id").type("abcdefg", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="street"]`).type("Abby Road", { delay: 15 });
         cy.getByTestingAttr("billing-address-de-street-inputs").find(`input[name="housenumber"]`).type("1337", { delay: 15 });
@@ -84,7 +84,7 @@ context("Address", () =>
         cy.getByTestingAttr("modal-submit").first().click();
 
         cy.get(".notification-wrapper").children().should("have.class", "show").should("have.class", "alert");
-        cy.get(".notification-wrapper").children().first().should("contain", "Die Umsatzsteuer-Identifikationsnummer ist ungültig. Bitte entfernen Sie alle Leer- und Sonderzeichen.");
+        cy.get(".notification-wrapper").children().first().should("contain", "Die Umsatzsteuer-Identifikationsnummer ist ungültig. Bitte entfernen Sie alle Leer- und Sonderzeichen sowie das Länderkürzel.");
     });
 
     it("should add new delivery address", () =>

@@ -21,11 +21,12 @@
                 <div class="prop-1-1">
                     <slot name="item-image">
                         <category-image-carousel :image-urls-data="item.images | itemImages(imageUrlAccessor)"
-                            :alt-text="item.texts.name2 + ' ' + item.texts.name3 + ' kaufen'"
-                            :title-text="item.texts.name2 + ' ' + item.texts.name3 + ' kaufen'"
-                            :item-url="item | itemURL(urlWithVariationId)"
-                            :enable-carousel="$ceres.config.item.enableImageCarousel"
-                            :disable-carousel-on-mobile="disableCarouselOnMobile" ref="categoryImageCarousel">
+                                                :alt="item.texts.name2 + ' ' + item.texts.name3 + ' kaufen'"
+                                                :title="item.texts.name2 + ' ' + item.texts.name3 + ' kaufen'"
+                                                :item-url="item | itemURL(urlWithVariationId)"
+                                                :enable-carousel="$ceres.config.item.enableImageCarousel"
+                                                :disable-carousel-on-mobile="disableCarouselOnMobile"
+                                                ref="categoryImageCarousel">
                         </category-image-carousel>
                     </slot>
                 </div>
@@ -121,12 +122,8 @@
                             $translate("Ceres::Template.itemExclVAT") }}</span>
                         <span v-else>{{ $translate("Ceres::Template.itemInclVAT") }}</span>
                         {{ $translate("Ceres::Template.itemExclusive") }}
-                        <a v-if="$ceres.config.global.shippingCostsCategoryId > 0" data-toggle="modal"
-                            href="#shippingscosts" class="text-appearance"
-                            :title="$translate('Ceres::Template.itemShippingCosts')">{{
-                                $translate("Ceres::Template.itemShippingCosts") }}</a>
-                        <a v-else :title="$translate('Ceres::Template.itemShippingCosts')">{{
-                            $translate("Ceres::Template.itemShippingCosts") }}</a>
+                        <a v-if="$ceres.config.global.shippingCostsCategoryId > 0" data-toggle="modal" href="#shippingscosts" class="text-appearance">{{ $translate("Ceres::Template.itemShippingCosts") }}</a>
+                        <a v-else>{{ $translate("Ceres::Template.itemShippingCosts") }}</a>
                     </div>
                 </div>
             </slot>

@@ -43,6 +43,8 @@ class ShopBuilderSettingsHandler extends MappableSettingsHandler
         'routing.legalDisclosureEnableRoute'    => 'IO.routing.enabled_routes',
         'routing.privacyPolicyCategory'         => 'IO.routing.category_privacy-policy',
         'routing.privacyPolicyEnableRoute'      => 'IO.routing.enabled_routes',
+        'routing.declarationOfAccessibilityCategory' => 'IO.routing.category_declaration-of-accessibility',
+        'routing.declarationOfAccessibilityEnableRoute' => 'IO.routing.enabled_routes',
         'routing.gtcCategory'                   => 'IO.routing.category_gtc',
         'routing.gtcEnableRoute'                => 'IO.routing.enabled_routes',
         'routing.contactCategory'               => 'IO.routing.category_contact',
@@ -84,6 +86,7 @@ class ShopBuilderSettingsHandler extends MappableSettingsHandler
         'routing.cancellationFormCategory'      => 'int',
         'routing.legalDisclosureCategory'       => 'int',
         'routing.privacyPolicyCategory'         => 'int',
+        'routing.declarationOfAccessibilityCategory' => 'int',
         'routing.gtcCategory'                   => 'int',
         'routing.contactCategory'               => 'int',
         'routing.wishListCategory'              => 'int',
@@ -329,6 +332,25 @@ class ShopBuilderSettingsHandler extends MappableSettingsHandler
     public function writeRouting_PrivacyPolicyEnableRoute($enablePrivacyPolicyRoute)
     {
         return $this->setEnabledRoute(RouteConfig::PRIVACY_POLICY, $enablePrivacyPolicyRoute);
+    }
+
+    /**
+     * Check if route is enabled or disabled.
+     * @return bool
+     */
+    public function readRouting_DeclarationOfAccessibilityEnableRoute()
+    {
+        return in_array( RouteConfig::DECLARATION_OF_ACCESSIBILITY, RouteConfig::getEnabledRoutes(true));
+    }
+
+    /**
+     * Enable or disable the route.
+     * @param bool $enableDeclarationOfAccessibilityRoute If true, enable the route.
+     * @return string
+     */
+    public function writeRouting_DeclarationOfAccessibilityEnableRoute($enableDeclarationOfAccessibilityRoute)
+    {
+        return $this->setEnabledRoute(RouteConfig::DECLARATION_OF_ACCESSIBILITY, $enableDeclarationOfAccessibilityRoute);
     }
 
     /**

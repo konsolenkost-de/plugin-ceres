@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <fieldset>
         <div v-if="isShownOnItemPageCount" class="pt-2">
             <div v-if="propertyGroup.group" :class="paddingClasses" :style="paddingInlineStyles">
-                <div class="h4">
+                <legend class="h4">
                     {{ propertyGroup.group.names.name }}:
-                </div>
-                <p class="text-muted text-wrap">
+                </legend>
+                <p class="text-muted text-wrap color-gray-700">
                     {{ propertyGroup.group.names.description }}
                 </p>
             </div>
@@ -14,7 +14,7 @@
                 <order-property-list-item v-if="property.isShownOnItemPage" :group="propertyGroup.group" :property="property"></order-property-list-item>
             </div>
         </div>
-    </div>
+    </fieldset>
 </template>
 
 <script>

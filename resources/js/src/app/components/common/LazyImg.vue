@@ -5,14 +5,15 @@
         :data-picture-class="pictureClass"
         :data-alt="alt"
         :data-title="title"
-        :data-height="height"
-        :data-width="width"
+        :data-height="getHeight()"
+        :data-width="getWidth()"
         :id="uuid">
         <slot name="additionalimages"></slot>
         <source :srcset="defaultImageUrl" :type="mimeType(defaultImageUrl)">
         <source v-if="defaultImageUrl !== imageUrl" :srcset="imageUrl" :type="mimeType(imageUrl)">
         <source v-if="fallbackUrl" :srcset="fallbackUrl" :type="mimeType(fallbackUrl)">
         <img v-if="receivedImageExtension === 'tif'" :src="defaultImageUrl" :alt="alt" :height="getHeight()" :width="getWidth()" type="image/tiff" class="mw-100 h-auto">
+        <img v-else-if="isImageReady" :alt="alt" :height="getHeight()" :width="getWidth()" class="mw-100 h-auto">
     </picture>
 
     <div v-else :data-background-image="defaultImageUrl || fallbackUrl" :class="pictureClass">
@@ -68,6 +69,7 @@ export default {
     data()
     {
         return {
+            isImageReady: false,
             imageConversionEnabled: App.config.log.modernImagesConversion,
             receivedImageExtension: null,
             browserSupportedImgExtension: null,
@@ -150,13 +152,13 @@ export default {
             return mime.lookup(url);
         },
         getHeight() {
-            if (this.height && this.height > 0) {
+            if (this.height && this.height > 0 && this.defaultImageUrl.includes('/full/')) {
                 return this.height;
             }
             return undefined;
         },
         getWidth() {
-            if (this.width && this.width > 0) {
+            if (this.width && this.width > 0 && this.defaultImageUrl.includes('/full/')) {
                 return this.width;
             }
             return undefined;
@@ -166,6 +168,7 @@ export default {
             this.setReceivedImageExtension();
             this.setBrowserSupportedImageExtension();
             this.setDefaultImageUrl();
+            this.isImageReady = true;
         },
         setReceivedImageExtension()
         {

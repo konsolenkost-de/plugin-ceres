@@ -232,3 +232,17 @@ header .widget {
         justify-content: flex-end;
     }
 }
+
+.widget-greeting {
+    span {
+        color: $gray-700;
+    }
+}
+
+.gray-700 {
+    color: $gray-700;
+}
+
+.basket-item-delete {
+    color: #c82333;
+}

@@ -14,6 +14,7 @@
                             <i class="fa fa-info d-none d-md-inline position-absolute ml-2"
                                 style="top:3px"
                                 v-tooltip
+                                aria-hidden="true"
                                 data-placement="top"
                                 data-trigger="hover"
                                 data-boundary="window"
@@ -50,7 +51,7 @@
                     >
                         <i class="fa fa-truck fa-flip-horizontal text-primary text-appearance" aria-hidden="true" v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans('Ceres::Template.orderHistoryTracking') }}"></i>
                     </a>
-                    <a v-if="!!order.confirmationURL" :href="order.confirmationURL" @click.stop target="_blank" rel="noopener">
+                    <a aria-label="{{ trans("Ceres::Template.orderHistoryOrderDetails") }}" v-if="!!order.confirmationURL" :href="order.confirmationURL" @click.stop target="_blank" rel="noopener">
                         <i class="fa fa-eye fa-flip-horizontal text-primary text-appearance" aria-hidden="true" v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.orderHistoryOrderDetails") }}"></i>
                     </a>
                     {#

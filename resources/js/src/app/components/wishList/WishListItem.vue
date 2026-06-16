@@ -3,8 +3,7 @@
         <div class="basket-item component-loading with-icon d-flex">
             <div class="image-container">
                 <a :href="wishListItem | itemURL">
-                    <lazy-img v-if="image" :image-url="image" :alt="wishListItem | itemName"
-                        :title="wishListItem | itemName" picture-class="d-block mw-100 mh-100" />
+                    <lazy-img v-if="image" :image-url="image" :alt="imageAlt" picture-class="d-block mw-100 mh-100" />
                 </a>
             </div>
 
@@ -17,8 +16,8 @@
                                 {{ wishListItem | itemName }}
                             </a>
 
-                            <div class="item-base-price">
-                                {{ unitPrice | currency }}
+                            <div class="item-base-price small">
+                                {{ unitPrice | currency }}&nbsp;<sup>*</sup>
                             </div>
 
                             <div class="item-small-prices text-muted small"
@@ -66,8 +65,8 @@
                         </div>
 
                         <div class="price-box text-right my-1 ml-2">
-                            <div class="item-total-price font-weight-bold text-nowrap">
-                                {{ quantity * unitPrice | currency }}
+                            <div class="item-total-price font-weight-bold text-nowrap d-flex align-items-center">
+                                {{ quantity * unitPrice | currency }}&nbsp;<sup>*</sup>
                             </div>
 
                             <div class="btn btn-sm text-danger p-0" @click="removeItem()"
@@ -146,6 +145,11 @@ export default {
             type: String,
             default: "urlPreview"
         },
+        imageNames:
+        {
+            type: String,
+            default: "names"
+        },
         itemDetailsData:
         {
             type: Array,
@@ -168,7 +172,20 @@ export default {
 
             return this.$options.filters.itemImage(itemImages);
         },
+        imageAlt () {
+            const itemImages = this.$options.filters.itemImages(this.wishListItem.images, this.imageNames);
+            const imageData = this.$options.filters.itemImage(itemImages)
 
+            if (imageData.alternate !== "") {
+                return imageData.alternate;
+            }
+
+            if (imageData.name !== "") {
+                return imageData.name;
+            }
+
+            return this.wishListItem.texts.name1;
+        },
         unitPrice () {
             if (!isNullOrUndefined(this.wishListItem.prices.specialOffer)) {
                 return this.wishListItem.prices.specialOffer.unitPrice.value;

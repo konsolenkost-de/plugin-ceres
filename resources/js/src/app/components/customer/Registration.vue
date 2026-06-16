@@ -41,7 +41,21 @@
                 </div>
             </div>
 
-            <input class="honey" type="text" name="username" autocomplete="new-password" tabindex="-1" v-model="honeypot">
+            <input
+                id="registration_honey"
+                class="honey"
+                type="text"
+                name="username"
+                autocomplete="new-password"
+                tabindex="-1"
+                v-model="honeypot"
+                aria-hidden="true"
+            >
+            <label class="position-absolute" for="registration_honey">
+                <span class="visually-hidden">
+                  {{ $translate("Ceres::Template.regHoneypotLabel") }}
+                </span>
+            </label>
 
             <div class="col-12">
                 <address-input-group template="#vue-address-input-group" v-if="!isSimpleRegistration" address-type="1" :value="billingAddress" @input="setAddressDataField($event)" :optional-address-fields="shownFields" :required-address-fields="requiredFields">

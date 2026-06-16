@@ -2,9 +2,10 @@
 
 namespace Ceres\Extensions;
 
-use IO\Helper\Utils;
 use IO\Helper\SafeGetter;
+use IO\Helper\Utils;
 use IO\Services\PropertyFileService;
+use Plenty\Modules\Webshop\Contracts\WebspaceRepositoryContract;
 use Plenty\Plugin\Templates\Extensions\Twig_Extension;
 use Plenty\Plugin\Templates\Factories\TwigFactory;
 use Plenty\Plugin\Templates\Twig;
@@ -28,6 +29,8 @@ class TwigItemDataField extends Twig_Extension
      * @var array $itemData This array acts as a stack (LIFO). The last element is used for data field fetches.
      */
     private $itemData = [];
+
+    private const METADATA_ALT_TEXT_KEY = 'alttext';
 
     /**
      * TwigItemDataField constructor.
@@ -58,7 +61,7 @@ class TwigItemDataField extends Twig_Extension
         return [
             $this->twig->createSimpleFunction('set_item_data_base', [$this, 'setItemDataBase']),
             $this->twig->createSimpleFunction('pop_item_data_base', [$this, 'popItemDataBase']),
-            $this->twig->createSimpleFunction('item_data_field', [$this, 'getDataField'], ['is_safe' => array('html')]),
+            $this->twig->createSimpleFunction('item_data_field', [$this, 'getDataField'], ['is_safe' => ['html']]),
             $this->twig->createSimpleFunction(
                 'item_data_field_html',
                 [$this, 'getDataFieldHtml'],
@@ -160,7 +163,24 @@ class TwigItemDataField extends Twig_Extension
         }
 
         if (in_array($htmlTagType, ['img'])) {
-            $html = "<$htmlTagType $vueDirectiveAttr=\"$vueDirectiveValue\"$attributes v-if=\"$vueDirectiveValue\"/>";
+            $twigPrintPath = is_string($twigPrint) ? trim($twigPrint) : '';
+            $altText = '';
+            if ($field === 'item.manufacturer.logo' && $twigPrintPath !== '') {
+                /** @var WebspaceRepositoryContract $webspaceRepository */
+                $webspaceRepository = pluginApp(WebspaceRepositoryContract::class);
+                $altText = $webspaceRepository->getCdnMetadata(
+                    $twigPrintPath,
+                    self::METADATA_ALT_TEXT_KEY,
+                    ''
+                );
+            }
+            
+            if (is_string($altText) && strlen($altText) > 0) {
+                $escapedAltText = htmlspecialchars($altText, ENT_QUOTES);
+                $html = "<$htmlTagType $vueDirectiveAttr=\"$vueDirectiveValue\"$attributes alt=\"$escapedAltText\" v-if=\"$vueDirectiveValue\"/>";
+            } else {
+                $html = "<$htmlTagType $vueDirectiveAttr=\"$vueDirectiveValue\"$attributes v-if=\"$vueDirectiveValue\"/>";
+            }
         } else {
             $html = "<$htmlTagType $vueDirectiveAttr=\"$vueDirectiveValue\"$attributes>$twigPrint</$htmlTagType>";
         }

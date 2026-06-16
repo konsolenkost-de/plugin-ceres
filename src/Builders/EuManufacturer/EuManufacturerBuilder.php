@@ -1,0 +1,123 @@
+<?php
+
+namespace Ceres\Builders\EuManufacturer;
+
+use Ceres\Builders\Abstracts\AbstractBuilderFieldGenerator;
+use Ceres\Builders\EuManufacturer\Address\DetailedEuAddressBuilder;
+use Ceres\Builders\EuManufacturer\Address\GeneralEuAddressBuilder;
+use Ceres\ShopBuilder\DataFieldProvider\Item\ManufacturerDataFieldProvider;
+use Ceres\Widgets\Helper\Factories\PresetWidgetFactory;
+
+class EuManufacturerBuilder extends AbstractBuilderFieldGenerator
+{
+    /** @var array */
+    public array $results = [];
+
+    /** @var DetailedEuAddressBuilder */
+    public DetailedEuAddressBuilder $detailedAddressBuilder;
+    /** @var GeneralEuAddressBuilder */
+    public GeneralEuAddressBuilder $generalAddressBuilder;
+
+    /**
+     * @param DetailedEuAddressBuilder $detailedAddressBuilder
+     * @param GeneralEuAddressBuilder $generalAddressBuilder
+     */
+    public function __construct(DetailedEuAddressBuilder $detailedAddressBuilder,
+                                GeneralEuAddressBuilder $generalAddressBuilder
+    ) {
+        $this->detailedAddressBuilder = $detailedAddressBuilder;
+        $this->generalAddressBuilder  = $generalAddressBuilder;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withName(): EuManufacturerBuilder
+    {
+        $this->results[] = $this->getShopBuilderDataFieldProvider(ManufacturerDataFieldProvider::RESPONSIBLE_NAME);
+
+        return $this;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withDetailedAddress(): EuManufacturerBuilder
+    {
+        $this->detailedAddressBuilder->withStreet();
+        $this->detailedAddressBuilder->withHouseNumber();
+        $this->results[] = $this->detailedAddressBuilder->build();
+
+        return $this;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withGeneralAddress(): EuManufacturerBuilder
+    {
+        $this->generalAddressBuilder->withPostCode();
+        $this->generalAddressBuilder->withCity();
+        $this->generalAddressBuilder->withCountry();
+        $this->results[] = $this->generalAddressBuilder->build();
+
+        return $this;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withMail(): EuManufacturerBuilder
+    {
+        $this->results[] = $this->getShopBuilderDataFieldProvider(ManufacturerDataFieldProvider::RESPONSIBLE_EMAIL);
+
+        return $this;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withPhoneNumber(): EuManufacturerBuilder
+    {
+        $this->results[] = $this->getShopBuilderDataFieldProvider(ManufacturerDataFieldProvider::RESPONSIBLE_PHONE);
+
+        return $this;
+    }
+
+    /**
+     * @return EuManufacturerBuilder
+     */
+    public function withContactUrl(): EuManufacturerBuilder
+    {
+        $this->results[] = $this->getShopBuilderDataFieldProvider(ManufacturerDataFieldProvider::RESPONSIBLE_CONTACT_URL);
+
+        return $this;
+    }
+
+    /**
+     * @param PresetWidgetFactory $presetWidgetFactory
+     * @param string $uuidEuResponsiblePerson
+     *
+     * @return void
+     */
+    public function build(PresetWidgetFactory $presetWidgetFactory, string $uuidEuResponsiblePerson): void
+    {
+        foreach ($this->results as $result) {
+            $presetWidgetFactory->createChild($uuidEuResponsiblePerson, 'Ceres::InlineTextWidget')
+                ->withSetting('appearance','none')
+                ->withSetting('spacing.customPadding', true)
+                ->withSetting('spacing.padding.left.value', 0)
+                ->withSetting('spacing.padding.left.unit', null)
+                ->withSetting('spacing.padding.right.value', 0)
+                ->withSetting('spacing.padding.right.unit', null)
+                ->withSetting('spacing.padding.top.value', 0)
+                ->withSetting('spacing.padding.top.unit', null)
+                ->withSetting('spacing.padding.bottom.value', 0)
+                ->withSetting('spacing.padding.bottom.unit', null)
+                ->withSetting(
+                    'text',
+                    $result
+                );
+        }
+    }
+}

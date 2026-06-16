@@ -3,38 +3,55 @@
         <div class="row">
             <div class="col-6" v-if="showNameInputs">
                 <div class="input-unit" data-validate="!regex">
-                    <label :for="'first-name-input_' + _uid">{{ $translate("Ceres::Template.newsletterFirstName") }}</label>
-                    <input type="text" data-validate-ref="/[.:\/\d]/g" :id="'first-name-input_' + _uid" v-model="firstName" data-testing="nl-first-name">
+                    <label :for="'first-name-input_' + uniqueId">{{ $translate("Ceres::Template.newsletterFirstName")
+                        }}</label>
+                    <input type="text" data-validate-ref="/[.:\/\d]/g" :id="'first-name-input_' + uniqueId"
+                        v-model="firstName" data-testing="nl-first-name">
                 </div>
             </div>
             <div class="col-6 pl-0" v-if="showNameInputs">
                 <div class="input-unit" data-validate="!regex">
-                    <label :for="'last-name-input_' + _uid">{{ $translate("Ceres::Template.newsletterLastName") }}</label>
-                    <input type="text" data-validate-ref="/[.:\/\d]/g" :id="'last-name-input_' + _uid" v-model="lastName"  data-testing="nl-last-name">
+                    <label :for="'last-name-input_' + uniqueId">{{ $translate("Ceres::Template.newsletterLastName")
+                        }}</label>
+                    <input type="text" data-validate-ref="/[.:\/\d]/g" :id="'last-name-input_' + uniqueId"
+                        v-model="lastName" data-testing="nl-last-name">
                 </div>
             </div>
 
             <div class="newsletter-input">
                 <div class="input-group">
                     <div class="input-unit border-0" data-validate="mail">
-                        <label v-if="showNameInputs" :for="'email-input-id_' + _uid">{{ $translate("Ceres::Template.newsletterEmail") }} *</label>
-                        <input type="email" autocomplete="email" :id="'email-input-id_' + _uid" v-model="email" placeholder="Deine E-Mail" class="newsletter-input">
+                        <label :for="'email-input-id_' + uniqueId">{{ $translate("Ceres::Template.newsletterEmail") }}
+                            *</label>
+                        <input type="email" autocomplete="email" :id="'email-input-id_' + uniqueId" v-model="email"
+                            placeholder="Deine E-Mail" class="newsletter-input">
                     </div>
-                    <input autocomplete="none" class="honey" type="text" name="username" tabindex="-1" v-model="honeypot">
+                    <input :id="'input-username_' + uniqueId" autocomplete="none" class="honey" type="text"
+                        name="username" tabindex="-1" aria-hidden="true" v-model="honeypot">
+                    <label class="position-absolute" :for="'input-username_' + uniqueId">
+                        <span class="visually-hidden">
+                            {{ $translate("Ceres::Template.newsletterHoneypotLabel") }}
+                        </span>
+                    </label>
                 </div>
             </div>
 
             <div class="col-12" v-if="showPrivacyPolicyCheckbox">
                 <div class="form-check small" data-validate>
-                    <input type="checkbox" class="form-check-input" :id="'privacy-policy-accept-id_' + _uid" name="privacy-policy-accept" v-model="privacyPolicyValue" data-testing="nl-policy">
-                    <label :for="'privacy-policy-accept-id_' + _uid" class="form-check-label" v-html="privacyPolicyText"></label>
+                    <input type="checkbox" class="form-check-input" :id="'privacy-policy-accept-id_' + uniqueId"
+                        name="privacy-policy-accept" v-model="privacyPolicyValue" data-testing="nl-policy">
+                    <label :for="'privacy-policy-accept-id_' + uniqueId" class="form-check-label"
+                        v-html="privacyPolicyText"></label>
                 </div>
             </div>
 
             <div class="col-12 mt-3">
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-block btn-primary btn-appearance newsletter-button" @click="validateData" :disabled="isDisabled" :class="buttonSizeClass">
-                        <img width="13" height="13" src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"><span class="newsletter-button-text">&nbsp; Anmelden</span>
+                    <button type="button" class="btn btn-block btn-primary btn-appearance newsletter-button"
+                        @click="validateData" :disabled="isDisabled" :class="buttonSizeClass">
+                        <img width="13" height="13"
+                            src="https://cdn02.plentymarkets.com/xp4oxtd91bsc/frontend/Images/Footer/Redesign/mail_white.png"><span
+                            class="newsletter-button-text">&nbsp; Anmelden</span>
                     </button>
                 </div>
             </div>
@@ -71,8 +88,7 @@ export default {
         }
     },
 
-    data()
-    {
+    data () {
         return {
             firstName: "",
             lastName: "",
@@ -80,34 +96,33 @@ export default {
             isDisabled: false,
             privacyPolicyValue: false,
             honeypot: "",
-            loadRecaptcha: false
+            loadRecaptcha: false,
+            uniqueId: null,
         };
     },
-
+    mounted () {
+        this.uniqueId = this._uid;
+    },
     computed:
     {
-        privacyPolicyText()
-        {
+        privacyPolicyText () {
             const link = "<a href=\"" + App.urls.privacyPolicy + "\" target=\"_blank\"><span class=\"text-primary text-appearance\">"
-                + this.$translate("Ceres::Template.checkoutPrivacyPolicy", {"hyphen": "&shy;"})
+                + this.$translate("Ceres::Template.checkoutPrivacyPolicy", { "hyphen": "&shy;" })
                 + "</span></a>";
 
-            return this.$translate("Ceres::Template.newsletterAcceptPrivacyPolicy", {"policy": link}) + this.$translate("Ceres::Template.newsletterIsRequiredFootnote");
+            return this.$translate("Ceres::Template.newsletterAcceptPrivacyPolicy", { "policy": link }) + this.$translate("Ceres::Template.newsletterIsRequiredFootnote");
         }
     },
 
     methods: {
-        validateData()
-        {
+        validateData () {
             this.isDisabled = true;
 
             ValidationService.validate($("#newsletter-input-form_" + this._uid))
-                .done(() =>
-                {
+                .done(() => {
                     this.save();
                 })
-                .fail(invalidFields =>
-                {
+                .fail(invalidFields => {
                     ValidationService.markInvalidFields(invalidFields, "error");
 
                     invalidFields.filter(field => {
@@ -118,9 +133,8 @@ export default {
                             name: field.innerText
                         }
                     }).forEach((field) => {
-                        if(field.type === '!regex')
-                        {
-                            NotificationService.error(this.$translate("Ceres::Template.newsletterNotAllowedCharacters", {name: field.name}));
+                        if (field.type === '!regex') {
+                            NotificationService.error(this.$translate("Ceres::Template.newsletterNotAllowedCharacters", { name: field.name }));
                         }
                     });
 
@@ -128,63 +142,52 @@ export default {
                 });
         },
 
-        save()
-        {
+        save () {
             const recaptchaEl = this.$el.querySelector("[data-recaptcha]");
 
-            if (App.config.global.googleRecaptchaApiKey && (!window.grecaptcha || !recaptchaEl))
-            {
+            if (App.config.global.googleRecaptchaApiKey && (!window.grecaptcha || !recaptchaEl)) {
                 NotificationService.error(this.$translate("Ceres::Template.newsletterAcceptRecaptchaCookie"));
                 this.isDisabled = false;
                 return;
             }
 
             executeReCaptcha(this.$el)
-            .then((recaptchaToken) =>
-            {
-                ApiService.post("/rest/io/customer/newsletter", { email: this.email, firstName: this.firstName, lastName: this.lastName, emailFolder: this.emailFolder, honeypot: this.honeypot, recaptcha: recaptchaToken})
-                    .done(data =>
-                    {
-                        if (!!data.containsHoneypot)
-                        {
-                            NotificationService.warn(
-                                this.$translate("Ceres::Template.newsletterHoneypotWarning")
-                            );
-                        }
-                        else
-                        {
-                            NotificationService.success(
-                                this.$translate("Ceres::Template.newsletterSuccessMessage")
-                            ).closeAfter(3000);
-                        }
-                        this.resetInputs();
-                    })
-                    .fail(() =>
-                    {
-                        NotificationService.error(
-                            this.$translate("Ceres::Template.newsletterErrorMessage")
-                        ).closeAfter(5000);
-                    })
-                    .always(() =>
-                    {
-                        this.isDisabled = false;
-                        this.resetRecaptcha();
-                    });
-            });
+                .then((recaptchaToken) => {
+                    ApiService.post("/rest/io/customer/newsletter", { email: this.email, firstName: this.firstName, lastName: this.lastName, emailFolder: this.emailFolder, honeypot: this.honeypot, recaptcha: recaptchaToken })
+                        .done(data => {
+                            if (!!data.containsHoneypot) {
+                                NotificationService.warn(
+                                    this.$translate("Ceres::Template.newsletterHoneypotWarning")
+                                );
+                            }
+                            else {
+                                NotificationService.success(
+                                    this.$translate("Ceres::Template.newsletterSuccessMessage")
+                                ).closeAfter(3000);
+                            }
+                            this.resetInputs();
+                        })
+                        .fail(() => {
+                            NotificationService.error(
+                                this.$translate("Ceres::Template.newsletterErrorMessage")
+                            ).closeAfter(5000);
+                        })
+                        .always(() => {
+                            this.isDisabled = false;
+                            this.resetRecaptcha();
+                        });
+                });
         },
 
-        resetInputs()
-        {
+        resetInputs () {
             this.firstName = "";
             this.lastName = "";
             this.email = "";
             this.privacyPolicyValue = false;
         },
 
-        resetRecaptcha()
-        {
-            if(App.config.global.googleRecaptchaVersion === 2 && window.grecaptcha)
-            {
+        resetRecaptcha () {
+            if (App.config.global.googleRecaptchaVersion === 2 && window.grecaptcha) {
                 const recaptchaId = this.$el.querySelector("[data-recaptcha]");
 
                 window.grecaptcha.reset(recaptchaId);

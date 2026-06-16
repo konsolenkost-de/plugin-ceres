@@ -167,6 +167,7 @@ class DefaultFooterPreset implements ContentPreset
             ->withSetting('showLegalDisclosure', true)
             ->withSetting('showPrivacyPolicy', true)
             ->withSetting('showGtc', true)
+            ->withSetting('showDeclarationOfAccessibility', true)
             ->withSetting('cancellationFormContainer.showCancellationForm', true)
             ->withSetting('cancellationFormContainer.useCancellationPdfUpload', false)
             ->withSetting('cancellationFormContainer.cancellationPdfPath', '');
@@ -176,8 +177,8 @@ class DefaultFooterPreset implements ContentPreset
     {
         $defaultText = '';
         $defaultText .= '<div class="copyright text-center">';
-        $defaultText .= '<a class="d-inline-block" rel="nofollow" href="https://www.plentymarkets.com">';
-        $defaultText .= '<img alt="plentymarkets logo" class="svg plenty-brand" src="https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/plentymarkets-logo.svg" rel="nofollow">';
+        $defaultText .= '<a class="d-inline-block" rel="nofollow" href="https://www.plentyone.com/">';
+        $defaultText .= '<img alt="PlentyONE Logo" class="svg plenty-brand" src="https://cdn01.plentymarkets.com/avw8j9fg70hi/frontend/plentyShop_LTS/PlentyONE_Logo_Black_RGB.svg" rel="nofollow">';
         $defaultText .= '</a>';
         $defaultText .= '<small class="d-block">&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>';
         $defaultText .= '</div>';

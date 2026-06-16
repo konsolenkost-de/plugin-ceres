@@ -40,10 +40,6 @@ class LegalInformationWidget extends BaseWidget
 
         $settingsFactory->createCustomClass();
 
-        $settingsFactory->createCheckbox("showCancellationRights")
-            ->withDefaultValue(true)
-            ->withName("Widget.legalInformationShowCancellationLabel");
-
         $settingsFactory->createCheckbox("showLegalDisclosure")
             ->withDefaultValue(true)
             ->withName("Widget.legalInformationShowLegalDisclosureLabel");
@@ -51,10 +47,19 @@ class LegalInformationWidget extends BaseWidget
         $settingsFactory->createCheckbox("showPrivacyPolicy")
             ->withDefaultValue(true)
             ->withName("Widget.legalInformationShowPrivacyPolicyLabel");
-
+        
         $settingsFactory->createCheckbox("showGtc")
             ->withDefaultValue(true)
             ->withName("Widget.legalInformationShowGtcLabel");
+        
+        $settingsFactory->createCheckbox("showDeclarationOfAccessibility")
+            ->withDefaultValue(true)
+            ->withName("Widget.legalInformationShowDeclarationOfAccessibility");    
+
+        $settingsFactory->createCheckbox("showCancellationRights")
+            ->withDefaultValue(true)
+            ->withName("Widget.legalInformationShowCancellationLabel");
+
 
         $cancellationFormContainer = $settingsFactory->createVerticalContainer("cancellationFormContainer")
             ->withName("Widget.legalInformationCancellationFormContainerLabel")
@@ -63,6 +68,10 @@ class LegalInformationWidget extends BaseWidget
         $cancellationFormContainer->createCheckbox("showCancellationForm")
             ->withDefaultValue(true)
             ->withName("Widget.legalInformationShowCancellationFormLabel");
+
+        $cancellationFormContainer->createCheckbox("styleLinkAsButton")
+            ->withDefaultValue(true)
+            ->withName("Widget.cancellationFormAsButtonLabel");    
 
         $cancellationFormContainer->createCheckbox("useCancellationPdfUpload")
             ->withDefaultValue(false)

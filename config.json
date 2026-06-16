@@ -37,14 +37,6 @@
                     "label": "Config.globalShippingCostsCategoryIdLabel",
                     "options": {}
                 },
-                "global.default_contact_class_b2b": {
-                    "type": "inputText",
-                    "required": false,
-                    "label": "Config.globalDefaultContactClassB2bLabel",
-                    "options": {
-                        "defaultValue": ""
-                    }
-                },
                 "global.enableOldUrlPattern": {
                     "type": "checkBox",
                     "required": false,
@@ -142,7 +134,7 @@
                     "required": false,
                     "label": "Config.globalUserDataHashMaxAgeLabel",
                     "options": {
-                        "defaultValue": 24,
+                        "defaultValue": 1,
                         "selectBoxValues": [
                             {
                                 "value": 1,
@@ -163,10 +155,6 @@
                             {
                                 "value": 168,
                                 "caption": "Config.globalMaxAge1Week"
-                            },
-                            {
-                                "value": -1,
-                                "caption": "Config.globalMaxAgeInfinite"
                             }
                         ]
                     }
@@ -955,6 +943,72 @@
                     "label": "Config.itemShowCategoryFilterLabel",
                     "options": {
                         "defaultValue": "false"
+                    }
+                },
+                "item.manufacturer_data": {
+                    "type": "multiCheckBox",
+                    "required": false,
+                    "label": "Config.itemManufacturerDataLabel",
+                    "options": {
+                        "defaultValue": "all",
+                        "checkBoxValues": [
+                            {
+                                "value": "name",
+                                "caption": "Config.itemManufacturerName"
+                            },
+                            {
+                                "value": "logo",
+                                "caption": "Config.itemManufacturerLogoUrl"
+                            },
+                            {
+                                "value": "url",
+                                "caption": "Config.itemManufacturerHomepage"
+                            },
+                            {
+                                "value": "street",
+                                "caption": "Config.itemManufacturerStreet"
+                            },
+                            {
+                                "value": "houseNo",
+                                "caption": "Config.itemManufacturerHouseNo"
+                            },
+                            {
+                                "value": "postcode",
+                                "caption": "Config.itemManufacturerPostcode"
+                            },
+                            {
+                                "value": "town",
+                                "caption": "Config.itemManufacturerTown"
+                            },
+                            {
+                                "value": "countryId",
+                                "caption": "Config.itemManufacturerCountry"
+                            },
+                            {
+                                "value": "phoneNumber",
+                                "caption": "Config.itemManufacturerTelephoneNumber"
+                            },
+                            {
+                                "value": "faxNumber",
+                                "caption": "Config.itemManufacturerFaxNumber"
+                            },
+                            {
+                                "value": "email",
+                                "caption": "Config.itemManufacturerEmail"
+                            },
+                            {
+                                "value": "externalName",
+                                "caption": "Config.itemManufacturerExternalName"
+                            },
+                            {
+                                "value": "legalName",
+                                "caption": "Config.itemManufacturerLegalName"
+                            },
+                            {
+                                "value": "contactUrl",
+                                "caption": "Config.itemManufacturerContactUrl"
+                            }
+                        ]
                     }
                 }
             }
@@ -2947,6 +3001,10 @@
                             {
                                 "value": "company",
                                 "caption": "Config.addressDefaultSalutationValueCompany"
+                            },
+                            {
+                                "value": "notToSay",
+                                "caption": "Config.addressDefaultSalutationValuePreferNotToSay"
                             }
                         ]
                     }
@@ -3796,6 +3854,36 @@
                     "type": "selectBox",
                     "required": false,
                     "label": "Config.metaRobotsCancelFormLabel",
+                    "options": {
+                        "defaultValue": "all",
+                        "selectBoxValues": [
+                            {
+                                "value": "all",
+                                "caption": "Config.metaRobotsAll"
+                            },
+                            {
+                                "value": "index",
+                                "caption": "Config.metaRobotsIndex"
+                            },
+                            {
+                                "value": "nofollow",
+                                "caption": "Config.metaRobotsNofollow"
+                            },
+                            {
+                                "value": "noindex",
+                                "caption": "Config.metaRobotsNoindex"
+                            },
+                            {
+                                "value": "noindex, nofollow",
+                                "caption": "Config.metaRobotsNoindexNofollow"
+                            }
+                        ]
+                    }
+                },
+                "meta.robots_declaration_of_accessibility": {
+                    "type": "selectBox",
+                    "required": false,
+                    "label": "Config.metaRobotsDeclarationOfAccessibilityLabel",
                     "options": {
                         "defaultValue": "all",
                         "selectBoxValues": [

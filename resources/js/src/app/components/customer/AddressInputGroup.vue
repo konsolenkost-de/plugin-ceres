@@ -12,7 +12,7 @@
                             </salutation-select>
                             <label :for="'txtSalutation' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressSalutation", "de",
-                                "delivery_address.salutation") }}
+                                    "delivery_address.salutation") }}
                             </label>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                                 @input="emitInputEvent('name1', $event.target.value)"
                                 data-testing="packing-station-de-company">
                             <label :for="'txtCompany' + _uid">{{ $translate("Ceres::Template.addressCompany")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                                     @input="emitInputEvent('name2', $event.target.value)"
                                     data-testing="packing-station-de-firstname">
                                 <label :for="'txtFirstName' + _uid">{{ $translate("Ceres::Template.addressFirstName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     @input="emitInputEvent('name3', $event.target.value)"
                                     data-testing="packing-station-de-lastname">
                                 <label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 @input="emitInputEvent('contactPerson', $event.target.value)">
                             <label :for="'txtContactPerson' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressContactPerson", "de",
-                                "delivery_address.contactPerson") }}
+                                    "delivery_address.contactPerson") }}
                             </label>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                                 @input="emitInputEvent('name4', $event.target.value)">
                             <label :for="'txtAdditionalName' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalName", "de",
-                                "delivery_address.name4") }}
+                                    "delivery_address.name4") }}
                             </label>
                         </div>
                     </div>
@@ -106,9 +106,9 @@
                     <div v-if="isInOptionalFields('de', 'delivery_address.phoneNumber')" class="col-12 col-sm-4">
                         <div class="input-unit" data-model="telephone"
                             v-validate:text="isInRequiredFields('de', 'delivery_address.phoneNumber')">
-                            <input type="text" name="telephone" :id="'txtTelephone' + _uid" :value="value.telephone"
-                                @input="emitInputEvent('telephone', $event.target.value)">
-                            <label :for="'txtTelephone' + _uid">
+                            <input type="text" name="telephone" :id="'delivery_txtTelephone' + _uid"
+                                :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
+                            <label :for="'delivery_txtTelephone' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressTelephone", "de",
                                 "delivery_address.phoneNumber") }}
                             </label>
@@ -119,7 +119,8 @@
 
             <div class="col-12" v-if="isParcelOrOfficeAvailable">
                 <div class="row">
-                    <div class="col-12">
+                    <div role="checkbox" :aria-label="$translate('Ceres::Template.addressToPickupStation')"
+                        class="col-12">
                         <input type="checkbox" name="togglePickup" :checked="value.showPickupStation"
                             @change="togglePickupStation($event.target.checked)" :id="'showPickup' + _uid">
                         <label :for="'showPickup' + _uid">{{ $translate("Ceres::Template.addressToPickupStation")
@@ -140,7 +141,7 @@
                                     $translate("Ceres::Template.addressPostOffice") }}</option>
                             </select>
                             <label for="'address1' + _uid">{{ $translate("Ceres::Template.addressPickupLocation")
-                                }}</label>
+                            }}</label>
                         </div>
                     </div>
 
@@ -178,7 +179,7 @@
                                 :value="value.address4" @input="emitInputEvent('address4', $event.target.value)">
                             <label :for="'decorateAddress1' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalAddress2", "de",
-                                "delivery_address.address4") }}
+                                    "delivery_address.address4") }}
                             </label>
                         </div>
                     </div>
@@ -233,7 +234,7 @@
                                 @input="emitInputEvent($event.field, $event.value)"></salutation-select>
                             <label :for="'txtSalutation' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressSalutation", "de",
-                                "billing_address.salutation") }}
+                                    "billing_address.salutation") }}
                             </label>
                         </div>
                     </div>
@@ -248,7 +249,7 @@
                                 @input="emitInputEvent('name1', $event.target.value)" data-autofocus
                                 data-testing="billing-address-de-company">
                             <label :for="'txtCompany' + _uid">{{ $translate("Ceres::Template.addressCompany")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
 
@@ -285,7 +286,7 @@
                                     @input="emitInputEvent('name2', $event.target.value)" data-autofocus
                                     data-testing="billing-address-de-firstname">
                                 <label :for="'txtFirstName' + _uid">{{ $translate("Ceres::Template.addressFirstName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -296,7 +297,7 @@
                                     @input="emitInputEvent('name3', $event.target.value)"
                                     data-testing="billing-address-de-lastname">
                                 <label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'billing_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -310,7 +311,7 @@
                                 @input="emitInputEvent('contactPerson', $event.target.value)">
                             <label :for="'txtContactPerson' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressContactPerson", "de",
-                                "billing_address.contactPerson") }}
+                                    "billing_address.contactPerson") }}
                             </label>
                         </div>
                     </div>
@@ -322,7 +323,7 @@
                                 @input="emitInputEvent('name4', $event.target.value)">
                             <label :for="'txtAdditionalName' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalName", "de",
-                                "billing_address.name4") }}
+                                    "billing_address.name4") }}
                             </label>
                         </div>
                     </div>
@@ -336,16 +337,16 @@
                                 @input="emitInputEvent('birthday', $event.target.value)">
                             <label :for="'txtBirthdate' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressBirthdate", "de",
-                                "billing_address.birthday") }}
+                                    "billing_address.birthday") }}
                             </label>
                         </div>
                     </div>
                     <div v-if="isInOptionalFields('de', 'billing_address.phoneNumber')" class="col-12 col-sm-4">
                         <div class="input-unit" data-model="telephone"
                             v-validate:text="isInRequiredFields('de', 'billing_address.phoneNumber')">
-                            <input type="text" name="telephone" :id="'txtTelephone' + _uid" :value="value.telephone"
-                                @input="emitInputEvent('telephone', $event.target.value)">
-                            <label :for="'txtTelephone' + _uid">
+                            <input type="text" name="telephone" :id="'billing_txtTelephone' + _uid"
+                                :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
+                            <label :for="'billing_txtTelephone' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressTelephone", "de",
                                 "billing_address.phoneNumber") }}
                             </label>
@@ -385,7 +386,7 @@
                                 :value="value.address3" @input="emitInputEvent('address3', $event.target.value)">
                             <label :for="'decorateAddress0' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalAddress1", "de",
-                                "billing_address.address3") }}
+                                    "billing_address.address3") }}
                             </label>
                         </div>
                     </div>
@@ -397,7 +398,7 @@
                                 :value="value.address4" @input="emitInputEvent('address4', $event.target.value)">
                             <label :for="'decorateAddress1' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalAddress2", "de",
-                                "billing_address.address4") }}
+                                    "billing_address.address4") }}
                             </label>
                         </div>
                     </div>
@@ -451,7 +452,7 @@
                                 @input="emitInputEvent($event.field, $event.value)"></salutation-select>
                             <label :for="'txtSalutation' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressSalutation", "gb",
-                                "billing_address.salutation") }}
+                                    "billing_address.salutation") }}
                             </label>
                         </div>
                     </div>
@@ -466,7 +467,7 @@
                             <input type="text" name="company" :id="'txtCompany' + _uid" :value="value.name1"
                                 @input="emitInputEvent('name1', $event.target.value)" data-autofocus>
                             <label :for="'txtCompany' + _uid">{{ $translate("Ceres::Template.addressCompany")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
 
@@ -515,7 +516,7 @@
                                 <input type="text" name="lastName" :id="'txtLastName' + _uid" :value="value.name3"
                                     @input="emitInputEvent('name3', $event.target.value)" data-model="name3">
                                 <label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName")
-                                    }}<template v-if="areNameFieldsRequired('gb', 'billing_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('gb', 'billing_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -529,7 +530,7 @@
                                 @input="emitInputEvent('contactPerson', $event.target.value)">
                             <label :for="'txtContactPerson' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressContactPerson", "gb",
-                                "billing_address.contactPerson") }}
+                                    "billing_address.contactPerson") }}
                             </label>
                         </div>
                     </div>
@@ -541,7 +542,7 @@
                                 @input="emitInputEvent('name4', $event.target.value)">
                             <label :for="'txtAdditionalName' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressGBNameAffix", "gb",
-                                "billing_address.name4") }}
+                                    "billing_address.name4") }}
                             </label>
                         </div>
                     </div>
@@ -555,7 +556,7 @@
                                 @input="emitInputEvent('birthday', $event.target.value)">
                             <label :for="'txtBirthdate' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressBirthdate", "gb",
-                                "billing_address.birthday") }}
+                                    "billing_address.birthday") }}
                             </label>
                         </div>
                     </div>
@@ -563,9 +564,9 @@
                     <div v-if="isInOptionalFields('gb', 'billing_address.phoneNumber')" class="col-12 col-sm-4">
                         <div class="input-unit" data-model="telephone"
                             v-validate:text="isInRequiredFields('gb', 'billing_address.phoneNumber')">
-                            <input class="formborder" type="text" name="telephone" :id="'txtTelephone' + _uid"
+                            <input type="text" name="telephone" :id="'billing_txtTelephone' + _uid"
                                 :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
-                            <label :for="'txtTelephone' + _uid">
+                            <label :for="'billing_txtTelephone' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressTelephone", "gb",
                                 "billing_address.phoneNumber") }}
                             </label>
@@ -581,7 +582,7 @@
                             <input type="text" name="street" autocomplete="address-line1" :id="'txtStreet' + _uid"
                                 :value="value.address1" @input="emitInputEvent('address1', $event.target.value)">
                             <label :for="'txtStreet' + _uid">{{ $translate("Ceres::Template.addressENAddressLine1")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
 
@@ -592,7 +593,7 @@
                                 :value="value.address2" @input="emitInputEvent('address2', $event.target.value)">
                             <label :for="'txtNumber' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine2", "gb",
-                                "billing_address.address2")
+                                    "billing_address.address2")
                                 }}
                             </label>
                         </div>
@@ -609,7 +610,7 @@
                                 :value="value.address3" @input="emitInputEvent('address3', $event.target.value)">
                             <label :for="'decorateAddress0' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine3", "gb",
-                                "billing_address.address3")
+                                    "billing_address.address3")
                                 }}
                             </label>
                         </div>
@@ -622,7 +623,7 @@
                                 :value="value.address4" @input="emitInputEvent('address4', $event.target.value)">
                             <label :for="'decorateAddress0' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine4", "gb",
-                                "billing_address.address4")
+                                    "billing_address.address4")
                                 }}
                             </label>
                         </div>
@@ -677,7 +678,7 @@
                                 @input="emitInputEvent($event.field, $event.value)"></salutation-select>
                             <label :for="'txtSalutation' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressSalutation", "de",
-                                "delivery_address.salutation") }}
+                                    "delivery_address.salutation") }}
                             </label>
                         </div>
                     </div>
@@ -692,7 +693,7 @@
                             <input type="text" name="company" :id="'txtCompany' + _uid" :value="value.name1"
                                 @input="emitInputEvent('name1', $event.target.value)" data-autofocus>
                             <label :for="'txtCompany' + _uid">{{ $translate("Ceres::Template.addressCompany")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -727,7 +728,7 @@
                                     @input="emitInputEvent('name2', $event.target.value)" data-autofocus
                                     data-testing="delivery-address-de-firstname">
                                 <label :for="'txtFirstName' + _uid">{{ $translate("Ceres::Template.addressFirstName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -739,7 +740,7 @@
                                     @input="emitInputEvent('name3', $event.target.value)"
                                     data-testing="delivery-address-de-lastname">
                                 <label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName")
-                                    }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('de', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -753,7 +754,7 @@
                                 @input="emitInputEvent('contactPerson', $event.target.value)">
                             <label :for="'txtContactPerson' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressContactPerson", "de",
-                                "delivery_address.contactPerson") }}
+                                    "delivery_address.contactPerson") }}
                             </label>
                         </div>
                     </div>
@@ -765,7 +766,7 @@
                                 @input="emitInputEvent('name4', $event.target.value)">
                             <label :for="'txtAdditionalName' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalName", "de",
-                                "delivery_address.name4") }}
+                                    "delivery_address.name4") }}
                             </label>
                         </div>
                     </div>
@@ -773,9 +774,9 @@
                     <div v-if="isInOptionalFields('de', 'delivery_address.phoneNumber')" class="col-12 col-sm-4">
                         <div class="input-unit" data-model="telephone"
                             v-validate:text="isInRequiredFields('de', 'delivery_address.phoneNumber')">
-                            <input type="text" name="telephone" :id="'txtTelephone' + _uid" :value="value.telephone"
-                                @input="emitInputEvent('telephone', $event.target.value)">
-                            <label :for="'txtTelephone' + _uid">
+                            <input type="text" name="telephone" :id="'delivery_txtTelephone' + _uid"
+                                :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
+                            <label :for="'delivery_txtTelephone' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressTelephone", "de",
                                 "delivery_address.phoneNumber") }}
                             </label>
@@ -786,7 +787,8 @@
 
             <div class="col-12" v-if="isParcelOrOfficeAvailable">
                 <div class="row">
-                    <div class="col-12">
+                    <div role="checkbox" :aria-label="$translate('Ceres::Template.addressToPickupStation')"
+                        class="col-12">
                         <input type="checkbox" name="togglePickup" :checked="value.showPickupStation"
                             @change="togglePickupStation($event.target.checked)" :id="'showPickup' + _uid">
                         <label :for="'showPickup' + _uid">{{ $translate("Ceres::Template.addressToPickupStation")
@@ -827,7 +829,7 @@
                             <label :for="'decorateAddress0' + _uid">
 
                                 {{ transformTranslation("Ceres::Template.addressAdditionalAddress1", "de",
-                                "delivery_address.address3") }}
+                                    "delivery_address.address3") }}
                             </label>
                         </div>
                     </div>
@@ -839,7 +841,7 @@
                                 :value="value.address4" @input="emitInputEvent('address4', $event.target.value)">
                             <label :for="'decorateAddress1' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressAdditionalAddress2", "de",
-                                "delivery_address.address4") }}
+                                    "delivery_address.address4") }}
                             </label>
                         </div>
                     </div>
@@ -893,7 +895,7 @@
                                 @input="emitInputEvent($event.field, $event.value)"></salutation-select>
                             <label :for="'txtSalutation' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressSalutation", "gb",
-                                "delivery_address.salutation") }}
+                                    "delivery_address.salutation") }}
                             </label>
                         </div>
                     </div>
@@ -908,7 +910,7 @@
                             <input type="text" name="company" :id="'txtCompany' + _uid" :value="value.name1"
                                 @input="emitInputEvent('name1', $event.target.value)" data-autofocus>
                             <label :for="'txtCompany' + _uid">{{ $translate("Ceres::Template.addressCompany")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
@@ -942,7 +944,7 @@
                                 <input type="text" name="firstName" :id="'txtFirstName' + _uid" :value="value.name2"
                                     @input="emitInputEvent('name2', $event.target.value)" data-autofocus>
                                 <label :for="'txtFirstName' + _uid">{{ $translate("Ceres::Template.addressFirstName")
-                                    }}<template v-if="areNameFieldsRequired('gb', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('gb', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -953,7 +955,7 @@
                                 <input type="text" name="lastName" :id="'txtLastName' + _uid" :value="value.name3"
                                     @input="emitInputEvent('name3', $event.target.value)">
                                 <label :for="'txtLastName' + _uid">{{ $translate("Ceres::Template.addressLastName")
-                                    }}<template v-if="areNameFieldsRequired('gb', 'delivery_address')">*</template>
+                                }}<template v-if="areNameFieldsRequired('gb', 'delivery_address')">*</template>
                                 </label>
                             </div>
                         </div>
@@ -968,7 +970,7 @@
                             <label :for="'txtContactPerson' + _uid">
 
                                 {{ transformTranslation("Ceres::Template.addressContactPerson", "gb",
-                                "delivery_address.contactPerson") }}
+                                    "delivery_address.contactPerson") }}
                             </label>
                         </div>
                     </div>
@@ -980,7 +982,7 @@
                                 @input="emitInputEvent('name4', $event.target.value)">
                             <label :for="'txtAdditionalName' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressGBNameAffix", "gb",
-                                "delivery_address.name4") }}
+                                    "delivery_address.name4") }}
                             </label>
                         </div>
                     </div>
@@ -988,9 +990,9 @@
                     <div v-if="isInOptionalFields('gb', 'delivery_address.phoneNumber')" class="col-12 col-sm-4">
                         <div class="input-unit" data-model="telephone"
                             v-validate:text="isInRequiredFields('gb', 'delivery_address.phoneNumber')">
-                            <input type="text" name="telephone" :id="'txtTelephone' + _uid" :value="value.telephone"
-                                @input="emitInputEvent('telephone', $event.target.value)">
-                            <label :for="'txtTelephone' + _uid">
+                            <input type="text" name="telephone" :id="'delivery_txtTelephone' + _uid"
+                                :value="value.telephone" @input="emitInputEvent('telephone', $event.target.value)">
+                            <label :for="'delivery_txtTelephone' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressTelephone", "gb",
                                 "delivery_address.phoneNumber") }}
                             </label>
@@ -1005,7 +1007,7 @@
                             <input type="text" name="street" autocomplete="address-line1" :id="'txtStreet' + _uid"
                                 :value="value.address1" @input="emitInputEvent('address1', $event.target.value)">
                             <label :for="'txtStreet' + _uid">{{ $translate("Ceres::Template.addressENAddressLine1")
-                                }}*</label>
+                            }}*</label>
                         </div>
                     </div>
 
@@ -1016,7 +1018,7 @@
                                 :value="value.address2" @input="emitInputEvent('address2', $event.target.value)">
                             <label :for="'txtNumber' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine2", "gb",
-                                "delivery_address.address2")
+                                    "delivery_address.address2")
                                 }}
                             </label>
                         </div>
@@ -1033,7 +1035,7 @@
                                 :value="value.address3" @input="emitInputEvent('address3', $event.target.value)">
                             <label :for="'decorateAddress0' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine3", "gb",
-                                "delivery_address.address3")
+                                    "delivery_address.address3")
                                 }}
                             </label>
                         </div>
@@ -1046,7 +1048,7 @@
                                 :value="value.address4" @input="emitInputEvent('address4', $event.target.value)">
                             <label :for="'decorateAddress1' + _uid">
                                 {{ transformTranslation("Ceres::Template.addressENAddressLine4", "gb",
-                                "delivery_address.address4")
+                                    "delivery_address.address4")
                                 }}
                             </label>
                         </div>

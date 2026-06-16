@@ -94,6 +94,7 @@ class TemplateServiceProvider extends ServiceProvider
             'tpl.cancellation-form' => ['StaticPages.CancellationForm', GlobalContext::class],
             'tpl.legal-disclosure' => ['StaticPages.LegalDisclosure', GlobalContext::class],
             'tpl.privacy-policy' => ['StaticPages.PrivacyPolicy', GlobalContext::class],
+            'tpl.declaration-of-accessibility' => ['StaticPages.DeclarationOfAccessibility', GlobalContext::class],
             'tpl.terms-conditions' => ['StaticPages.TermsAndConditions', GlobalContext::class],
             'tpl.item-not-found' => ['StaticPages.ItemNotFound', GlobalContext::class],
             'tpl.page-not-found' => ['StaticPages.PageNotFound', GlobalContext::class],
@@ -362,7 +363,7 @@ class TemplateServiceProvider extends ServiceProvider
          * Cannot use CeresConfig since it depends on IO helper class.
          */
         $config = pluginApp(ConfigRepository::class);
-        if (strlen($config->get('Ceres.contact.api_key'))) {
+        if (strlen($config->get('Ceres.contact.api_key') ?? '')) {
             $consentRepository->registerConsent(
                 'googleMaps',
                 'Ceres::Template.consentGoogleMapsLabel',
@@ -377,7 +378,7 @@ class TemplateServiceProvider extends ServiceProvider
             );
         }
 
-        if (strlen($config->get('Ceres.global.google_recaptcha_secret'))) {
+        if (strlen($config->get('Ceres.global.google_recaptcha_secret') ?? '')) {
             $necessary = $config->get('Ceres.global.google_recaptcha_consentNecessary');
             $group = $config->get('Ceres.global.google_recaptcha_consentGroup', 'media');
             $isNecessary = $necessary === true || $necessary === 'true' || $necessary === '1' || $necessary === 1 || $group === 'necessary';

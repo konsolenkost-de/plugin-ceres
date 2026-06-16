@@ -419,9 +419,20 @@ var render = function render() {
       "variation-id": _vm.variationId
     }
   })], 1) : _vm._e(), _vm._v(" "), !_vm.showQuantity && _vm.useLargeScale && !_vm.canBeAddedToBasket ? _c("div", {
+    directives: [{
+      name: "tooltip",
+      rawName: "v-tooltip"
+    }],
     staticClass: "add-to-basket-lg-container d-none d-lg-block",
     attrs: {
+      "data-toggle": "tooltip",
+      "data-placement": "top",
       title: _vm.$translate("Ceres::Template.itemShowItem")
+    },
+    on: {
+      click: function click($event) {
+        return _vm.directToItem();
+      }
     }
   }, [_c("div", {
     on: {
@@ -430,7 +441,10 @@ var render = function render() {
       }
     }
   }, [_vm._v("\n            " + _vm._s(_vm.$translate("Ceres::Template.itemShowItem")) + "\n            "), _c("i", {
-    staticClass: "fa fa-arrow-right fa-lg d-none d-sm-block"
+    staticClass: "fa fa-arrow-right fa-lg d-none d-sm-block",
+    attrs: {
+      "aria-hidden": "true"
+    }
   })]), _vm._v(" "), _c("add-to-wish-list-icon", {
     attrs: {
       "variation-id": _vm.variationId
@@ -471,7 +485,7 @@ var render = function render() {
       "data-placement": "top",
       title: _vm.tooltipText
     }
-  }, [_vm._v("\n                    Ausverkauft\n            ")]) : !_vm.buttonLockState ? _c("button", {
+  }, [_vm._v("\n                Ausverkauft\n            ")]) : !_vm.buttonLockState ? _c("button", {
     staticClass: "btn btn-block btn-primary btn-basket btn-appearance",
     class: _vm.buttonClasses,
     style: _vm.paddingInlineStyles,
@@ -503,7 +517,7 @@ var render = function render() {
         max: _vm.maximumQuantity
       })
     }
-  }, [_vm._v("\n                    Ausverkauft\n            ")])])]) : _vm._e(), _vm._v(" "), !_vm.showQuantity && !_vm.useLargeScale ? _c("div", {
+  }, [_vm._v("\n                Ausverkauft\n            ")])])]) : _vm._e(), _vm._v(" "), !_vm.showQuantity && !_vm.useLargeScale ? _c("div", {
     staticClass: "d-inline",
     class: {
       "d-lg-none": !_vm.isWishList

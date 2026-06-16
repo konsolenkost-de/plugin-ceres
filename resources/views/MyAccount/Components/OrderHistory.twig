@@ -44,6 +44,7 @@
                                     {% if entry.order.typeId == 5 %}
                                         <i class="fa fa-info d-inline ml-1"
                                             v-tooltip
+                                            aria-hidden="true"
                                             data-placement="top"
                                             data-trigger="hover"
                                             data-boundary="window"
@@ -116,11 +117,11 @@
             </div>
 
             <!-- ORDER DETAILS MODAL -->
-            <div class="modal fade" ref="orderDetails" v-if="currentOrder" tabindex="-1" role="dialog">
+            <div class="modal fade" ref="orderDetails" v-if="currentOrder" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-modal="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title">{{ trans("Ceres::Template.orderHistoryOrderDetails") }}</h3>
+                            <h3 id="modal-title" class="modal-title">{{ trans("Ceres::Template.orderHistoryOrderDetails") }}</h3>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="{{ trans("Ceres::Template.closeIcon") }}">&times;</button>
                         </div>
                         <div class="modal-body" style="min-height:350px">

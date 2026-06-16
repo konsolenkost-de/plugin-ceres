@@ -9213,6 +9213,20 @@ a.text-dark:hover, a.color-dark:hover, a.text-dark:focus, a.color-dark:focus {
   background-repeat: repeat !important;
 }
 
+.breadcrumbs .breadcrumb-item span {
+  color: #495057;
+}
+
+.color-gray-700 {
+  color: #495057 !important;
+}
+
+.articlenumber b, .articlenumber span,
+.producertag b,
+.producertag span {
+  color: #495057;
+}
+
 .input-group .input-unit + .input-group-btn {
   padding-bottom: 15px;
 }
@@ -9611,11 +9625,27 @@ a {
   min-height: 1px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 [v-cloak],
 script2,
 style2,
 tab-list {
   display: none !important;
+}
+
+.thumb-content .feedback-stars-average.feedback-category-view .feedback-count {
+  position: relative;
+  margin-left: 75%;
 }
 
 .mh-1 {
@@ -10206,7 +10236,7 @@ html.ios textarea {
   cursor: pointer;
   outline: none;
 }
-.autocomplete-suggestion:hover {
+.autocomplete-suggestion:focus, .autocomplete-suggestion:hover {
   background: #dee2e6;
 }
 .autocomplete-suggestion .label {
@@ -10214,7 +10244,7 @@ html.ios textarea {
   color: #212529;
 }
 .autocomplete-suggestion .label .small, .autocomplete-suggestion .label .btn-labeled {
-  color: #6c757d;
+  color: #495057;
 }
 .autocomplete-suggestion .label.compact .small, .autocomplete-suggestion .label.compact .btn-labeled {
   line-height: 0.85;
@@ -10234,7 +10264,7 @@ html.ios textarea {
   min-width: 3em;
   padding: 0.1rem 0;
   font-size: 0.85rem;
-  color: #6c757d;
+  color: #495057;
   text-align: center;
   background: #e9ecef;
 }
@@ -10955,7 +10985,7 @@ html.ie .single-carousel .owl-item > div {
 }
 .live-shopping-prices-additional-info a {
   font-weight: 700;
-  color: inherit;
+  color: #fff !important;
 }
 
 .live-shopping-progress:not(:last-child) {
@@ -11266,7 +11296,7 @@ html.ie .single-carousel .owl-item > div {
   font-size: 0.65em;
   font-weight: 600;
   line-height: 1em !important;
-  color: #adb5bd;
+  color: #495057;
   text-overflow: ellipsis;
   text-transform: uppercase;
   letter-spacing: 0.1px;
@@ -11503,6 +11533,14 @@ textarea.no-resize {
   z-index: -1;
 }
 
+.privacy-policy-input {
+  width: 16px;
+  height: 16px;
+}
+.privacy-policy-input + label {
+  margin-left: 4px;
+}
+
 .back-to-top-center {
   position: fixed;
   right: 0;
@@ -11560,6 +11598,12 @@ textarea.no-resize {
 }
 .footer a {
   color: #212529;
+}
+.footer .btn-primary {
+  color: #fff;
+}
+.footer .btn-primary:hover, .footer .btn-primary:focus {
+  color: #fff;
 }
 .footer > .container-max {
   max-width: 1170px;
@@ -11870,7 +11914,7 @@ body.basket-open {
 .cmp-product-thumb .crossprice {
   font-size: 0.81em;
   font-weight: 700;
-  color: #adb5bd;
+  color: #6c757d;
 }
 .cmp-product-thumb .price-view-port {
   flex: 1 0 0;
@@ -11970,7 +12014,7 @@ body.basket-open {
 }
 .cmp-product-thumb .category-lowest-price,
 .cmp-product-thumb .category-unit-price {
-  color: #adb5bd;
+  color: #495057;
 }
 .cmp-product-thumb .btn-group {
   margin-top: 5px;
@@ -12134,6 +12178,14 @@ body.basket-open {
 }
 .qty-btn-container .qty-btn:not(.disabled):hover {
   background: #cbd3da;
+}
+
+.add-to-basket-container .qty-btn-container {
+  width: 28px;
+}
+.add-to-basket-container .qty-btn-container .qty-btn {
+  width: 28px;
+  height: 28px;
 }
 
 .product-list {
@@ -12550,7 +12602,7 @@ html.crios .parallax-img-container .parallax-img-container-inner[style^=backgrou
   padding: 0.1rem 0;
   font-size: 0.85rem;
   line-height: 18px;
-  color: #6c757d;
+  color: #495057;
   text-align: center;
   background: #e9ecef;
 }
@@ -13269,44 +13321,44 @@ html.ie .v-s-boxes .v-s-box.invalid::after {
   min-height: 100%;
   object-fit: cover;
 }
-.widget-image-box > .widget-inner {
+.widget-image-box .widget-inner {
   display: flex;
   padding: 1.5rem;
 }
-.widget-image-box > .widget-inner .widget-caption {
+.widget-image-box .widget-inner .widget-caption {
   word-break: break-word;
   transition: 300ms all ease;
 }
 @media (prefers-reduced-motion: reduce) {
-  .widget-image-box > .widget-inner .widget-caption {
+  .widget-image-box .widget-inner .widget-caption {
     transition: none;
   }
 }
-.widget-image-box > .widget-inner .widget-caption h2,
-.widget-image-box > .widget-inner .widget-caption .h2 {
+.widget-image-box .widget-inner .widget-caption h2,
+.widget-image-box .widget-inner .widget-caption .h2 {
   margin: 0;
   font-size: 1.75rem;
 }
-.widget-image-box.widget-image-box-fullwidth > .widget-inner .widget-caption {
+.widget-image-box.widget-image-box-fullwidth .widget-inner .widget-caption {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 1rem;
 }
-.widget-image-box.widget-image-box-fullwidth > .widget-inner .widget-caption > div {
+.widget-image-box.widget-image-box-fullwidth .widget-inner .widget-caption > div {
   display: block;
   width: 100%;
 }
-.widget-image-box.widget-image-box-inline-caption > .widget-inner {
+.widget-image-box.widget-image-box-inline-caption .widget-inner {
   align-items: flex-end;
 }
-.widget-image-box.widget-image-box-inline-caption > .widget-inner .widget-caption {
+.widget-image-box.widget-image-box-inline-caption .widget-inner .widget-caption {
   padding: 0 1.5rem;
 }
-.widget-image-box.widget-image-box-block-caption > .widget-inner {
+.widget-image-box.widget-image-box-block-caption .widget-inner {
   padding: 0;
 }
-.widget-image-box.widget-image-box-block-caption > .widget-inner .widget-caption {
+.widget-image-box.widget-image-box-block-caption .widget-inner .widget-caption {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -14340,7 +14392,7 @@ html.ie .navbar-brand img[src*=svg] {
   position: fixed;
 }
 .top-bar .cmp {
-  position: fixed;
+  position: absolute;
   right: 0;
   left: 0;
   z-index: 1070;
@@ -15113,6 +15165,18 @@ header .widget {
 .widget-alignment-right .widget-alignment {
   display: flex;
   justify-content: flex-end;
+}
+
+.widget-greeting span {
+  color: #495057;
+}
+
+.gray-700 {
+  color: #495057;
+}
+
+.basket-item-delete {
+  color: #c82333;
 }
 
 .widget-primary .text-appearance {

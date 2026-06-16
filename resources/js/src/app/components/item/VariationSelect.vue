@@ -3,7 +3,7 @@
         <template v-if="attributes.length || (possibleUnitCombinationIds.length > 1 && isContentVisible)">
             <div class="col-12 variation-select" v-for="(attribute, index) in attributes" :key="index">
                 <!-- dropdown -->
-                <div class="input-unit" ref="attributesContaner" v-if="attribute.type === 'dropdown'">
+                <div class="input-unit" ref="attributesContaner" v-if="attribute.type === 'dropdown'" style="overflow: visible;">
                     <select :id="'custom-select_' + attribute.name" class="custom-select" @change="selectAttribute(attribute.attributeId, $event.target.value)" data-testing="variation-select-dropdown">
                         <option :value="-1" v-if="addPleaseSelectOption || !hasSelection">{{ $translate("Ceres::Template.singleItemPleaseSelect") }}</option>
                         <option
@@ -31,26 +31,29 @@
 
                 <!-- box and image -->
                 <div v-else-if="attribute.type === 'box' || attribute.type === 'image'">
-                    <span class="text-muted" data-testing="attribute-name">{{ attribute.name }}:</span> <b data-testing="attribute-value">{{ getSelectedAttributeValueName(attribute) }}</b>
+                    <span class="text-muted color-gray-700" data-testing="attribute-name">{{ attribute.name }}:</span> <b data-testing="attribute-value">{{ getSelectedAttributeValueName(attribute) }}</b>
                     <div class="v-s-boxes py-3" :class="{ 'images': attribute.type === 'image' }">
-                        <div class="v-s-box bg-white empty-option"
+                        <div tabindex="0" class="v-s-box bg-white empty-option"
                              data-testing="variation-select-box"
                              v-if="addPleaseSelectOption"
+                             @keydown="handleKeydown"
                              @click="selectAttribute(attribute.attributeId, -1)"
                              :class="{ 'active': selectedAttributes[attribute.attributeId] === -1, 'invalid': !isAttributeSelectionValid(attribute.attributeId, -1) }">
                             <span class="mx-3">{{ $translate("Ceres::Template.singleItemPleaseSelect") }}</span>
                         </div>
-                        <div class="v-s-box bg-white empty-option"
+                        <div tabindex="0" class="v-s-box bg-white empty-option"
                              data-testing="variation-select-box"
                              v-if="hasEmptyOption"
+                             @keydown="handleKeydown"
                              @click="selectAttribute(attribute.attributeId, null)"
                              :class="{ 'active': selectedAttributes[attribute.attributeId] === null, 'invalid': !isAttributeSelectionValid(attribute.attributeId, null, true) }">
                             <span class="mx-3">{{ $translate("Ceres::Template.singleItemNoSelection") }}</span>
                         </div>
 
-                        <div class="v-s-box bg-white"
+                        <div tabindex="0" class="v-s-box bg-white"
                              data-testing="variation-select-box"
                              v-for="value in attribute.values"
+                             @keydown="handleKeydown"
                              @click="selectAttribute(attribute.attributeId, value.attributeValueId)"
                              :class="{ 'active': value.attributeValueId === selectedAttributes[attribute.attributeId], 'invalid': !isAttributeSelectionValid(attribute.attributeId, value.attributeValueId, true) }"
                              v-tooltip="true" data-html="true" data-toggle="tooltip" data-placement="top" :data-original-title="getTooltip(attribute, value)"
@@ -159,7 +162,14 @@ export default {
          */
         currentSelection()
         {
-            const filteredVariations = this.filterVariations(null, null, true);
+            let filteredVariations = this.filterVariations(null, null, true) || [];
+
+            if (filteredVariations && filteredVariations.length > 1) {
+              filteredVariations = filteredVariations.filter(
+                  (obj, index, self) =>
+                      index === self.findIndex(o => o.variationId === obj.variationId)
+              );
+            }
 
             if (filteredVariations.length === 1)
             {
@@ -277,7 +287,7 @@ export default {
         {
             const qualifiedVariations = this.getQualifiedVariations(attributeId, attributeValueId, unitId);
             const closestVariations = this.getClosestVariations(qualifiedVariations);
-            
+
             // if the salable 'closestVariations' is undefined, take the not-salable one
             const closestVariation = closestVariations[0] || closestVariations[1];
 
@@ -339,18 +349,21 @@ export default {
             const invalidSelection = invalidSelections[0] || invalidSelections[1];
             const names = [];
 
-            for (const attribute of invalidSelection.attributesToReset)
+            if (invalidSelection)
             {
+              for (const attribute of invalidSelection.attributesToReset)
+              {
                 if (attribute.attributeId !== attributeId)
                 {
-                    names.push("<b>" + attribute.name +"</b>");
+                  names.push("<b>" + attribute.name +"</b>");
                 }
-            }
-            if (invalidSelection.newUnit)
-            {
+              }
+              if (invalidSelection.newUnit)
+              {
                 names.push(
                     "<b>" + this.$translate("Ceres::Template.singleItemContent") + "</b>"
                 );
+              }
             }
 
             if (!names.length)
@@ -697,6 +710,13 @@ export default {
             }
 
             return unitNameSplit;
+        },
+
+        handleKeydown(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                event.preventDefault();
+                event.target.click();
+            }
         }
     },
 

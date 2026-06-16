@@ -26,11 +26,6 @@ class CeresGlobalConfig extends PluginConfig
     public $shippingCostsCategoryId;
 
     /**
-     * @var int $defaultContactClassB2B Default customer class B2B.
-     */
-    public $defaultContactClassB2B;
-
-    /**
      * @var bool Enable Callisto route pattern for items.
      */
     public $enableOldUrlPattern;
@@ -92,7 +87,6 @@ class CeresGlobalConfig extends PluginConfig
     {
         $this->favicon                     = $this->getTextValue( 'global.favicon', '' );
         $this->shippingCostsCategoryId     = $this->getIntegerValue( 'global.shippingCostsCategoryId', 0 );
-        $this->defaultContactClassB2B      = $this->getIntegerValue( 'global.default_contact_class_b2b', null );
         $this->enableOldUrlPattern         = $this->getBooleanValue( 'global.enableOldUrlPattern', false );
 
         // This setting was moved from deprecated contact config
@@ -104,6 +98,7 @@ class CeresGlobalConfig extends PluginConfig
         $this->googleRecaptchaConsentGroup = $this->getTextValue('global.google_recaptcha_consentGroup', 'media');
         $this->registrationRequirePrivacyPolicyConfirmation = $this->getBooleanValue( 'global.registration_require_privacy_policy_confirmation', true );
         $this->blockCookies                = $this->getBooleanValue( 'global.block_cookies', true );
-        $this->userDataHashMaxAge          = $this->getIntegerValue('global.user_data_hash_max_age', 24);
+        $ttl = $this->getIntegerValue('global.user_data_hash_max_age', 1);
+        $this->userDataHashMaxAge = $ttl == -1 ? 168 : $ttl;
     }
 }

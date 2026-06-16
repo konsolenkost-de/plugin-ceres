@@ -1,7 +1,8 @@
 <template>
     <div>
-        <div :class="{'no-pointer-events': isLoading}" class="add-to-basket-lg-container d-none d-lg-block" v-if="!showQuantity && useLargeScale && canBeAddedToBasket"
-             :title="$translate('Ceres::Template.singleItemAddToBasket')">
+        <div :class="{ 'no-pointer-events': isLoading }" class="add-to-basket-lg-container d-none d-lg-block"
+            v-if="!showQuantity && useLargeScale && canBeAddedToBasket"
+            :title="$translate('Ceres::Template.singleItemAddToBasket')">
             <div @click="addToBasket()">
                 {{ $translate("Ceres::Template.singleItemAddToBasket") }}
                 <icon icon="cart-plus" class="fa-lg mobile-icon-right" :loading="isLoading"></icon>
@@ -9,71 +10,56 @@
             <add-to-wish-list-icon :variation-id="variationId"></add-to-wish-list-icon>
         </div>
 
-        <div class="add-to-basket-lg-container d-none d-lg-block" v-if="!showQuantity && useLargeScale && !canBeAddedToBasket"
-             :title="$translate('Ceres::Template.itemShowItem')">
+        <div class="add-to-basket-lg-container d-none d-lg-block"
+            v-if="!showQuantity && useLargeScale && !canBeAddedToBasket" v-tooltip data-toggle="tooltip"
+            data-placement="top" :title="$translate('Ceres::Template.itemShowItem')" @click="directToItem()">
             <div @click="directToItem()">
                 {{ $translate("Ceres::Template.itemShowItem") }}
-                <i class="fa fa-arrow-right fa-lg d-none d-sm-block"></i>
+                <i class="fa fa-arrow-right fa-lg d-none d-sm-block" aria-hidden="true"></i>
             </div>
             <add-to-wish-list-icon :variation-id="variationId"></add-to-wish-list-icon>
         </div>
 
-        <div class="d-inline" v-if="showQuantity && !useLargeScale" :class="{'d-lg-none': !$ceres.isItemView }">
+        <div class="d-inline" v-if="showQuantity && !useLargeScale" :class="{ 'd-lg-none': !$ceres.isItemView }">
             <div class="add-to-basket-container">
                 <div class="quantity-input-container">
-                    <quantity-input :value="quantity"
-                                    @quantity-change="updateQuantity"
-                                    @out-of-stock="handleButtonState"
-                                    :timeout="0"
-                                    :min="minimumQuantity"
-                                    :max="maximumQuantity"
-                                    :interval="intervalQuantity"
-                                    :variation-id="variationId"
-                                    :waiting="isLoading || !isSalable || !allVariationsSelected">
+                    <quantity-input :value="quantity" @quantity-change="updateQuantity"
+                        @out-of-stock="handleButtonState" :timeout="0" :min="minimumQuantity" :max="maximumQuantity"
+                        :interval="intervalQuantity" :variation-id="variationId"
+                        :waiting="isLoading || !isSalable || !allVariationsSelected">
                     </quantity-input>
                 </div>
 
-                <button
-                        v-if="!allVariationsSelected || !isSalable"
-                        class="btn btn-block btn-primary btn-basket btn-appearance disabled"
-                        v-tooltip
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        :title="tooltipText"
-                        :class="buttonClasses"
-                        :style="paddingInlineStyles">
-                        Ausverkauft
+                <button v-if="!allVariationsSelected || !isSalable"
+                    class="btn btn-block btn-primary btn-basket btn-appearance disabled" v-tooltip data-toggle="tooltip"
+                    data-placement="top" :title="tooltipText" :class="buttonClasses" :style="paddingInlineStyles">
+                    Ausverkauft
                 </button>
-                <button
-                        v-else-if="!buttonLockState"
-                        :disabled="isLoading || !hasPrice"
-                        class="btn btn-block btn-primary btn-basket btn-appearance"
-                        @click="addToBasket()"
-                        :class="buttonClasses"
-                        :style="paddingInlineStyles">
+                <button v-else-if="!buttonLockState" :disabled="isLoading || !hasPrice"
+                    class="btn btn-block btn-primary btn-basket btn-appearance" @click="addToBasket()"
+                    :class="buttonClasses" :style="paddingInlineStyles">
                     <icon icon="shopping-cart" :loading="isLoading"></icon>
                     {{ $translate("Ceres::Template.singleItemAddToBasket") }}
                 </button>
-                <button v-else
-                        class="btn btn-block btn-primary btn-basket btn-appearance disabled"
-                        v-tooltip
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        :title="'Ceres::Template.singleItemQuantityMax' | translate({ max: maximumQuantity })"
-                        :class="buttonClasses"
-                        :style="paddingInlineStyles">
-                        Ausverkauft
+                <button v-else class="btn btn-block btn-primary btn-basket btn-appearance disabled" v-tooltip
+                    data-toggle="tooltip" data-placement="top"
+                    :title="'Ceres::Template.singleItemQuantityMax' | translate({ max: maximumQuantity })"
+                    :class="buttonClasses" :style="paddingInlineStyles">
+                    Ausverkauft
                 </button>
             </div>
         </div>
 
-        <div class="d-inline" v-if="!showQuantity && !useLargeScale" :class="{'d-lg-none': !isWishList }">
+        <div class="d-inline" v-if="!showQuantity && !useLargeScale" :class="{ 'd-lg-none': !isWishList }">
             <div class="btn-group" role="group" aria-label="Thumb Control">
-                <button type="button" :class="{'no-pointer-events': isLoading}" v-if="canBeAddedToBasket" class="btn btn-primary btn-basket btn-i-w btn-appearance mobile-width-button" @click="addToBasket()">
+                <button type="button" :class="{ 'no-pointer-events': isLoading }" v-if="canBeAddedToBasket"
+                    class="btn btn-primary btn-basket btn-i-w btn-appearance mobile-width-button"
+                    @click="addToBasket()">
                     <icon icon="shopping-cart" class="fa-lg mobile-icon-right" :loading="isLoading"></icon>
                     <span class="btn-text">{{ $translate("Ceres::Template.singleItemAddToBasket") }}</span>
                 </button>
-                <button type="button" v-if="!canBeAddedToBasket" class="btn btn-primary btn-basket btn-appearance mobile-width-button" @click="directToItem()">
+                <button type="button" v-if="!canBeAddedToBasket"
+                    class="btn btn-primary btn-basket btn-appearance mobile-width-button" @click="directToItem()">
                     <i class="fa fa-arrow-right fa-lg d-none d-sm-block" aria-hidden="true"></i>
                     <span class="btn-text">{{ $translate("Ceres::Template.itemShowItem") }}</span>
                 </button>
@@ -96,7 +82,7 @@ export default {
     name: "add-to-basket",
 
     mixins: [ButtonSizePropertyMixin],
-    
+
     components:
     {
         QuantityInput
@@ -166,8 +152,8 @@ export default {
         },
         hasGraduatedPrice:
         {
-          type: Boolean,
-          default: false
+            type: Boolean,
+            default: false
         },
         paddingClasses:
         {
@@ -204,8 +190,7 @@ export default {
 
     computed:
     {
-        isSet()
-        {
+        isSet () {
             return (
                 this.$store.state.items[this.itemId]
                 && this.$store.state.items[this.itemId].variation
@@ -213,8 +198,7 @@ export default {
             ) || this.itemType === "set";
         },
 
-        canBeAddedToBasket()
-        {
+        canBeAddedToBasket () {
             return this.isSalable &&
                 !this.hasChildren &&
                 !(this.minimumQuantity != 1 || this.intervalQuantity != 1) &&
@@ -224,67 +208,54 @@ export default {
                 !this.isSet;
         },
 
-        requiresProperties()
-        {
-            return (App.config.item.requireOrderProperties && 
+        requiresProperties () {
+            return (App.config.item.requireOrderProperties &&
                 (this.hasOrderProperties || this.orderProperties.filter(property => property.property.isShownOnItemPage).length > 0)) ||
                 this.hasRequiredOrderProperty;
         },
 
-        buttonClasses()
-        {
+        buttonClasses () {
             const classes = [];
 
-            if (isDefined(this.buttonSizeClass))
-            {
+            if (isDefined(this.buttonSizeClass)) {
                 classes.push(this.buttonSizeClass);
             }
 
-            if (isDefined(this.paddingClasses))
-            {
+            if (isDefined(this.paddingClasses)) {
                 classes.push(this.paddingClasses.split(" "));
             }
 
             return classes;
         },
 
-        tooltipText()
-        {
-            if (this.hasAvailableVariations)
-            {
+        tooltipText () {
+            if (this.hasAvailableVariations) {
                 return this.$translate("Ceres::Template.singleItemPleaseSelectValidVariation");
             }
-            else
-            {
+            else {
                 return this.$translate("Ceres::Template.singleItemPleaseSelectNotAvailable");
             }
         },
 
-        variationOrderQuantity()
-        {
+        variationOrderQuantity () {
             return this.$store.state.items[this.itemId] && this.$store.state.items[this.itemId].variationOrderQuantity;
         },
 
-        variationMissingProperties()
-        {
+        variationMissingProperties () {
             return this.$store.getters[`${this.itemId}/variationMissingProperties`];
         },
 
-        hasAvailableVariations()
-        {
+        hasAvailableVariations () {
             return this.$store.state.items[this.itemId]
                 && this.$store.state.items[this.itemId].variationSelect
                 && this.$store.state.items[this.itemId].variationSelect.variations.some(variation => variation.isSalable);
         },
 
-        allVariationsSelected()
-        {
-            if (this.isSet)
-            {
+        allVariationsSelected () {
+            if (this.isSet) {
                 return this.$store.getters["itemSetAllVariationSelected"];
             }
-            else
-            {
+            else {
                 // FIX return true if module is not registered. This equals the default value from the module
                 // and is required to use this component in other contexts, e.g. the category view
                 return !this.$store.state.items[this.itemId]
@@ -293,8 +264,7 @@ export default {
             }
         },
 
-        isLoading()
-        {
+        isLoading () {
             return this.$store.state.items.isAddToBasketLoading === this.variationId || this.$store.state.items.isSetLoading;
         },
 
@@ -304,8 +274,7 @@ export default {
         })
     },
 
-    data()
-    {
+    data () {
         return {
             quantity: 1,
             buttonLockState: false
@@ -317,34 +286,29 @@ export default {
         /**
          * add an item to basket-resource
          */
-        addToBasket()
-        {
+        addToBasket () {
             this.$store.dispatch("loadComponent", "add-item-to-basket-overlay");
             this.$store.dispatch("loadComponent", "basket-preview");
 
-            if (this.variationMissingProperties !== undefined && this.variationMissingProperties.length)
-            {
+            if (this.variationMissingProperties !== undefined && this.variationMissingProperties.length) {
                 this.showMissingPropertiesError();
             }
-            else if (this.isSalable || this.isSet)
-            {
+            else if (this.isSalable || this.isSet) {
                 this.$store.commit("setIsAddToBasketLoading", this.variationId);
 
                 const orderParamsAndSurcharge = extractPropertiesAndSurcharge(this.orderProperties);
 
                 const basketObject =
-                    {
-                        variationId             :   this.variationId,
-                        quantity                :   this.quantity,
-                        basketItemOrderParams   :   orderParamsAndSurcharge.orderParams,
-                        totalOrderParamsMarkup  :   orderParamsAndSurcharge.totalSurcharge
-                    };
-
-                if(this.isSet)
                 {
+                    variationId: this.variationId,
+                    quantity: this.quantity,
+                    basketItemOrderParams: orderParamsAndSurcharge.orderParams,
+                    totalOrderParamsMarkup: orderParamsAndSurcharge.totalSurcharge
+                };
+
+                if (this.isSet) {
                     const setComponents = [];
-                    this.$store.state.items.setComponentIds.forEach(itemId =>
-                    {
+                    this.$store.state.items.setComponentIds.forEach(itemId => {
                         const setComponent = this.$store.getters[`${itemId}/currentItemVariation`];
 
                         const variationId = setComponent && setComponent.variation.id;
@@ -365,17 +329,14 @@ export default {
                 }
 
                 this.$store.dispatch("addBasketItem", basketObject).then(
-                    response =>
-                    {
+                    response => {
                         document.dispatchEvent(new CustomEvent("afterBasketItemAdded", { detail: basketObject }));
                         this.$store.commit("setIsAddToBasketLoading", 0);
                     },
-                    error =>
-                    {
+                    error => {
                         this.$store.commit("setIsAddToBasketLoading", 0);
 
-                        if (error.data)
-                        {
+                        if (error.data) {
                             NotificationService.error(
                                 this.$translate(
                                     "Ceres::Template." + ExceptionMap.get(error.data.exceptionCode.toString()),
@@ -386,28 +347,24 @@ export default {
                     });
             }
         },
-        showMissingPropertiesError()
-        {
+        showMissingPropertiesError () {
             this.$store.commit(`${this.itemId}/setVariationMarkInvalidProps`, true);
 
             const propertyNames = this.variationMissingProperties.map(property => property.property.names.name);
             let errorMsgContent = "";
 
-            for (const name of propertyNames)
-            {
+            for (const name of propertyNames) {
                 errorMsgContent += name + "<br>";
             }
 
             NotificationService.error(this.$translate("Ceres::Template.singleItemMissingOrderPropertiesError").replace("<properties>", errorMsgContent));
         },
 
-        directToItem()
-        {
+        directToItem () {
             navigateTo(this.itemUrl);
         },
 
-        handleButtonState(value)
-        {
+        handleButtonState (value) {
             this.buttonLockState = value;
         },
 
@@ -415,56 +372,45 @@ export default {
          * update the property quantity of the current instance
          * @param value
          */
-        updateQuantity(value)
-        {
+        updateQuantity (value) {
             this.quantity = value;
         }
     },
 
     watch:
     {
-        quantity(value)
-        {
-            if(!isNullOrUndefined(this.itemId))
-            {
+        quantity (value) {
+            if (!isNullOrUndefined(this.itemId)) {
                 this.$store.commit(`${this.itemId}/setVariationOrderQuantity`, value);
                 this.$store.commit(`${this.itemId}/setVariationPropertySurcharges`, this.$store.getters[`${this.itemId}/variationBasePrice`]);
             }
         },
 
-        variationOrderQuantity(value)
-        {
-            if (this.quantity !== value)
-            {
+        variationOrderQuantity (value) {
+            if (this.quantity !== value) {
                 this.quantity = value;
             }
         },
 
-        propQuantity(value)
-        {
-            if (!isNaN(value))
-            {
+        propQuantity (value) {
+            if (!isNaN(value)) {
                 this.quantity = value;
             }
         }
     }
 }
 
-function extractPropertiesAndSurcharge(orderProperties)
-{
+function extractPropertiesAndSurcharge (orderProperties) {
     let totalSurcharge = 0;
     const orderParams = [];
 
-    orderProperties.forEach((orderProperty) =>
-    {
-        if(!isNullOrUndefined(orderProperty.property.value))
-        {
+    orderProperties.forEach((orderProperty) => {
+        if (!isNullOrUndefined(orderProperty.property.value)) {
             const property = orderProperty.property;
 
             if (property.valueType === "float" &&
                 !isNullOrUndefined(property.value) &&
-                property.value.slice(-1) === App.decimalSeparator)
-            {
+                property.value.slice(-1) === App.decimalSeparator) {
                 property.value = property.value.substr(0, property.value.length - 1);
             }
 

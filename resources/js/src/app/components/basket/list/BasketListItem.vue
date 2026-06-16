@@ -6,8 +6,8 @@
             :class="{ 'sending is-loading': waiting, 'is-loading': isCheckoutReadonly }">
             <div class="image-container">
                 <a :href="basketItem.variation.data | itemURL">
-                    <lazy-img v-if="image" :image-url="image" :alt="altText" :title="itemName" :height="height"
-                        :width="width" picture-class="d-block mw-100 mh-100 h-auto" data-testing="basket-item-img" />
+                    <lazy-img v-if="image" :image-url="image" :alt="altText" :height="height" :width="width"
+                        picture-class="d-block mw-100 mh-100 h-auto" data-testing="basket-item-img" />
                 </a>
             </div>
 
@@ -93,7 +93,7 @@
                                 unitPrice |
                                 currency(basketItem.variation.data.prices.default.currency) }}</div>
 
-                            <button class="btn btn-sm text-danger p-0"
+                            <button class="btn btn-sm text-danger-darker p-0"
                                 :class="{ 'disabled': waiting || isBasketLoading || isCheckoutReadonly || waitingForDelete }"
                                 @click="deleteItem">
                                 {{ $translate("Ceres::Template.basketDelete") }}
@@ -148,11 +148,12 @@
                     </template>
                 </div>
 
-                <label v-if="isMoreButtonVisible" class="btn-collapse" :class="{ 'collapsed': !showMoreInformation }"
+                <div v-if="isMoreButtonVisible" class="btn-collapse" :class="{ 'collapsed': !showMoreInformation }"
                     @click="showMoreInformation = !showMoreInformation"
                     :data-show-more="$translate('Ceres::Template.basketShowMore')"
-                    :data-show-less="$translate('Ceres::Template.basketShowLess')">
-                </label>
+                    :data-show-less="$translate('Ceres::Template.basketShowLess')"
+                    :aria-label="$translate('Ceres::Template.basketShowMore')">
+                </div>
             </div>
         </div>
 

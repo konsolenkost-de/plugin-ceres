@@ -843,6 +843,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         key: "company",
         name: "addressSalutationCompany"
+      }, {
+        key: "notToSay",
+        name: "addressSalutationPreferNotToSay"
       }]
     };
   },
@@ -1371,7 +1374,7 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "telephone",
-      id: "txtTelephone" + _vm._uid
+      id: "delivery_txtTelephone" + _vm._uid
     },
     domProps: {
       value: _vm.value.telephone
@@ -1383,14 +1386,18 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      for: "txtTelephone" + _vm._uid
+      for: "delivery_txtTelephone" + _vm._uid
     }
   }, [_vm._v("\n                            " + _vm._s(_vm.transformTranslation("Ceres::Template.addressTelephone", "de", "delivery_address.phoneNumber")) + "\n                        ")])])]) : _vm._e()], 2)]), _vm._v(" "), _vm.isParcelOrOfficeAvailable ? _c("div", {
     staticClass: "col-12"
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-12"
+    staticClass: "col-12",
+    attrs: {
+      role: "checkbox",
+      "aria-label": _vm.$translate("Ceres::Template.addressToPickupStation")
+    }
   }, [_c("input", {
     attrs: {
       type: "checkbox",
@@ -1941,7 +1948,7 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "telephone",
-      id: "txtTelephone" + _vm._uid
+      id: "billing_txtTelephone" + _vm._uid
     },
     domProps: {
       value: _vm.value.telephone
@@ -1953,7 +1960,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      for: "txtTelephone" + _vm._uid
+      for: "billing_txtTelephone" + _vm._uid
     }
   }, [_vm._v("\n                            " + _vm._s(_vm.transformTranslation("Ceres::Template.addressTelephone", "de", "billing_address.phoneNumber")) + "\n                        ")])])]) : _vm._e()], 2)]), _vm._v(" "), _c("div", {
     staticClass: "col-12",
@@ -2472,11 +2479,10 @@ var render = function render() {
       "data-model": "telephone"
     }
   }, [_c("input", {
-    staticClass: "formborder",
     attrs: {
       type: "text",
       name: "telephone",
-      id: "txtTelephone" + _vm._uid
+      id: "billing_txtTelephone" + _vm._uid
     },
     domProps: {
       value: _vm.value.telephone
@@ -2488,7 +2494,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      for: "txtTelephone" + _vm._uid
+      for: "billing_txtTelephone" + _vm._uid
     }
   }, [_vm._v("\n                            " + _vm._s(_vm.transformTranslation("Ceres::Template.addressTelephone", "gb", "billing_address.phoneNumber")) + "\n                        ")])])]) : _vm._e()], 2)]), _vm._v(" "), _c("div", {
     staticClass: "col-12",
@@ -2977,7 +2983,7 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "telephone",
-      id: "txtTelephone" + _vm._uid
+      id: "delivery_txtTelephone" + _vm._uid
     },
     domProps: {
       value: _vm.value.telephone
@@ -2989,14 +2995,18 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      for: "txtTelephone" + _vm._uid
+      for: "delivery_txtTelephone" + _vm._uid
     }
   }, [_vm._v("\n                            " + _vm._s(_vm.transformTranslation("Ceres::Template.addressTelephone", "de", "delivery_address.phoneNumber")) + "\n                        ")])])]) : _vm._e()], 2)]), _vm._v(" "), _vm.isParcelOrOfficeAvailable ? _c("div", {
     staticClass: "col-12"
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-12"
+    staticClass: "col-12",
+    attrs: {
+      role: "checkbox",
+      "aria-label": _vm.$translate("Ceres::Template.addressToPickupStation")
+    }
   }, [_c("input", {
     attrs: {
       type: "checkbox",
@@ -3495,7 +3505,7 @@ var render = function render() {
     attrs: {
       type: "text",
       name: "telephone",
-      id: "txtTelephone" + _vm._uid
+      id: "delivery_txtTelephone" + _vm._uid
     },
     domProps: {
       value: _vm.value.telephone
@@ -3507,7 +3517,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
-      for: "txtTelephone" + _vm._uid
+      for: "delivery_txtTelephone" + _vm._uid
     }
   }, [_vm._v("\n                            " + _vm._s(_vm.transformTranslation("Ceres::Template.addressTelephone", "gb", "delivery_address.phoneNumber")) + "\n                        ")])])]) : _vm._e()], 2)]), _vm._v(" "), _c("div", {
     staticClass: "col-12"
@@ -4015,10 +4025,12 @@ var render = function render() {
     }],
     staticClass: "honey",
     attrs: {
+      id: "registration_honey",
       type: "text",
       name: "username",
       autocomplete: "new-password",
-      tabindex: "-1"
+      tabindex: "-1",
+      "aria-hidden": "true"
     },
     domProps: {
       value: _vm.honeypot
@@ -4029,7 +4041,14 @@ var render = function render() {
         _vm.honeypot = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("label", {
+    staticClass: "position-absolute",
+    attrs: {
+      for: "registration_honey"
+    }
+  }, [_c("span", {
+    staticClass: "visually-hidden"
+  }, [_vm._v("\n              " + _vm._s(_vm.$translate("Ceres::Template.regHoneypotLabel")) + "\n            ")])]), _vm._v(" "), _c("div", {
     staticClass: "col-12"
   }, [!_vm.isSimpleRegistration ? _c("address-input-group", {
     attrs: {

@@ -106,8 +106,8 @@
 
                             <span class="vat small text-muted">
                                 {{ $translate("Ceres::Template.singleItemFootnote1") }} <template v-if="showNetPrices">{{ $translate("Ceres::Template.singleItemExclVAT") }}</template><template v-else>{{ $translate("Ceres::Template.singleItemInclVAT") }}</template> {{ $translate("Ceres::Template.singleItemExclusive") }}
-                            <a v-if="hasShippingCostsCategoryId" data-toggle="modal" href="#shippingscosts" :title="$translate('Ceres::Template.singleItemShippingCosts')">{{ $translate("Ceres::Template.singleItemShippingCosts") }}</a>
-                            <a v-else :title="$translate('Ceres::Template.singleItemShippingCosts')">{{ $translate("Ceres::Template.singleItemShippingCosts") }}</a>
+                            <a v-if="hasShippingCostsCategoryId" data-toggle="modal" href="#shippingscosts">{{ $translate("Ceres::Template.singleItemShippingCosts") }}</a>
+                            <a v-else>{{ $translate("Ceres::Template.singleItemShippingCosts") }}</a>
 
                             </span>
 
@@ -130,6 +130,14 @@
 
                                 <li class="nav-item">
                                     <a :class="{ 'active': !isDescriptionTabActive && !isTechnicalDataTabActive }" class="nav-link" data-toggle="tab" href="#assessments-details" role="tab">{{ $translate("Ceres::Template.singleItemMoreDetails") }}</a>
+                                </li>
+
+                                <li class="nav-item" v-if="isEuResponsibleTabShown">
+                                    <a class="nav-link" data-toggle="tab" href="#eu-responsible" role="tab">{{ $translate("Ceres::Template.singleItemEuResponsiblePerson") }}</a>
+                                </li>
+
+                                <li class="nav-item" v-if="isManufacturerTabShown">
+                                  <a class="nav-link" data-toggle="tab" href="#manufacturer" role="tab">{{ $translate("Ceres::Template.singleItemManufacturer") }}</a>
                                 </li>
 
                                 <slot name="add-detail-tabs"></slot>
@@ -218,6 +226,85 @@
                                     </div>
                                 </div>
 
+                                <div class="tab-pane overflow-auto" id="eu-responsible" role="tabpanel" v-if="isEuResponsibleTabShown">
+                                  <div class="my-4">
+                                      <div class="p-0">
+                                        <span>{{ currentVariation.item.manufacturer.responsibleName }}</span>
+                                      </div>
+
+                                      <div class="p-0">
+                                        <span>{{ currentVariation.item.manufacturer.responsibleStreet }}</span>
+                                        <span>{{ currentVariation.item.manufacturer.responsibleHouseNo }}</span>
+                                      </div>
+
+                                      <div class="p-0">
+                                        <span>{{ currentVariation.item.manufacturer.responsiblePostCode }}</span>
+                                        <span>{{ currentVariation.item.manufacturer.responsibleTown }}</span>
+                                        <span v-if="currentVariation.item.manufacturer.responsibleCountryObject">
+                                          {{ currentVariation.item.manufacturer.responsibleCountryObject.name }}
+                                        </span>
+                                      </div>
+
+                                      <div class="p-0">
+                                        <span>{{ currentVariation.item.manufacturer.responsibleEmail }}</span>
+                                      </div>
+
+                                      <div class="p-0">
+                                        <span>{{ currentVariation.item.manufacturer.responsiblePhoneNo }}</span>
+                                      </div>
+
+                                    <div class="p-0">
+                                      <span>{{ currentVariation.item.manufacturer.responsibleContactUrl }}</span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="tab-pane overflow-auto" id="manufacturer" role="tabpanel" v-if="isManufacturerTabShown">
+                                <div class="my-4">
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.name }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.legalName }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.street }}</span>
+                                    <span>{{ currentVariation.item.manufacturer.houseNo }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.postcode }}</span>
+                                    <span>{{ currentVariation.item.manufacturer.town }}</span>
+                                    <span v-if="currentVariation.item.manufacturer.countryObject">
+                                      {{ currentVariation.item.manufacturer.countryObject.name }}
+                                    </span>
+
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.email }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.url }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.phoneNumber }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.faxNumber }}</span>
+                                  </div>
+
+                                  <div class="p-0">
+                                    <span>{{ currentVariation.item.manufacturer.contactUrl }}</span>
+                                  </div>
+                                </div>
+                              </div>
+
                                 <slot name="add-detail-tabs-content"></slot>
                             </div>
                         </div>
@@ -289,6 +376,36 @@ export default {
         {
             return (App.config.item.itemData.includes("item.description") || App.config.item.itemData.includes("all"))
                 && !!this.currentVariation.texts.description.length;
+        },
+
+        isManufacturerTabShown()
+        {
+            return (this.currentVariation.item.manufacturer.url !== "") ||
+                (this.currentVariation.item.manufacturer.street !== "") ||
+                (this.currentVariation.item.manufacturer.houseNo !== "") ||
+                (this.currentVariation.item.manufacturer.postcode !== "") ||
+                (this.currentVariation.item.manufacturer.town !== "") ||
+                (this.currentVariation.item.manufacturer.countryId !== 0) ||
+                (this.currentVariation.item.manufacturer.phoneNumber !== "") ||
+                (this.currentVariation.item.manufacturer.faxNumber !== "") ||
+                (this.currentVariation.item.manufacturer.email !== "") ||
+                (this.currentVariation.item.manufacturer.legalName !== "") ||
+                (this.currentVariation.item.manufacturer.contactUrl !== "") ||
+                (this.currentVariation.item.manufacturer.name !== "") ||
+                (this.currentVariation.item.manufacturer.externalName !== "");
+        },
+
+        isEuResponsibleTabShown()
+        {
+            return (this.currentVariation.item.manufacturer.responsibleEmail !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleHouseNo !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleName !== "") ||
+                (this.currentVariation.item.manufacturer.responsiblePhoneNo !== "") ||
+                (this.currentVariation.item.manufacturer.responsiblePostCode !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleStreet !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleTown !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleContactUrl !== "") ||
+                (this.currentVariation.item.manufacturer.responsibleCountry !== 0);
         },
 
         isRecommendedPriceActive()
@@ -364,7 +481,7 @@ export default {
 
             if (this.isItemSet)
             {
-                this.$store.dispatch("initSetComponents", this.itemData);   
+                this.$store.dispatch("initSetComponents", this.itemData);
             }
         })
 
