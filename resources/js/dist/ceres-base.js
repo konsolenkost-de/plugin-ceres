@@ -68840,36 +68840,42 @@ var actions = {
   sendContactForm: function sendContactForm(state, event) {
     event.preventDefault();
     event.stopPropagation();
+    var formType = event.target.dataset.formType;
+    var isContractWithdrawal = formType === "contract-withdrawal";
     var btnClassName = event.submitter.className;
     var btnSendContactForm = "btn-send-contact-form";
     if (event.target.tagName !== "FORM" || !btnClassName.includes(btnSendContactForm)) {
       return;
     }
     var recaptchaEl = event.target.querySelector("[data-recaptcha]");
-    if (App.config.global.googleRecaptchaApiKey && (!window.grecaptcha || !recaptchaEl)) {
+    if (App.config.global.googleRecaptchaApiKey && (!window.grecaptcha || !recaptchaEl) && !isContractWithdrawal) {
       _services_NotificationService__WEBPACK_IMPORTED_MODULE_18__["default"].error(_services_TranslationService__WEBPACK_IMPORTED_MODULE_19__["default"].translate("Ceres::Template.contactAcceptRecaptchaCookie"));
       return;
     }
-    Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_22__["executeReCaptcha"])(event.target).then(function (recaptchaResponse) {
+    var recaptchaPromise = isContractWithdrawal ? Promise.resolve(null) : Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_22__["executeReCaptcha"])(event.target);
+    recaptchaPromise.then(function (recaptchaResponse) {
       _services_ValidationService__WEBPACK_IMPORTED_MODULE_17__["default"].validate(event.target).done(function () {
         disableForm(event.target, true);
         var formData = Object(_helper_serializeForm__WEBPACK_IMPORTED_MODULE_20__["serializeForm"])(event.target);
         var formOptions = readFormOptions(event.target, formData);
         sendFile(event, recaptchaResponse).then(function (response) {
           resetRecaptcha(recaptchaEl);
-          Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_22__["executeReCaptcha"])(event.target).then(function (recaptchaToken2) {
-            var formType = event.target.dataset.formType;
+          var recaptchaTokenPromise = isContractWithdrawal ? Promise.resolve(null) : Object(_helper_executeReCaptcha__WEBPACK_IMPORTED_MODULE_22__["executeReCaptcha"])(event.target);
+          recaptchaTokenPromise.then(function (recaptchaToken2) {
             var endpoint = formType === "contract-withdrawal" ? "/rest/io/cancellation" : "/rest/io/customer/contact/mail";
-            ApiService.post(endpoint, {
+            var payload = {
               data: formData,
               recipient: formOptions.recipient,
               subject: formOptions.subject || "",
               cc: formOptions.cc,
               bcc: formOptions.bcc,
               replyTo: formOptions.replyTo,
-              recaptchaToken: recaptchaToken2,
               fileKeys: response.fileKeys
-            }).done(function (response) {
+            };
+            if (!isContractWithdrawal) {
+              payload.recaptchaToken = recaptchaToken2;
+            }
+            ApiService.post(endpoint, payload).done(function (response) {
               resetRecaptcha(recaptchaEl);
               event.target.reset();
               disableForm(event.target, false);
